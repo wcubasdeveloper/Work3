@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Informe de Procuracion</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/cupertino/jquery.ui.all.css" rel="stylesheet">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/nuevo_editar_informe.css" rel="stylesheet">
+<script src="wpscripts/jquery-1.11.1.min.js"></script>
+<script src="wpscripts/jquery.ui.core.min.js"></script>
+<script src="wpscripts/jquery.ui.widget.min.js"></script>
+<script src="wpscripts/jquery.ui.mouse.min.js"></script>
+<script src="wpscripts/jquery.ui.sortable.min.js"></script>
+<script src="wpscripts/jquery.ui.tabs.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   var jQueryTabs1Opts =
+   {
+      show: false,
+      event: 'click',
+      collapsible: false
+   };
+   $("#jQueryTabs1").tabs(jQueryTabs1Opts);
+});
+</script>
+<!--<script src="https://code.jquery.com/jquery-latest.min.js"></script>-->
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/nuevo_editar_informe.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:415px;">
+<div id="container">
+<div id="jQueryTabs1" style="position:absolute;left:10px;top:26px;width:873px;height:371px;z-index:266;">
+<ul>
+<li><a href="#jquerytabs1-page-0"><span>Ocurrencia</span></a></li>
+<li><a href="#jquerytabs1-page-1"><span>Asociado</span></a></li>
+<li><a href="#jquerytabs1-page-2"><span>Responsables</span></a></li>
+<li><a href="#jquerytabs1-page-3"><span>Comisaría/Dosaje</span></a></li>
+<li><a href="#jquerytabs1-page-4"><span>Agraviados</span></a></li>
+<li><a href="#jquerytabs1-page-5"><span>Calificación</span></a></li>
+</ul>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-0">
+<div id="wb_Text5" style="position:absolute;left:29px;top:54px;width:153px;height:15px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha/Hora Accidente</strong></span></div>
+<input type="text" id="idFechaAccidente" style="position:absolute;left:22px;top:69px;width:151px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" readonly>
+<input type="text" id="idFechaAviso" style="position:absolute;left:207px;top:69px;width:151px;height:20px;line-height:20px;z-index:11;" name="Editbox1" value="" readonly>
+<div id="wb_Text2" style="position:absolute;left:214px;top:54px;width:132px;height:15px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha/Hora Aviso</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:395px;top:54px;width:132px;height:15px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Tipo de Accidente</strong></span></div>
+<select name="Combobox1" size="1" id="idTipoAccidente" style="position:absolute;left:391px;top:69px;width:217px;height:22px;z-index:14;">
+</select>
+<select name="Combobox1" size="1" id="idCausal" style="position:absolute;left:637px;top:69px;width:217px;height:22px;z-index:15;">
+</select>
+<div id="wb_Text4" style="position:absolute;left:644px;top:54px;width:132px;height:15px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Causal</strong></span></div>
+<div id="idPanelLugarAccidente" style="position:absolute;text-align:left;left:14px;top:116px;width:848px;height:84px;z-index:17;">
+<input type="text" id="idDepProv_E" style="position:absolute;left:14px;top:23px;width:171px;height:20px;line-height:20px;z-index:0;" name="Editbox1" value="" readonly>
+<div id="wb_Text7" style="position:absolute;left:21px;top:8px;width:76px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dep./Prov.</strong></span></div>
+<input type="button" id="btnCambiarProv_E" name="" value="Cambiar Prov." style="position:absolute;left:28px;top:51px;width:123px;height:26px;z-index:2;cursor:pointer;">
+<select name="Combobox1" size="1" id="select_E" style="position:absolute;left:208px;top:23px;width:184px;height:22px;z-index:3;">
+</select>
+<div id="wb_Text8" style="position:absolute;left:212px;top:8px;width:132px;height:16px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Distrito</strong></span></div>
+<div id="wb_Text9" style="position:absolute;left:415px;top:8px;width:132px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dirección</strong></span></div>
+<input type="text" id="idDireccion" style="position:absolute;left:406px;top:23px;width:418px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="">
+</div>
+<div id="wb_Text6" style="position:absolute;left:28px;top:101px;width:168px;height:15px;z-index:18;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>LUGAR DEL ACCIDENTE</strong></span></div>
+<div id="Layer2" style="position:absolute;text-align:left;left:15px;top:227px;width:848px;height:143px;z-index:19;">
+<input type="button" id="idBtnNuevoVehiculo" name="" value="(+) Agregar Vehículo" style="position:absolute;left:690px;top:13px;width:142px;height:30px;z-index:7;cursor:pointer;">
+<div id="Html2" style="position:absolute;overflow:auto;left:12px;top:6px;width:665px;height:130px;z-index:8">
+<div id="divTABLA_vehiculos" style="height:128px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_vehiculos" class="display" width="100%" cellspacing="0" style="font-family:Arial;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th><center>PLACA</center></th>
+        <th><center>MARCA</center></th>
+        <th><center>MODELO</center></th>    
+        <th><center>AÑO</center></th>
+        <th><center>BORRAR</center></th>             
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+</div>
+<div id="wb_Text13" style="position:absolute;left:28px;top:212px;width:195px;height:15px;z-index:20;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>VEHICULOS INVOLUCRADOS</strong></span></div>
+</div>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-1">
+<input type="text" id="nroCAT" style="position:absolute;left:66px;top:58px;width:103px;height:20px;line-height:20px;z-index:50;" name="Editbox1" value="">
+<div id="wb_Text10" style="position:absolute;left:33px;top:63px;width:33px;height:15px;z-index:51;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>CAT</strong></span></div>
+<div id="wb_Text11" style="position:absolute;left:185px;top:63px;width:45px;height:15px;z-index:52;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Placa</strong></span></div>
+<input type="text" id="placa" style="position:absolute;left:229px;top:58px;width:103px;height:20px;line-height:20px;z-index:53;" name="Editbox1" value="">
+<input type="button" id="btnValidarPoliza" name="" value="Validar" style="position:absolute;left:352px;top:58px;width:92px;height:24px;z-index:54;cursor:pointer;">
+<div id="wb_Text16" style="position:absolute;left:28px;top:99px;width:168px;height:15px;z-index:55;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ASOCIADO</strong></span></div>
+<div id="idPanelDireccionAsociado" style="position:absolute;text-align:left;left:14px;top:114px;width:848px;height:148px;z-index:56;">
+<div id="wb_Text12" style="position:absolute;left:21px;top:14px;width:58px;height:15px;z-index:36;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre</strong></span></div>
+<input type="text" id="idNombreAsociado" style="position:absolute;left:82px;top:9px;width:548px;height:20px;line-height:20px;z-index:37;" name="Editbox1" value="" readonly>
+<div id="wb_Text14" style="position:absolute;left:655px;top:14px;width:58px;height:15px;z-index:38;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro. Doc</strong></span></div>
+<input type="text" id="idNroDocAsociado" style="position:absolute;left:714px;top:9px;width:108px;height:20px;line-height:20px;z-index:39;" name="Editbox1" value="" readonly>
+<div id="Layer5" style="position:absolute;text-align:left;left:21px;top:56px;width:801px;height:82px;z-index:40;">
+<input type="button" id="btnCambiarProv_A" name="" value="Cambiar Prov." style="position:absolute;left:31px;top:47px;width:123px;height:26px;z-index:21;cursor:pointer;">
+<input type="text" id="idDepProv_A" style="position:absolute;left:13px;top:19px;width:168px;height:20px;line-height:20px;z-index:22;" name="Editbox1" value="" readonly>
+<div id="wb_Text17" style="position:absolute;left:24px;top:4px;width:76px;height:15px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dep./Prov.</strong></span></div>
+<select name="Combobox1" size="1" id="select_A" style="position:absolute;left:199px;top:19px;width:174px;height:22px;z-index:24;">
+</select>
+<div id="wb_Text18" style="position:absolute;left:208px;top:4px;width:132px;height:15px;z-index:25;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Distrito</strong></span></div>
+<input type="text" id="idCalle" style="position:absolute;left:384px;top:19px;width:146px;height:20px;line-height:20px;z-index:26;" name="Editbox1" value="">
+<div id="wb_Text19" style="position:absolute;left:391px;top:4px;width:76px;height:15px;z-index:27;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre vía</strong></span></div>
+<input type="text" id="idNro" style="position:absolute;left:548px;top:19px;width:53px;height:20px;line-height:20px;z-index:28;" name="Editbox1" value="">
+<div id="wb_Text20" style="position:absolute;left:556px;top:4px;width:41px;height:15px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro</strong></span></div>
+<input type="text" id="idMzLt" style="position:absolute;left:620px;top:19px;width:58px;height:20px;line-height:20px;z-index:30;" name="Editbox1" value="">
+<div id="wb_Text21" style="position:absolute;left:628px;top:4px;width:41px;height:15px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Mz/Lt</strong></span></div>
+<input type="text" id="idSector" style="position:absolute;left:696px;top:19px;width:83px;height:20px;line-height:20px;z-index:32;" name="Editbox1" value="">
+<div id="wb_Text22" style="position:absolute;left:705px;top:4px;width:55px;height:15px;z-index:33;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Sector</strong></span></div>
+<div id="wb_Text23" style="position:absolute;left:188px;top:53px;width:76px;height:15px;z-index:34;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Referencia</strong></span></div>
+<input type="text" id="idReferencia" style="position:absolute;left:264px;top:49px;width:515px;height:20px;line-height:20px;z-index:35;" name="Editbox1" value="">
+</div>
+<div id="wb_Text15" style="position:absolute;left:36px;top:41px;width:288px;height:15px;z-index:41;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Confirmación de la dirección del asociado</strong></span></div>
+</div>
+<div id="Layer6" style="position:absolute;text-align:left;left:14px;top:292px;width:848px;height:58px;z-index:57;">
+<div id="wb_Text25" style="position:absolute;left:39px;top:20px;width:45px;height:15px;z-index:42;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Placa</strong></span></div>
+<input type="text" id="idPlaca_v" style="position:absolute;left:84px;top:15px;width:108px;height:20px;line-height:20px;z-index:43;" name="Editbox1" value="" readonly>
+<div id="wb_Text26" style="position:absolute;left:231px;top:20px;width:45px;height:15px;z-index:44;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Marca</strong></span></div>
+<input type="text" id="idMarca_v" style="position:absolute;left:276px;top:15px;width:128px;height:20px;line-height:20px;z-index:45;" name="Editbox1" value="" readonly>
+<div id="wb_Text27" style="position:absolute;left:447px;top:20px;width:56px;height:15px;z-index:46;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Modelo</strong></span></div>
+<input type="text" id="idModelo_v" style="position:absolute;left:503px;top:15px;width:128px;height:20px;line-height:20px;z-index:47;" name="Editbox1" value="" readonly>
+<div id="wb_Text28" style="position:absolute;left:674px;top:20px;width:41px;height:15px;z-index:48;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Año</strong></span></div>
+<input type="text" id="idAno_v" style="position:absolute;left:715px;top:15px;width:88px;height:20px;line-height:20px;z-index:49;" name="Editbox1" value="" readonly>
+</div>
+<div id="wb_Text24" style="position:absolute;left:30px;top:276px;width:168px;height:15px;z-index:58;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>VEHICULO</strong></span></div>
+<div id="wb_Text64" style="position:absolute;left:468px;top:65px;width:76px;height:15px;z-index:59;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Venc. Poliza</strong></span></div>
+<input type="text" id="idVencPoliza" style="position:absolute;left:550px;top:60px;width:103px;height:20px;line-height:20px;z-index:60;" name="Editbox1" value="" readonly>
+</div>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-2">
+<div id="wb_Text33" style="position:absolute;left:31px;top:46px;width:168px;height:15px;z-index:110;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Chofer</strong></span></div>
+<div id="idPanelChofer" style="position:absolute;text-align:left;left:15px;top:62px;width:848px;height:66px;z-index:111;">
+<div id="wb_Text29" style="position:absolute;left:25px;top:11px;width:36px;height:16px;z-index:61;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idDNI_pc" style="position:absolute;left:60px;top:6px;width:93px;height:20px;line-height:20px;z-index:62;" name="Editbox1" value="">
+<input type="button" id="btnBuscarPersona_pc" name="" value="Buscar" style="position:absolute;left:88px;top:33px;width:72px;height:20px;z-index:63;cursor:pointer;">
+<div id="wb_Text30" style="position:absolute;left:202px;top:11px;width:58px;height:16px;z-index:64;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="text" id="idNombres_pc" style="position:absolute;left:263px;top:6px;width:339px;height:20px;line-height:20px;z-index:65;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text31" style="position:absolute;left:185px;top:40px;width:77px;height:16px;z-index:66;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Pat.</strong></span></div>
+<input type="text" id="idApePat_pc" style="position:absolute;left:263px;top:35px;width:123px;height:20px;line-height:20px;z-index:67;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text32" style="position:absolute;left:402px;top:40px;width:77px;height:16px;z-index:68;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Mat.</strong></span></div>
+<input type="text" id="idApeMat_pc" style="position:absolute;left:479px;top:35px;width:123px;height:20px;line-height:20px;z-index:69;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text34" style="position:absolute;left:622px;top:11px;width:62px;height:16px;z-index:70;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Licencia</strong></span></div>
+<input type="text" id="idLicencia" style="position:absolute;left:684px;top:6px;width:123px;height:20px;line-height:20px;z-index:71;" name="Editbox1" value="">
+<input type="text" id="idClase" style="position:absolute;left:684px;top:35px;width:123px;height:20px;line-height:20px;z-index:72;" name="Editbox1" value="">
+<div id="wb_Text35" style="position:absolute;left:622px;top:40px;width:62px;height:16px;z-index:73;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Clase</strong></span></div>
+</div>
+<div id="wb_Text42" style="position:absolute;left:31px;top:131px;width:168px;height:15px;z-index:112;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Propietario</strong></span></div>
+<div id="idPanelPropietario" style="position:absolute;text-align:left;left:15px;top:147px;width:848px;height:59px;z-index:113;">
+<div id="wb_Text36" style="position:absolute;left:25px;top:11px;width:36px;height:16px;z-index:74;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idDNI_pp" style="position:absolute;left:60px;top:6px;width:93px;height:20px;line-height:20px;z-index:75;" name="Editbox1" value="">
+<input type="button" id="btnBuscarPersona_pp" name="" value="Buscar" style="position:absolute;left:88px;top:33px;width:72px;height:20px;z-index:76;cursor:pointer;">
+<div id="wb_Text37" style="position:absolute;left:202px;top:11px;width:58px;height:16px;z-index:77;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="text" id="idNombres_pp" style="position:absolute;left:263px;top:6px;width:123px;height:20px;line-height:20px;z-index:78;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text38" style="position:absolute;left:402px;top:11px;width:77px;height:16px;z-index:79;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Pat.</strong></span></div>
+<div id="wb_Text39" style="position:absolute;left:612px;top:11px;width:77px;height:16px;z-index:80;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Mat.</strong></span></div>
+<input type="text" id="idApePat_pp" style="position:absolute;left:479px;top:6px;width:118px;height:20px;line-height:20px;z-index:81;" name="Editbox1" value="" disabled autocomplete="off">
+<input type="text" id="idApeMat_pp" style="position:absolute;left:689px;top:6px;width:118px;height:20px;line-height:20px;z-index:82;" name="Editbox1" value="" disabled autocomplete="off">
+</div>
+<div id="wb_Text45" style="position:absolute;left:31px;top:209px;width:168px;height:15px;z-index:114;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Propietario Alterno</strong></span></div>
+<div id="idPanelPropietario2" style="position:absolute;text-align:left;left:15px;top:225px;width:848px;height:59px;z-index:115;">
+<div id="wb_Text40" style="position:absolute;left:25px;top:11px;width:36px;height:16px;z-index:83;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idDNI_pp2" style="position:absolute;left:60px;top:6px;width:93px;height:20px;line-height:20px;z-index:84;" name="Editbox1" value="">
+<input type="button" id="btnBuscarPersona_pp2" name="" value="Buscar" style="position:absolute;left:88px;top:33px;width:72px;height:20px;z-index:85;cursor:pointer;">
+<div id="wb_Text41" style="position:absolute;left:202px;top:11px;width:58px;height:16px;z-index:86;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="text" id="idNombres_pp2" style="position:absolute;left:263px;top:6px;width:123px;height:20px;line-height:20px;z-index:87;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text43" style="position:absolute;left:402px;top:11px;width:77px;height:16px;z-index:88;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Pat.</strong></span></div>
+<div id="wb_Text44" style="position:absolute;left:612px;top:11px;width:77px;height:16px;z-index:89;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Mat.</strong></span></div>
+<input type="text" id="idApePat_pp2" style="position:absolute;left:479px;top:6px;width:118px;height:20px;line-height:20px;z-index:90;" name="Editbox1" value="" disabled autocomplete="off">
+<input type="text" id="idApeMat_pp2" style="position:absolute;left:689px;top:6px;width:118px;height:20px;line-height:20px;z-index:91;" name="Editbox1" value="" disabled autocomplete="off">
+</div>
+<div id="wb_Text50" style="position:absolute;left:31px;top:287px;width:168px;height:15px;z-index:116;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Madre del chofer</strong></span></div>
+<div id="idPanelMadreChofer" style="position:absolute;text-align:left;left:15px;top:303px;width:410px;height:61px;z-index:117;">
+<div id="wb_Text46" style="position:absolute;left:11px;top:11px;width:36px;height:16px;z-index:92;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idDNI_pmc" style="position:absolute;left:69px;top:6px;width:61px;height:18px;line-height:18px;z-index:93;" name="Editbox1" value="">
+<div id="wb_Text47" style="position:absolute;left:209px;top:11px;width:58px;height:16px;z-index:94;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="button" id="btnBuscarPersona_pmc" name="" value="Buscar" style="position:absolute;left:139px;top:6px;width:55px;height:20px;z-index:95;cursor:pointer;">
+<div id="wb_Text48" style="position:absolute;left:10px;top:37px;width:59px;height:16px;z-index:96;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Ape. Pat.</strong></span></div>
+<input type="text" id="idApePat_pmc" style="position:absolute;left:69px;top:32px;width:118px;height:18px;line-height:18px;z-index:97;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text49" style="position:absolute;left:209px;top:37px;width:59px;height:16px;z-index:98;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Ape. Mat.</strong></span></div>
+<input type="text" id="idApeMat_pmc" style="position:absolute;left:268px;top:32px;width:118px;height:18px;line-height:18px;z-index:99;" name="Editbox1" value="" disabled autocomplete="off">
+<input type="text" id="idNombres_pmc" style="position:absolute;left:268px;top:6px;width:118px;height:18px;line-height:18px;z-index:100;" name="Editbox1" value="" disabled autocomplete="off">
+</div>
+<div id="wb_Text55" style="position:absolute;left:469px;top:287px;width:168px;height:15px;z-index:118;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Padre del chofer</strong></span></div>
+<div id="idPanelPadreChofer" style="position:absolute;text-align:left;left:453px;top:303px;width:410px;height:61px;z-index:119;">
+<div id="wb_Text51" style="position:absolute;left:11px;top:11px;width:36px;height:16px;z-index:101;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idDNI_ppc" style="position:absolute;left:69px;top:6px;width:61px;height:18px;line-height:18px;z-index:102;" name="Editbox1" value="">
+<div id="wb_Text52" style="position:absolute;left:209px;top:11px;width:58px;height:16px;z-index:103;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="text" id="idNombres_ppc" style="position:absolute;left:268px;top:6px;width:118px;height:18px;line-height:18px;z-index:104;" name="Editbox1" value="" disabled autocomplete="off">
+<input type="button" id="btnBuscarPersona_ppc" name="" value="Buscar" style="position:absolute;left:139px;top:6px;width:55px;height:20px;z-index:105;cursor:pointer;">
+<div id="wb_Text53" style="position:absolute;left:10px;top:37px;width:59px;height:16px;z-index:106;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Ape. Pat.</strong></span></div>
+<input type="text" id="idApePat_ppc" style="position:absolute;left:69px;top:32px;width:118px;height:18px;line-height:18px;z-index:107;" name="Editbox1" value="" disabled autocomplete="off">
+<div id="wb_Text54" style="position:absolute;left:209px;top:37px;width:59px;height:16px;z-index:108;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Ape. Mat.</strong></span></div>
+<input type="text" id="idApeMat_ppc" style="position:absolute;left:267px;top:32px;width:118px;height:18px;line-height:18px;z-index:109;" name="Editbox1" value="" disabled autocomplete="off">
+</div>
+</div>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-3">
+<div id="idPanelComisaria" style="position:absolute;text-align:left;left:15px;top:59px;width:848px;height:68px;z-index:136;">
+<select name="Combobox1" size="1" id="idComisaria" style="position:absolute;left:36px;top:30px;width:419px;height:22px;z-index:120;">
+<option>Seleccione</option>
+</select>
+<div id="wb_Text56" style="position:absolute;left:51px;top:15px;width:132px;height:16px;z-index:121;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Comisaría</strong></span></div>
+<div id="wb_Text57" style="position:absolute;left:694px;top:15px;width:93px;height:16px;z-index:122;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Cod. Denuncia</strong></span></div>
+<input type="text" id="idCodDenuncia" style="position:absolute;left:685px;top:30px;width:121px;height:20px;line-height:20px;z-index:123;" name="Editbox1" value="">
+<input type="text" id="comisariaBuscar" style="position:absolute;left:481px;top:30px;width:151px;height:20px;line-height:20px;z-index:124;" name="Editbox1" value="" placeholder="Buscar Comisaria">
+<div id="wb_idBucarComisaria" style="position:absolute;left:648px;top:28px;width:23px;height:23px;z-index:125;">
+<img src="wpimages/search-icon.png" id="idBucarComisaria" alt="" style="cursor:pointer;"></div>
+</div>
+<div id="idPanelDosaje" style="position:absolute;text-align:left;left:15px;top:154px;width:848px;height:65px;z-index:137;">
+<div id="wb_Text59" style="position:absolute;left:43px;top:11px;width:147px;height:16px;z-index:126;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Hora Examén cualitativo</strong></span></div>
+<input type="text" id="idHoraExCualitativo" style="position:absolute;left:36px;top:26px;width:154px;height:20px;line-height:20px;z-index:127;" name="Editbox1" value="" readonly>
+<input type="text" id="idHoraExCuantitativo" style="position:absolute;left:356px;top:26px;width:169px;height:20px;line-height:20px;z-index:128;" name="Editbox1" value="" readonly>
+<div id="wb_Text60" style="position:absolute;left:365px;top:11px;width:162px;height:16px;z-index:129;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Hora Examén Cuantitativo</strong></span></div>
+<div id="wb_Text61" style="position:absolute;left:694px;top:11px;width:93px;height:16px;z-index:130;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Resultado</strong></span></div>
+<input type="text" id="idResultadoDosaje" style="position:absolute;left:685px;top:26px;width:121px;height:20px;line-height:20px;z-index:131;" name="Editbox1" value="">
+</div>
+<div id="wb_Text58" style="position:absolute;left:58px;top:137px;width:168px;height:15px;z-index:138;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dosaje Etílico</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:15px;top:251px;width:848px;height:65px;z-index:139;">
+<div id="wb_Text65" style="position:absolute;left:40px;top:11px;width:147px;height:16px;z-index:132;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Inicio Investigación</strong></span></div>
+<input type="text" id="idFechaInicioInv" style="position:absolute;left:36px;top:26px;width:154px;height:20px;line-height:20px;z-index:133;" name="Editbox1" value="" readonly>
+<input type="text" id="idFechaFinInv" style="position:absolute;left:356px;top:26px;width:169px;height:20px;line-height:20px;z-index:134;" name="Editbox1" value="" readonly>
+<div id="wb_Text66" style="position:absolute;left:373px;top:11px;width:140px;height:16px;z-index:135;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Fin Investigación</strong></span></div>
+</div>
+<div id="wb_Text68" style="position:absolute;left:58px;top:231px;width:168px;height:15px;z-index:140;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Investigación</strong></span></div>
+</div>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-4">
+<div id="divAgraviados" style="position:absolute;overflow:scroll;left:15px;top:55px;width:850px;height:300px;z-index:141">
+<div id="divTABLA_Agraviados" style="height:280px; width:2100px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_agraviados" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:#afcaff;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th style='width:8%;'><center>DNI</center></th>
+        <th style='width:13%;'><center>NOMBRES</center></th>
+        <th style='width:13%;'><center>AP. PATERNO</center></th>    
+        <th style='width:13%;'><center>AP. MATERNO</center></th>
+        <th style='width:4%;'><center>EDAD</center></th>
+        <th style='width:13%;'><center>DIAGNOSTICO</center></th> 
+        <th style='width:11%;'><center>ASISTENCIA</center></th>        
+        <th style='width:11%;'><center>NOSOCOMIO</center></th>
+        <th style='width:5%;'><center>MONTO</center></th>
+        <th style='width:5%;'><center>TELF.</center></th>
+        <th style='width:4%;'><center>X</center></th>         
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="idBtnAgregarAgraviado" name="" value="(+) Agregar Agraviado" style="position:absolute;left:670px;top:294px;width:152px;height:30px;z-index:142;cursor:pointer;">
+</div>
+<div style="height:331px;overflow:auto;padding:0;" id="jquerytabs1-page-5">
+<div id="Html1" style="position:absolute;left:15px;top:53px;width:850px;height:230px;z-index:143">
+<div id="divTABLA_calificacion" style="height:230px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_calificacion" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th><center>NRO</center></th>
+        <th><center>PREGUNTA</center></th>
+        <th><center>RESULTADO</center></th>    
+        <th><center>NRO</center></th>
+        <th><center>PREGUNTA</center></th>
+        <th><center>RESULTADO</center></th>              
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_Text62" style="position:absolute;left:33px;top:295px;width:132px;height:15px;z-index:144;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Observaciones</strong></span></div>
+<textarea name="TextArea1" id="idObservaciones" style="position:absolute;left:15px;top:318px;width:848px;height:42px;z-index:145;" rows="1" cols="138"></textarea>
+<div id="wb_Text63" style="position:absolute;left:534px;top:295px;width:86px;height:15px;z-index:146;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Calificación :</strong></span></div>
+<select name="Combobox1" size="1" id="idCalificacion" style="position:absolute;left:620px;top:291px;width:243px;height:22px;z-index:147;">
+<option value="C">Coberturable</option>
+<option value="R">Recupero</option>
+</select>
+</div>
+</div>
+<div id="wb_Text1" style="position:absolute;left:25px;top:3px;width:290px;height:23px;z-index:267;text-align:left;">
+<span style="color:#1E90FF;font-family:Tahoma;font-size:19px;"><strong>Informe de Procuración</strong></span></div>
+<input type="button" id="btnRegistro" name="" value="Guardar" style="position:absolute;left:786px;top:35px;width:87px;height:30px;z-index:268;cursor:pointer;">
+<input type="button" id="idBtnPDF" name="" value="PDF" style="position:absolute;left:699px;top:35px;width:79px;height:30px;z-index:269;cursor:pointer;">
+</div>
+</body>
+</html>

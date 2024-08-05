@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ingreso de Expediente</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/ingresoexpediente.js"></script>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script> 
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:18.0px; line-height:1.22em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; text-decoration:underline; font-size:13.0px; line-height:1.23em;
+}
+.Artistic-Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C-C2
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:13.0px; line-height:1.23em;
+}
+input[type=button] {
+	height:30px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div id="panel" style="position:absolute;left:126px;top:13px;width:850px;height:500px; border-style:solid; border-width:2px; border-color:gray; border-radius:8px;">
+    <div style="position:absolute;left:310px;top:20px;width:244px;height:22px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">INGRESO DE EXPEDIENTES</span></div>
+    </div>
+    <div id="idPanelSolicitud" style="position:absolute;left:16px;top:110px;width:406px;height:293px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <div style="position:absolute;left:10px;top:6px;width:194px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">SOLICITUDES DE REEMBOLSO</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:33px;width:86px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Cod. Evento</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:63px;width:64px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Asociado</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:93px;width:37px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Placa</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:123px;width:117px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Fecha Accidente</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:153px;width:114px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Lugar Accidente</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:183px;width:71px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Agraviado</span></div>
+        </div>
+        <div style="position:absolute;left:9px;top:213px;width:143px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C2">Nro Expediente Previo</span></div>
+        </div>
+        <input type="text" id="codEvento" name="edit_1" value="" disabled style="position:absolute; left:155px; top:30px; width:120px;" requerido="">
+        <input type="text" id="idPlaca" name="edit_1" readonly value="" style="position:absolute; left:155px; top:90px; width:120px;">
+        <input type="text" id="idFechaAccidente" name="edit_1" readonly value="" style="position:absolute; left:155px; top:120px; width:120px;">
+        <select id="idComboAgraviado" name="combo_1" size="1" disabled style="position:absolute; left:155px; top:180px; width:240px;" requerido="">
+            <option value="">Seleccione</option>
+        </select>
+        <input type="text" id="idNroFolios_Exp" name="edit_1" value="" disabled style="position:absolute; left:155px; top:240px; width:120px;" requerido="">
+        <input type="text" id="idAsociado" name="edit_1" readonly value="" style="position:absolute; left:155px; top:60px; width:234px;">
+        <input type="text" id="idLugarAccidente" name="edit_1" readonly value="" style="position:absolute; left:155px; top:150px; width:234px;">
+        <input type="button" style="position:absolute; left:284px; top:27px; width:105px; height:22px;" id="idBuscarEvento" value="Buscar Evento" disabled>
+        <div style="position:absolute;left:9px;top:243px;width:72px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro Folios</span></div>
+        </div>
+        <input type="text" id="idNroExpPrevio" name="edit_1" value="" disabled style="position:absolute; left:155px; top:210px; width:120px;" requerido="">
+        <input type="button" style="position:absolute; left:284px; top:209px; width:105px; height:22px;" id="idBtnBuscarExpPrevio" value="Buscar Exped." disabled>
+    </div>
+    <div id="idPanelOtrosDocs" style="position:absolute;left:431px;top:110px;width:401px;height:75px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <div style="position:absolute;left:18px;top:5px;width:142px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">OTROS DOCUMENTOS</span></div>
+        </div>
+        <input type="text" id="idNroDocRef" name="edit_1" value="" disabled style="position:absolute; left:113px; top:23px; width:110px;" requerido="">
+        <div style="position:absolute;left:18px;top:26px;width:88px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro Doc Ref.</span></div>
+        </div>
+        <div style="position:absolute;left:236px;top:26px;width:72px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro Folios</span></div>
+        </div>
+        <input type="text" id="idNroFolios_Otros" name="edit_1" value="" disabled style="position:absolute; left:317px; top:23px; width:63px;" requerido="">
+        <div style="position:absolute;left:32px;top:52px;width:74px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Institución</span></div>
+        </div>
+        <select id="idComboInstitucion" name="combo_1" size="1" disabled style="position:absolute; left:113px; top:49px; width:183px;" requerido="">
+            <option value="">Seleccione</option>
+        </select>
+        <input type="button" style="position:absolute; left:303px; top:48px; width:80px; height:22px; height:20px;" id="idBtnNuevaInstitucion" value="Nueva" disabled>
+    </div>
+    <div id="idPanelPersonaTramitante" style="position:absolute;left:430px;top:191px;width:401px;height:212px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <div style="position:absolute;left:18px;top:6px;width:86px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">SOLICITANTE</span></div>
+        </div>
+        <div style="position:absolute;left:21px;top:34px;width:63px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nombres</span></div>
+        </div>
+        <div style="position:absolute;left:21px;top:64px;width:65px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Apellidos</span></div>
+        </div>
+        <div style="position:absolute;left:21px;top:94px;width:24px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">DNI</span></div>
+        </div>
+        <div style="position:absolute;left:21px;top:124px;width:39px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Telef.</span></div>
+        </div>
+        <div style="position:absolute;left:21px;top:154px;width:67px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Dirección</span></div>
+        </div>
+        <input type="text" id="idNombres" name="edit_1" readonly value="" style="position:absolute; left:106px; top:31px; width:275px;" requerido="">
+        <input type="text" id="idApellidos" name="edit_1" readonly value="" style="position:absolute; left:106px; top:61px; width:275px;" requerido="">
+        <input type="text" id="idDNI" name="edit_1" value="" disabled style="position:absolute; left:106px; top:91px; width:111px;" requerido="">
+        <input type="text" id="idTelef" name="edit_1" value="" disabled style="position:absolute; left:106px; top:121px; width:111px;">
+        <input type="text" id="idDireccion" name="edit_1" value="" disabled style="position:absolute; left:106px; top:151px; width:275px;" requerido="">
+        <input type="button" style="position:absolute; left:226px; top:91px; width:142px; height:22px;" id="idBuscarPersona" value="Buscar Persona" disabled>
+        <input type="text" id="idEmail" name="edit_1" value="" disabled style="position:absolute; left:106px; top:181px; width:275px;">
+        <div style="position:absolute;left:21px;top:184px;width:37px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Email</span></div>
+        </div>
+        <input type="button" style="position:absolute; left:226px; top:119px; width:142px; height:22px; display:none;" id="idBtnEliminarSolicitante" value="Eliminar Solicitante" onclick="resetSolicitante()">
+    </div>
+    <div id="idPanelObservaciones" style="position:absolute;left:16px;top:410px;width:553px;height:78px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <div style="position:absolute;left:18px;top:6px;width:112px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">OBSERVACIONES</span></div>
+        </div>
+        <textarea id="idObservaciones" name="text_1" rows="2" cols="62" disabled style="position:absolute; left:18px; top:24px; width:520px; height:40px;" requerido=""></textarea>
+    </div>
+    <div id="idPanelRespuesta" style="position:absolute;left:579px;top:410px;width:252px;height:78px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <input type="text" id="idDiaRespuesta" name="edit_1" value="" style="position:absolute; left:144px; top:9px; width:82px;" requerido="Dias para responder">
+        <div style="position:absolute;left:20px;top:12px;width:109px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Días Respuesta</span></div>
+        </div>
+        <input type="button" style="position:absolute; left:144px; top:38px; width:89px; height:22px; height:28px;" id="idGuardarExpediente" value="Guardar">
+        <input type="button" style="position:absolute; left:19px; top:38px; width:115px; height:22px; height:28px;display:none;" id="idGenerarCita" value="Generar Cita">
+    </div>
+    <div id="panel_60" style="position:absolute;left:16px;top:56px;width:816px;height:50px; border-style:solid; border-width:1px; border-color:gray; border-radius:8px;">
+        <div style="position:absolute;left:16px;top:18px;width:114px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Tipo Expediente</span></div>
+        </div>
+        <select id="idTipoExpediente" name="combo_1" size="1" style="position:absolute; left:146px; top:16px; width:250px;">
+            <option value="" id='default_idTipoExpediente'>Seleccione</option>
+            <option value="1">Solicitud&nbsp;Reembolso&nbsp;por&nbsp;gastos&nbsp;médicos</option>
+            <option value="2">Solicitud&nbsp;de&nbsp;Indemnización&nbsp;por&nbsp;muerte</option>
+            <option value="3">Solicitud&nbsp;de&nbsp;Indemnización&nbsp;por&nbsp;sepelio</option>
+            <option value="4">Solicitud&nbsp;de&nbsp;Indemnización&nbsp;por&nbsp;Incapacidad&nbsp;Temporal</option>
+            <option value="5">Solicitud&nbsp;de&nbsp;Indemnización&nbsp;por&nbsp;Invalidez&nbsp;Permanente</option>
+            <option value="6">Solicitud&nbsp;de&nbsp;Subsanacion</option>
+            <option value="7">Documento&nbsp;Administrativo</option>
+            <option value="10">Solicitudes&nbsp;de&nbsp;pago&nbsp;a&nbsp;las&nbsp;IPRESS</option>
+            <option value="11">Regularaciones&nbsp;de&nbsp;Solicitudes</option>
+            <option value="9">Otros</option>
+        </select>
+        <div style="position:absolute;left:588px;top:16px;width:109px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro Expediente</span></div>
+        </div>
+        <input type="text" id="idNroExpediente" name="edit_1" readonly value="" style="position:absolute; left:707px; top:12px; width:90px;">
+    </div>
+    <div style="position:absolute;left:635px;top:10px;width:39px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C2">Fecha</span></div>
+    </div>
+    <input type="text" id="idFechaExpediente" name="idFechaExpediente" readonly value="" style="position:absolute; left:632px; top:25px; width:100px; text-align:center;">
+    <div style="position:absolute;left:745px;top:10px;width:30px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C2">Hora</span></div>
+    </div>
+    <input type="text" id="idHoraExpediente" name="edit_1" readonly value="" style="position:absolute; left:743px; top:25px; width:70px; text-align:center;">
+</div>
+</div>
+</body>
+</html>

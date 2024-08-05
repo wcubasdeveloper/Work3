@@ -1,0 +1,209 @@
+div#container
+{
+   width: 500px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FAFAFA;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#Layer1
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 1px;
+   -webkit-border-radius: 1px;
+   border-radius: 1px;
+}
+#select_C
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#idTelefono
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#idDireccion
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#btnGuardar
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: transparent;
+   background-image: url(../wpimages/nuevo_editar_comisaria_btnGuardar_bkgrnd.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#wb_Text56 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text56 div
+{
+   text-align: left;
+}
+#idNombre
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idID
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_lblID 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_lblID div
+{
+   text-align: left;
+}
+#btnCambiarProv_C
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: transparent;
+   background-image: url(../wpimages/nuevo_editar_comisaria_btnCambiarProv_C_bkgrnd.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 12px;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text5 div
+{
+   text-align: left;
+}
+#idDepProv_C
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}

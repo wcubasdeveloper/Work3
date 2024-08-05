@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Liquidacion de Siniestros</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<!--Header code for Form Button butn_1 -->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/liquidaciones.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:20.0px; line-height:1.25em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:14.0px; line-height:1.14em;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:150px;top:44px;width:800px;height:116px; background-color:#676767; border-radius:5px; border-style:solid; border-width:2px;">
+    <div style="position:absolute;left:10px;top:5px;width:286px;height:25px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">LIQUIDACIÓN DE SINIESTROS</span></div>
+    </div>
+    <div style="position:absolute;left:1px;top:36px;width:798px;height:79px; background-color:#3478ab;">
+        <div style="position:absolute;left:94px;top:27px;width:104px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Código Evento</span></div>
+        </div>
+        <input type="text" id="idCodigo" name="edit_1" value="" style="position:absolute; left:209px; top:24px; width:138px;">
+        <input type="radio" name="busqueda" VALUE="E" style="position:absolute; left:69px; top:24px;">
+        <input type="text" id="fechaImpresion" name="edit_1" readonly value="" style="position:absolute; left:494px; top:24px; width:138px;">
+        <div style="position:absolute;left:359px;top:27px;width:124px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Fecha de Emisión</span></div>
+        </div>
+        <input type="button" style="position:absolute; left:644px; top:24px; width:80px; height:22px;" value="Procesar" onclick="getLiquidacion()">
+    </div>
+    <input type="button" style="position:absolute; left:619px; top:7px; width:166px; height:22px;" value="Busqueda Avanzada" onclick="abrirBusquedaAvanzada()">
+</div>
+<div id="divTABLA" style="position:absolute;left:149px;top:174px;width:802px;height:254px; border-style:solid; border-width:1px;">
+<table id="tablaLiquidaciones"  class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th>N° EVENTO</th>
+    <th>SINIESTRO</th>
+    <th>FECHA EVENTO</th>
+    <th>NOMBRES</th>
+    <th>TOTAL</th> 
+    <th>FECHA SINIESTRO</th>        
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<div id="oculta" style="position:absolute;left:143px;top:173px;width:810px;height:259px; background-color:#fafafa;">
+</div>
+</div>
+</body>
+</html>

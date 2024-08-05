@@ -1,0 +1,4 @@
+Esta carpeta contendra todas las vistas invocadas con el metodo res.render() 
+y seran las que se acceden directamente desde la Internet, NO desde dentro
+del sistema.
+Tambien incluira las que se invocan desde "autoseguro.pe"

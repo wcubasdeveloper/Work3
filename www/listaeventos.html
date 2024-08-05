@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Eventos</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/listaeventos.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="js/jpaginate/css/style.css" media="screen">
+ <script type="text/javascript" src="js/jpaginate/jquery.paginate.js"></script>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Tahoma", sans-serif; font-weight:700; color:#4c4c4c; font-size:23.0px; line-height:1.22em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Tahoma", sans-serif; font-weight:700; color:#606060; font-size:13.0px; line-height:1.23em;
+}
+input[type=button] {
+	height:30px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:29px;top:28px;width:324px;height:28px;white-space:nowrap;">
+    <div class="Wp-Artistic-Body-P">
+        <span class="Artistic-Body-C">CENTRAL DE EMERGENCIAS</span></div>
+</div>
+<div style="position:absolute;left:375px;top:5px;width:700px;height:75px; border-radius:5px; border-style:solid; border-width:2px;">
+    <div style="position:absolute;left:17px;top:13px;width:82px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Cod. Evento:</span></div>
+    </div>
+    <input type="text" id="codEvento" name="edit_3" value="" style="position:absolute; left:107px; top:10px; width:100px; height:21px;">
+    <div style="position:absolute;left:17px;top:44px;width:39px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Placa:</span></div>
+    </div>
+    <input type="text" id="placa" name="edit_3" value="" style="position:absolute; left:107px; top:40px; width:100px; height:21px;">
+    <div style="position:absolute;left:216px;top:13px;width:30px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">CAT:</span></div>
+    </div>
+    <input type="text" id="cat" name="edit_3" value="" style="position:absolute; left:254px; top:10px; width:100px; height:21px;">
+    <div style="position:absolute;left:365px;top:13px;width:45px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Desde:</span></div>
+    </div>
+    <input type="text" id="fechaDesde" name="edit_3" readonly value="" style="position:absolute; left:418px; top:10px; width:100px; text-align:center; height:21px;">
+    <div style="position:absolute;left:366px;top:40px;width:43px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Hasta:</span></div>
+    </div>
+    <input type="text" id="fechaHasta" name="edit_3" readonly value="" style="position:absolute; left:418px; top:37px; width:100px; text-align:center; height:21px;">
+    <input type="button" style="position:absolute; left:555px; top:16px; width:127px; height:22px; height:35px;" id="btnBuscar" value="Buscar Evento">
+    <input type="button" style="position:absolute; left:518px; top:10px; width:22px; height:22px; height:21px;" value="X" onclick="cleanDate('fechaDesde')">
+    <input type="button" style="position:absolute; left:518px; top:37px; width:22px; height:22px; height:21px;" value="X" onclick="cleanDate('fechaHasta')">
+</div>
+<div id="divTABLA" style="position:absolute;left:20px;top:90px;width:1060px;height:420px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>COD. EVENTO</center></th>
+	<th><center>ESTADO COBERT</center></th>
+	<th><center>ESTADO RECUPE</center></th> 
+	<th><center>CAUSAL</center></th> 	
+    <th><center>PROCURADOR</center></th>
+    <th><center>FECHA</center></th>    
+    <th><center>PLACA</center></th>
+    <th><center>CAT</center></th>
+    <th><center>ASOCIADO</center></th> 
+    <th><center>LUGAR ACCIDENTE</center></th>	  
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+    <input type="button" style="position:absolute; left:946px; top:371px; width:104px; height:22px; height:28px;" id="btnRegistro" value="Nuevo Evento">
+    <input type="button" style="position:absolute; left:838px; top:371px; width:105px; height:22px; height:28px;" id="btnEdicion" value="Editar Evento">
+    <input type="button" style="position:absolute; left:732px; top:371px; width:100px; height:22px; height:28px;" id="btnAsignacion" value="Procurador">
+    <input type="button" style="position:absolute; left:625px; top:371px; width:100px; height:22px; height:28px;" id="idVerAgraviados" value="Agraviados">
+    <input type="button" style="position:absolute; left:520px; top:371px; width:100px; height:22px; height:28px;" id="btnEliminar" value="Eliminar">
+    <input type="button" style="position:absolute; left:412px; top:371px; width:100px; height:22px; height:28px;" id="btnTerminar" value="Terminar">
+	<div style="position:absolute;left:20px;top:369px;width:410px;height:32px;">
+        <div id="pagination" style="font-family: verdana;"/>
+    </div>
+</div>
+</div>
+</body>
+</html>

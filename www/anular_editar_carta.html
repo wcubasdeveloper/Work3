@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>anular_editar_carta</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/anular_editar_carta.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/date-eu.js"></script>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/anular_editar_carta.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:590px;">
+<div id="container">
+<div id="lblCarta" style="position:absolute;text-align:left;left:10px;top:5px;width:828px;height:102px;z-index:73;">
+<div id="wb_idTitle" style="position:absolute;left:14px;top:21px;width:219px;height:19px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:17px;"><strong>Nuevo_editar_Carta</strong></span></div>
+<input type="text" id="idCodEvento" style="position:absolute;left:241px;top:23px;width:108px;height:20px;line-height:20px;z-index:1;" name="Editbox1" value="" readonly>
+<div id="wb_Text5" style="position:absolute;left:259px;top:8px;width:90px;height:15px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Cod. Evento</strong></span></div>
+<input type="text" id="idFechaAccidente" style="position:absolute;left:367px;top:23px;width:108px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" readonly>
+<div id="wb_Text11" style="position:absolute;left:373px;top:8px;width:106px;height:15px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Accidente</strong></span></div>
+<input type="text" id="idNosocomio" style="position:absolute;left:14px;top:67px;width:201px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="" readonly>
+<div id="wb_Text13" style="position:absolute;left:81px;top:52px;width:150px;height:15px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nosocomio</strong></span></div>
+<div id="wb_Text14" style="position:absolute;left:258px;top:52px;width:150px;height:15px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Comisaria</strong></span></div>
+<input type="text" id="idComisaria" style="position:absolute;left:241px;top:67px;width:234px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" readonly>
+<div id="wb_Text12" style="position:absolute;left:510px;top:8px;width:150px;height:15px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Descripción Accidente</strong></span></div>
+<input type="text" id="idDescripcionAccidente" style="position:absolute;left:497px;top:23px;width:305px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" readonly>
+<div id="wb_Text9" style="position:absolute;left:508px;top:53px;width:150px;height:15px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Diagnóstico Inicial</strong></span></div>
+<input type="text" id="idDiagnosticoInicial" style="position:absolute;left:497px;top:67px;width:310px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" readonly>
+</div>
+<div id="Layer1" style="position:absolute;text-align:left;left:10px;top:126px;width:828px;height:63px;z-index:74;">
+<div id="wb_Text16" style="position:absolute;left:49px;top:11px;width:65px;height:15px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro. CAT</strong></span></div>
+<input type="text" id="idNroCAT" style="position:absolute;left:14px;top:26px;width:121px;height:20px;line-height:20px;z-index:14;" name="Editbox1" value="" readonly>
+<input type="text" id="idPlaca" style="position:absolute;left:233px;top:26px;width:108px;height:20px;line-height:20px;z-index:15;" name="Editbox1" value="" readonly>
+<div id="wb_Text17" style="position:absolute;left:270px;top:11px;width:65px;height:15px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Placa</strong></span></div>
+<div id="wb_Text18" style="position:absolute;left:453px;top:11px;width:65px;height:15px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Asociado</strong></span></div>
+<input type="text" id="idNombreAsociado" style="position:absolute;left:424px;top:26px;width:378px;height:20px;line-height:20px;z-index:18;" name="Editbox1" value="" readonly>
+</div>
+<div id="wb_Text1" style="position:absolute;left:38px;top:110px;width:150px;height:16px;z-index:75;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong><u>ASOCIADO</u></strong></span></div>
+<div id="Layer2" style="position:absolute;text-align:left;left:10px;top:209px;width:828px;height:103px;z-index:76;">
+<input type="text" id="idCodAgraviado" style="position:absolute;left:14px;top:23px;width:121px;height:20px;line-height:20px;z-index:19;" name="Editbox1" value="" readonly>
+<div id="wb_Text19" style="position:absolute;left:32px;top:8px;width:96px;height:15px;z-index:20;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Cod. Agraviado</strong></span></div>
+<input type="text" id="idDNIAgraviado" style="position:absolute;left:233px;top:23px;width:108px;height:20px;line-height:20px;z-index:21;" name="Editbox1" value="" readonly>
+<div id="wb_Text20" style="position:absolute;left:277px;top:8px;width:37px;height:15px;z-index:22;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="idNombreAgraviado" style="position:absolute;left:424px;top:23px;width:378px;height:20px;line-height:20px;z-index:23;" name="Editbox1" value="" readonly>
+<div id="wb_Text21" style="position:absolute;left:453px;top:8px;width:65px;height:15px;z-index:24;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:32px;top:52px;width:82px;height:15px;z-index:25;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Diagnóstico</strong></span></div>
+<input type="text" id="idDiagnosticoAgraviado" style="position:absolute;left:14px;top:67px;width:788px;height:18px;line-height:18px;z-index:26;" name="Editbox1" value="" readonly>
+</div>
+<div id="wb_Text15" style="position:absolute;left:38px;top:193px;width:150px;height:16px;z-index:77;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong><u>AGRAVIADO</u></strong></span></div>
+<div id="idPanelCarta" style="position:absolute;text-align:left;left:10px;top:314px;width:828px;height:270px;z-index:78;">
+<div id="wb_Text22" style="position:absolute;left:32px;top:78px;width:96px;height:15px;z-index:27;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Etapa</strong></span></div>
+<select name="Combobox1" size="1" id="idEtapa" style="position:absolute;left:14px;top:93px;width:157px;height:21px;z-index:28;" requerido="Etapa">
+<option value="1">Gastos Médicos</option>
+<option value="5">Por sepelio</option>
+</select>
+<div id="wb_Text25" style="position:absolute;left:203px;top:78px;width:96px;height:15px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Tipo Atención</strong></span></div>
+<select name="Combobox1" size="1" id="tipoAsistencia_a" style="position:absolute;left:185px;top:93px;width:157px;height:21px;z-index:30;" requerido="Tipo Atencion">
+<option>Seleccione</option>
+</select>
+<div id="wb_Text28" style="position:absolute;left:32px;top:121px;width:96px;height:15px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Médico Auditor</strong></span></div>
+<div id="wb_Text26" style="position:absolute;left:30px;top:163px;width:96px;height:15px;z-index:32;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Servicio Médico</strong></span></div>
+<div id="wb_lblCartaPrevia" style="position:absolute;left:465px;top:163px;width:122px;height:15px;z-index:33;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Carta Previa</strong></span></div>
+<select name="Combobox1" size="1" id="idNosocomio_a" style="position:absolute;left:357px;top:92px;width:205px;height:22px;z-index:34;" requerido="Nosocomio">
+<option>Seleccione</option>
+</select>
+<div id="wb_idLblNosocomio" style="position:absolute;left:365px;top:77px;width:132px;height:15px;z-index:35;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nosocomio</strong></span></div>
+<input type="text" id="buscarNosocomio_a" style="position:absolute;left:573px;top:92px;width:160px;height:20px;line-height:20px;z-index:36;" name="Editbox1" value="" placeholder="Buscar Nosocomio">
+<input type="button" id="btnBuscarNosocomio" name="" value="Buscar" style="position:absolute;left:744px;top:87px;width:65px;height:30px;z-index:37;cursor:pointer;">
+<select name="Combobox1" size="1" id="idMedico" style="position:absolute;left:14px;top:136px;width:328px;height:21px;z-index:38;">
+</select>
+<input type="text" id="idObservaciones" style="position:absolute;left:357px;top:135px;width:447px;height:20px;line-height:20px;z-index:39;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text27" style="position:absolute;left:366px;top:120px;width:104px;height:15px;z-index:40;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Observaciones</strong></span></div>
+<select name="Combobox1" size="1" id="idAmpliacion" style="position:absolute;left:357px;top:178px;width:78px;height:21px;z-index:41;">
+<option value="N">No</option>
+<option value="S">Si</option>
+</select>
+<div id="wb_Text23" style="position:absolute;left:359px;top:163px;width:122px;height:15px;z-index:42;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>¿ampliación ?</strong></span></div>
+<select name="Combobox1" size="1" id="idCartaPrevia" style="position:absolute;left:449px;top:177px;width:234px;height:22px;z-index:43;">
+</select>
+<div id="wb_Text4" style="position:absolute;left:718px;top:162px;width:55px;height:15px;z-index:44;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Monto</strong></span></div>
+<input type="text" id="monto_a" style="position:absolute;left:699px;top:176px;width:108px;height:20px;line-height:20px;z-index:45;" name="Editbox1" value="" autocomplete="off" requerido="Monto">
+<input type="button" id="btnAccion" name="" value="Guardar" style="position:absolute;left:713px;top:221px;width:96px;height:30px;z-index:46;cursor:pointer;">
+<textarea name="TextArea1" id="idMotivo" style="position:absolute;left:357px;top:221px;width:324px;height:38px;z-index:47;" rows="1" cols="51"></textarea>
+<div id="wb_lblMotivo" style="position:absolute;left:364px;top:205px;width:171px;height:15px;z-index:48;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Motivo de Anulación</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:14px;top:12px;width:81px;height:15px;z-index:49;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Carta:</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:233px;top:12px;width:53px;height:15px;z-index:50;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Manual :</strong></span></div>
+<div id="wb_lblNroCarta" style="position:absolute;left:360px;top:12px;width:66px;height:15px;z-index:51;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro Carta:</strong></span></div>
+<input type="text" id="idFechaCarta" style="position:absolute;left:90px;top:8px;width:131px;height:19px;line-height:19px;z-index:52;" name="Editbox1" value="" readonly autocomplete="off">
+<select name="Combobox1" size="1" id="idEsManual" style="position:absolute;left:287px;top:8px;width:54px;height:21px;z-index:53;">
+<option value="N">No</option>
+<option value="S">Si</option>
+</select>
+<input type="text" id="nroCarta" style="position:absolute;left:426px;top:8px;width:90px;height:19px;line-height:19px;z-index:54;" name="Editbox1" value="" maxlength="5" autocomplete="off">
+<div id="wb_lblImpresa" style="position:absolute;left:562px;top:12px;width:124px;height:15px;z-index:55;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Cambiar a Impresa ?</strong></span></div>
+<input type="checkbox" id="idChckImpr" name="" value="on" style="position:absolute;left:687px;top:10px;z-index:56;">
+<select name="Combobox1" size="1" id="idServicioMedico" style="position:absolute;left:14px;top:179px;width:328px;height:21px;z-index:57;" requerido="Servicio Médico">
+</select>
+<input type="button" id="btnPDF" name="" value="PDF" style="position:absolute;left:718px;top:4px;width:90px;height:30px;z-index:58;cursor:pointer;">
+<div id="wb_Text3" style="position:absolute;left:30px;top:205px;width:171px;height:15px;z-index:59;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Diagnóstico Final</strong></span></div>
+<textarea name="TextArea1" id="idDiagnosticoFinal" style="position:absolute;left:14px;top:221px;width:324px;height:38px;z-index:60;" rows="1" cols="51"></textarea>
+<input type="text" id="idTotalUI" style="position:absolute;left:14px;top:51px;width:83px;height:20px;line-height:20px;z-index:61;" name="Editbox1" value="" readonly>
+<div id="wb_Text10" style="position:absolute;left:27px;top:35px;width:68px;height:15px;z-index:62;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Total UIT</strong></span></div>
+<div id="wb_Text24" style="position:absolute;left:126px;top:35px;width:68px;height:15px;z-index:63;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Total C.G.</strong></span></div>
+<input type="text" id="idTotalCG" style="position:absolute;left:112px;top:51px;width:83px;height:20px;line-height:20px;z-index:64;" name="Editbox1" value="" readonly>
+<input type="text" id="idTotalProy" style="position:absolute;left:211px;top:51px;width:83px;height:20px;line-height:20px;z-index:65;" name="Editbox1" value="" readonly>
+<div id="wb_Text29" style="position:absolute;left:224px;top:35px;width:68px;height:15px;z-index:66;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Total Proy.</strong></span></div>
+<input type="text" id="idTotalFact" style="position:absolute;left:309px;top:51px;width:83px;height:20px;line-height:20px;z-index:67;" name="Editbox1" value="" readonly>
+<div id="wb_Text30" style="position:absolute;left:318px;top:35px;width:68px;height:15px;z-index:68;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Total Fact.</strong></span></div>
+<div id="wb_Text31" style="position:absolute;left:405px;top:36px;width:95px;height:15px;z-index:69;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Total Ord. Pago</strong></span></div>
+<input type="text" id="idTotalOrdPago" style="position:absolute;left:408px;top:51px;width:83px;height:20px;line-height:20px;z-index:70;" name="Editbox1" value="" readonly>
+<input type="text" id="idDisponible" style="position:absolute;left:507px;top:52px;width:83px;height:20px;line-height:20px;z-index:71;" name="Editbox1" value="" readonly>
+<div id="wb_Text32" style="position:absolute;left:516px;top:37px;width:95px;height:15px;z-index:72;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Disponible</strong></span></div>
+</div>
+</div>
+</body>
+</html>

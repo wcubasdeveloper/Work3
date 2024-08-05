@@ -1,0 +1,147 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gestion Variables Globales</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/gestion_variables.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; text-decoration:underline; font-size:12.0px; line-height:1.25em;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:13.0px; line-height:1.23em;
+}
+.Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:17.0px; line-height:1.18em;
+}
+input[type=button] {
+	height:30px;
+}
+body{
+	font-size:12.5px;
+	font-family:Arial;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:17px;top:2px;width:1057px;height:520px;">
+    <div style="position:absolute;left:27px;top:26px;width:1010px;height:445px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+        <div style="position:absolute;left:24px;top:54px;width:962px;height:99px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_37" style="position:absolute;left:16px;top:7px;width:187px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C">USUARIOS AUTORIZADOS</span></p>
+            </div>
+            <div style="position:absolute;left:32px;top:34px;width:59px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Usuario 1</span></div>
+            </div>
+            <div style="position:absolute;left:346px;top:34px;width:59px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Usuario 2</span></div>
+            </div>
+            <div style="position:absolute;left:658px;top:34px;width:59px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Usuario 3</span></div>
+            </div>
+            <select id="cmb_autorizado1" name="combo_1" size="1" style="position:absolute; left:102px; top:32px; width:200px;" class="autorizado">
+                <option value="">Ninguno</option>
+            </select>
+            <select id="cmb_autorizado2" name="combo_1" size="1" style="position:absolute; left:412px; top:32px; width:200px;" class="autorizado">
+                <option value="">Ninguno</option>
+            </select>
+            <select id="cmb_autorizado3" name="combo_1" size="1" style="position:absolute; left:727px; top:32px; width:200px;" class="autorizado">
+                <option value="">Ninguno</option>
+            </select>
+            <div style="position:absolute;left:48px;top:67px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Correo</span></div>
+            </div>
+            <div style="position:absolute;left:362px;top:67px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Correo</span></div>
+            </div>
+            <input type="text" id="correo-1" name="" value="" disabled style="position:absolute; left:102px; top:64px; width:198px;" class="correoUsuario">
+            <input type="text" id="correo-2" name="" value="" disabled style="position:absolute; left:412px; top:64px; width:198px;" class="correoUsuario">
+            <div style="position:absolute;left:674px;top:67px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Correo</span></div>
+            </div>
+            <input type="text" id="correo-3" name="" value="" disabled style="position:absolute; left:727px; top:64px; width:198px;" class="correoUsuario">
+        </div>
+        <div style="position:absolute;left:33px;top:17px;width:233px;height:20px;overflow:hidden;">
+        <p class="Wp-Body-P"><span class="Body-C-C0">VARIABLES GLOBALES</span></p>
+        </div>
+        <div style="position:absolute;left:24px;top:168px;width:645px;height:100px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_41" style="position:absolute;left:14px;top:7px;width:187px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C">USUARIOS A NOTIFICAR</span></p>
+            </div>
+            <div style="position:absolute;left:32px;top:32px;width:59px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Usuario 1</span></div>
+            </div>
+            <div style="position:absolute;left:346px;top:32px;width:59px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Usuario 2</span></div>
+            </div>
+            <select id="cmb_anotificar-1" name="combo_1" size="1" style="position:absolute; left:102px; top:30px; width:200px;" class="anotificar">
+                <option value="">Ninguno</option>
+            </select>
+            <select id="cmb_anotificar-2" name="combo_1" size="1" style="position:absolute; left:412px; top:30px; width:200px;" class="anotificar">
+                <option value="">Ninguno</option>
+            </select>
+            <div style="position:absolute;left:48px;top:68px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Correo</span></div>
+            </div>
+            <input type="text" id="correo2-1" name="" value="" disabled style="position:absolute; left:102px; top:65px; width:198px;" class="correoUsuario">
+            <div style="position:absolute;left:356px;top:68px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Correo</span></div>
+            </div>
+            <input type="text" id="correo2-2" name="" value="" disabled style="position:absolute; left:410px; top:65px; width:198px;" class="correoUsuario">
+        </div>
+        <div id="panelAnticipacion" style="position:absolute;left:681px;top:168px;width:305px;height:100px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_42" style="position:absolute;left:14px;top:7px;width:187px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C">ANTICIPACIÓN PARA ALERTAR</span></p>
+            </div>
+            <input type="text" id="diasAnticipa" name="edit_1" value="" style="position:absolute; left:177px; top:49px; width:80px;" requerido="Dias de Anticipación">
+            <div style="position:absolute;left:49px;top:52px;width:110px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Días Anticipación</span></div>
+            </div>
+        </div>
+        <input type="button" style="position:absolute; left:855px; top:404px; width:100px; height:22px; height:30px;" id="btnGuardar" value="Guardar">
+        <div id="idPanelTextos" style="position:absolute;left:24px;top:285px;width:962px;height:99px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_47" style="position:absolute;left:16px;top:7px;width:187px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C">TEXTOS</span></p>
+            </div>
+            <div style="position:absolute;left:32px;top:30px;width:73px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Aprobación</span></div>
+            </div>
+            <div style="position:absolute;left:501px;top:30px;width:79px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Observación</span></div>
+            </div>
+            <textarea id="idTXTAprobacion" name="text_1" rows="1" cols="52" style="position:absolute; left:24px; top:48px; width:441px; height:31px;" requerido="Aprobacion"></textarea>
+            <textarea id="idTXTObservacion" name="text_1" rows="1" cols="52" style="position:absolute; left:491px; top:48px; width:441px; height:31px;" requerido="Observacion"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

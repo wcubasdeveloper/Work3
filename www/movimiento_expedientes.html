@@ -1,0 +1,89 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Movimiento de Expedientes</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=2200">
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/date-euro.js"></script>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/movimiento_expedientes.js"></script>
+ <!--<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />--> 
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:21.0px; line-height:1.19em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-size:14.0px; line-height:1.14em;
+}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-size:14.0px; line-height:1.14em;
+}
+body{
+	font-family:Arial;
+	font-size:11px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:505px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:2200px;height:505px;">
+<div style="position:absolute;left:749px;top:18px;width:316px;height:25px;white-space:nowrap;">
+    <div class="Wp-Artistic-Body-P">
+        <span class="Artistic-Body-C">MOVIMIENTO DE EXPEDIENTES</span></div>
+</div>
+<div id="divTABLA" style="position:absolute;left:25px;top:51px;width:2150px;height:440px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:11px;'>
+  	<th></th>
+  	<th><center>NRO EXPEDIENTE</center></th>
+  	<th><center>FECHA RECEPCION</center></th>
+  	<th><center>FECHA INGRESO AREA</center></th>
+    <th><center>COD. AGRAVIADO</center></th>
+    <th><center>EVENTO</center></th>
+    <th><center>PLACA</center></th>
+    <th><center>TIPO ACCID.</center></th>    
+    <th><center>FECHA ACCID.</center></th>
+    <th><center>AGRAVIADO</center></th>    
+    <th><center>BENEFICIARIO</center></th>
+    <th><center>IPRESS</center></th>
+    <th><center>AREA DE ORIGEN</center></th>
+    <th><center>USUARIO DESTINO</center></th>
+    <th><center>ESTADO NOTIF</center></th>
+    <th><center>TIPO EXPED.</center></th>
+    <th><center>NRO FOLIOS</center></th>
+    <th><center>OBSERVACIONES</center></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+    <input type="button" style="position:absolute; left:84px; top:409px; width:83px; height:22px; height:30px;" id="idBtnRecibir" value="Recibir">
+    <input type="button" style="position:absolute; left:184px; top:409px; width:78px; height:22px; height:30px;" id="idBtnMover" value="Mover">
+    <input type="button" style="position:absolute; left:280px; top:409px; width:84px; height:22px; height:30px;" id="idBtnInforme" value="Informe">
+    <select id="tipoExpediente" name="" size="1" style="position:absolute; left:94px; top:4px;">
+    </select>
+    <div style="position:absolute;left:12px;top:7px;width:74px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Tipo exped:</span></div>
+    </div>
+    <input type="button" style="position:absolute; left:445px; top:2px; width:145px; height:22px;" id="idBtnBusquedaAvanzada" value="Busqueda Avanz.">
+    <div id="lblBusquedaAvanza" style="position:absolute;left:605px;top:2px;width:1528px;height:22px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C"><br></span></p>
+    </div>
+</div>
+<input type="button" style="position:absolute; left:109px; top:15px; width:99px; height:22px; height:30px;" id="idBtnRefrescar" value="Refrescar">
+</div>
+</body>
+</html>

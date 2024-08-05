@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-depositopj-editar-depositobco.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-depositopj-editar-depositobco.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:320px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:10px;top:19px;width:543px;height:264px;z-index:14;">
+<div id="wb_idLblTitulo" style="position:absolute;left:144px;top:27px;width:219px;height:24px;z-index:0;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Depositos en Banco</strong></span></div>
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:422px;top:210px;width:90px;height:34px;z-index:1;cursor:pointer;">
+<input type="text" id="txtFecha" style="position:absolute;left:26px;top:153px;width:98px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text6" style="position:absolute;left:26px;top:137px;width:75px;height:16px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Fecha :</strong></span></div>
+<div id="wb_Text1" style="position:absolute;left:36px;top:75px;width:110px;height:16px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Tipo :</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:175px;top:75px;width:124px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Cuenta Bancaria :</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:426px;top:137px;width:58px;height:16px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Monto :</strong></span></div>
+<input type="number" id="txtMonto" style="position:absolute;left:422px;top:153px;width:88px;height:20px;line-height:20px;z-index:7;" name="Editbox1" value="" autocomplete="off">
+<select name="Combobox1" size="1" id="cmbCuentaBancaria" style="position:absolute;left:165px;top:91px;width:347px;height:20px;z-index:8;">
+</select>
+<select name="Combobox1" size="1" id="cmbTipoDeposito" style="position:absolute;left:26px;top:91px;width:118px;height:20px;z-index:9;">
+<option selected value="D">DEPOSITO</option>
+<option value="C">CHEQUE</option>
+</select>
+<div id="wb_Text2" style="position:absolute;left:165px;top:137px;width:134px;height:32px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro. Voucher Banco :</strong></span></div>
+<input type="text" id="txtNroVoucherBanco" style="position:absolute;left:165px;top:153px;width:219px;height:20px;line-height:20px;z-index:11;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text4" style="position:absolute;left:401px;top:156px;width:21px;height:36px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;"><strong>S/.</strong></span></div>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:126px;top:153px;width:22px;height:24px;z-index:13;cursor:pointer;" onclick="cleanDate('txtFecha')">
+</div>
+</div>
+</body>
+</html>

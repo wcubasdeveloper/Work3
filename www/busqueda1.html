@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>BUSQUEDA EVENTOS</title>
+<meta name="author" content="MHB Soft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/busqueda1.css" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+ <script src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet"/>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+ <script src="js/date-eu.js"></script>
+ <script src="js/jquery.datetimepicker.js"></script>
+ <script src="js/global.js"></script>
+ <script src="js/busqueda_avanzada_eventos1.js"></script>
+</head>
+<body style="height: 470px;">
+<input type="text" id="Editbox2" style="position:absolute;left:154px;top:0px;width:-2px;height:-2px;line-height:-2px;visibility:hidden;z-index:40;" name="edit_2" value="">
+<input type="text" id="Editbox3" style="position:absolute;left:154px;top:0px;width:-2px;height:-2px;line-height:-2px;visibility:hidden;z-index:41;" name="edit_2" value="">
+<input type="text" id="Editbox4" style="position:absolute;left:154px;top:0px;width:-2px;height:-2px;line-height:-2px;visibility:hidden;z-index:42;" name="edit_2" value="">
+<input type="text" id="Editbox5" style="position:absolute;left:154px;top:0px;width:-2px;height:-2px;line-height:-2px;visibility:hidden;z-index:43;" name="edit_2" value="">
+<input type="text" id="Editbox6" style="position:absolute;left:154px;top:0px;width:-2px;height:-2px;line-height:-2px;visibility:hidden;z-index:44;" name="edit_2" value="">
+<div id="Layer1" style="position:absolute;text-align:left;left:2px;top:2px;width:696px;height:38px;z-index:45;">
+<div id="wb_Text1" style="position:absolute;left:207px;top:8px;width:315px;height:24px;z-index:0;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:21px;"><strong>BÚSQUEDA DE EVENTOS</strong></span></div>
+</div>
+<div id="Layer2" style="position:absolute;text-align:left;left:2px;top:47px;width:696px;height:43px;z-index:46;">
+<input type="radio" id="RadioButton1" name="busqueda" value="C" style="position:absolute;left:176px;top:9px;z-index:1;">
+<input type="radio" id="RadioButton4" name="busqueda" value="A" style="position:absolute;left:342px;top:9px;z-index:2;">
+<div id="wb_Text3" style="position:absolute;left:196px;top:9px;width:58px;height:17px;z-index:3;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">N° CAT</span></div>
+<div id="wb_Text7" style="position:absolute;left:362px;top:9px;width:136px;height:17px;z-index:4;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">Nombres Agraviado</span></div>
+<div id="wb_Text5" style="position:absolute;left:281px;top:9px;width:45px;height:17px;z-index:5;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">Fecha</span></div>
+<input type="radio" id="RadioButton3" name="busqueda" value="P" style="position:absolute;left:100px;top:9px;z-index:6;">
+<div id="wb_Text2" style="position:absolute;left:119px;top:9px;width:39px;height:34px;z-index:7;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">Placa</span></div>
+<input type="radio" id="RadioButton2" name="busqueda" value="F" style="position:absolute;left:261px;top:9px;z-index:8;">
+<input type="radio" id="RadioButton6" name="busqueda" value="G" style="position:absolute;left:517px;top:9px;z-index:9;">
+<div id="wb_Text19" style="position:absolute;left:536px;top:9px;width:122px;height:17px;z-index:10;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">Cod. Agraviado</span></div>
+<div id="wb_Text6" style="position:absolute;left:12px;top:9px;width:80px;height:17px;z-index:11;text-align:left;">
+<span style="color:#FFFFFF;font-family:Arial;font-size:15px;">Seleccione</span></div>
+</div>
+<div id="oculta" style="position:absolute;text-align:left;left:2px;top:170px;width:698px;height:255px;z-index:47;">
+</div>
+<div id="panel_busqueda" style="position:absolute;text-align:left;left:2px;top:97px;width:696px;height:68px;z-index:48;display:none;">
+<input type="button" id="Button2" name="" value="Buscar" style="position:absolute;left:551px;top:21px;width:70px;height:24px;z-index:24;" onclick="BuscarEvento1()">
+<div id="buscar_x_codigo" style="position:absolute;text-align:left;left:12px;top:4px;width:510px;height:60px;z-index:25;">
+<div id="wb_idLabel" style="position:absolute;left:127px;top:25px;width:133px;height:16px;text-align:right;z-index:12;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Label :</span></div>
+<input type="text" id="codigo" style="position:absolute;left:276px;top:17px;width:188px;height:22px;line-height:22px;z-index:13;" name="edit_1" value="">
+</div>
+<div id="buscar_x_fechas" style="position:absolute;text-align:left;left:33px;top:4px;width:510px;height:60px;z-index:26;">
+<input type="text" id="fin" style="position:absolute;left:380px;top:20px;width:103px;height:18px;line-height:18px;z-index:14;" name="edit_1" value="">
+<input type="text" id="inicio" style="position:absolute;left:153px;top:20px;width:103px;height:18px;line-height:18px;z-index:15;" name="edit_1" value="">
+<div id="wb_Text14" style="position:absolute;left:87px;top:23px;width:62px;height:17px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Desde:</span></div>
+<div id="wb_Text15" style="position:absolute;left:319px;top:23px;width:69px;height:17px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">hasta:</span></div>
+</div>
+<div id="buscar_x_Agraviado" style="position:absolute;text-align:left;left:24px;top:4px;width:510px;height:60px;z-index:27;">
+<input type="text" id="dniAgraviado" style="position:absolute;left:362px;top:6px;width:132px;height:18px;line-height:18px;z-index:18;" name="edit_1" value="">
+<div id="wb_Text16" style="position:absolute;left:18px;top:9px;width:80px;height:17px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nombres</span></div>
+<div id="wb_Text17" style="position:absolute;left:18px;top:28px;width:106px;height:17px;z-index:20;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Apellidos</span></div>
+<input type="text" id="apellidoAgraviado" style="position:absolute;left:87px;top:32px;width:407px;height:18px;line-height:18px;z-index:21;" name="edit_1" value="">
+<div id="wb_Text18" style="position:absolute;left:328px;top:8px;width:43px;height:17px;z-index:22;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">DNI :</span></div>
+<input type="text" id="nombreAgraviado" style="position:absolute;left:87px;top:6px;width:230px;height:18px;line-height:18px;z-index:23;" name="edit_1" value="">
+</div>
+</div>
+<input type="button" id="Button1" name="" value="Seleccionar" style="position:absolute;left:604px;top:445px;width:96px;height:25px;z-index:49;" onclick="cargarEvento()">
+<div style="position:absolute;left:2px;top:170px;width:698px;height:300px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%">
+<thead>
+  <tr style='color:white; font-size:10px; font-family:Arial;'>
+    <th style='background-color:#4485A6;'><center>COD. EVENTO<center></th>
+    <th style='background-color:#4485A6;'><center>ASEGURADO</center></th>
+    <th style='background-color:#4485A6;'><center>CONDUCTOR</center></th>
+    <th style='background-color:#4485A6;'><center>CAT</center></th>
+    <th style='background-color:#4485A6;'><center>FECHA</center></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></body>
+</html>

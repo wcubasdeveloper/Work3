@@ -1,0 +1,1 @@
+node  "C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\bin\pm2" start "C:\work3\server.js"

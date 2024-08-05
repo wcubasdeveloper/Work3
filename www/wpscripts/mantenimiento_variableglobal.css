@@ -1,0 +1,415 @@
+div#container
+{
+   width: 1100px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FAFAFA;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+.ui-widget
+{
+   font-size: 1em !important;
+}
+#jQueryTabs1
+{
+   padding: 4px 4px 4px 4px;
+}
+#jQueryTabs1 .ui-tabs-nav
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 4px 4px 0px 4px;
+}
+#jQueryTabs1 .ui-tabs-nav li
+{
+   font-family: Arial;
+   font-weight: normal;
+   font-style: normal;
+   margin: 0px 2px -1px 0px;
+}
+#jQueryTabs1 .ui-tabs-nav li a
+{
+   padding: 8px 10px 8px 10px;
+}
+#panelCuerpo
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 1px;
+   -webkit-border-radius: 1px;
+   border-radius: 1px;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#panelPie
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 1px;
+   -webkit-border-radius: 1px;
+   border-radius: 1px;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#btnGuardar
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: transparent;
+   background-image: url(../wpimages/mantenimiento_variableglobal_btnGuardar_bkgrnd.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#idUIT
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text5 div
+{
+   text-align: left;
+}
+#idSueldoMinimo
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#panelCuerpo_opa
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 1px;
+   -webkit-border-radius: 1px;
+   border-radius: 1px;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#panelPie_opa
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 1px;
+   -webkit-border-radius: 1px;
+   border-radius: 1px;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text7 div
+{
+   text-align: left;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text8 div
+{
+   text-align: left;
+}
+#idFACTNroSerie
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idBVNroSerie
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text9 div
+{
+   text-align: left;
+}
+#idNCNroSerie
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text10 div
+{
+   text-align: left;
+}
+#idNCCorrelativoActual
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text11 div
+{
+   text-align: left;
+}
+#idFACTCorrelativoActual
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text12 div
+{
+   text-align: left;
+}
+#idBVCorrelativoActual
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text13 div
+{
+   text-align: left;
+}
+#idNroAutSUNAT
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text14 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text14 div
+{
+   text-align: left;
+}
+#idNroMaqRegistradora
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text15 div
+{
+   text-align: left;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text16 div
+{
+   text-align: left;
+}
+#txtIdConcesionarioProm
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   padding: 0px 0px 0px 5px;
+   text-align: left;
+   vertical-align: middle;
+}

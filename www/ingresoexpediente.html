@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Expedientes</title>
+<meta name="author" content="MHBSoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/ingresoexpediente.css" rel="stylesheet">
+ <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+ <script src="js/mhbsoftScripts.js"></script>
+ <script src="js/global.js"></script>
+ <script src="js/ingresoexpediente.js"></script>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+ <script src="js/jquery.datetimepicker.js"></script>
+ <script src="js/select2.js"></script>
+ <link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="Layer1" style="position:absolute;text-align:center;left:21px;top:24px;width:925px;height:68px;z-index:62;">
+<div id="Layer1_Container" style="width:925px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<input type="text" id="idFechaExpediente" style="position:absolute;left:653px;top:39px;width:104px;height:20px;line-height:20px;z-index:0;" name="idFechaExpediente" value="">
+<div id="wb_Text24" style="position:absolute;left:16px;top:39px;width:42px;height:17px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Tipo</span></div>
+<div id="wb_Text25" style="position:absolute;left:342px;top:39px;width:38px;height:17px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nro.</span></div>
+<input type="text" id="idNroExpediente" style="position:absolute;left:380px;top:39px;width:94px;height:20px;line-height:20px;z-index:3;" name="edit_1" value="" readonly>
+<select name="combo_1" size="1" id="idTipoExpediente" style="position:absolute;left:58px;top:39px;width:250px;height:22px;z-index:4;">
+<option selected>Seleccione</option>
+<option value="1">Solicitud Reembolso por gastos médicos</option>
+<option value="2">Solicitud de Indemnización por muerte</option>
+<option value="3">Solicitud de Indemnización por sepelio</option>
+<option value="4">Solicitud de Indemnización por Incapacidad Temporal</option>
+<option value="5">Solicitud de Indemnización por Invalidez Permanente</option>
+<option value="6">Solicitud de Subsanacion</option>
+<option value="7">Documento Administrativo</option>
+<option value="10">Solicitudes de pago a las IPRESS</option>
+<option value="11">Regularaciones de Solicitudes</option>
+<option value="9">Otros</option>
+</select>
+<div id="wb_Text1" style="position:absolute;left:310px;top:7px;width:289px;height:24px;z-index:5;text-align:left;" class="Heading 4 <h4>">
+<span style="color:#0071B2;font-family:Arial;font-size:21px;"><strong>INGRESO DE EXPEDIENTES</strong></span></div>
+<input type="text" id="idHoraExpediente" style="position:absolute;left:835px;top:39px;width:74px;height:20px;line-height:20px;z-index:6;" name="edit_1" value="">
+<div id="wb_Text26" style="position:absolute;left:592px;top:39px;width:47px;height:17px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Fecha</span></div>
+<div id="wb_Text27" style="position:absolute;left:792px;top:39px;width:43px;height:17px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Hora</span></div>
+</div>
+</div>
+<div id="idPanelSolicitud" style="position:absolute;text-align:left;left:21px;top:104px;width:536px;height:306px;z-index:63;">
+<div id="wb_Text2" style="position:absolute;left:12px;top:6px;width:171px;height:16px;z-index:9;text-align:left;">
+<span style="color:#DC143C;font-family:Arial;font-size:13px;"><strong>DATOS DE LA SOLICITUD</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:212px;top:9px;width:88px;height:17px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Cod. Evento</span></div>
+<input type="text" id="codEvento" style="position:absolute;left:300px;top:6px;width:112px;height:20px;line-height:20px;z-index:11;" name="edit_1" value="" disabled requerido="">
+<div id="wb_Text4" style="position:absolute;left:11px;top:36px;width:66px;height:17px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Asociado</span></div>
+<div id="wb_Text5" style="position:absolute;left:341px;top:66px;width:39px;height:34px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Placa</span></div>
+<input type="text" id="idPlaca" style="position:absolute;left:399px;top:66px;width:124px;height:20px;line-height:20px;z-index:14;" name="edit_1" value="" readonly>
+<div id="wb_Text6" style="position:absolute;left:10px;top:96px;width:119px;height:17px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Fecha Accidente</span></div>
+<input type="text" id="idFechaAccidente" style="position:absolute;left:158px;top:95px;width:124px;height:20px;line-height:20px;z-index:16;" name="edit_1" value="" readonly>
+<div id="wb_Text7" style="position:absolute;left:10px;top:155px;width:116px;height:17px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Lugar Accidente</span></div>
+<input type="text" id="idLugarAccidente" style="position:absolute;left:158px;top:154px;width:365px;height:20px;line-height:20px;z-index:18;" name="edit_1" value="">
+<div id="wb_Text8" style="position:absolute;left:10px;top:185px;width:145px;height:17px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Agraviado</span></div>
+<select name="combo_1" size="1" id="idComboAgraviado" style="position:absolute;left:158px;top:185px;width:367px;height:22px;z-index:20;" disabled requerido="">
+<option selected>Seleccione</option>
+</select>
+<div id="wb_Text9" style="position:absolute;left:11px;top:243px;width:145px;height:16px;z-index:21;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;">Nro Expediente Previo</span></div>
+<input type="text" id="idNroExpPrevio" style="position:absolute;left:158px;top:242px;width:124px;height:20px;line-height:20px;z-index:22;" name="edit_1" value="" requerido="">
+<input type="button" id="idBtnBuscarExpPrevio" name="" value="Buscar Exped." style="position:absolute;left:289px;top:243px;width:105px;height:22px;z-index:23;" disabled>
+<div id="wb_Text10" style="position:absolute;left:10px;top:273px;width:74px;height:17px;z-index:24;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nro Folios</span></div>
+<input type="text" id="idNroFolios_Exp" style="position:absolute;left:158px;top:272px;width:124px;height:20px;line-height:20px;z-index:25;" name="edit_1" value="" requerido="">
+<div id="wb_Text28" style="position:absolute;left:10px;top:214px;width:145px;height:17px;z-index:26;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Agraviado DNI</span></div>
+<input type="text" id="idAgraviadoDNI" style="position:absolute;left:158px;top:214px;width:124px;height:20px;line-height:20px;z-index:27;" name="edit_1" value="" readonly>
+<div id="wb_Text29" style="position:absolute;left:10px;top:66px;width:66px;height:17px;z-index:28;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">CAT</span></div>
+<input type="text" id="idCAT" style="position:absolute;left:158px;top:66px;width:124px;height:20px;line-height:20px;z-index:29;" name="edit_1" value="" readonly>
+<input type="text" id="idTipoAccidente" style="position:absolute;left:158px;top:123px;width:363px;height:20px;line-height:20px;z-index:30;" name="edit_1" value="" readonly>
+<div id="wb_Text30" style="position:absolute;left:11px;top:128px;width:110px;height:17px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Descripcion</span></div>
+<input type="text" id="idAsociado" style="position:absolute;left:158px;top:36px;width:364px;height:20px;line-height:20px;z-index:32;" name="edit_1" value="" readonly>
+<input type="button" id="idBuscarEvento" name="" value="Buscar Evento" style="position:absolute;left:422px;top:6px;width:103px;height:22px;z-index:33;" disabled>
+</div>
+<div id="idPanelOtrosDocs" style="position:absolute;text-align:left;left:567px;top:104px;width:379px;height:88px;z-index:64;">
+<div id="wb_Text11" style="position:absolute;left:5px;top:4px;width:144px;height:32px;z-index:34;text-align:left;">
+<span style="color:#DC143C;font-family:Arial;font-size:13px;"><strong>OTROS DOCUMENTOS</strong></span></div>
+<div id="wb_Text12" style="position:absolute;left:5px;top:27px;width:90px;height:17px;z-index:35;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nro Doc Ref.</span></div>
+<input type="text" id="idNroDocRef" style="position:absolute;left:95px;top:26px;width:114px;height:20px;line-height:20px;z-index:36;" name="edit_1" value="" disabled requerido="">
+<div id="wb_Text13" style="position:absolute;left:223px;top:27px;width:74px;height:17px;z-index:37;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nro Folios</span></div>
+<div id="wb_idLabel_inst_prov" style="position:absolute;left:6px;top:54px;width:76px;height:17px;z-index:38;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Institución</span></div>
+<select name="combo_1" size="1" id="idComboInstitucion" style="position:absolute;left:95px;top:56px;width:183px;height:22px;z-index:39;" disabled requerido="">
+<option selected>Seleccione</option>
+</select>
+<input type="button" id="idBtnNuevaInstitucion" name="" value="Nueva" style="position:absolute;left:294px;top:58px;width:80px;height:20px;z-index:40;" disabled>
+<input type="text" id="idNroFolios_Otros" style="position:absolute;left:305px;top:26px;width:67px;height:20px;line-height:20px;z-index:41;" name="edit_1" value="" disabled requerido="">
+</div>
+<div id="idPanelPersonaTramitante" style="position:absolute;text-align:left;left:567px;top:200px;width:379px;height:210px;z-index:65;">
+<div id="wb_Text15" style="position:absolute;left:4px;top:5px;width:209px;height:32px;z-index:42;text-align:left;">
+<span style="color:#DC143C;font-family:Arial;font-size:13px;"><strong>SOLICITANTE Y/O BENEFICIARIO</strong></span></div>
+<div id="wb_Text16" style="position:absolute;left:7px;top:33px;width:65px;height:17px;z-index:43;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Nombres</span></div>
+<div id="wb_Text17" style="position:absolute;left:6px;top:63px;width:67px;height:17px;z-index:44;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Apellidos</span></div>
+<input type="text" id="idApellidos" style="position:absolute;left:93px;top:62px;width:279px;height:20px;line-height:20px;z-index:45;" name="edit_1" value="" readonly requerido="">
+<div id="wb_Text18" style="position:absolute;left:6px;top:93px;width:26px;height:34px;z-index:46;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">DNI</span></div>
+<input type="text" id="idDNI" style="position:absolute;left:93px;top:92px;width:115px;height:20px;line-height:20px;z-index:47;" name="edit_1" value="" disabled requerido="">
+<input type="button" id="idBuscarPersona" name="" value="Buscar Persona" style="position:absolute;left:223px;top:93px;width:142px;height:22px;z-index:48;" disabled>
+<div id="wb_Text19" style="position:absolute;left:6px;top:123px;width:41px;height:17px;z-index:49;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Telef.</span></div>
+<input type="text" id="idTelef" style="position:absolute;left:94px;top:122px;width:115px;height:20px;line-height:20px;z-index:50;" name="edit_1" value="" disabled>
+<div id="wb_Text20" style="position:absolute;left:7px;top:153px;width:69px;height:17px;z-index:51;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Dirección</span></div>
+<input type="text" id="idNombres" style="position:absolute;left:94px;top:32px;width:279px;height:20px;line-height:20px;z-index:52;" name="edit_1" value="" readonly requerido="">
+<input type="text" id="idDireccion" style="position:absolute;left:94px;top:152px;width:279px;height:20px;line-height:20px;z-index:53;" name="edit_1" value="" disabled requerido="">
+<input type="text" id="idEmail" style="position:absolute;left:94px;top:182px;width:279px;height:20px;line-height:20px;z-index:54;" name="edit_1" value="" disabled>
+<input type="button" id="idBtnEliminarSolicitante" name="" value="Eliminar Solicitante" style="position:absolute;left:223px;top:123px;width:141px;height:22px;z-index:55;display:none;" onclick="resetSolicitante()">
+</div>
+<div id="wb_Text21" style="position:absolute;left:575px;top:384px;width:39px;height:34px;z-index:66;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:15px;">Email</span></div>
+<div id="idPanelObservaciones" style="position:absolute;text-align:left;left:21px;top:415px;width:662px;height:85px;z-index:67;">
+<div id="wb_Text22" style="position:absolute;left:10px;top:8px;width:114px;height:32px;z-index:56;text-align:left;">
+<span style="color:#DC143C;font-family:Arial;font-size:13px;"><strong>OBSERVACIONES</strong></span></div>
+<textarea name="text_1" id="idObservaciones" style="position:absolute;left:11px;top:28px;width:628px;height:44px;z-index:57;" rows="1" cols="76" requerido=""></textarea>
+</div>
+<div id="idPanelRespuesta" style="position:absolute;text-align:left;left:699px;top:415px;width:247px;height:85px;z-index:68;">
+<div id="wb_Text23" style="position:absolute;left:22px;top:16px;width:118px;height:18px;z-index:58;text-align:left;">
+<span style="color:#DC143C;font-family:Arial;font-size:15px;"><strong>Días Respuesta</strong></span></div>
+<input type="text" id="idDiaRespuesta" style="position:absolute;left:140px;top:12px;width:86px;height:20px;line-height:20px;z-index:59;" name="edit_1" value="" requerido="Dias para responder">
+<input type="button" id="idGuardarExpediente" name="" value="Guardar" style="position:absolute;left:139px;top:42px;width:89px;height:28px;z-index:60;">
+<input type="button" id="idGenerarCita" name="" value="Generar Cita" style="position:absolute;left:22px;top:44px;width:100px;height:26px;z-index:61;display:none;">
+</div>
+</body>
+</html>

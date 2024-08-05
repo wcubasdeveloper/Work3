@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es-pe">
+
+<head>
+   <meta charset="utf-8">
+   <title>Untitled Page</title>
+   <meta name="author" content="mhbsoft">
+   <link href="wpscripts/cupertino/jquery.ui.all.css" rel="stylesheet">
+   <link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+   <link href="wpscripts/mantenimiento_variableglobal.css" rel="stylesheet">
+   <script src="wpscripts/jquery-1.11.1.min.js"></script>
+   <script src="wpscripts/jquery.ui.core.min.js"></script>
+   <script src="wpscripts/jquery.ui.widget.min.js"></script>
+   <script src="wpscripts/jquery.ui.mouse.min.js"></script>
+   <script src="wpscripts/jquery.ui.sortable.min.js"></script>
+   <script src="wpscripts/jquery.ui.tabs.min.js"></script>
+   <script>
+      $(document).ready(function () {
+         var jQueryTabs1Opts =
+         {
+            show: false,
+            event: 'click',
+            collapsible: false
+         };
+         $("#jQueryTabs1").tabs(jQueryTabs1Opts);
+      });
+   </script>
+   <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+   <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+   <script src="js/dataTables.min.js"></script>
+   <link href="css/jquery.dataTables.css" rel="stylesheet" />
+   <script src="js/mhbsoftScripts.js"></script>
+   <script src="js/global.js"></script>
+   <script src="js/mantenimiento_variableglobal.js"></script>
+   <link rel="stylesheet" href="js_editor/codebase/dhtmlx.css">
+   <link rel="stylesheet" href="js_editor/skins/skyblue/dhtmlx.css" />
+   <script src="js_editor/codebase/dhtmlx.js"></script>
+</head>
+
+<body style="height:525px;">
+   <div id="container">
+      <div id="jQueryTabs1" style="position:absolute;left:5px;top:4px;width:1075px;height:505px;z-index:28;">
+         <ul>
+            <li><a href="#jquerytabs1-page-0"><span>Notificaciones</span></a></li>
+            <li><a href="#jquerytabs1-page-1"><span>Ordenes de Pago Agrav.</span></a></li>
+            <li><a href="#jquerytabs1-page-2"><span>Otros</span></a></li>
+         </ul>
+         <div style="height:465px;overflow:auto;padding:0;" id="jquerytabs1-page-0">
+            <div id="wb_Text2"
+               style="position:absolute;left:16px;top:50px;width:215px;height:15px;z-index:0;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>PLANTILLA NOTIFICACION -
+                     CUERPO</strong></span></div>
+            <div id="panelCuerpo"
+               style="position:absolute;text-align:left;left:14px;top:65px;width:1051px;height:208px;z-index:1;">
+            </div>
+            <div id="wb_Text4"
+               style="position:absolute;left:16px;top:278px;width:215px;height:15px;z-index:2;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>PLANTILLA NOTIFICACION -
+                     PIE</strong></span></div>
+            <div id="panelPie"
+               style="position:absolute;text-align:left;left:14px;top:295px;width:1051px;height:208px;z-index:3;">
+            </div>
+         </div>
+         <div style="height:465px;overflow:auto;padding:0;" id="jquerytabs1-page-1">
+            <div id="wb_Text6"
+               style="position:absolute;left:16px;top:50px;width:215px;height:15px;z-index:4;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>PLANTILLA ORDEN PAGO -
+                     CUERPO</strong></span></div>
+            <div id="wb_Text7"
+               style="position:absolute;left:16px;top:278px;width:215px;height:15px;z-index:5;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>PLANTILLA ORDEN PAGO -
+                     PIE</strong></span></div>
+            <div id="panelCuerpo_opa"
+               style="position:absolute;text-align:left;left:14px;top:65px;width:1051px;height:208px;z-index:6;">
+            </div>
+            <div id="panelPie_opa"
+               style="position:absolute;text-align:left;left:14px;top:295px;width:1051px;height:208px;z-index:7;">
+            </div>
+         </div>
+         <div style="height:465px;overflow:auto;padding:0;" id="jquerytabs1-page-2">
+            <input type="text" id="idUIT"
+               style="position:absolute;left:56px;top:66px;width:93px;height:20px;line-height:20px;z-index:8;"
+               name="Editbox1" value="">
+            <div id="wb_Text3"
+               style="position:absolute;left:21px;top:70px;width:35px;height:15px;z-index:9;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>UIT</strong></span></div>
+            <div id="wb_Text5"
+               style="position:absolute;left:167px;top:70px;width:107px;height:15px;z-index:10;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>SUELDO MINIMO</strong></span></div>
+            <input type="text" id="idSueldoMinimo"
+               style="position:absolute;left:274px;top:66px;width:93px;height:20px;line-height:20px;z-index:11;"
+               name="Editbox1" value="">
+            <div id="wb_Text8"
+               style="position:absolute;left:25px;top:115px;width:107px;height:15px;z-index:12;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong># SERIE FACT.</strong></span></div>
+            <input type="text" id="idFACTNroSerie"
+               style="position:absolute;left:21px;top:130px;width:128px;height:20px;line-height:20px;z-index:13;"
+               name="Editbox1" value="">
+            <input type="text" id="idBVNroSerie"
+               style="position:absolute;left:176px;top:130px;width:130px;height:20px;line-height:20px;z-index:14;"
+               name="Editbox1" value="">
+            <div id="wb_Text9"
+               style="position:absolute;left:180px;top:115px;width:117px;height:15px;z-index:15;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong># SERIE BV.</strong></span></div>
+            <input type="text" id="idNCNroSerie"
+               style="position:absolute;left:335px;top:130px;width:128px;height:20px;line-height:20px;z-index:16;"
+               name="Editbox1" value="">
+            <div id="wb_Text10"
+               style="position:absolute;left:339px;top:115px;width:124px;height:15px;z-index:17;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong># SERIE NCRED.</strong></span>
+            </div>
+            <input type="text" id="idNCCorrelativoActual"
+               style="position:absolute;left:493px;top:130px;width:128px;height:20px;line-height:20px;z-index:18;"
+               name="Editbox1" value="">
+            <div id="wb_Text11"
+               style="position:absolute;left:499px;top:115px;width:121px;height:15px;z-index:19;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ULTIMA NCRED.</strong></span></div>
+            <input type="text" id="idFACTCorrelativoActual"
+               style="position:absolute;left:652px;top:130px;width:128px;height:20px;line-height:20px;z-index:20;"
+               name="Editbox1" value="">
+            <div id="wb_Text12"
+               style="position:absolute;left:657px;top:115px;width:106px;height:15px;z-index:21;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ULTIMA FACT.</strong></span></div>
+            <input type="text" id="idBVCorrelativoActual"
+               style="position:absolute;left:811px;top:130px;width:128px;height:20px;line-height:20px;z-index:22;"
+               name="Editbox1" value="">
+            <div id="wb_Text13"
+               style="position:absolute;left:816px;top:115px;width:89px;height:15px;z-index:23;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ULTIMA BV.</strong></span></div>
+            <div id="wb_Text14"
+               style="position:absolute;left:25px;top:173px;width:142px;height:15px;z-index:24;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>NRO. AUTORIZ. SUNAT</strong></span>
+            </div>
+            <input type="text" id="idNroMaqRegistradora"
+               style="position:absolute;left:176px;top:188px;width:130px;height:20px;line-height:20px;z-index:25;"
+               name="Editbox1" value="">
+            <div id="wb_Text15"
+               style="position:absolute;left:181px;top:173px;width:132px;height:15px;z-index:26;text-align:left;">
+               <span style="color:#000000;font-family:Arial;font-size:12px;"><strong>NRO. MAQ. REGIST.</strong></span>
+            </div>
+            <input type="text" id="idNroAutSUNAT"
+               style="position:absolute;left:21px;top:188px;width:128px;height:20px;line-height:20px;z-index:27;"
+               name="Editbox1" value="">
+         </div>
+      </div>
+      <div id="wb_Text1"
+         style="position:absolute;left:555px;top:19px;width:245px;height:23px;z-index:29;text-align:left;">
+         <span style="color:#0080C0;font-family:Tahoma;font-size:19px;"><strong>VARIABLES GLOBALES</strong></span></div>
+      <input type="button" id="btnGuardar" name="" value="Guardar"
+         style="position:absolute;left:975px;top:14px;width:87px;height:30px;z-index:30;cursor:pointer;">
+   </div>
+</body>
+
+</html>

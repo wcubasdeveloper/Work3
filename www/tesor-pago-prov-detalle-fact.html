@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-pago-prov-detalle-fact.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/select2.js"></script> 
+<link href="css/select2.css" rel="stylesheet"/> 
+
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-pago-prov-detalle-fact.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+<!--<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> -->
+<!--<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> --> 
+<!--<script src="js/dataTables.min.js"></script> -->
+<!--<link href="css/jquery.dataTables.css" rel="stylesheet"/> -->
+<!--<script src="js/select2.js"></script> -->
+<!--<link href="css/select2.css" rel="stylesheet"/> -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
+<!-- -->
+
+</head>
+<body style="height:335px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:15px;top:15px;width:454px;height:301px;z-index:17;">
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:336px;top:169px;width:90px;height:34px;z-index:0;cursor:pointer;">
+<div id="wb_Text20" style="position:absolute;left:172px;top:87px;width:107px;height:14px;z-index:1;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nro. Documento</strong></span></div>
+<input type="text" id="txtNroDoc" style="position:absolute;left:172px;top:104px;width:115px;height:28px;line-height:28px;z-index:2;" name="Editbox1" value="" tabindex="22" class="form-control">
+<input type="number" id="txtMonto" style="position:absolute;left:172px;top:173px;width:114px;height:28px;line-height:28px;z-index:3;" name="Editbox1" value="" tabindex="25" autocomplete="off" class="form-control">
+<div id="wb_Text2" style="position:absolute;left:172px;top:159px;width:102px;height:14px;z-index:4;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Monto</strong></span></div>
+<div id="wb_Text1" style="position:absolute;left:12px;top:9px;width:121px;height:48px;z-index:5;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Factura<br>Proveedor</strong></span></div>
+<input type="text" id="labelProveedor" style="position:absolute;left:129px;top:12px;width:306px;height:27px;line-height:27px;z-index:6;" name="Editbox1" value="" tabindex="22" readonly disabled class="form-control">
+<div id="wb_Text22" style="position:absolute;left:12px;top:156px;width:127px;height:14px;z-index:7;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha Recepcion</strong></span></div>
+<input type="text" id="txtFechaRecepcion" style="position:absolute;left:12px;top:173px;width:114px;height:28px;line-height:28px;z-index:8;" name="Editbox1" value="" tabindex="25" autocomplete="off" class="form-control">
+<input type="text" id="txtFechaEmision" style="position:absolute;left:319px;top:104px;width:114px;height:28px;line-height:28px;z-index:9;" name="Editbox1" value="" tabindex="25" autocomplete="off" class="form-control">
+<div id="wb_Text3" style="position:absolute;left:319px;top:87px;width:127px;height:14px;z-index:10;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha Emision</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:12px;top:220px;width:127px;height:14px;z-index:11;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Observaciones</strong></span></div>
+<input type="text" id="txtObservaciones" style="position:absolute;left:12px;top:237px;width:421px;height:44px;line-height:44px;z-index:12;" name="Editbox1" value="" tabindex="25" autocomplete="off" class="form-control">
+<div id="wb_Text21" style="position:absolute;left:12px;top:87px;width:116px;height:14px;z-index:13;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Tipo Documento</strong></span></div>
+<select name="Combobox1" size="1" id="idTipoDocumento" style="position:absolute;left:12px;top:106px;width:116px;height:28px;z-index:14;" tabindex="23" class="form-control">
+</select>
+<div id="wb_Text5" style="position:absolute;left:128px;top:54px;width:44px;height:14px;z-index:15;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Etapa</strong></span></div>
+<select name="Combobox1" size="1" id="idEtapa" style="position:absolute;left:175px;top:52px;width:260px;height:28px;z-index:16;" tabindex="23" class="form-control">
+<option value="1">Gastos Médicos</option>
+<option value="5">Por sepelio</option>
+</select>
+</div>
+</div>
+</body>
+</html>

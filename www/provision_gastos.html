@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/provision_gastos.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/provision_gastos.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:25px;top:28px;width:313px;height:29px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>PROVISIÓN DE GASTOS</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:360px;top:5px;width:716px;height:71px;z-index:14;">
+<div id="wb_Text2" style="position:absolute;left:27px;top:13px;width:93px;height:16px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Cod. Evento :</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:233px;top:13px;width:42px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>CAT :</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:67px;top:41px;width:53px;height:16px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Placa :</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:370px;top:13px;width:59px;height:16px;text-align:right;z-index:3;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:370px;top:41px;width:59px;height:16px;text-align:right;z-index:4;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="codEvento" style="position:absolute;left:120px;top:8px;width:93px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="">
+<input type="text" id="placa" style="position:absolute;left:120px;top:37px;width:93px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="">
+<input type="text" id="cat" style="position:absolute;left:274px;top:8px;width:83px;height:20px;line-height:20px;z-index:7;" name="Editbox1" value="">
+<input type="text" id="fechaDesde" style="position:absolute;left:435px;top:8px;width:98px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" readonly>
+<input type="text" id="fechaHasta" style="position:absolute;left:435px;top:37px;width:98px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="" readonly>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:535px;top:8px;width:22px;height:24px;z-index:10;cursor:pointer;" onclick="cleanDate('fechaDesde')">
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:535px;top:37px;width:22px;height:24px;z-index:11;cursor:pointer;" onclick="cleanDate('fechaHasta')">
+<input type="button" id="btnBuscar" name="" value="Buscar Evento" style="position:absolute;left:583px;top:12px;width:108px;height:40px;z-index:12;cursor:pointer;">
+</div>
+<div id="Html2" style="position:absolute;left:20px;top:90px;width:1060px;height:420px;z-index:15">
+<div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>COD. EVENTO</center></th>
+  	<th><center>ESTADO</center></th> 
+    <th><center>FECHA</center></th>    
+    <th><center>PLACA</center></th>
+    <th><center>CAT</center></th>
+    <th><center>ASOCIADO</center></th> 
+    <th><center>LUGAR ACCIDENTE</center></th>        
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="btnProyectar" name="" value="Proyectar Gastos" style="position:absolute;left:905px;top:469px;width:139px;height:30px;z-index:16;cursor:pointer;">
+<input type="button" id="btnRevisar" name="" value="Revisar Informe" style="position:absolute;left:754px;top:469px;width:138px;height:30px;z-index:17;cursor:pointer;">
+<div id="Html1" style="position:absolute;left:42px;top:468px;width:410px;height:33px;z-index:18">
+<div id="pagination" style="font-family: verdana;"/></div>
+</div>
+</body>
+</html>

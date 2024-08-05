@@ -1,0 +1,775 @@
+body
+{
+   background-color: #FFFFFF;
+   background-image: url(none);
+   background-position: left top;
+   background-repeat: repeat;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   padding: 0;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#idBtnEliminarSolicitante
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text22 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text22 div
+{
+   text-align: left;
+}
+#idObservaciones
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: "Courier New";
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   resize: none;
+}
+#idDiaRespuesta
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text23 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text23 div
+{
+   text-align: left;
+}
+#idGuardarExpediente
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#idGenerarCita
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text24 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text24 div
+{
+   text-align: left;
+}
+#idTipoExpediente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text25 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text25 div
+{
+   text-align: left;
+}
+#idNroExpediente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text26 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text26 div
+{
+   text-align: left;
+}
+#idFechaExpediente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text27 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text27 div
+{
+   text-align: left;
+}
+#idHoraExpediente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#Layer1
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#idPanelSolicitud
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#codEvento
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idBuscarEvento
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 2px;
+   -webkit-border-radius: 2px;
+   border-radius: 2px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#idAsociado
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text5 div
+{
+   text-align: left;
+}
+#idPlaca
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#idFechaAccidente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text7 div
+{
+   text-align: left;
+}
+#idLugarAccidente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text8 div
+{
+   text-align: left;
+}
+#idComboAgraviado
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text9 div
+{
+   text-align: left;
+}
+#idNroExpPrevio
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idBtnBuscarExpPrevio
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text10 div
+{
+   text-align: left;
+}
+#idNroFolios_Exp
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text28 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text28 div
+{
+   text-align: left;
+}
+#idAgraviadoDNI
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idPanelOtrosDocs
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text11 div
+{
+   text-align: left;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text12 div
+{
+   text-align: left;
+}
+#idNroDocRef
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text13 div
+{
+   text-align: left;
+}
+#idNroFolios_Otros
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_idLabel_inst_prov 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_idLabel_inst_prov div
+{
+   text-align: left;
+}
+#idComboInstitucion
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#idBtnNuevaInstitucion
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text29 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text29 div
+{
+   text-align: left;
+}
+#idCAT
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idTipoAccidente
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text30 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text30 div
+{
+   text-align: left;
+}
+#idPanelPersonaTramitante
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text15 div
+{
+   text-align: left;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text16 div
+{
+   text-align: left;
+}
+#idNombres
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text17 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text17 div
+{
+   text-align: left;
+}
+#idApellidos
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text18 div
+{
+   text-align: left;
+}
+#idDNI
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idBuscarPersona
+{
+   border: 1px #A9A9A9 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+   background-color: #F0F0F0;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text19 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text19 div
+{
+   text-align: left;
+}
+#idTelef
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text20 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text20 div
+{
+   text-align: left;
+}
+#idDireccion
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text21 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text21 div
+{
+   text-align: left;
+}
+#idEmail
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idPanelObservaciones
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#idPanelRespuesta
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/lista_facturas_provision.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/date-eu.js"></script>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/lista_facturas_provision.js"></script>
+</head>
+<body style="height:530px;">
+<div id="container">
+<!--   -->
+<div id="Html1" style="position:absolute;left:18px;top:93px;width:720px;height:400px;z-index:0">
+<div id="divTABLA_cartas" style="height:400px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_cartas" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:11px;'>
+      	<th><center>N°</center></th>
+		<th><center>NRO GASTO</center></th>
+      	<th><center>FECHA</center></th>
+        <th><center>MONTO (S/.)</center></th>
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_Text3" style="position:absolute;left:18px;top:8px;width:137px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong><u>GASTOS PAGADOS</u></strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:18px;top:34px;width:93px;height:16px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Agraviado :</strong></span></div>
+<input type="text" id="codAgraviado" style="position:absolute;left:111px;top:31px;width:620px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" readonly>
+<div id="wb_Text1" style="position:absolute;left:18px;top:64px;width:93px;height:16px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Tipo Gasto :</strong></span></div>
+<input type="text" id="idTipoGasto" style="position:absolute;left:111px;top:61px;width:620px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="" readonly>
+<div id="wb_Text4" style="position:absolute;left:517px;top:504px;width:93px;height:16px;text-align:center;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>TOTAL</strong></span></div>
+<input type="text" id="idTotal" style="position:absolute;left:610px;top:498px;width:120px;height:20px;line-height:20px;z-index:7;" name="Editbox1" value="" readonly>
+</div>
+</body>
+</html>

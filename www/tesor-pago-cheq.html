@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es-pe">
+
+<head>
+  <meta charset="utf-8">
+  <title>Untitled Page</title>
+  <meta name="author" content="mhbsoft">
+  <link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+  <link href="wpscripts/tesor-pago-cheq.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+  <script src="js/dataTables.min.js"></script>
+  <link href="css/jquery.dataTables.css" rel="stylesheet" />
+  <script src="js/mhbsoftScripts.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/date-eu.js"></script>
+  <script src="js/tesor-pago-cheq.js"></script>
+  <!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+  <link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+  <script src="js/jpaginate/jquery.paginate.js"></script>
+  <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+  <script src="js/jquery.datetimepicker.js"></script>
+  <script src="js/select2.js"></script>
+  <link href="css/select2.css" rel="stylesheet" />
+</head>
+
+<body style="height:525px;">
+  <div id="container">
+    <div id="wb_Text1"
+      style="position:absolute;left:60px;top:15px;width:236px;height:54px;text-align:center;z-index:15;">
+      <span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>Cheques &amp;
+          Recibos<br></strong></span><span
+        style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>(Agraviados)</strong></span><span
+        style="color:#000000;font-family:Tahoma;font-size:24px;"><strong> </strong></span></div>
+    <div id="Layer1" style="position:absolute;text-align:left;left:296px;top:5px;width:743px;height:71px;z-index:16;">
+      <div id="wb_Text5"
+        style="position:absolute;left:220px;top:45px;width:59px;height:16px;text-align:right;z-index:0;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+      <div id="wb_Text6"
+        style="position:absolute;left:423px;top:45px;width:59px;height:16px;text-align:right;z-index:1;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+      <input type="text" id="fechaDesde"
+        style="position:absolute;left:286px;top:41px;width:78px;height:20px;line-height:20px;z-index:2;" name="Editbox1"
+        value="" readonly>
+      <input type="text" id="fechaHasta"
+        style="position:absolute;left:489px;top:39px;width:78px;height:20px;line-height:20px;z-index:3;" name="Editbox1"
+        value="" readonly>
+      <input type="button" id="Button1" name="" value="x"
+        style="position:absolute;left:569px;top:39px;width:22px;height:24px;z-index:4;cursor:pointer;"
+        onclick="cleanDate('fechaHasta')">
+      <div id="wb_Text4"
+        style="position:absolute;left:375px;top:12px;width:107px;height:16px;text-align:right;z-index:5;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Beneficiario:</strong></span></div>
+      <input type="button" id="Eliminar" name="" value="x"
+        style="position:absolute;left:366px;top:41px;width:22px;height:24px;z-index:6;cursor:pointer;"
+        onclick="cleanDate('fechaDesde')">
+      <select name="Combobox1" size="1" id="idCmbProveedor_benef"
+        style="position:absolute;left:487px;top:8px;width:250px;height:20px;z-index:7;">
+      </select>
+      <div id="wb_Text3" style="position:absolute;left:9px;top:13px;width:103px;height:16px;z-index:8;text-align:left;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Cod. Agraviado </strong></span></div>
+      <input type="text" id="codAgraviado"
+        style="position:absolute;left:115px;top:8px;width:93px;height:20px;line-height:20px;z-index:9;" name="Editbox1"
+        value="">
+      <div id="wb_Text7"
+        style="position:absolute;left:220px;top:15px;width:66px;height:16px;z-index:10;text-align:left;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>N° Orden:</strong></span></div>
+      <input type="text" id="nroOrdenPago"
+        style="position:absolute;left:286px;top:8px;width:93px;height:20px;line-height:20px;z-index:11;" name="Editbox1"
+        value="">
+      <div id="wb_Text2"
+        style="position:absolute;left:6px;top:43px;width:106px;height:16px;z-index:12;text-align:left;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro. Expediente</strong></span></div>
+      <input type="text" id="nroExpediente"
+        style="position:absolute;left:115px;top:43px;width:93px;height:20px;line-height:20px;z-index:13;"
+        name="Editbox1" value="">
+      <input type="button" id="btnBuscar" name="" value="Filtrar"
+        style="position:absolute;left:657px;top:35px;width:80px;height:34px;z-index:14;cursor:pointer;">
+    </div>
+    <div id="Html2" style="position:absolute;left:60px;top:88px;width:983px;height:420px;z-index:17">
+      <div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+        <table id="tabla_datos" class="display" cellspacing="0" width="100%"
+          style="font-family:Arial; background-color:#afcaff;">
+          <thead>
+            <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+              <th>TIPO</th>
+              <th>N° DOC.</th>
+              <th>FECHA</th>
+              <th>MONTO</th>
+              <th>TIPO EXP.</th>
+              <th>N° EXP.</th>
+              <th> AGRAVIADO </th>
+              <th>ORDEN PAGO</th>
+              <th>BENEFICIARIO</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <input type="button" id="btnNuevo" name="" value="Nuevo"
+      style="position:absolute;left:906px;top:468px;width:100px;height:30px;z-index:18;cursor:pointer;">
+    <input type="button" id="btnRevisar" name="" value="Revisar"
+      style="position:absolute;left:799px;top:468px;width:100px;height:30px;z-index:19;cursor:pointer;">
+    <div id="Html1" style="position:absolute;left:81px;top:448px;width:476px;height:50px;z-index:20">
+      <div id="pagination" style="font-family: verdana;" />
+    </div>
+  </div>
+</body>
+
+</html>

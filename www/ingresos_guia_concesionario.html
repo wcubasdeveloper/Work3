@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/ingresos_guia_concesionario.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/ingresos_guia_concesionario.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:560px;">
+<div id="container">
+<div id="idPanel" style="position:absolute;text-align:left;left:15px;top:9px;width:1018px;height:140px;z-index:12;">
+<div id="wb_Text1" style="position:absolute;left:24px;top:9px;width:268px;height:24px;z-index:0;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>CONCESIONARIOS</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:64px;top:52px;width:59px;height:16px;text-align:right;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Fecha</strong></span></div>
+<input type="text" id="idFechaGuia" style="position:absolute;left:57px;top:68px;width:118px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text2" style="position:absolute;left:203px;top:52px;width:110px;height:16px;text-align:right;z-index:3;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Tipo Operación</strong></span></div>
+<select name="Combobox1" size="1" id="idCmbTipoOperacion" style="position:absolute;left:203px;top:70px;width:132px;height:20px;z-index:4;">
+<option value="DIST">Distribución</option>
+<option value="DEV">Devolución</option>
+</select>
+<select name="Combobox1" size="1" id="idCmbUsuario" style="position:absolute;left:617px;top:70px;width:219px;height:20px;z-index:5;">
+</select>
+<div id="wb_Text5" style="position:absolute;left:638px;top:52px;width:101px;height:16px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Promotor</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:864px;top:52px;width:71px;height:16px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Guia</strong></span></div>
+<input type="text" id="nroGuia" style="position:absolute;left:856px;top:68px;width:111px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" autocomplete="off">
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:880px;top:101px;width:89px;height:30px;z-index:9;cursor:pointer;">
+<select name="Combobox1" size="1" id="idCmbConcesionario" style="position:absolute;left:363px;top:70px;width:232px;height:20px;z-index:10;">
+</select>
+<div id="wb_Text3" style="position:absolute;left:384px;top:52px;width:117px;height:16px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Concesionario</strong></span></div>
+</div>
+<!--   -->
+<div id="Html1" style="position:absolute;left:15px;top:179px;width:1020px;height:369px;z-index:13">
+<div id="divTABLA_datos" style="height:369px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th><center>CODIGO</center></th>
+      	<th><center>DESCRIPCION ARTICULO</center></th>
+      	<th><center>UNIDAD</center></th>
+      	<th><center>CANT</center></th>
+      	<th><center>N° INICIO</center></th>
+        <th><center>N° FINAL</center></th>
+        <th><center>OBSERVACIONES</center></th>      
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_Text7" style="position:absolute;left:20px;top:157px;width:83px;height:21px;z-index:14;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>DETALLE</strong></span></div>
+<input type="button" id="btnNuevo" name="" value="Nuevo" style="position:absolute;left:932px;top:505px;width:81px;height:30px;z-index:15;cursor:pointer;">
+<input type="button" id="btnEditar" name="" value="Editar" style="position:absolute;left:837px;top:505px;width:89px;height:30px;z-index:16;cursor:pointer;">
+<input type="button" id="btnEliminar" name="" value="Eliminar" style="position:absolute;left:744px;top:505px;width:88px;height:30px;z-index:17;cursor:pointer;">
+<input type="button" id="idBtnAnular" name="" value="Anular" style="position:absolute;left:650px;top:505px;width:88px;height:30px;z-index:18;cursor:pointer;display:none;">
+</div>
+</body>
+</html>

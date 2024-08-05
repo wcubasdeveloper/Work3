@@ -1,0 +1,2501 @@
+div#container
+{
+   width: 1200px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #0071B2;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#imgLOGO
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+#Layer3
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   border-radius: 4px;
+}
+#txtNombres
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text27 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text27 div
+{
+   text-align: left;
+}
+#wb_Text34 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text34 div
+{
+   text-align: left;
+}
+#txtNroCAT
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: center;
+   vertical-align: middle;
+}
+#imgSalir
+{
+   border: 0px #000000 solid;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.ui-widget
+{
+   font-size: 1em !important;
+}
+#tabsInfoCAT
+{
+   padding: 2px 0px 2px 0px;
+}
+#tabsInfoCAT .ui-tabs-nav
+{
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-size: 13px;
+   padding: 4px 4px 0px 4px;
+}
+#tabsInfoCAT .ui-tabs-nav li
+{
+   font-family: "MS Sans Serif";
+   font-weight: normal;
+   font-style: normal;
+   margin: 0px 2px -1px 0px;
+}
+#tabsInfoCAT .ui-tabs-nav li a
+{
+   padding: 4px 5px 4px 5px;
+}
+#txtMarca
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text20 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text20 div
+{
+   text-align: left;
+}
+#wb_Text21 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text21 div
+{
+   text-align: left;
+}
+#wb_Text28 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text28 div
+{
+   text-align: left;
+}
+#txtPlaca
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.inputformulario
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+
+#wb_Text24 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text24 div
+{
+   text-align: left;
+}
+#cmbUsoVehiculo
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text22 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text22 div
+{
+   text-align: left;
+}
+#cmbClaseVehiculo
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text8 div
+{
+   text-align: left;
+}
+#wb_Text25 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text25 div
+{
+   text-align: left;
+}
+#cmbCategoria
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text23 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text23 div
+{
+   text-align: left;
+}
+#txtModelo
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text12 div
+{
+   text-align: left;
+}
+#idDNI_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text13 div
+{
+   text-align: left;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text15 div
+{
+   text-align: left;
+}
+#idApeMat_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text16 div
+{
+   text-align: left;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_label_asoc 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_label_asoc div
+{
+   text-align: left;
+}
+#idDistrito_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+}
+#wb_Text14 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text14 div
+{
+   text-align: left;
+}
+#idApePat_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text17 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text17 div
+{
+   text-align: left;
+}
+#wb_Text26 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text26 div
+{
+   text-align: left;
+}
+#idTelf_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#idTipoPersona_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 11px;
+}
+#idRazonSocial_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 11px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idDirec_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#idNombres_asoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtAnno
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtSerieNro
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtAsientos
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text4 div
+{
+   text-align: left;
+}
+#txtFechaEmision
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#divFechaVigencia
+{
+   background-color: #FAFAFA;
+   border: 1px #A9A9A9 solid;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text7 div
+{
+   text-align: left;
+}
+#txtFV_Fin
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#txtFV_Inicio
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#divFechaPolicial
+{
+   background-color: #FAFAFA;
+   border: 1px #A9A9A9 solid;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text10 div
+{
+   text-align: left;
+}
+#txtFCP_Fin
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#txtFCP_Inicio
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text9 div
+{
+   text-align: left;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text5 div
+{
+   text-align: left;
+}
+#divMonto
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 4px;
+   -webkit-border-radius: 4px;
+   border-radius: 4px;
+}
+#wb_Text31 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text31 div
+{
+   text-align: left;
+}
+#wb_Text32 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text32 div
+{
+   text-align: left;
+}
+#wb_Text37 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text37 div
+{
+   text-align: left;
+}
+#wb_Text36 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text36 div
+{
+   text-align: left;
+}
+#txtComision
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtAporte
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtTotal
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#txtPrima
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: left;
+   vertical-align: middle;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text11 div
+{
+   text-align: left;
+}
+#wb_Text30 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text30 div
+{
+   text-align: left;
+}
+#wb_Text29 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text29 div
+{
+   text-align: left;
+}
+#btnRegistra
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: #800065;
+   color: #FFFFFF;
+   font-family: Verdana;
+   font-weight: bold;
+   font-size: 13px;
+}
+#wb_Text35 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text35 div
+{
+   text-align: center;
+}
+#lblStatus
+{
+   border: 0px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Verdana;
+   font-weight: normal;
+   font-size: 12px;
+   text-align: left;
+   vertical-align: middle;
+}
+#divFechaEmision
+{
+   background-color: #FAFAFA;
+   border: 1px #A9A9A9 solid;
+}
+#divAsociado
+{
+   background-color: #FAFAFA;
+}
+#divVehiculo
+{
+   background-color: #FAFAFA;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text18 div
+{
+   text-align: left;
+}
+#txtPrima
+{
+   position: absolute;
+   left: 245px;
+   top: 29px;
+   width: 63px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 84;
+}
+#tabsInfoCAT
+{
+   position: absolute;
+   left: 0px;
+   top: 130px;
+   width: 1188px;
+   height: 372px;
+   z-index: 137;
+}
+#wb_Text1
+{
+   position: absolute;
+   left: 12px;
+   top: 6px;
+   width: 235px;
+   height: 14px;
+   z-index: 19;
+   text-align: left;
+}
+#txtAporte
+{
+   position: absolute;
+   left: 471px;
+   top: 29px;
+   width: 100px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 86;
+}
+#wb_Text2
+{
+   position: absolute;
+   left: 289px;
+   top: 26px;
+   width: 127px;
+   height: 13px;
+   z-index: 26;
+   text-align: left;
+}
+#txtAnno
+{
+   position: absolute;
+   left: 67px;
+   top: 219px;
+   width: 58px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 62;
+}
+#wb_Text3
+{
+   position: absolute;
+   left: 142px;
+   top: 168px;
+   width: 73px;
+   height: 13px;
+   z-index: 33;
+   text-align: left;
+}
+#txtAsientos
+{
+   position: absolute;
+   left: 338px;
+   top: 216px;
+   width: 48px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 48;
+}
+#idApeMat_asoc
+{
+   position: absolute;
+   left: 454px;
+   top: 116px;
+   width: 134px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 42;
+}
+#wb_Text4
+{
+   position: absolute;
+   left: 14px;
+   top: 9px;
+   width: 145px;
+   height: 14px;
+   z-index: 21;
+   text-align: left;
+}
+#divMonto
+{
+   position: absolute;
+   text-align: left;
+   left: 0px;
+   top: 508px;
+   width: 1188px;
+   height: 70px;
+   z-index: 138;
+}
+#txtModelo
+{
+   position: absolute;
+   left: 337px;
+   top: 158px;
+   width: 266px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 54;
+}
+#idRazonSocial_asoc
+{
+   position: absolute;
+   left: 289px;
+   top: 46px;
+   width: 299px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 41;
+}
+#idNombres_asoc
+{
+   position: absolute;
+   left: 32px;
+   top: 116px;
+   width: 240px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 37;
+}
+#idApePat_asoc
+{
+   position: absolute;
+   left: 289px;
+   top: 116px;
+   width: 148px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 28;
+}
+#wb_Text5
+{
+   position: absolute;
+   left: 12px;
+   top: 6px;
+   width: 158px;
+   height: 14px;
+   z-index: 11;
+   text-align: left;
+}
+#wb_Text30
+{
+   position: absolute;
+   left: 360px;
+   top: 11px;
+   width: 67px;
+   height: 13px;
+   z-index: 89;
+   text-align: left;
+}
+#wb_Text6
+{
+   position: absolute;
+   left: 26px;
+   top: 37px;
+   width: 54px;
+   height: 14px;
+   z-index: 12;
+   text-align: left;
+}
+#Html1
+{
+   position: absolute;
+   left: 776px;
+   top: 12px;
+   width: 22px;
+   height: 23px;
+   z-index: 1;
+}
+#Layer3
+{
+   position: absolute;
+   text-align: left;
+   left: 200px;
+   top: 40px;
+   width: 920px;
+   height: 79px;
+   z-index: 135;
+}
+#wb_Text31
+{
+   position: absolute;
+   left: 469px;
+   top: 11px;
+   width: 116px;
+   height: 13px;
+   z-index: 90;
+   text-align: left;
+}
+#txtTotal
+{
+   position: absolute;
+   left: 610px;
+   top: 29px;
+   width: 66px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 87;
+}
+#wb_Text20
+{
+   position: absolute;
+   left: 70px;
+   top: 26px;
+   width: 66px;
+   height: 13px;
+   z-index: 65;
+   text-align: left;
+}
+#cmbUsoVehiculo
+{
+   position: absolute;
+   left: 197px;
+   top: 91px;
+   width: 174px;
+   height: 28px;
+   z-index: 60;
+}
+#wb_label_asoc
+{
+   position: absolute;
+   left: 228px;
+   top: 168px;
+   width: 239px;
+   height: 13px;
+   z-index: 29;
+   text-align: left;
+}
+#txtFV_Inicio
+{
+   position: absolute;
+   left: 80px;
+   top: 34px;
+   width: 128px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 9;
+}
+#wb_Text7
+{
+   position: absolute;
+   left: 247px;
+   top: 38px;
+   width: 36px;
+   height: 14px;
+   z-index: 6;
+   text-align: left;
+}
+#btnRegistra
+{
+   position: absolute;
+   left: 1028px;
+   top: 593px;
+   width: 154px;
+   height: 30px;
+   z-index: 139;
+   cursor: pointer;
+}
+#wb_Text32
+{
+   position: absolute;
+   left: 324px;
+   top: 31px;
+   width: 18px;
+   height: 14px;
+   z-index: 81;
+   text-align: left;
+}
+#wb_Text21
+{
+   position: absolute;
+   left: 202px;
+   top: 71px;
+   width: 39px;
+   height: 13px;
+   z-index: 59;
+   text-align: left;
+}
+#txtPlaca
+{
+   position: absolute;
+   left: 116px;
+   top: 24px;
+   width: 123px;
+   height: 23px;
+   line-height: 23px;
+   z-index: 57;
+}
+#wb_Text8
+{
+   position: absolute;
+   left: 70px;
+   top: 71px;
+   width: 74px;
+   height: 13px;
+   z-index: 55;
+   text-align: left;
+}
+#divVehiculo
+{
+   position: absolute;
+   text-align: left;
+   left: 182px;
+   top: 63px;
+   width: 658px;
+   height: 269px;
+   z-index: 66;
+}
+#Html3
+{
+   position: absolute;
+   left: 185px;
+   top: 29px;
+   width: 22px;
+   height: 23px;
+   z-index: 20;
+}
+#wb_Text10
+{
+   position: absolute;
+   left: 247px;
+   top: 38px;
+   width: 36px;
+   height: 14px;
+   z-index: 13;
+   text-align: left;
+}
+#lblStatus
+{
+   position: absolute;
+   left: 473px;
+   top: 46px;
+   width: 429px;
+   height: 20px;
+   line-height: 20px;
+   z-index: 5;
+}
+#wb_Text11
+{
+   position: absolute;
+   left: 610px;
+   top: 11px;
+   width: 63px;
+   height: 13px;
+   z-index: 91;
+   text-align: left;
+}
+#txtComision
+{
+   position: absolute;
+   left: 358px;
+   top: 29px;
+   width: 63px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 85;
+}
+#wb_Text22
+{
+   position: absolute;
+   left: 398px;
+   top: 77px;
+   width: 39px;
+   height: 13px;
+   z-index: 61;
+   text-align: left;
+}
+#wb_Text9
+{
+   position: absolute;
+   left: 26px;
+   top: 38px;
+   width: 54px;
+   height: 14px;
+   z-index: 18;
+   text-align: left;
+}
+#txtFCP_Fin
+{
+   position: absolute;
+   left: 283px;
+   top: 34px;
+   width: 128px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 14;
+}
+#Html4
+{
+   position: absolute;
+   left: 210px;
+   top: 37px;
+   width: 22px;
+   height: 23px;
+   z-index: 10;
+}
+#wb_imgLOGO
+{
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 200px;
+   height: 117px;
+   z-index: 134;
+}
+#wb_Text23
+{
+   position: absolute;
+   left: 70px;
+   top: 142px;
+   width: 47px;
+   height: 14px;
+   z-index: 56;
+   text-align: left;
+}
+#idTelf_asoc
+{
+   position: absolute;
+   left: 32px;
+   top: 186px;
+   width: 92px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 39;
+}
+#idDNI_asoc
+{
+   position: absolute;
+   left: 142px;
+   top: 46px;
+   width: 108px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 32;
+}
+#wb_Text12
+{
+   position: absolute;
+   left: 142px;
+   top: 26px;
+   width: 101px;
+   height: 13px;
+   z-index: 31;
+   text-align: left;
+}
+#Html5
+{
+   position: absolute;
+   left: 413px;
+   top: 36px;
+   width: 22px;
+   height: 23px;
+   z-index: 8;
+}
+#wb_Text34
+{
+   position: absolute;
+   left: 474px;
+   top: 17px;
+   width: 111px;
+   height: 28px;
+   z-index: 4;
+   text-align: left;
+}
+#wb_Text35
+{
+   position: absolute;
+   left: 415px;
+   top: 8px;
+   width: 356px;
+   height: 16px;
+   text-align: center;
+   z-index: 140;
+}
+#wb_Text24
+{
+   position: absolute;
+   left: 75px;
+   top: 203px;
+   width: 38px;
+   height: 13px;
+   z-index: 51;
+   text-align: left;
+}
+#txtSerieNro
+{
+   position: absolute;
+   left: 145px;
+   top: 219px;
+   width: 159px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 50;
+}
+#wb_Text13
+{
+   position: absolute;
+   left: 32px;
+   top: 98px;
+   width: 83px;
+   height: 13px;
+   z-index: 36;
+   text-align: left;
+}
+#Html6
+{
+   position: absolute;
+   left: 210px;
+   top: 37px;
+   width: 22px;
+   height: 23px;
+   z-index: 17;
+}
+#txtFCP_Inicio
+{
+   position: absolute;
+   left: 80px;
+   top: 34px;
+   width: 128px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 16;
+}
+#divFechaVigencia
+{
+   position: absolute;
+   text-align: left;
+   left: 269px;
+   top: 151px;
+   width: 479px;
+   height: 78px;
+   z-index: 23;
+}
+#tabsinfocat-page-0
+{
+   height: 328px;
+   overflow: auto;
+   padding: 0;
+}
+#wb_Text36
+{
+   position: absolute;
+   left: 585px;
+   top: 31px;
+   width: 18px;
+   height: 14px;
+   z-index: 83;
+   text-align: left;
+}
+#wb_Text25
+{
+   position: absolute;
+   left: 146px;
+   top: 201px;
+   width: 97px;
+   height: 26px;
+   z-index: 49;
+   text-align: left;
+}
+#wb_Text14
+{
+   position: absolute;
+   left: 289px;
+   top: 98px;
+   width: 133px;
+   height: 13px;
+   z-index: 27;
+   text-align: left;
+}
+#divAsociado
+{
+   position: absolute;
+   text-align: left;
+   left: 200px;
+   top: 54px;
+   width: 619px;
+   height: 307px;
+   z-index: 46;
+}
+#tabsinfocat-page-1
+{
+   height: 328px;
+   overflow: auto;
+   padding: 0;
+}
+#Html7
+{
+   position: absolute;
+   left: 413px;
+   top: 37px;
+   width: 22px;
+   height: 23px;
+   z-index: 15;
+}
+#txtNroCAT
+{
+   position: absolute;
+   left: 603px;
+   top: 11px;
+   width: 171px;
+   height: 20px;
+   line-height: 20px;
+   z-index: 2;
+}
+#wb_Text37
+{
+   position: absolute;
+   left: 436px;
+   top: 31px;
+   width: 18px;
+   height: 14px;
+   z-index: 82;
+   text-align: left;
+}
+#tabsinfocat-page-2
+{
+   height: 328px;
+   overflow: auto;
+   padding: 0;
+}
+#wb_Text15
+{
+   position: absolute;
+   left: 454px;
+   top: 98px;
+   width: 162px;
+   height: 13px;
+   z-index: 44;
+   text-align: left;
+}
+#wb_Text26
+{
+   position: absolute;
+   left: 32px;
+   top: 26px;
+   width: 46px;
+   height: 13px;
+   z-index: 34;
+   text-align: left;
+}
+#Html8
+{
+   position: absolute;
+   left: 252px;
+   top: 51px;
+   width: 22px;
+   height: 23px;
+   z-index: 30;
+}
+#wb_imgSalir
+{
+   position: absolute;
+   left: 1133px;
+   top: 36px;
+   width: 40px;
+   height: 40px;
+   z-index: 136;
+}
+#Html9
+{
+   position: absolute;
+   left: 241px;
+   top: 26px;
+   width: 22px;
+   height: 23px;
+   z-index: 52;
+}
+#idDirec_asoc
+{
+   position: absolute;
+   left: 32px;
+   top: 257px;
+   width: 556px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 45;
+}
+#idDistrito_asoc
+{
+   position: absolute;
+   left: 142px;
+   top: 186px;
+   width: 429px;
+   height: 28px;
+   z-index: 43;
+}
+#wb_Text16
+{
+   position: absolute;
+   left: 34px;
+   top: 168px;
+   width: 93px;
+   height: 13px;
+   z-index: 38;
+   text-align: left;
+}
+#txtFechaEmision
+{
+   position: absolute;
+   left: 15px;
+   top: 27px;
+   width: 168px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 22;
+}
+#divFechaPolicial
+{
+   position: absolute;
+   text-align: left;
+   left: 269px;
+   top: 254px;
+   width: 479px;
+   height: 78px;
+   z-index: 24;
+}
+#txtFV_Fin
+{
+   position: absolute;
+   left: 283px;
+   top: 34px;
+   width: 128px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 7;
+}
+#wb_Text27
+{
+   position: absolute;
+   left: 15px;
+   top: 14px;
+   width: 95px;
+   height: 16px;
+   z-index: 3;
+   text-align: left;
+}
+#cmbClaseVehiculo
+{
+   position: absolute;
+   left: 388px;
+   top: 92px;
+   width: 217px;
+   height: 28px;
+   z-index: 64;
+}
+#wb_Text28
+{
+   position: absolute;
+   left: 338px;
+   top: 141px;
+   width: 68px;
+   height: 14px;
+   z-index: 53;
+   text-align: left;
+}
+#wb_Text17
+{
+   position: absolute;
+   left: 34px;
+   top: 239px;
+   width: 94px;
+   height: 13px;
+   z-index: 40;
+   text-align: left;
+}
+#idTipoPersona_asoc
+{
+   position: absolute;
+   left: 32px;
+   top: 46px;
+   width: 95px;
+   height: 28px;
+   z-index: 35;
+}
+#wb_Text29
+{
+   position: absolute;
+   left: 245px;
+   top: 11px;
+   width: 47px;
+   height: 13px;
+   z-index: 88;
+   text-align: left;
+}
+#txtMarca
+{
+   position: absolute;
+   left: 67px;
+   top: 156px;
+   width: 237px;
+   height: 26px;
+   line-height: 26px;
+   z-index: 63;
+}
+#cmbCategoria
+{
+   position: absolute;
+   left: 67px;
+   top: 92px;
+   width: 117px;
+   height: 28px;
+   z-index: 58;
+}
+#wb_Text18
+{
+   position: absolute;
+   left: 338px;
+   top: 201px;
+   width: 60px;
+   height: 13px;
+   z-index: 47;
+   text-align: left;
+}
+#divFechaEmision
+{
+   position: absolute;
+   text-align: left;
+   left: 269px;
+   top: 57px;
+   width: 479px;
+   height: 78px;
+   z-index: 25;
+}
+#txtNombres
+{
+   position: absolute;
+   left: 110px;
+   top: 9px;
+   width: 335px;
+   height: 20px;
+   line-height: 20px;
+   z-index: 0;
+}
+@media only screen and (max-width: 1199px)
+{
+div#container
+{
+   width: 320px;
+}
+#wb_imgLOGO
+{
+   left: 0px;
+   top: 0px;
+   width: 100px;
+   height: 58px;
+   visibility: visible;
+   display: inline;
+}
+#Layer3
+{
+   left: 0px;
+   top: 55px;
+   width: 318px;
+   height: 122px;
+   visibility: visible;
+   display: inline;
+}
+#txtNombres
+{
+   left: 7px;
+   top: 19px;
+   width: 304px;
+   height: 20px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text27
+{
+   left: 107px;
+   top: 2px;
+   width: 83px;
+   height: 32px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text34
+{
+   left: 7px;
+   top: 64px;
+   width: 114px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtNroCAT
+{
+   left: 121px;
+   top: 64px;
+   width: 165px;
+   height: 20px;
+   visibility: visible;
+   display: inline;
+}
+#Html1
+{
+   left: 291px;
+   top: 63px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_imgSalir
+{
+   left: 287px;
+   top: 14px;
+   width: 30px;
+   height: 30px;
+   visibility: visible;
+   display: inline;
+}
+#tabsInfoCAT
+{
+   left: 0px;
+   top: 183px;
+   width: 320px;
+   height: 402px;
+   visibility: visible;
+   display: inline;
+}
+#txtMarca
+{
+   left: 2px;
+   top: 231px;
+   width: 114px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text20
+{
+   left: 2px;
+   top: 8px;
+   width: 66px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text21
+{
+   left: 5px;
+   top: 94px;
+   width: 39px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text28
+{
+   left: 125px;
+   top: 212px;
+   width: 75px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtPlaca
+{
+   left: 69px;
+   top: 8px;
+   width: 129px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#Html9
+{
+   left: 200px;
+   top: 10px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text24
+{
+   left: 6px;
+   top: 285px;
+   width: 38px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#cmbUsoVehiculo
+{
+   left: 2px;
+   top: 112px;
+   width: 261px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text22
+{
+   left: 5px;
+   top: 148px;
+   width: 39px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#cmbClaseVehiculo
+{
+   left: 2px;
+   top: 164px;
+   width: 261px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text8
+{
+   left: 6px;
+   top: 37px;
+   width: 74px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text25
+{
+   left: 76px;
+   top: 285px;
+   width: 97px;
+   height: 26px;
+   visibility: visible;
+   display: inline;
+}
+#cmbCategoria
+{
+   left: 2px;
+   top: 56px;
+   width: 261px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text23
+{
+   left: 5px;
+   top: 212px;
+   width: 47px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtModelo
+{
+   left: 119px;
+   top: 231px;
+   width: 179px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text12
+{
+   left: 115px;
+   top: 8px;
+   width: 101px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idDNI_asoc
+{
+   left: 113px;
+   top: 27px;
+   width: 108px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#Html8
+{
+   left: 231px;
+   top: 28px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text13
+{
+   left: 7px;
+   top: 119px;
+   width: 83px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text15
+{
+   left: 165px;
+   top: 173px;
+   width: 122px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idApeMat_asoc
+{
+   left: 162px;
+   top: 190px;
+   width: 137px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text16
+{
+   left: 4px;
+   top: 218px;
+   width: 93px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text3
+{
+   left: 7px;
+   top: 266px;
+   width: 72px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_label_asoc
+{
+   left: 66px;
+   top: 265px;
+   width: 235px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idDistrito_asoc
+{
+   left: 3px;
+   top: 284px;
+   width: 261px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text14
+{
+   left: 7px;
+   top: 172px;
+   width: 123px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idApePat_asoc
+{
+   left: 3px;
+   top: 190px;
+   width: 148px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text17
+{
+   left: 8px;
+   top: 310px;
+   width: 94px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text26
+{
+   left: 7px;
+   top: 8px;
+   width: 46px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idTelf_asoc
+{
+   left: 3px;
+   top: 234px;
+   width: 92px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text2
+{
+   left: 6px;
+   top: 65px;
+   width: 127px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#idTipoPersona_asoc
+{
+   left: 5px;
+   top: 27px;
+   width: 95px;
+   height: 26px;
+   visibility: visible;
+   display: inline;
+}
+#idRazonSocial_asoc
+{
+   left: 3px;
+   top: 84px;
+   width: 299px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#idDirec_asoc
+{
+   left: 3px;
+   top: 327px;
+   width: 296px;
+   height: 20px;
+   visibility: visible;
+   display: inline;
+}
+#idNombres_asoc
+{
+   left: 3px;
+   top: 135px;
+   width: 240px;
+   height: 22px;
+   visibility: visible;
+   display: inline;
+}
+#txtAnno
+{
+   left: 2px;
+   top: 305px;
+   width: 58px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#txtSerieNro
+{
+   left: 69px;
+   top: 305px;
+   width: 174px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#txtAsientos
+{
+   left: 253px;
+   top: 305px;
+   width: 48px;
+   height: 24px;
+   visibility: visible;
+   display: inline;
+}
+#Html3
+{
+   left: 219px;
+   top: 39px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text4
+{
+   left: 24px;
+   top: 15px;
+   width: 145px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtFechaEmision
+{
+   left: 49px;
+   top: 39px;
+   width: 168px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#divFechaVigencia
+{
+   left: 13px;
+   top: 156px;
+   width: 265px;
+   height: 117px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text7
+{
+   left: 19px;
+   top: 78px;
+   width: 36px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtFV_Fin
+{
+   left: 70px;
+   top: 71px;
+   width: 128px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#Html5
+{
+   left: 203px;
+   top: 78px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#txtFV_Inicio
+{
+   left: 70px;
+   top: 33px;
+   width: 128px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#Html4
+{
+   left: 203px;
+   top: 35px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#divFechaPolicial
+{
+   left: 13px;
+   top: 286px;
+   width: 265px;
+   height: 105px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text10
+{
+   left: 19px;
+   top: 70px;
+   width: 36px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtFCP_Fin
+{
+   left: 70px;
+   top: 67px;
+   width: 128px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#Html7
+{
+   left: 203px;
+   top: 70px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#txtFCP_Inicio
+{
+   left: 70px;
+   top: 31px;
+   width: 128px;
+   height: 28px;
+   visibility: visible;
+   display: inline;
+}
+#Html6
+{
+   left: 203px;
+   top: 31px;
+   width: 22px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text9
+{
+   left: 19px;
+   top: 31px;
+   width: 54px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text1
+{
+   left: 19px;
+   top: 8px;
+   width: 235px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text6
+{
+   left: 19px;
+   top: 33px;
+   width: 54px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text5
+{
+   left: 19px;
+   top: 8px;
+   width: 158px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#divMonto
+{
+   left: 0px;
+   top: 585px;
+   width: 318px;
+   height: 60px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text31
+{
+   left: 161px;
+   top: 8px;
+   width: 116px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text32
+{
+   left: 69px;
+   top: 28px;
+   width: 18px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text37
+{
+   left: 145px;
+   top: 28px;
+   width: 18px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text36
+{
+   left: 232px;
+   top: 26px;
+   width: 18px;
+   height: 14px;
+   visibility: visible;
+   display: inline;
+}
+#txtComision
+{
+   left: 80px;
+   top: 26px;
+   width: 63px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#txtAporte
+{
+   left: 157px;
+   top: 26px;
+   width: 71px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#txtTotal
+{
+   left: 242px;
+   top: 26px;
+   width: 66px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#txtPrima
+{
+   left: 4px;
+   top: 26px;
+   width: 63px;
+   height: 23px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text11
+{
+   left: 244px;
+   top: 8px;
+   width: 63px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text30
+{
+   left: 81px;
+   top: 8px;
+   width: 67px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text29
+{
+   left: 7px;
+   top: 8px;
+   width: 47px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+#btnRegistra
+{
+   left: 164px;
+   top: 650px;
+   width: 154px;
+   height: 30px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text35
+{
+   left: 108px;
+   top: 5px;
+   width: 145px;
+   height: 32px;
+   visibility: visible;
+   display: inline;
+}
+#lblStatus
+{
+   left: 7px;
+   top: 92px;
+   width: 298px;
+   height: 20px;
+   visibility: visible;
+   display: inline;
+}
+#divFechaEmision
+{
+   left: 13px;
+   top: 51px;
+   width: 265px;
+   height: 84px;
+   visibility: visible;
+   display: inline;
+}
+#divAsociado
+{
+   left: 2px;
+   top: 36px;
+   width: 309px;
+   height: 358px;
+   visibility: visible;
+   display: inline;
+}
+#divVehiculo
+{
+   left: 3px;
+   top: 38px;
+   width: 311px;
+   height: 351px;
+   visibility: visible;
+   display: inline;
+}
+#wb_Text18
+{
+   left: 240px;
+   top: 285px;
+   width: 60px;
+   height: 13px;
+   visibility: visible;
+   display: inline;
+}
+}
+ body { background: rgba(0, 113, 178, 1.00) !important; } 

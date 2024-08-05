@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Seguimiento</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=550">
+<!--Page Head-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/select2.js"></script>
+ <link href="css/select2.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/seguimiento.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:right; font-weight:400;
+}
+.Body-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:center; font-weight:400;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+body{
+	font-size:12px;
+	font-family:Arial;
+}
+</style>
+</head>
+
+<body text="#000000" style="background:#ffffff; height:415px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:550px;height:415px;">
+<div style="position:absolute;left:13px;top:13px;width:521px;height:385px; border-style:solid; border-width:2px; border-radius:5px; border-color:gray;">
+    <div id="idDivComponents" style="position:absolute;left:202px;top:87px;width:217px;height:195px;">
+        <input type="text" id="id_fechaProgramacion" name="edit_5" readonly value="" style="position:absolute; left:8px; top:10px; width:200px;" requerido="Fecha de Programacion">
+        <textarea id="id_tarea" name="text_1" rows="5" cols="22" style="position:absolute; left:8px; top:51px; width:200px; height:90px; font-family:Arial;" requerido="Tarea"></textarea>
+        <select id="id_medio" name="combo_1" size="1" style="position:absolute; left:8px; top:161px; width:200px;" requerido="Medio de comunicación">
+            <option value="">Seleccione</option>
+            <option value="C">Carta</option>
+            <option value="T">Llamada&nbsp;Telefonica</option>
+            <option value="M">SMS</option>
+            <option value="E">E-mail</option>
+        </select>
+    </div>
+    <div style="position:absolute;left:154px;top:141px;width:43px;height:16px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C">Tarea:</span></div>
+    </div>
+    <div style="position:absolute;left:27px;top:100px;width:170px;height:16px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C">Fecha de Programación:</span></div>
+    </div>
+    <div style="position:absolute;left:24px;top:250px;width:173px;height:16px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C">Medio de Comunicación:</span></div>
+    </div>
+    <input type="button" style="position:absolute; left:388px; top:321px; width:89px; height:22px; height:30px;" id="idGuardar" value="Guardar">
+    <input type="button" style="position:absolute; left:277px; top:321px; width:94px; height:22px; height:30px;" id="idCancelar" value="Cancelar">
+    <img src="wpimages/wp1af0ed46_06.png" border="0" width="503" height="2" alt="" style="position:absolute;left:9px;top:51px;">
+    <div id="id_Titulo" style="position:absolute;left:0px;top:31px;width:521px;height:18px;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C">SEGUIMIENTO PARA LA(S) NOTIFICACION(ES) DEL EVENTO</span></p>
+    </div>
+</div>
+</div>
+</body>
+</html>

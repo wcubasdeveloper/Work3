@@ -1,0 +1,152 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Estados de cuentas</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/estadocuentas.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-style:italic; font-weight:700; font-size:20.0px; line-height:1.25em;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-style:italic; font-weight:700; font-size:15.0px; line-height:1.13em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:16.0px; line-height:1.25em;
+}
+.Artistic-Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:13.0px; line-height:1.23em;
+}
+input[type=button] {
+	height:30px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:882px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:882px;">
+<div style="position:absolute;left:17px;top:10px;width:1057px;height:385px;">
+    <div style="position:absolute;left:19px;top:12px;width:480px;height:28px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">ESTADOS DE CUENTA</span></p>
+    </div>
+    <div style="position:absolute;left:19px;top:211px;width:125px;height:17px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">RESPONSABLES</span></div>
+    </div>
+    <div style="position:absolute;left:195px;top:230px;width:702px;height:145px;">
+    <table id="tabla_datos_responsables" class="display" cellspacing="0" width="100%" style="border-style:solid; border-width:1px; border-color:gray;">
+    <thead>
+      <tr style='color:white; font-size:11.5px; font-family:Arial;'>
+        <th style='background-color:#4485A6;'><center>NOMBRES<center></th>
+        <th style='background-color:#4485A6;'><center>NRO DOC</center></th>
+        <th style='background-color:#4485A6;'><center>ROL</center></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+    <input type="text" id="idLblFechaEmision" name="edit_1" readonly value="15/07/2015" style="position:absolute; left:699px; top:14px; width:120px; height:24px; border-radius:6px; text-align:center; font-weight:bold; font-size:14px;">
+    <div style="position:absolute;left:532px;top:20px;width:154px;height:20px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">FECHA DE EMISIÓN</span></div>
+    </div>
+    <input type="button" style="position:absolute; left:835px; top:12px; width:136px; height:22px; height:30px;" id="idBtnBuscarAcuerdo" value="Buscar Acuerdo">
+    <div style="position:absolute;left:521px;top:57px;width:489px;height:60px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+        <input type="text" id="idLblCodEvento" name="edit_1" readonly value="" style="position:absolute; left:16px; top:29px; width:100px; text-align:center;">
+        <input type="text" id="idLblFechaEvento" name="edit_1" readonly value="" style="position:absolute; left:134px; top:29px; width:95px; text-align:center;">
+        <div style="position:absolute;left:136px;top:11px;width:86px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Fecha Evento</span></div>
+        </div>
+        <div style="position:absolute;left:253px;top:11px;width:74px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Descripción</span></div>
+        </div>
+        <input type="text" id="idLblDescripcion" name="edit_1" readonly value="" style="position:absolute; left:246px; top:29px; width:230px;">
+        <div style="position:absolute;left:22px;top:11px;width:76px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Cod. Evento</span></div>
+        </div>
+    </div>
+    <div style="position:absolute;left:62px;top:129px;width:947px;height:60px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+        <input type="text" id="idLblNroCAT" name="edit_1" readonly value="" style="position:absolute; left:14px; top:28px; width:100px; text-align:center;">
+        <input type="text" id="idLblAsociado" name="edit_1" readonly value="" style="position:absolute; left:150px; top:28px; width:662px;">
+        <div style="position:absolute;left:158px;top:12px;width:58px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Asociado</span></div>
+        </div>
+        <input type="text" id="idLblPlaca" name="edit_1" readonly value="" style="position:absolute; left:840px; top:28px; width:94px;">
+        <div style="position:absolute;left:844px;top:12px;width:36px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Placa</span></div>
+        </div>
+        <div style="position:absolute;left:23px;top:12px;width:52px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro CAT</span></div>
+        </div>
+    </div>
+    <div style="position:absolute;left:62px;top:57px;width:453px;height:60px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+        <input type="text" id="idLblAcuerdo" name="edit_1" readonly value="" style="position:absolute; left:14px; top:28px; width:100px; text-align:center;">
+        <input type="text" id="idLblFechaAcuerdo" name="edit_1" readonly value="" style="position:absolute; left:121px; top:28px; width:100px; text-align:center;">
+        <div style="position:absolute;left:122px;top:11px;width:96px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Fecha Acuerdo</span></div>
+        </div>
+        <input type="text" id="idLblDeudaAcordada" name="edit_1" readonly value="" style="position:absolute; left:229px; top:28px; width:102px; text-align:center;">
+        <div style="position:absolute;left:229px;top:11px;width:105px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Deuda acordada</span></div>
+        </div>
+        <div style="position:absolute;left:20px;top:11px;width:79px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro Acuerdo</span></div>
+        </div>
+        <input type="text" id="idLblCuotaInicial" name="edit_1" readonly value="" style="position:absolute; left:337px; top:27px; width:102px; text-align:center;">
+        <div style="position:absolute;left:347px;top:10px;width:80px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Cuota Inicial</span></div>
+        </div>
+    </div>
+</div>
+<div style="position:absolute;left:212px;top:431px;width:702px;height:385px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos_cuotas" class="display" cellspacing="0" width="100%">
+<thead>
+  <tr style='color:white; font-size:12px; font-family:Arial;'>
+    <th style='background-color:#4485A6;'><center>NRO<center></th>
+    <th style='background-color:#4485A6;'><center>ESTADO<center></th>
+    <th style='background-color:#4485A6;'><center>FECHA VENC.</center></th>
+    <th style='background-color:#4485A6;'><center>MONTO</center></th>
+    <th style='background-color:#4485A6;'><center>SALDO</center></th>
+    <th style='background-color:#4485A6;'><center>ULTIMA FECHA PAGO</center></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+<input type="button" style="position:absolute; left:750px; top:831px; width:104px; height:22px; height:30px;" id="idBtnGenerarExcel" value="Descargar">
+<div style="position:absolute;left:36px;top:410px;width:165px;height:17px;white-space:nowrap;">
+    <div class="Wp-Artistic-Body-P">
+        <span class="Artistic-Body-C">ESTADOS DE CUENTA</span></div>
+</div>
+<div id="oculta" style="position:absolute;left:17px;top:58px;width:1065px;height:810px; background-color:#4485a6;">
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-depositopn-liquidacion.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-depositopn-liquidacion.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:470px;">
+<div id="container">
+<div id="idPanel" style="position:absolute;text-align:left;left:15px;top:9px;width:938px;height:104px;z-index:10;">
+<div id="wb_Text1" style="position:absolute;left:13px;top:16px;width:268px;height:24px;z-index:0;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>LIQUIDACIÓN DE VENTAS</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:20px;top:52px;width:59px;height:16px;text-align:right;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Fecha</strong></span></div>
+<input type="text" id="idFechaLiquidacion" style="position:absolute;left:13px;top:68px;width:118px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly autocomplete="off">
+<select name="Combobox1" size="1" id="idCmbPromotor" style="position:absolute;left:481px;top:70px;width:296px;height:20px;z-index:3;">
+</select>
+<div id="wb_Text5" style="position:absolute;left:503px;top:52px;width:101px;height:16px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Promotor</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:813px;top:52px;width:114px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro PreImpreso</strong></span></div>
+<input type="text" id="nroLiquidacion" style="position:absolute;left:806px;top:68px;width:117px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="" autocomplete="off">
+<select name="Combobox1" size="1" id="idCmbConcesionario" style="position:absolute;left:160px;top:70px;width:286px;height:20px;z-index:7;">
+</select>
+<div id="wb_Text3" style="position:absolute;left:181px;top:52px;width:117px;height:16px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Concesionario</strong></span></div>
+<input type="text" id="txtNroLiq" style="position:absolute;left:298px;top:18px;width:117px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="" readonly autocomplete="off">
+</div>
+<!--   -->
+<div id="Html1" style="position:absolute;left:15px;top:147px;width:940px;height:310px;z-index:11">
+<div id="divTABLA_datos" style="height:310px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th>NRO CERTIFICADO</th>
+      	<th>CLASE VEHICULO</th>
+      	<th>PRECIO VENTA</th>
+      	<th>COMISION</th> 
+      	<th>MONTO RECIBIDO</th> 
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_Text7" style="position:absolute;left:20px;top:125px;width:83px;height:21px;z-index:12;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>DETALLE</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:574px;top:430px;width:56px;height:16px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>TOTAL</strong></span></div>
+<input type="text" id="idTotalCosto" style="position:absolute;left:631px;top:425px;width:98px;height:20px;line-height:20px;z-index:14;" name="Editbox1" value="" autocomplete="off">
+<input type="text" id="idTotalComision" style="position:absolute;left:736px;top:425px;width:98px;height:20px;line-height:20px;z-index:15;" name="Editbox1" value="" autocomplete="off">
+<input type="text" id="idTotalRecibido" style="position:absolute;left:841px;top:424px;width:98px;height:20px;line-height:20px;z-index:16;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text8" style="position:absolute;left:656px;top:408px;width:56px;height:15px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Venta</strong></span></div>
+<div id="wb_Text9" style="position:absolute;left:755px;top:408px;width:63px;height:15px;z-index:18;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Comisión</strong></span></div>
+<div id="wb_Text10" style="position:absolute;left:860px;top:408px;width:63px;height:15px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Recibido</strong></span></div>
+</div>
+</body>
+</html>

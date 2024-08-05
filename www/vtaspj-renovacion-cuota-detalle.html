@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/vtaspj-renovacion-cuota-detalle.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="css/jquery.dataTables.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<link rel="stylesheet" href="css/select2.css"/>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+
+<script src="js/dataTables.min.js"></script>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/vtaspj-renovacion-cuota-detalle.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+</head>
+<body style="height:485px;">
+<div id="container">
+<div id="pnlDatGen" style="position:absolute;text-align:left;left:9px;top:15px;width:989px;height:111px;z-index:16;">
+<input type="text" id="txtFechaEmision" style="position:absolute;left:272px;top:13px;width:110px;height:21px;line-height:21px;z-index:0;" name="Editbox1" value="" tabindex="6" readonly class="form-control">
+<div id="wb_Text8" style="position:absolute;left:152px;top:13px;width:115px;height:14px;text-align:right;z-index:1;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha de Emision</strong></span></div>
+<input type="text" id="txtRazonSocial" style="position:absolute;left:496px;top:13px;width:298px;height:21px;line-height:21px;z-index:2;" name="Editbox1" value="" tabindex="15" disabled autocomplete="off" class="form-control">
+<div id="wb_Text33" style="position:absolute;left:407px;top:13px;width:93px;height:14px;z-index:3;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Razón Social</strong></span></div>
+<div id="wb_Text11" style="position:absolute;left:817px;top:13px;width:89px;height:14px;z-index:4;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nro. Cuota</strong></span></div>
+<input type="text" id="txtNCuota" style="position:absolute;left:906px;top:13px;width:67px;height:21px;line-height:21px;z-index:5;" name="Editbox1" value="" tabindex="21" disabled autocomplete="off" class="form-control">
+<div id="wb_Text1" style="position:absolute;left:11px;top:45px;width:113px;height:24px;z-index:6;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:20px;">Nro&nbsp; 00100</span></div>
+<div id="wb_Text3" style="position:absolute;left:11px;top:13px;width:141px;height:24px;z-index:7;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:20px;"><strong>CONTRATO</strong></span></div>
+<input type="text" id="txtNResolucion" style="position:absolute;left:497px;top:45px;width:297px;height:21px;line-height:21px;z-index:8;" name="Editbox1" value="" tabindex="21" disabled autocomplete="off" class="form-control">
+<div id="wb_Text6" style="position:absolute;left:818px;top:48px;width:56px;height:14px;z-index:9;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:407px;top:45px;width:89px;height:14px;z-index:10;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nro. Res.</strong></span></div>
+<input type="text" id="txtFechaCuota" style="position:absolute;left:861px;top:46px;width:112px;height:21px;line-height:21px;z-index:11;" name="Editbox1" value="" tabindex="10" readonly disabled class="form-control">
+<input type="text" id="txtVigContr_Fin" style="position:absolute;left:271px;top:78px;width:112px;height:21px;line-height:21px;z-index:12;" name="Editbox1" value="" tabindex="10" readonly disabled class="form-control">
+<input type="text" id="txtVigContr_Inicio" style="position:absolute;left:271px;top:45px;width:112px;height:21px;line-height:21px;z-index:13;" name="Editbox1" value="" tabindex="9" readonly class="form-control">
+<div id="wb_Text4" style="position:absolute;left:162px;top:45px;width:110px;height:14px;z-index:14;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Vigencia&nbsp; Inicio</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:162px;top:80px;width:101px;height:14px;z-index:15;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Vigencia Fin</strong></span></div>
+</div>
+<div id="htmlFlota" style="position:absolute;left:9px;top:128px;width:991px;height:346px;z-index:17">
+<div id="divTABLA" style="height:346px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th style='text-align:center;'>N°Orden</th>
+  	<th style='text-align:center;'>Estado</th>
+  	<th style='text-align:center;'>Ult.CAT</th>
+    <th style='text-align:center;'> Placa </th>    
+    <th style='text-align:center;'> Marca </th>
+    <th style='text-align:center;'> Modelo </th>
+    <th style='text-align:center;'>Año Fabr</th>
+    <th style='text-align:center;'> Uso </th>
+    <th style='text-align:center;'> Clase </th>
+    <th style='text-align:center;'> Precio </th>
+    <th style='text-align:center;'> Prima </th>
+    
+   </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+</div>
+</body>
+</html>

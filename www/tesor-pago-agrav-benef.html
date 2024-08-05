@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-pago-agrav-benef.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/select2.js"></script> 
+<link href="css/select2.css" rel="stylesheet"/> 
+
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-pago-agrav-benef.js"></script>
+
+<!-- <script src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+<!--<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script> -->
+<!--<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> --> 
+<!--<script src="js/dataTables.min.js"></script> -->
+<!--<link href="css/jquery.dataTables.css" rel="stylesheet"/> -->
+<!--<script src="js/select2.js"></script> -->
+<!--<link href="css/select2.css" rel="stylesheet"/> -->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
+<!-- -->
+
+</head>
+<body style="height:360px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:15px;top:15px;width:539px;height:327px;z-index:31;">
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:425px;top:273px;width:90px;height:34px;z-index:13;cursor:pointer;">
+<div id="wb_Text1" style="position:absolute;left:24px;top:30px;width:210px;height:24px;z-index:14;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Datos Beneficiario</strong></span></div>
+<div id="pnlRepLegal" style="position:absolute;text-align:left;left:6px;top:73px;width:512px;height:200px;z-index:15;" class="form-group well">
+<div id="wb_Text20" style="position:absolute;left:389px;top:19px;width:120px;height:14px;z-index:0;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Materno</strong></span></div>
+<input type="text" id="txtApePatRep" style="position:absolute;left:256px;top:36px;width:116px;height:28px;line-height:28px;z-index:1;" name="Editbox1" value="" tabindex="17" autocomplete="off" class="form-control">
+<div id="wb_Text21" style="position:absolute;left:262px;top:19px;width:122px;height:14px;z-index:2;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Paterno</strong></span></div>
+<div id="wb_Text22" style="position:absolute;left:29px;top:19px;width:65px;height:14px;z-index:3;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nombres</strong></span></div>
+<input type="text" id="txtNombreRep" style="position:absolute;left:18px;top:36px;width:228px;height:28px;line-height:28px;z-index:4;" name="Editbox1" value="" tabindex="16" autocomplete="off" class="form-control">
+<input type="text" id="txtApeMatRep" style="position:absolute;left:381px;top:36px;width:116px;height:28px;line-height:28px;z-index:5;" name="Editbox1" value="" tabindex="18" autocomplete="off" class="form-control">
+<input type="text" id="txtTelfRep" style="position:absolute;left:19px;top:92px;width:92px;height:28px;line-height:28px;z-index:6;" name="Editbox1" value="" tabindex="19" class="form-control">
+<div id="wb_Text23" style="position:absolute;left:27px;top:73px;width:59px;height:14px;z-index:7;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Telefono</strong></span></div>
+<select name="Combobox1" size="1" id="idDistrito_rep" style="position:absolute;left:121px;top:92px;width:375px;height:30px;z-index:8;" tabindex="20">
+</select>
+<div id="wb_Text24" style="position:absolute;left:129px;top:73px;width:119px;height:14px;z-index:9;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Distrito Domicilio</strong></span></div>
+<div id="wb_Text25" style="position:absolute;left:28px;top:127px;width:59px;height:14px;z-index:10;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Dirección</strong></span></div>
+<input type="text" id="txtDirecRep" style="position:absolute;left:18px;top:144px;width:478px;height:28px;line-height:28px;z-index:11;" name="Editbox1" value="" tabindex="21" autocomplete="off" class="form-control">
+<div id="wb_label_rep" style="position:absolute;left:257px;top:74px;width:239px;height:13px;z-index:12;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:11px;"><strong>(..)</strong></span></div>
+</div>
+<div id="wb_Text10" style="position:absolute;left:348px;top:30px;width:61px;height:14px;z-index:16;text-align:left;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>DNI</strong></span></div>
+<input type="text" id="txtDNIRep" style="position:absolute;left:392px;top:27px;width:108px;height:28px;line-height:28px;z-index:17;" name="Editbox1" value="" tabindex="14" readonly class="form-control">
+</div>
+</div>
+</body>
+</html>

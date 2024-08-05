@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-depositopn-editar-liquidacion.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-depositopn-editar-liquidacion.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:350px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:13px;top:19px;width:607px;height:300px;z-index:17;">
+<div id="wb_idLblTitulo" style="position:absolute;left:168px;top:16px;width:259px;height:24px;z-index:0;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Liquidaciones de Venta</strong></span></div>
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:490px;top:249px;width:90px;height:34px;z-index:1;cursor:pointer;">
+<input type="text" id="txtPrecioLiq" style="position:absolute;left:193px;top:174px;width:122px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text6" style="position:absolute;left:193px;top:157px;width:106px;height:16px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Precio Total:</strong></span></div>
+<div id="wb_Text1" style="position:absolute;left:28px;top:102px;width:110px;height:32px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Liquidacion :</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:335px;top:100px;width:124px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Pre Impreso :</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:336px;top:156px;width:108px;height:16px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Comisión Total:</strong></span></div>
+<input type="text" id="txtComisionLiq" style="position:absolute;left:335px;top:174px;width:107px;height:20px;line-height:20px;z-index:7;" name="Editbox1" value="" readonly autocomplete="off">
+<select name="cmbLiquidaciones" size="1" id="cmbConcesionarios" style="position:absolute;left:28px;top:64px;width:552px;height:20px;z-index:8;">
+</select>
+<input type="text" id="txtNroPreImpreso" style="position:absolute;left:335px;top:122px;width:122px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="" readonly autocomplete="off">
+<input type="text" id="txtFechaLiq" style="position:absolute;left:28px;top:174px;width:98px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text2" style="position:absolute;left:28px;top:157px;width:124px;height:16px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Fecha :</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:28px;top:40px;width:124px;height:16px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Concesionario :</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:471px;top:158px;width:109px;height:16px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Total Recibido :</strong></span></div>
+<input type="text" id="txtTotalLiq" style="position:absolute;left:471px;top:174px;width:107px;height:20px;line-height:20px;z-index:14;" name="Editbox1" value="" readonly autocomplete="off">
+<select name="cmbLiquidaciones" size="1" id="cmbLiquidaciones" style="position:absolute;left:28px;top:124px;width:289px;height:20px;z-index:15;">
+</select>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:128px;top:174px;width:22px;height:24px;z-index:16;cursor:pointer;" onclick="cleanDate('txtFechaLiq')">
+</div>
+</div>
+</body>
+</html>

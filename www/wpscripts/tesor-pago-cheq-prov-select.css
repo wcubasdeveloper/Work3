@@ -1,0 +1,274 @@
+div#container
+{
+   width: 1100px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FAFAFA;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text1 div
+{
+   text-align: left;
+}
+#Layer2
+{
+   background-color: #FAFAFA;
+   border: 1px #000000 solid;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border-radius: 5px;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text4 div
+{
+   text-align: right;
+}
+#idCmbProveedor
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+}
+#btnBuscar
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: transparent;
+   background-image: url(../wpimages/tesor-pago-cheq-prov-select_btnBuscar_bkgrnd.png);
+   background-repeat: repeat-x;
+   background-position: left top;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#txtTotal
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 15px;
+   text-align: right;
+   vertical-align: middle;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text12 div
+{
+   text-align: left;
+}
+#txtObservaciones
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#btnGuardar
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: #2E8B57;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text15 div
+{
+   text-align: left;
+}
+#cmbTipoCheq
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Tahoma;
+   font-weight: normal;
+   font-size: 13px;
+}
+#cmbCtaBancaria
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Tahoma;
+   font-weight: normal;
+   font-size: 13px;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text16 div
+{
+   text-align: left;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text5 div
+{
+   text-align: right;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#txtNroOrden
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Tahoma;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#fechaOrden
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color :#000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   text-align: center;
+   vertical-align: middle;
+}
+#btnEliminarFecha
+{
+   border: 0px #C0C0C0 solid;
+   background-color: #DC143C;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#cmbTipoDoc
+{
+   border: 1px #A9A9A9 solid;
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Tahoma;
+   font-weight: normal;
+   font-size: 13px;
+}
+#btnAnular
+{
+   border: 3px #C0C0C0 solid;
+   -moz-border-radius: 6px;
+   -webkit-border-radius: 6px;
+   border-radius: 6px;
+   background-color: #DC143C;
+   color: #FFFFFF;
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 13px;
+}
+#Layer1
+{
+   background-color: #FAFAFA;
+   border: 1px #696969 solid;
+   -moz-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+.select2-result-label{
+	font-size:11.5px;
+	text-align:left;
+}

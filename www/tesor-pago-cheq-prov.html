@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es-pe">
+
+<head>
+  <meta charset="utf-8">
+  <title>Untitled Page</title>
+  <meta name="author" content="mhbsoft">
+  <link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+  <link href="wpscripts/tesor-pago-cheq-prov.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+  <script src="js/dataTables.min.js"></script>
+  <link href="css/jquery.dataTables.css" rel="stylesheet" />
+  <script src="js/mhbsoftScripts.js"></script>
+  <script src="js/global.js"></script>
+  <script src="js/date-eu.js"></script>
+  <script src="js/tesor-pago-cheq-prov.js"></script>
+  <!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+  <link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+  <script src="js/jpaginate/jquery.paginate.js"></script>
+  <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+  <script src="js/jquery.datetimepicker.js"></script>
+  <script src="js/select2.js"></script>
+  <link href="css/select2.css" rel="stylesheet" />
+</head>
+
+<body style="height:525px;">
+  <div id="container">
+    <div id="wb_Text1"
+      style="position:absolute;left:60px;top:15px;width:236px;height:54px;text-align:center;z-index:9;">
+      <span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>Cheques &amp;
+          Recibos<br></strong></span><span
+        style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>(Proveedores)</strong></span><span
+        style="color:#000000;font-family:Tahoma;font-size:24px;"><strong> </strong></span></div>
+    <div id="Layer1" style="position:absolute;text-align:left;left:490px;top:5px;width:543px;height:71px;z-index:10;">
+      <div id="wb_Text5"
+        style="position:absolute;left:26px;top:45px;width:59px;height:16px;text-align:right;z-index:0;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+      <div id="wb_Text6"
+        style="position:absolute;left:259px;top:45px;width:59px;height:16px;text-align:right;z-index:1;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+      <input type="text" id="fechaDesde"
+        style="position:absolute;left:112px;top:39px;width:78px;height:20px;line-height:20px;z-index:2;" name="Editbox1"
+        value="" readonly>
+      <input type="text" id="fechaHasta"
+        style="position:absolute;left:325px;top:39px;width:78px;height:20px;line-height:20px;z-index:3;" name="Editbox1"
+        value="" readonly>
+      <input type="button" id="Button1" name="" value="x"
+        style="position:absolute;left:405px;top:39px;width:22px;height:24px;z-index:4;cursor:pointer;"
+        onclick="cleanDate('fechaHasta')">
+      <div id="wb_Text4"
+        style="position:absolute;left:0px;top:12px;width:107px;height:16px;text-align:right;z-index:5;">
+        <span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Proveedor:</strong></span></div>
+      <input type="button" id="Eliminar" name="" value="x"
+        style="position:absolute;left:192px;top:39px;width:22px;height:24px;z-index:6;cursor:pointer;"
+        onclick="cleanDate('fechaDesde')">
+      <select name="Combobox1" size="1" id="idCmbProveedor"
+        style="position:absolute;left:112px;top:8px;width:423px;height:20px;z-index:7;">
+      </select>
+      <input type="button" id="btnBuscar" name="" value="Filtrar"
+        style="position:absolute;left:455px;top:35px;width:80px;height:34px;z-index:8;cursor:pointer;">
+    </div>
+    <div id="Html2" style="position:absolute;left:60px;top:88px;width:983px;height:420px;z-index:11">
+      <div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+        <table id="tabla_datos" class="display" cellspacing="0" width="100%"
+          style="font-family:Arial; background-color:#afcaff;">
+          <thead>
+            <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+              <th>TIPO</th>
+              <th>N° DOC.</th>
+              <th>FECHA</th>
+              <th>MONTO</th>
+              <th>PROVEEDOR</th>
+              <th>N° ORDENES</th>
+              <th>N° FACTURAS</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <input type="button" id="btnNuevo" name="" value="Nuevo"
+      style="position:absolute;left:906px;top:468px;width:100px;height:30px;z-index:12;cursor:pointer;">
+    <input type="button" id="btnRevisar" name="" value="Revisar"
+      style="position:absolute;left:799px;top:468px;width:100px;height:30px;z-index:13;cursor:pointer;">
+    <div id="Html1" style="position:absolute;left:81px;top:448px;width:476px;height:50px;z-index:14">
+      <div id="pagination" style="font-family: verdana;" />
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Activar CAT</title>
+<meta name="author" content="mhbsoft">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="redmond/jquery.ui.all.css" rel="stylesheet">
+<link href="interfaces-autoseguro.css" rel="stylesheet">
+<link href="activarCATView.css" rel="stylesheet">
+<script src="jquery-1.11.1.min.js"></script>
+<script src="jquery.ui.core.min.js"></script>
+<script src="jquery.ui.widget.min.js"></script>
+<script src="jquery.ui.mouse.min.js"></script>
+<script src="jquery.ui.sortable.min.js"></script>
+<script src="jquery.ui.tabs.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   var tabsInfoCATOpts =
+   {
+      show: true,
+      event: 'click',
+      collapsible: false
+   };
+   $("#tabsInfoCAT").tabs(tabsInfoCATOpts);
+});
+</script>
+   <link rel="icon" href="images/favicon.png" type="image/png" />
+   <link href="css/jquery.dataTables.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../js/jpaginate/css/style.css" media="screen">
+   <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+   <link href="css/select2.css" rel="stylesheet" />
+   <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+   <script src="../js/dataTables.min.js"></script>
+   <script src="../js/mhbsoftScripts.js"></script>
+   <script src="../js/global.js"></script>
+   <script src="../js/date-eu.js"></script>
+
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script src="../js/jpaginate/jquery.paginate.js"></script>
+   <script src="../js/jquery.datetimepicker.js"></script>
+   <script src="../js/select2.js"></script>
+   <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+   <script src="activarCATView.js"></script>
+
+</head>
+<body>
+<div id="container">
+<div id="wb_imgLOGO">
+<img src="images/img0005.png" id="imgLOGO" alt=""></div>
+<div id="Layer3">
+<input type="text" id="txtNombres" name="txtNombres" value="" readonly>
+<div id="Html1">
+<a href="#" id="btnBusquedaCertificado"><span class="glyphicon glyphicon-search"></span></a></div>
+<input type="text" id="txtNroCAT" name="txtNroCAT" value="" autocomplete="off">
+<div id="wb_Text27">
+<span style="color:#000000;font-family:Verdana;font-size:13px;"><strong>PROMOTOR</strong></span></div>
+<div id="wb_Text34">
+<span style="color:#000000;font-family:Verdana;font-size:12px;"><strong>Nro. Certificado:</strong></span></div>
+<input type="text" id="lblStatus" name="Editbox1" value="" readonly autocomplete="off">
+</div>
+<div id="wb_imgSalir">
+<img src="images/img0006.png" id="imgSalir" alt=""></div>
+<div id="tabsInfoCAT">
+<ul>
+<li><a href="#tabsinfocat-page-0"><span>Vigencias</span></a></li>
+<li><a href="#tabsinfocat-page-1"><span>Asociado</span></a></li>
+<li><a href="#tabsinfocat-page-2"><span>Vehiculo</span></a></li>
+</ul>
+<div id="tabsinfocat-page-0">
+<div id="divFechaVigencia">
+<div id="wb_Text7">
+<span style="color:#696969;font-family:Verdana;font-size:12px;">Fin</span></div>
+<input type="text" id="txtFV_Fin" name="Editbox1" value="" tabindex="10" readonly class="form-control">
+<div id="Html5">
+<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
+<input type="text" id="txtFV_Inicio" name="Editbox1" value="" tabindex="9" readonly class="form-control">
+<div id="Html4">
+<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
+<div id="wb_Text5">
+<span style="color:#696969;font-family:Verdana;font-size:12px;"><strong>FECHA VIGENCIA</strong></span></div>
+<div id="wb_Text6">
+<span style="color:#696969;font-family:Verdana;font-size:12px;">Inicio</span></div>
+</div>
+<div id="divFechaPolicial">
+<div id="wb_Text10">
+<span style="color:#696969;font-family:Verdana;font-size:12px;">Fin</span></div>
+<input type="text" id="txtFCP_Fin" name="Editbox1" value="" tabindex="12" readonly class="form-control">
+<div id="Html7">
+<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
+<input type="text" id="txtFCP_Inicio" name="Editbox1" value="" tabindex="11" readonly class="form-control">
+<div id="Html6">
+<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
+<div id="wb_Text9">
+<span style="color:#696969;font-family:Verdana;font-size:12px;">Inicio</span></div>
+<div id="wb_Text1">
+<span style="color:#696969;font-family:Verdana;font-size:12px;"><strong>FECHA CONTROL POLICIAL</strong></span></div>
+</div>
+<div id="divFechaEmision">
+<div id="Html3">
+<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
+<div id="wb_Text4">
+<span style="color:#696969;font-family:Verdana;font-size:12px;"><strong>FECHA EMISIÓN</strong></span></div>
+<input type="text" id="txtFechaEmision" name="Editbox1" value="" tabindex="6" readonly class="form-control">
+</div>
+</div>
+<div id="tabsinfocat-page-1">
+<div id="divAsociado">
+<div id="wb_Text2">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Razón Social</strong></span></div>
+<div id="wb_Text14">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Apellido Paterno</strong></span></div>
+<input type="text" id="idApePat_asoc" name="Editbox1" value="" tabindex="17" autocomplete="off" class="form-control">
+<div id="wb_label_asoc">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>(..)</strong></span></div>
+<div id="Html8">
+<a href="#"><span id="btnBuscarPersona_asoc" class="glyphicon glyphicon-search"></span></a></div>
+<div id="wb_Text12">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>DNI/RUC</strong></span></div>
+<input type="text" id="idDNI_asoc" name="Editbox1" value="" tabindex="14" class="form-control">
+<div id="wb_Text3">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Distrito</strong></span></div>
+
+<div style="position: absolute; left: 100%; top: 46px; width: 100%; height: 13px; z-index: 34; text-align: left;">
+   <button onclick="busquedaReniecSUNAT();" type="button" >RENIEC/SUNAT <span class="glyphicon glyphicon-search"></span></button>
+</div>
+
+<div id="wb_Text26">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Tipo</strong></span></div>
+<select name="Combobox1" size="1" id="idTipoPersona_asoc" tabindex="13" class="form-control">
+<option value="N">Natural</option>
+<option value="J">Juridico</option>
+</select>
+<div id="wb_Text13">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Nombres</strong></span></div>
+<input type="text" id="idNombres_asoc" name="Editbox1" value="" tabindex="16" autocomplete="off" class="form-control">
+<div id="wb_Text16">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Telefono</strong></span></div>
+<input type="text" id="idTelf_asoc" name="Editbox1" value="" tabindex="19" class="form-control">
+<div id="wb_Text17">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Dirección</strong></span></div>
+<input type="text" id="idRazonSocial_asoc" name="Editbox1" value="" tabindex="15" autocomplete="off" class="form-control">
+<input type="text" id="idApeMat_asoc" name="Editbox1" value="" tabindex="18" autocomplete="off" class="form-control">
+<select name="Combobox1" size="1" id="idDistrito_asoc" tabindex="20">
+</select>
+<div id="wb_Text15">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Apellido Materno</strong></span></div>
+<input type="text" id="idDirec_asoc" name="Editbox1" value="" tabindex="21" autocomplete="off" class="form-control">
+</div>
+</div>
+<div id="tabsinfocat-page-2">
+<div id="divVehiculo">
+<div id="wb_Text18">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Asientos</strong></span></div>
+<input type="text" id="txtAsientos" name="Editbox1" value="" tabindex="30" autocomplete="off" class="form-control">
+
+<div style="position: absolute; left: 10%; top: 247px; 
+width: 100%; height: 26px; line-height: 26px; z-index: 48;">
+   <span style="text-decoration: underline;font-size: 15px;">Propietario</span>
+   &nbsp;&nbsp;
+   <select  id="selectPersonaPropietario" style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
+      <option value="0">Tipo persona</option>
+      <option value="N">Natural</option>
+      <option value="J">Jurídico</option>
+  </select>
+  &nbsp;&nbsp;
+  <select id="selectTipoDocuPropietario"   style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
+   <option value="0">Tipo documento</option>
+   <option value="DNI">DNI</option>
+   <option value="PTP">PTP</option>
+   <option value="CE">CE</option>
+   <option value="RUC">RUC</option>
+</select>
+&nbsp;&nbsp;
+<input type="text" placeholder="Num. documento" id="txtNumeroDocumentoPropietario" id-propietario-vehiculo="0" class="inputformulario" style="height: 27px;" >
+</div>
+
+
+<div style="position: absolute; left: 7%; top: 279px; 
+width: 100%; height: 26px; line-height: 26px; z-index: 48;">
+
+
+   &nbsp;
+   <a href="#" hidden ><span id="idBtnBuscarPropietario" class="glyphicon glyphicon-search"></span></a>
+   &nbsp;&nbsp;
+   <input type="text" id="nombresPropietario" class="inputformulario" style="width:40%;height:24px;line-height:24px" placeholder="Nombres / Razon Social" >
+   &nbsp;&nbsp;
+   <input type="text" id="apepatPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Paterno" >
+   &nbsp;&nbsp;
+   <input type="text" id="apematPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Materno" >
+
+</div>
+
+<div id="wb_Text25">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>N° Serie Motor</strong></span></div>
+<input type="text" id="txtSerieNro" name="Editbox1" value="" tabindex="29" autocomplete="off" class="form-control">
+<div id="wb_Text24">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Año</strong></span></div>
+<div id="Html9" style="width: 100%;">
+<a href="#"><span id="idBtnBuscarPlaca" class="glyphicon glyphicon-search"></span></a> 
+<button onclick="busquedaSUNARP();" style="margin-left: 39%;" >SUNARP&nbsp;<span class="glyphicon glyphicon-search"></span></button> </div>
+<div id="wb_Text28">
+<span style="color:#696969;font-family:Verdana;font-size:12px;"><strong>Modelo</strong></span></div>
+<input type="text" id="txtModelo" name="Editbox1" value="" tabindex="27" autocomplete="off" class="form-control">
+<div id="wb_Text8">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Categoria</strong></span></div>
+<div id="wb_Text23">
+<span style="color:#696969;font-family:Verdana;font-size:12px;"><strong>Marca</strong></span></div>
+<input type="text" id="txtPlaca" is_servicio="0" name="Editbox1" value="" tabindex="22" class="form-control">
+<select name="Combobox1" size="1" id="cmbCategoria" tabindex="23" class="form-control">
+</select>
+<div id="wb_Text21">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Uso</strong></span></div>
+<select name="Combobox1" size="1" id="cmbUsoVehiculo" tabindex="24" class="form-control">
+</select>
+<div id="wb_Text22">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Clase</strong></span></div>
+<input type="text" id="txtAnno" name="Editbox1" value="" tabindex="28" autocomplete="off" class="form-control">
+<input type="text" id="txtMarca" name="Editbox1" value="" tabindex="26" autocomplete="off" class="form-control">
+<select name="Combobox1" size="1" id="cmbClaseVehiculo" tabindex="25" class="form-control">
+</select>
+<div id="wb_Text20">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>PLACA</strong></span></div>
+</div>
+
+
+
+
+</div>
+</div>
+<div id="divMonto">
+<div id="wb_Text32">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span></div>
+<div id="wb_Text37">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span></div>
+<div id="wb_Text36">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>=</strong></span></div>
+<input type="text" id="txtPrima" name="Editbox1" value="" tabindex="31" autocomplete="off" class="form-control">
+<input type="text" id="txtComision" name="Editbox1" value="" tabindex="32" autocomplete="off" class="form-control">
+<input type="text" id="txtAporte" name="Editbox1" value="" tabindex="33" autocomplete="off" class="form-control">
+<input type="text" id="txtTotal" name="Editbox1" value="" tabindex="34" autocomplete="off" class="form-control">
+<div id="wb_Text29">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Prima</strong></span></div>
+<div id="wb_Text30">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Comisión</strong></span></div>
+<div id="wb_Text31">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>Aporte</strong></span></div>
+<div id="wb_Text11">
+<span style="color:#696969;font-family:Verdana;font-size:11px;"><strong>MONTO</strong></span></div>
+</div>
+<input type="button" id="btnRegistra" name="" value="Registrar CAT">
+<div id="wb_Text35">
+<span style="color:#DCDCDC;font-family:Verdana;font-size:13px;"><strong>ACTIVACION DE CERTIFICADOS</strong></span></div>
+</div>
+</body>
+</html><script>
+
+   function emitirErrorCatch(err, nombre_funcion) {
+      try {
+         var txt = "Se encontro un error en la funcion " + nombre_funcion + "\n\n";
+         txt += "Error: " + err.message + "\n\n";
+         txt += "Click ACEPTAR para continuar.\n\n";
+         //fancyAlert(txt);
+         alert(txt);
+         return;
+      } catch (err) {
+         emitirErrorCatch(err, "emitirErrorCatch");
+      }
+   }
+   function decoficarDatosPassport(data) {
+      try {
+         var e = document.createElement('div');
+         e.innerHTML = data;
+         return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+      } catch (err) {
+         emitirErrorCatch(err, "decoficarDatosPassport");
+      }
+   }
+   var arrayResponse = JSON.parse(decoficarDatosPassport("<%= JSON.stringify(user) %>"));
+</script>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/nuevo_editar_proveedor.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/nuevo_editar_proveedor.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:240px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:27px;top:9px;width:196px;height:23px;z-index:24;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:19px;"><strong>PROVEEDOR</strong></span></div>
+<div id="idForm" style="position:absolute;text-align:left;left:11px;top:42px;width:856px;height:189px;z-index:25;">
+<div id="wb_Text56" style="position:absolute;left:26px;top:9px;width:86px;height:15px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Tipo Persona</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:143px;top:9px;width:68px;height:15px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:307px;top:9px;width:84px;height:15px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Pat.</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:433px;top:9px;width:84px;height:15px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellido Mat.</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:557px;top:9px;width:84px;height:15px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Razon Social</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:26px;top:57px;width:86px;height:15px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong><em><u>Dirección</u></em></strong></span></div>
+<select name="Combobox1" size="1" id="idTipoPersona" style="position:absolute;left:24px;top:29px;width:96px;height:21px;z-index:6;">
+<option value="J">Jurídico</option>
+<option value="N">Natural</option>
+</select>
+<input type="text" id="idNombres" style="position:absolute;left:133px;top:28px;width:148px;height:18px;line-height:18px;z-index:7;" name="Editbox1" value="" autocomplete="off">
+<input type="text" id="idApellidoPat" style="position:absolute;left:298px;top:28px;width:108px;height:18px;line-height:18px;z-index:8;" name="Editbox1" value="" autocomplete="off">
+<input type="text" id="idApellidoMat" style="position:absolute;left:424px;top:28px;width:99px;height:18px;line-height:18px;z-index:9;" name="Editbox1" value="" autocomplete="off">
+<input type="text" id="idRazonSocial" style="position:absolute;left:544px;top:28px;width:160px;height:18px;line-height:18px;z-index:10;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text7" style="position:absolute;left:24px;top:77px;width:68px;height:15px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dep / Prov</strong></span></div>
+<input type="text" id="idDepProv_C" style="position:absolute;left:24px;top:94px;width:156px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" readonly>
+<input type="button" id="btnCambiarProv_C" name="" value="Cambiar Prov." style="position:absolute;left:92px;top:66px;width:95px;height:26px;z-index:13;cursor:pointer;">
+<div id="wb_Text8" style="position:absolute;left:433px;top:77px;width:68px;height:15px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Calle</strong></span></div>
+<select name="Combobox1" size="1" id="select_C" style="position:absolute;left:197px;top:94px;width:211px;height:22px;z-index:15;">
+</select>
+<div id="wb_Text9" style="position:absolute;left:211px;top:77px;width:68px;height:15px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Distrito</strong></span></div>
+<div id="wb_Text10" style="position:absolute;left:727px;top:11px;width:100px;height:15px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro Documento</strong></span></div>
+<input type="text" id="idNroDocumento" style="position:absolute;left:723px;top:28px;width:107px;height:18px;line-height:18px;z-index:18;" name="Editbox1" value="">
+<input type="text" id="idCalle" style="position:absolute;left:424px;top:92px;width:401px;height:20px;line-height:20px;z-index:19;" name="Editbox1" value="" autocomplete="off">
+<select name="Combobox1" size="1" id="idTipoProveedor" style="position:absolute;left:24px;top:147px;width:163px;height:21px;z-index:20;">
+<option value="">Seleccione</option>
+<option value="N">Nosocomio</option>
+<option value="F">Funeraria</option>
+<option value="O">Otros</option>
+</select>
+<div id="wb_Text11" style="position:absolute;left:31px;top:130px;width:147px;height:15px;z-index:21;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Tipo Proveedor</strong></span></div>
+<input type="text" id="idUltimaCompra" style="position:absolute;left:197px;top:148px;width:204px;height:18px;line-height:18px;z-index:22;" name="Editbox1" value="" readonly>
+<div id="wb_Text12" style="position:absolute;left:211px;top:131px;width:147px;height:15px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Ultima compra</strong></span></div>
+</div>
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:782px;top:5px;width:87px;height:30px;z-index:26;cursor:pointer;">
+<input type="text" id="idID" style="position:absolute;left:669px;top:9px;width:93px;height:20px;line-height:20px;z-index:27;" name="Editbox1" value="" readonly>
+<div id="wb_lblID" style="position:absolute;left:641px;top:13px;width:27px;height:15px;z-index:28;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ID</strong></span></div>
+</div>
+</body>
+</html>

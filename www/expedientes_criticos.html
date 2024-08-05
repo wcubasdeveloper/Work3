@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Expedientes Criticos</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/expedientes_criticos.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:19.0px; line-height:1.21em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:15.0px; line-height:1.20em;
+}
+input[type=button] {
+	height:30px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:38px;top:19px;width:337px;height:23px;white-space:nowrap;">
+    <div class="Wp-Artistic-Body-P">
+        <span class="Artistic-Body-C">EXPEDIENTES EN ESTADO CRITICO</span></div>
+</div>
+<div id="divTABLA" style="position:absolute;left:32px;top:51px;width:1040px;height:460px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>COD. EXPEDIENTE</center></th>
+    <th><center>FECHA INGRESO</center></th>
+    <th><center>AREA ORIGEN</center></th>
+    <th><center>USUARIO ORIGEN</center></th>
+    <th><center>AREA DESTINO</center></th> 
+    <th><center>USUARIO DESTINO</center></th>        
+  	<th><center>ESTADO NOTIF.</center></th>
+  	<th><center>DIAS A RESPONDER.</center></th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+    <div id="idPanelFiltro" style="position:absolute;left:8px;top:0px;width:186px;height:32px; display:none;">
+        <div style="position:absolute;left:6px;top:8px;width:37px;height:18px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Filtro</span></div>
+        </div>
+        <select id="idFiltro" name="combo_1" size="1" style="position:absolute; left:64px; top:6px;">
+            <option value="T">Todos</option>
+            <option value="U">Del&nbsp;Usuario</option>
+        </select>
+    </div>
+    <input type="button" style="position:absolute; left:861px; top:416px; width:140px; height:22px; height:30px;" id="idBtnDescargar" value="Descargar Excel">
+</div>
+</div>
+</body>
+</html>

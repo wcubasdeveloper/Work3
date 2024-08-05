@@ -1,0 +1,3 @@
+codigoEnlace,id_carta_garantia,Fecha_Factura,Nosocomio,Nro_Documento_Factura_Ipress,Monto_Factura,Tipo_Gasto,Cod_Agraviado,evento,cod_TES_tipodocumento
+33208,123046,15/03/2017,HOSPITAL DE VENTANILLA,0001-007067,350,GASTOS MEDICOS                        ,S2014090027,E2014090018,FAC
+33473,122462,15/03/2017,HOSPITAL NACIONAL HIPOLITO UNANUE,003-0031944,157,GASTOS MEDICOS                        ,S2014090097,E2014090068,FAC

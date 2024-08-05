@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Gestionar Menu</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/gestormenu.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:13.0px; line-height:1.23em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:22.0px; line-height:1.23em;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:66px;top:5px;width:962px;height:508px; background-color:#3478ab; border-radius:5px; border-style:solid; border-width:2px;">
+    <div style="position:absolute;left:89px;top:40px;width:536px;height:41px;">
+        <input type="text" id="idNombreMenu" name="edit_1" value="" style="position:absolute; left:226px; top:9px; width:208px;">
+        <input type="button" style="position:absolute; left:444px; top:9px; width:89px; height:22px;" value="Ingresar" onclick="agregarMenu()">
+        <div style="position:absolute;left:12px;top:4px;width:212px;height:29px;">
+            <div style="position:absolute;left:26px;top:8px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nivel 1</span></div>
+            </div>
+            <div style="position:absolute;left:95px;top:8px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nivel 2</span></div>
+            </div>
+            <div style="position:absolute;left:163px;top:8px;width:43px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nivel 3</span></div>
+            </div>
+            <input type="radio" name="nivelSeleccion" VALUE="0" style="position:absolute; left:6px; top:6px;">
+            <input type="radio" name="nivelSeleccion" VALUE="1" style="position:absolute; left:75px; top:6px;">
+            <input type="radio" name="nivelSeleccion" VALUE="2" style="position:absolute; left:143px; top:6px;">
+        </div>
+    </div>
+    <div style="position:absolute;left:22px;top:8px;width:242px;height:27px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Configuración del menú</span></div>
+    </div>
+    <div style="position:absolute;left:49px;top:84px;width:876px;height:381px; overflow-y:auto;">
+    <table id='tablaConfig' width="100%" style='font-family:Arial;'>
+    	<thead style='height:28px; background-color:black; color:white;'>
+    		<th>Ordenar</th>
+    		<th>Nivel</th>
+    		<th></th>
+    		<th></th>
+    		<th></th>
+    		<th>Link</th>
+    	</thead>
+    	<tbody></tbody>	
+    </table>
+    </div>
+    <input type="button" style="position:absolute; left:794px; top:475px; width:134px; height:22px;" value="Actualizar menú" onclick="actualizarMenu()">
+    <input type="button" style="position:absolute; left:16px; top:185px; width:27px; height:22px;" value="+" onclick="subirBajar('+')">
+    <input type="button" style="position:absolute; left:16px; top:224px; width:25px; height:22px;" value="-" onclick="subirBajar('-')">
+    <input type="button" style="position:absolute; left:652px; top:475px; width:134px; height:22px;" id="eliminarOpcion" value="Eliminar Opcion">
+</div>
+</div>
+</body>
+</html>

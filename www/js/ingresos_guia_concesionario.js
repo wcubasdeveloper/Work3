@@ -1,0 +1,234 @@
+var idLocal = 0;
+var idPerfil = parent.perfilUsuario1;
+if(idPerfil!=1 && idPerfil!=2){
+	idLocal = parent.idLocal;
+}
+var idGuia = 0;
+var contadorId = 0;
+var DAO = new DAOWebServiceGeT("wbs_ventas")
+var accion = $_GET("accion");
+var arrayDatos = [];
+var idUsuario = parent.idUsuario;
+cargarInicio(function(){
+	$("#idFechaGuia").attr("requerido", "Fecha de Registro");
+	$("#idCmbConcesionario").attr("requerido", "Concesionario");
+	$("#idCmbUsuario").attr("requerido", "Promotor");
+	$("#nroGuia").attr("requerido", "Nro de Guia");
+	
+	$("#idFechaGuia").datetimepicker({lan:'es', format:'d/m/Y',  timepicker:false, closeOnDateSelect:true});
+	$("#idFechaGuia").val(convertirAfechaString(new Date(), false)); // muestra la fecha actual en la caja de texto	
+	
+	var parametros = "&idLocal="+idLocal;
+	DAO.consultarWebServiceGet("getAllConcesionarios", parametros, function(data){
+		var campos =  {"keyId":'idConcesionario', "keyValue":'nombreCompuesto'}
+		agregarOpcionesToCombo("idCmbConcesionario", data, campos);
+		$("#idCmbConcesionario").select2();
+		var parametros="&idUsuario="+idUsuario+"&idLocal="+idLocal;
+		DAO.consultarWebServiceGet("getUsuarios", parametros, function(arrayUsuarios){
+			var campos =  {"keyId":'idUsuario', "keyValue":'nombreUsuario'}
+			agregarOpcionesToCombo("idCmbUsuario", arrayUsuarios, campos);
+			$("#idCmbUsuario").select2();			
+			$("#btnNuevo").click(nuevo);
+			$("#btnEditar").click(editar);
+			$("#btnEliminar").click(eliminar);
+			$("#btnGuardar").click(guardar);
+			aplicarDataTable();
+			if(accion=='N'){				
+				$.fancybox.close();
+			}else{ // VISTA
+				idGuia = $_GET("idGuia");
+				var parametros = "&idGuia="+idGuia
+				DAO.consultarWebServiceGet("getDetallesGuia", parametros, function(datos){
+					$("#idFechaGuia").val(datos[0].fechaOperacion);						
+					$("#idCmbConcesionario").val(datos[0].idConcesionario)
+					$("#idCmbConcesionario").select2();
+					$("#nroGuia").val(datos[0].docRefProveedor)
+					$("#idCmbTipoOperacion").val(datos[0].tipoOperacion)
+					$("#idCmbUsuario").val(datos[0].idUsuarioResp)
+					$("#idCmbUsuario").select2();
+					var rptaDatos = datos[0].detalle;
+					for(var i=0; i<rptaDatos.length; i++){
+						var trFila = "<tr id='tr_"+rptaDatos[i].idDetalle+"' style='font-family: Arial; height: 30px; cursor: pointer; font-size: 12px;' onclick='seleccionarFila("+'"'+rptaDatos[i].idDetalle+'"'+")'>"+
+							"<td style='text-align:center;'>"+rptaDatos[i].codArticulo+"</td>"+
+							"<td style='text-align:left;'>"+rptaDatos[i].descArticulo+"</td>"+
+							"<td style='text-align:center;'>"+rptaDatos[i].unidad+"</td>"+
+							"<td style='text-align:center;'>"+rptaDatos[i].cantidad+"</td>"+
+							"<td style='text-align:center;'>"+rptaDatos[i].nroInicio+"</td>"+
+							"<td style='text-align:center;'>"+rptaDatos[i].nroFinal+"</td>"+
+							"<td style='text-align:left;'>"+rptaDatos[i].observaciones+"</td>"+
+						"</tr>";
+						arrayDatos.push(rptaDatos[i]);
+						$("#tabla_datos > tbody").append(trFila);
+					}
+					$(":input").prop("disabled", true); // bloque todas las entradas (input text, radio, select)
+					$(":input").css("opacity", "0.65");
+										
+					$("#idBtnAnular").click(function(){
+						var arrayRegistros = parent.window.frames[0].arrayDatos[parent.window.frames[0].filaSeleccionada];
+						anularGuia(arrayRegistros, function(){
+							parent.window.frames[0].buscar();
+							parent.$.fancybox.close();
+						})
+					});
+					$("#btnEliminar").css("display", "none");
+					$("#btnEditar").css("display", "none");
+					$("#btnNuevo").css("display", "none");
+					$("#idBtnAnular").css("display", "block");
+					$("#idBtnAnular").prop("disabled", false);
+					$("#idBtnAnular").css("opacity", "1.00");
+					$.fancybox.close();
+				});
+			}
+		});
+	});
+});
+function aplicarDataTable(){
+	try{
+		var camposAmostrar = [ // asigna los campos a mostrar en la grilla
+			{campo:'codigo', alineacion:'center'},
+			{campo:'descripcionArticulo', alineacion:'left'},
+			{campo:'unidad', alineacion:'center'},
+			{campo:'cantidad', alineacion:'center'},
+			{campo:'nroInicio', alineacion:'center'},
+			{campo:'nroFin', alineacion:'center'},
+			{campo:'Observaciones', alineacion:'left'}
+		];
+		var columns=[
+			{"width": "10%"},
+			{"width": "25%"},
+			{"width": "5%"},
+			{"width": "5%"},
+			{"width": "12%"},
+			{"width": "15"},
+			{"width": "28%"}
+		];
+		crearFilasHTML("tabla_datos", arrayDatos, camposAmostrar, true, 12); // crea la tabla HTML
+		parseDataTable("tabla_datos", columns, 275, false, false, false, false, function(){
+            if($("#tabla_datos > tbody >tr").length==1 && $("#tabla_datos > tbody >tr")[0].innerText=='NO SE ENCONTRARON REGISTROS'){
+                $("#tabla_datos > tbody").html("");
+            }
+		});		
+		$.fancybox.close();
+	}catch(err){
+		emitirErrorCatch(err, "aplicarDataTable");
+	}
+}
+function guardar(){// guarda las guias
+	try{
+		if(validarCamposRequeridos("idPanel")){
+			if($("#tabla_datos > tbody >tr").length>0){
+				fancyConfirm("Continuar con la operación", function(rpta){
+					var parametrosPOST = {
+						"tipo":$("#idCmbTipoOperacion").val(),
+						"fecha":dateTimeFormat($("#idFechaGuia").val()),
+						"concesionario":$("#idCmbConcesionario").val(),
+						"nroGuia":$("#nroGuia").val(),
+						"idUsuarioDestino":$("#idCmbUsuario").val(),
+						"idUsuario":parent.idUsuario,					
+						"detalle": arrayDatos
+					}
+					DAO.consultarWebServicePOST(parametrosPOST, "guardarGuia", function(data){
+						if(data[0]>0){
+							fancyAlertFunction("Guia ingresada correctamente (ID = "+data[0]+")", function(){
+								realizoTarea=true;
+								parent.$.fancybox.close();
+							})
+						}					
+					});
+				});			
+			}else{
+				fancyAlert("¡Debe ingresar al menos un detalle!")
+			}			
+		}		
+	}catch(err){
+		emitirErrorCatch(err, "guardar")
+	}
+}
+function editar(){
+	try{
+		if(filaSeleccionada!=undefined){
+			var idDetalle = filaSeleccionada;
+			var idConcesionario = $("#idCmbConcesionario").val();
+			abrirVentanaFancyBox(730, 265, "nuevo_editar_detalle_guia?accion=E&tipo="+$("#idCmbTipoOperacion").val()+"&idDetalle="+idDetalle+"&idConcesionario="+idConcesionario+"&idAlmacen=0", true, function(rptaDatos){
+				var idDetalle = rptaDatos[0].idDetalle;
+				$("#tr_"+idDetalle).find("td").eq(0).html(rptaDatos[0].codArticulo);
+				$("#tr_"+idDetalle).find("td").eq(1).html(rptaDatos[0].descArticulo);
+				$("#tr_"+idDetalle).find("td").eq(2).html(rptaDatos[0].unidad);
+				$("#tr_"+idDetalle).find("td").eq(3).html(rptaDatos[0].cantidad);
+				$("#tr_"+idDetalle).find("td").eq(4).html(rptaDatos[0].nroInicio);
+				$("#tr_"+idDetalle).find("td").eq(5).html(rptaDatos[0].nroFinal);
+				$("#tr_"+idDetalle).find("td").eq(6).html(rptaDatos[0].observaciones);			
+				
+				for(var i=0; i<arrayDatos.length; i++){
+					if(arrayDatos[i].idDetalle == idDetalle){
+						arrayDatos[i].codArticulo = rptaDatos[0].codArticulo
+						arrayDatos[i].descArticulo = rptaDatos[0].descArticulo
+						arrayDatos[i].unidad = rptaDatos[0].unidad
+						arrayDatos[i].cantidad = rptaDatos[0].cantidad
+						arrayDatos[i].nroInicio = rptaDatos[0].nroInicio
+						arrayDatos[i].nroFinal = rptaDatos[0].nroFinal
+						arrayDatos[i].observaciones = rptaDatos[0].observaciones
+						break;
+					}				
+				}
+				
+			});			
+		}else{
+			fancyAlert("¡Debe seleccionar un Detalle!");
+		}		
+	}catch(err){
+		emitirErrorCatch(err, "editar")
+	}
+}
+function nuevo(){
+	try{
+		contadorId++;
+		var idConcesionario = $("#idCmbConcesionario").val();
+		if(idConcesionario!=""){			
+			abrirVentanaFancyBox(730, 265, "nuevo_editar_detalle_guia?accion=N&tipo="+$("#idCmbTipoOperacion").val()+"&idDetalle="+contadorId+"&idConcesionario="+idConcesionario+"&idAlmacen=0", true, function(rptaDatos){
+				// agrega el detalle en la grilla:
+				var trFila = "<tr id='tr_"+rptaDatos[0].idDetalle+"' style='font-family: Arial; height: 30px; cursor: pointer; font-size: 12px;' onclick='seleccionarFila("+'"'+rptaDatos[0].idDetalle+'"'+")'>"+
+					"<td style='text-align:center;'>"+rptaDatos[0].codArticulo+"</td>"+
+					"<td style='text-align:left;'>"+rptaDatos[0].descArticulo+"</td>"+
+					"<td style='text-align:center;'>"+rptaDatos[0].unidad+"</td>"+
+					"<td style='text-align:center;'>"+rptaDatos[0].cantidad+"</td>"+
+					"<td style='text-align:center;'>"+rptaDatos[0].nroInicio+"</td>"+
+					"<td style='text-align:center;'>"+rptaDatos[0].nroFinal+"</td>"+
+					"<td style='text-align:left;'>"+rptaDatos[0].observaciones+"</td>"+
+				"</tr>";
+				arrayDatos.push(rptaDatos[0]);
+				$("#tabla_datos > tbody").append(trFila);
+				$("#idCmbConcesionario").prop("disabled", true);				
+				$("#idCmbTipoOperacion").prop("disabled", true);
+			});
+		}else{
+			fancyAlertFunction("¡Debe seleccionar un Concesionario!", function(){
+				$("#idCmbConcesionario").select2("open");
+			})
+		}
+	}catch(err){
+		emitirErrorCatch(err, "nuevo")
+	}
+}
+function eliminar(){
+	try{
+		if(filaSeleccionada!=undefined){
+			// elimina el detalle en el array:
+			for(var i=0; i<arrayDatos.length; i++){
+				if(arrayDatos[i].idDetalle==filaSeleccionada){
+					arrayDatos.splice(i,1);
+					$("#tr_"+filaSeleccionada).remove();
+					break;
+				}
+			}
+			if($("#tabla_datos > tbody >tr").length == 0){
+				$("#idCmbConcesionario").prop("disabled", false);	
+				$("#idCmbTipoOperacion").prop("disabled", false);
+			}
+		}else{
+			fancyAlert("¡Debe seleccionar un Detalle!");
+		}		
+	}catch(err){
+		emitirErrorCatch(err, "eliminar")
+	}
+}

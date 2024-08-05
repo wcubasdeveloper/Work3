@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/mantenimiento_notificacion.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/mantenimiento_notificacion.js"></script>
+<link rel="stylesheet" href="js_editor/codebase/dhtmlx.css">
+<link rel="stylesheet" href="js_editor/skins/skyblue/dhtmlx.css"/> 
+<script src="js_editor/codebase/dhtmlx.js"></script>
+</head>
+<body style="height:595px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:15px;top:6px;width:266px;height:25px;z-index:28;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:21px;"><strong>EDITAR NOTIFICACIÓN</strong></span></div>
+<div id="panelInforme" style="position:absolute;text-align:left;left:4px;top:33px;width:689px;height:209px;z-index:29;">
+</div>
+<input type="button" id="btnGuardar" name="" value="Actualizar" style="position:absolute;left:511px;top:1px;width:87px;height:30px;z-index:30;cursor:pointer;">
+<input type="text" id="idID" style="position:absolute;left:385px;top:6px;width:111px;height:20px;line-height:20px;z-index:31;" name="Editbox1" value="" readonly>
+<input type="button" id="btnEliminar" name="" value="Cancelar" style="position:absolute;left:607px;top:1px;width:88px;height:30px;z-index:32;cursor:pointer;">
+<div id="idForm" style="position:absolute;text-align:left;left:4px;top:250px;width:689px;height:339px;z-index:33;">
+<div id="wb_Text2" style="position:absolute;left:22px;top:73px;width:100px;height:15px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Cod. Evento</strong></span></div>
+<input type="text" id="idCodEvento" style="position:absolute;left:10px;top:90px;width:103px;height:20px;line-height:20px;z-index:1;" name="Editbox1" value="" readonly>
+<input type="text" id="idCAT" style="position:absolute;left:136px;top:90px;width:103px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly>
+<div id="wb_Text3" style="position:absolute;left:143px;top:73px;width:100px;height:15px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>CAT</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:28px;top:114px;width:100px;height:15px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Conductor</strong></span></div>
+<div id="wb_Text9" style="position:absolute;left:28px;top:156px;width:218px;height:15px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha y lugar del accidente</strong></span></div>
+<input type="text" id="idDestinatario" style="position:absolute;left:10px;top:47px;width:229px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="" readonly>
+<div id="wb_Text13" style="position:absolute;left:23px;top:29px;width:100px;height:15px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Destinatario</strong></span></div>
+<div id="wb_Text11" style="position:absolute;left:28px;top:198px;width:218px;height:15px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Gastos</strong></span></div>
+<input type="text" id="idPlaca" style="position:absolute;left:258px;top:90px;width:103px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="" readonly>
+<div id="wb_Text4" style="position:absolute;left:268px;top:73px;width:100px;height:15px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Placa</strong></span></div>
+<input type="text" id="idConductor" style="position:absolute;left:10px;top:131px;width:351px;height:20px;line-height:20px;z-index:11;" name="Editbox1" value="" readonly>
+<input type="text" id="idLugar" style="position:absolute;left:10px;top:173px;width:351px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" readonly>
+<select name="Combobox1" size="1" id="id_motivo" style="position:absolute;left:258px;top:47px;width:110px;height:22px;z-index:13;" requerido="Motivo">
+</select>
+<div id="wb_Text14" style="position:absolute;left:268px;top:29px;width:100px;height:15px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Motivo</strong></span></div>
+<div id="wb_Text12" style="position:absolute;left:28px;top:240px;width:218px;height:15px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Agraviados</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:406px;top:73px;width:100px;height:15px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Asociado</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:406px;top:114px;width:100px;height:15px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Propietario</strong></span></div>
+<div id="wb_Text10" style="position:absolute;left:406px;top:156px;width:100px;height:15px;z-index:18;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Causales</strong></span></div>
+<div id="wb_Text15" style="position:absolute;left:398px;top:29px;width:100px;height:15px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Medio</strong></span></div>
+<select name="Combobox1" size="1" id="id_medio" style="position:absolute;left:388px;top:47px;width:110px;height:22px;z-index:20;" requerido="Medio">
+<option value="C">Carta</option>
+<option value="T">Llamada Telefonica</option>
+<option value="M">SMS</option>
+<option value="E">Email</option>
+</select>
+<div id="wb_Text16" style="position:absolute;left:519px;top:29px;width:100px;height:15px;z-index:21;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Descripcion</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:10px;top:3px;width:301px;height:16px;z-index:22;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>DATOS DE LA NOTIFICACIÓN Y EVENTO</strong></span></div>
+<input type="text" id="idAsociado" style="position:absolute;left:388px;top:90px;width:285px;height:20px;line-height:20px;z-index:23;" name="Editbox1" value="" readonly>
+<input type="text" id="idPropietario" style="position:absolute;left:388px;top:131px;width:285px;height:20px;line-height:20px;z-index:24;" name="Editbox1" value="" readonly>
+<input type="text" id="idCausales" style="position:absolute;left:388px;top:173px;width:285px;height:20px;line-height:20px;z-index:25;" name="Editbox1" value="" readonly>
+<input type="text" id="idGastos" style="position:absolute;left:10px;top:215px;width:663px;height:20px;line-height:20px;z-index:26;" name="Editbox1" value="" readonly>
+<input type="text" id="id_descripcion" style="position:absolute;left:506px;top:47px;width:167px;height:20px;line-height:20px;z-index:27;" name="Editbox1" value="" autocomplete="off">
+</div>
+<textarea name="TextArea1" id="idAgraviados" style="position:absolute;left:15px;top:510px;width:670px;height:70px;z-index:34;" rows="3" cols="108" readonly></textarea>
+<div id="wb_Text17" style="position:absolute;left:335px;top:11px;width:44px;height:15px;z-index:35;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>NRO</strong></span></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-pago-prov-aprobacion.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/tesor-pago-prov-aprobacion.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:69px;top:15px;width:300px;height:58px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>Aprobacion de Ordenes de Pago a Proveedores</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:369px;top:5px;width:670px;height:71px;z-index:16;">
+<div id="wb_Text5" style="position:absolute;left:227px;top:41px;width:59px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:383px;top:41px;width:59px;height:16px;text-align:right;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="fechaDesde" style="position:absolute;left:286px;top:39px;width:78px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly>
+<input type="text" id="fechaHasta" style="position:absolute;left:442px;top:39px;width:78px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" readonly>
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:522px;top:39px;width:22px;height:24px;z-index:4;cursor:pointer;" onclick="cleanDate('fechaHasta')">
+<select name="Combobox1" size="1" id="idCmbProveedor" style="position:absolute;left:442px;top:5px;width:219px;height:20px;z-index:5;">
+</select>
+<div id="wb_Text4" style="position:absolute;left:392px;top:7px;width:46px;height:16px;text-align:right;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Prov. :</strong></span></div>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:366px;top:39px;width:22px;height:24px;z-index:7;cursor:pointer;" onclick="cleanDate('fechaDesde')">
+<input type="button" id="btnBuscar" name="" value="Filtrar" style="position:absolute;left:601px;top:35px;width:60px;height:34px;z-index:8;cursor:pointer;">
+<input type="text" id="nroExpediente" style="position:absolute;left:118px;top:42px;width:93px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="">
+<div id="wb_Text3" style="position:absolute;left:12px;top:12px;width:103px;height:16px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Cod. Agraviado </strong></span></div>
+<input type="text" id="codAgraviado" style="position:absolute;left:118px;top:7px;width:93px;height:20px;line-height:20px;z-index:11;" name="Editbox1" value="">
+<div id="wb_Text7" style="position:absolute;left:223px;top:14px;width:66px;height:16px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>N° Orden:</strong></span></div>
+<input type="text" id="nroOrdenPago" style="position:absolute;left:289px;top:7px;width:93px;height:20px;line-height:20px;z-index:13;" name="Editbox1" value="">
+<div id="wb_Text2" style="position:absolute;left:9px;top:42px;width:106px;height:16px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro. Expediente</strong></span></div>
+</div>
+<div id="Html2" style="position:absolute;left:20px;top:88px;width:1060px;height:420px;z-index:17">
+<div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th>Estado</th>
+  	<th>N°Orden</th>
+  	<th>N°Exp.</th>
+    <th>Fecha</th>    
+    <th> Proveedor  </th>
+    <th>Cod.Agraviado</th>
+    <th> Nombre </th>
+    <th> Documentos Pago </th>
+    <th> TOTAL </th>          
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="btnAprobar" name="" value="Aprobar" style="position:absolute;left:906px;top:468px;width:100px;height:30px;z-index:18;cursor:pointer;">
+<input type="button" id="btnAnular" name="" value="Anular" style="position:absolute;left:799px;top:468px;width:100px;height:30px;z-index:19;cursor:pointer;">
+<input type="button" id="idRevertirAprobar" name="" value="Revertir estado" style="position:absolute;left:660px;top:468px;width:130px;height:30px;z-index:20;cursor:pointer;">
+<div id="Html1" style="position:absolute;left:83px;top:450px;width:410px;height:50px;z-index:21">
+<div id="pagination" style="font-family: verdana;"/></div>
+</div>
+</body>
+</html>

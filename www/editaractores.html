@@ -1,0 +1,361 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Editar Actores</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1270">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/editaractoresaccidente.js"></script>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/select2.js"></script>
+ <link href="css/select2.css" rel="stylesheet" type="text/css"/>
+ 
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-style:italic; font-weight:700; color:#ffffff; font-size:16.0px; line-height:1.19em;
+}
+.Artistic-Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; text-decoration:underline; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C-C2
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:20.0px; line-height:1.25em;
+}
+body{
+	font-family:"Arial"; font-size:12.0px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:transparent; height:610px;">
+<div style="background-color:#4485a6;margin-left:auto;margin-right:auto;position:relative;width:1270px;height:610px;">
+<div style="position:absolute;left:15px;top:38px;width:1235px;height:183px; border-style:solid; border-width:1px; border-color:white; border-radius:5px;">
+    <input type="text" id="nombreAsociado" name="edit_1" readonly value="" style="position:absolute; left:21px; top:46px; width:590px;">
+    <div style="position:absolute;left:33px;top:30px;width:155px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nombre / Razón social</span></div>
+    </div>
+    <input type="text" id="calle_a" name="edit_1" value="" style="position:absolute; left:21px; top:105px; width:304px;">
+    <input type="text" id="nroDocAsociado" name="edit_1" readonly value="" style="position:absolute; left:621px; top:46px; width:128px;">
+    <img src="wpimages/wp30195233_06.png" border="0" width="100" height="17" title="" alt="F. Nacimiento&#10;" style="position:absolute;left:772px;top:29px;">
+    <input type="text" id="fechNacAsociado" name="edit_1" readonly value="" disabled style="position:absolute; left:766px; top:46px; width:125px;">
+    <div style="position:absolute;left:81px;top:89px;width:146px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Tipo y nombre de vía</span></div>
+    </div>
+    <div style="position:absolute;left:346px;top:89px;width:25px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro</span></div>
+    </div>
+    <input type="text" id="nro_a" name="edit_1" value="" style="position:absolute; left:336px; top:105px; width:61px;">
+    <div style="position:absolute;left:412px;top:89px;width:64px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Mz -<wbr> Lote</span></div>
+    </div>
+    <input type="text" id="lote_a" name="edit_1" value="" style="position:absolute; left:409px; top:105px; width:70px;">
+    <div style="position:absolute;left:499px;top:89px;width:46px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Sector</span></div>
+    </div>
+    <input type="text" id="sector_a" name="edit_1" value="" style="position:absolute; left:490px; top:105px; width:121px;">
+    <div style="position:absolute;left:28px;top:3px;width:88px;height:19px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">ASOCIADO</span></div>
+    </div>
+    <img src="wpimages/wp8c6d042e_06.png" border="0" width="1209" height="1" alt="" style="position:absolute;left:17px;top:23px;">
+    <div style="position:absolute;left:637px;top:30px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro Doc.</span></div>
+    </div>
+    <div style="position:absolute;left:22px;top:72px;width:75px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">DOMICILIO</span></div>
+    </div>
+    <div style="position:absolute;left:20px;top:134px;width:99px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Departamento</span></div>
+    </div>
+    <select id="idDepartamento_a" name="combo_2" size="1" style="position:absolute; left:20px; top:150px; width:180px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <select id="idProvincia_a" name="combo_2" size="1" style="position:absolute; left:213px; top:150px; width:190px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:218px;top:134px;width:66px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Provincia</span></div>
+    </div>
+    <select id="idDistrito_a" name="combo_2" size="1" style="position:absolute; left:408px; top:150px; width:205px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:415px;top:134px;width:51px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Distrito</span></div>
+    </div>
+    <input type="text" id="telfijo_a" name="edit_1" value="" style="position:absolute; left:621px; top:149px; width:128px;">
+    <div style="position:absolute;left:629px;top:133px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Fijo</span></div>
+    </div>
+    <input type="text" id="telmovil_a" name="edit_1" value="" style="position:absolute; left:766px; top:149px; width:125px;">
+    <div style="position:absolute;left:776px;top:133px;width:73px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Móvil</span></div>
+    </div>
+    <input type="text" id="referencia_a" name="edit_1" value="" style="position:absolute; left:621px; top:105px; width:598px;">
+    <div style="position:absolute;left:627px;top:89px;width:77px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Referencia</span></div>
+    </div>
+</div>
+<div style="position:absolute;left:0px;top:0px;width:1270px;height:35px; background-color:#676767;">
+    <div style="position:absolute;left:19px;top:5px;width:394px;height:25px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C2">EDITAR DATOS DE LOS RESPONSABLES</span></div>
+    </div>
+    <input type="button" style="position:absolute; left:1106px; top:5px; width:144px; height:22px; height:30px;" value="Guardar cambios" onclick="guardarActores()">
+</div>
+<div style="position:absolute;left:15px;top:225px;width:1235px;height:183px; border-style:solid; border-width:1px; border-color:white; border-radius:5px;">
+    <input type="text" id="calle_p" name="edit_1" value="" style="position:absolute; left:21px; top:105px; width:304px;">
+    <div style="position:absolute;left:82px;top:89px;width:146px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Tipo y nombre de vía</span></div>
+    </div>
+    <div style="position:absolute;left:348px;top:89px;width:25px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro</span></div>
+    </div>
+    <input type="text" id="nro_p" name="edit_1" value="" style="position:absolute; left:336px; top:105px; width:64px;">
+    <div style="position:absolute;left:415px;top:89px;width:64px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Mz -<wbr> Lote</span></div>
+    </div>
+    <input type="text" id="lote_p" name="edit_1" value="" style="position:absolute; left:409px; top:105px; width:70px;">
+    <div style="position:absolute;left:502px;top:89px;width:46px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Sector</span></div>
+    </div>
+    <input type="text" id="sector_p" name="edit_1" value="" style="position:absolute; left:490px; top:105px; width:121px;">
+    <div style="position:absolute;left:28px;top:3px;width:113px;height:19px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">PROPIETARIO</span></div>
+    </div>
+    <img src="wpimages/wpfb4ae646_06.png" border="0" width="1203" height="1" alt="" style="position:absolute;left:17px;top:23px;">
+    <div style="position:absolute;left:22px;top:72px;width:75px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">DOMICILIO</span></div>
+    </div>
+    <div style="position:absolute;left:22px;top:134px;width:99px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Departamento</span></div>
+    </div>
+    <select id="idDepartamento_p" name="combo_2" size="1" style="position:absolute; left:22px; top:150px; width:180px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <select id="idProvincia_p" name="combo_2" size="1" style="position:absolute; left:213px; top:150px; width:190px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:218px;top:134px;width:66px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Provincia</span></div>
+    </div>
+    <select id="idDistrito_p" name="combo_2" size="1" style="position:absolute; left:408px; top:150px; width:205px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:417px;top:134px;width:51px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Distrito</span></div>
+    </div>
+    <input type="text" id="telfijo_p" name="edit_1" value="" style="position:absolute; left:624px; top:149px; width:125px;">
+    <div style="position:absolute;left:634px;top:133px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Fijo</span></div>
+    </div>
+    <input type="text" id="telmovil_p" name="edit_1" value="" style="position:absolute; left:766px; top:149px; width:125px;">
+    <div style="position:absolute;left:774px;top:133px;width:73px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Móvil</span></div>
+    </div>
+    <select id="idCmbSelecion_p" name="combo_2" size="1" style="position:absolute; left:155px; top:2px; width:220px;">
+    </select>
+    <input type="text" id="referencia_p" name="edit_1" value="" style="position:absolute; left:624px; top:105px; width:595px;">
+    <div style="position:absolute;left:630px;top:89px;width:77px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Referencia</span></div>
+    </div>
+    <select id="tipoPersona_p" name="combo_2" size="1" style="position:absolute; left:22px; top:46px;">
+        <option value="N">Natural</option>
+        <option value="J">Juridica</option>
+        <option value="C">Soc.&nbsp;Conyugal</option>
+    </select>
+    <div style="position:absolute;left:28px;top:28px;width:74px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">T. Persona</span></div>
+    </div>
+    <div style="position:absolute;left:309px;top:30px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro Doc.</span></div>
+    </div>
+    <input type="text" id="nroDoc_p" name="edit_1" value="" style="position:absolute; left:297px; top:47px; width:102px;">
+    <div style="position:absolute;left:416px;top:31px;width:63px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nombres</span></div>
+    </div>
+    <div style="position:absolute;left:544px;top:31px;width:87px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Pat.</span></div>
+    </div>
+    <div style="position:absolute;left:658px;top:31px;width:91px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Mat.</span></div>
+    </div>
+    <input type="text" id="nombre_p" name="edit_1" value="" style="position:absolute; left:409px; top:48px; width:120px;" class='nombre'>
+    <input type="text" id="apePat_p" name="edit_1" value="" style="position:absolute; left:535px; top:48px; width:110px;" class='apePat'>
+    <input type="text" id="apeMat_p" name="edit_1" value="" style="position:absolute; left:653px; top:48px; width:110px;">
+    <input type="text" id="razonSocial_p" name="edit_1" value="" style="position:absolute; left:141px; top:47px; width:148px;">
+    <div style="position:absolute;left:147px;top:31px;width:89px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Razón Social</span></div>
+    </div>
+    <div style="position:absolute;left:778px;top:30px;width:56px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro Doc</span></div>
+    </div>
+    <input type="text" id="nroDocC_p" name="edit_1" value="" style="position:absolute; left:769px; top:48px; width:90px;">
+    <div style="position:absolute;left:871px;top:31px;width:63px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nombres</span></div>
+    </div>
+    <div style="position:absolute;left:999px;top:31px;width:87px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Pat.</span></div>
+    </div>
+    <input type="text" id="nombreC_p" name="edit_1" value="" style="position:absolute; left:864px; top:48px; width:120px;" class='nombre'>
+    <input type="text" id="apePatC_p" name="edit_1" value="" style="position:absolute; left:990px; top:48px; width:110px;" class='apePat'>
+    <div style="position:absolute;left:1114px;top:29px;width:91px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Mat.</span></div>
+    </div>
+    <input type="text" id="apeMatC_p" name="edit_1" value="" style="position:absolute; left:1107px; top:47px; width:110px;">
+    <div style="position:absolute;left:770px;top:4px;width:153px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">DATOS DEL CÓNYUGE</span></div>
+    </div>
+</div>
+<div style="position:absolute;left:15px;top:413px;width:1235px;height:190px; border-style:solid; border-width:1px; border-color:white; border-radius:5px;">
+    <div style="position:absolute;left:33px;top:30px;width:63px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nombres</span></div>
+    </div>
+    <input type="text" id="calle_c" name="edit_1" value="" style="position:absolute; left:21px; top:105px; width:304px;">
+    <img src="wpimages/wp30195233_06.png" border="0" width="100" height="17" title="" alt="F. Nacimiento&#10;" style="position:absolute;left:1020px;top:29px;">
+    <input type="text" id="fecNac_c" name="edit_1" readonly value="" style="position:absolute; left:1011px; top:46px; width:140px;">
+    <div style="position:absolute;left:75px;top:89px;width:146px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Tipo y nombre de vía</span></div>
+    </div>
+    <div style="position:absolute;left:354px;top:89px;width:25px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro</span></div>
+    </div>
+    <input type="text" id="nro_c" name="edit_1" value="" style="position:absolute; left:336px; top:105px; width:61px;">
+    <div style="position:absolute;left:415px;top:89px;width:64px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Mz -<wbr> Lote</span></div>
+    </div>
+    <input type="text" id="lote_c" name="edit_1" value="" style="position:absolute; left:409px; top:105px; width:73px;">
+    <div style="position:absolute;left:502px;top:89px;width:46px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Sector</span></div>
+    </div>
+    <input type="text" id="sector_c" name="edit_1" value="" style="position:absolute; left:490px; top:105px; width:121px;">
+    <div style="position:absolute;left:28px;top:3px;width:69px;height:19px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">CHOFER</span></div>
+    </div>
+    <img src="wpimages/wp9d28cb11_06.png" border="0" width="1136" height="1" alt="" style="position:absolute;left:15px;top:23px;">
+    <div style="position:absolute;left:877px;top:30px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro Doc.</span></div>
+    </div>
+    <div style="position:absolute;left:22px;top:72px;width:75px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">DOMICILIO</span></div>
+    </div>
+    <select id="idProvincia_c" name="combo_2" size="1" style="position:absolute; left:213px; top:151px; width:190px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:219px;top:135px;width:66px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Provincia</span></div>
+    </div>
+    <select id="idDistrito_c" name="combo_2" size="1" style="position:absolute; left:408px; top:151px; width:205px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:415px;top:135px;width:51px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Distrito</span></div>
+    </div>
+    <input type="text" id="telfijo_c" name="edit_1" value="" style="position:absolute; left:621px; top:148px; width:128px;">
+    <div style="position:absolute;left:631px;top:132px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Fijo</span></div>
+    </div>
+    <input type="text" id="telmovil_c" name="edit_1" value="" style="position:absolute; left:766px; top:149px; width:122px;">
+    <div style="position:absolute;left:772px;top:133px;width:73px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Telf. Móvil</span></div>
+    </div>
+    <div style="position:absolute;left:348px;top:30px;width:87px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Pat.</span></div>
+    </div>
+    <div style="position:absolute;left:643px;top:30px;width:91px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Apellido Mat.</span></div>
+    </div>
+    <input type="text" id="nombre_c" name="edit_1" value="" style="position:absolute; left:21px; top:46px; width:304px;" class='nombre'>
+    <input type="text" id="apePat_c" name="edit_1" value="" style="position:absolute; left:336px; top:46px; width:275px;" class='apePat'>
+    <input type="text" id="apeMat_c" name="edit_1" value="" style="position:absolute; left:621px; top:46px; width:230px;">
+    <input type="text" id="nroDoc_c" name="edit_1" value="" style="position:absolute; left:866px; top:46px; width:132px;">
+    <select id="idCmbSelecion_c" name="combo_2" size="1" style="position:absolute; left:116px; top:2px; width:220px;">
+    </select>
+    <input type="text" id="referencia_c" name="edit_1" value="" style="position:absolute; left:621px; top:105px; width:598px;">
+    <div style="position:absolute;left:630px;top:89px;width:77px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Referencia</span></div>
+    </div>
+    <div style="position:absolute;left:25px;top:135px;width:99px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Departamento</span></div>
+    </div>
+    <select id="idDepartamento_c" name="combo_2" size="1" style="position:absolute; left:25px; top:151px; width:180px;" onchange="clonarDepaProvDist(this.id)">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:912px;top:131px;width:39px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Clase</span></div>
+    </div>
+    <input type="text" id="claseChofer" name="edit_1" value="" style="position:absolute; left:905px; top:147px; width:87px;">
+    <div style="position:absolute;left:1017px;top:130px;width:87px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Nro Licencia</span></div>
+    </div>
+    <input type="text" id="licenciaChofer" name="edit_1" value="" style="position:absolute; left:1007px; top:146px; width:216px;">
+</div>
+</div>
+</body>
+</html>

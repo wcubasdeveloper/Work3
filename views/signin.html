@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Sign in</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=450">
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:16.0px; line-height:1.25em;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:400px;">
+<!--div style="background-color:transparent;margin-left:auto;margin-right:auto;position:relative;width:450px;height:400px;"-->
+<div style="background-color:#007fbf;margin-left:auto;margin-right:auto;position:relative;width:450px;height:400px;">
+<div style="position:absolute;left:2px;top:2px;width:446px;height:396px; background-color:white;"> <!--#007fbf;"-->
+    <form id="form_1" action="" method="post" style="margin:0;position:absolute;left:60px;top:125px;width:330px;height:210px; background-color:#0071b2;">
+    <input type="submit" style="position:absolute; left:190px; top:160px; width:89px; height:22px; height:30px;" value="Ingresar">
+    <input type="text" name="username" value="" style="position:absolute; left:50px; top:54px; width:233px;">
+    <input type="password" name="password" value="" style="position:absolute; left:50px; top:123px; width:233px;">
+    <div style="position:absolute;left:55px;top:30px;width:60px;height:20px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Usuario</span></div>
+    </div>
+    <div style="position:absolute;left:58px;top:98px;width:43px;height:20px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Clave</span></div>
+    </div>
+    </form>
+    <img src="images/logo.png" border="0" width="205" height="108" alt="" style="position:absolute;left:123px;top:15px;">
+</div>
+<div style="position:absolute;left:83px;top:315px;width:285px;height:21px; font-family:Arial; color:white;">
+<% if(typeof(errorMessage) !== 'undefined') {%>
+            
+  <span><%= errorMessage %></span>
+         
+  <% } %>
+</div>
+</div>
+</body>
+</html>

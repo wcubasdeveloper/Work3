@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-depositopj-contrato.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-depositopj-contrato.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:500px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:15px;top:18px;width:1008px;height:472px;z-index:20;">
+<input type="text" id="txtNCuotas" style="position:absolute;left:942px;top:43px;width:37px;height:20px;line-height:20px;z-index:0;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text6" style="position:absolute;left:864px;top:49px;width:78px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Cuotas:</strong></span></div>
+<div id="wb_Text1" style="position:absolute;left:453px;top:49px;width:88px;height:16px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>ID Contrato </strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:697px;top:90px;width:46px;height:16px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Flota</strong></span></div>
+<input type="text" id="txtNFlota" style="position:absolute;left:748px;top:84px;width:56px;height:20px;line-height:20px;z-index:4;" name="Editbox1" value="" readonly autocomplete="off">
+<input type="text" id="txtInicioContr" style="position:absolute;left:747px;top:43px;width:98px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text4" style="position:absolute;left:9px;top:49px;width:103px;height:16px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Empr. Transp.</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:641px;top:50px;width:108px;height:16px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Inicio Contrato </strong></span></div>
+<input type="text" id="txtInicioCATS" style="position:absolute;left:342px;top:84px;width:98px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text9" style="position:absolute;left:207px;top:90px;width:135px;height:16px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>CATs Vigencia Inicio</strong></span></div>
+<input type="text" id="txtNroCuota" style="position:absolute;left:112px;top:84px;width:80px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" readonly autocomplete="off">
+<input type="text" id="txtNombreEmpr" style="position:absolute;left:112px;top:43px;width:326px;height:20px;line-height:20px;z-index:11;" name="Editbox3" value="">
+<input type="text" id="txtIDContrato" style="position:absolute;left:541px;top:44px;width:86px;height:20px;line-height:20px;z-index:12;" name="Editbox3" value="">
+<div id="wb_Text7" style="position:absolute;left:847px;top:90px;width:49px;height:16px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Total </strong></span></div>
+<div id="Html1" style="position:absolute;left:9px;top:118px;width:991px;height:346px;z-index:14">
+<div id="divTABLA" style="height:346px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th> Nro CAT </th>
+    <th> PLACA </th>    
+    <th>Clase Vehiculo</th>
+    <th> Marca </th>
+    <th> Modelo </th>
+    <th>Año Fab.</th>
+    <th>Nro Motor</th>
+    <th> PRECIO </th>  
+    <th> APORTE </th>  
+    <th> FONDO </th>          
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_idLblTitulo" style="position:absolute;left:290px;top:8px;width:406px;height:24px;z-index:15;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Contratos con Empresas de Transporte</strong></span></div>
+<input type="text" id="txtTotal" style="position:absolute;left:898px;top:84px;width:81px;height:20px;line-height:20px;z-index:16;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text2" style="position:absolute;left:455px;top:90px;width:88px;height:16px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Vigencia Fin</strong></span></div>
+<input type="text" id="txtFinCATS" style="position:absolute;left:542px;top:84px;width:98px;height:20px;line-height:20px;z-index:18;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text5" style="position:absolute;left:11px;top:90px;width:103px;height:16px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro. CUOTA&nbsp;&nbsp;&nbsp; </strong></span></div>
+</div>
+</div>
+</body>
+</html>

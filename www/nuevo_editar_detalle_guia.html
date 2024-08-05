@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/nuevo_editar_detalle_guia.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/nuevo_editar_detalle_guia.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:265px;">
+<div id="container">
+<div id="idForm" style="position:absolute;text-align:left;left:9px;top:18px;width:708px;height:225px;z-index:16;">
+<div id="wb_idLblTitulo" style="position:absolute;left:41px;top:15px;width:152px;height:24px;z-index:0;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:20px;"><strong>Nuevo Detalle</strong></span></div>
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:597px;top:179px;width:90px;height:34px;z-index:1;cursor:pointer;">
+<div id="wb_Text2" style="position:absolute;left:30px;top:50px;width:75px;height:16px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Artículo :</strong></span></div>
+<select name="Combobox1" size="1" id="idCmbArticulo" style="position:absolute;left:21px;top:66px;width:156px;height:20px;z-index:3;">
+</select>
+<input type="text" id="idInicio" style="position:absolute;left:438px;top:64px;width:116px;height:20px;line-height:20px;z-index:4;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text6" style="position:absolute;left:438px;top:48px;width:119px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Certif. / Inicio:</strong></span></div>
+<input type="text" id="idCantidad" style="position:absolute;left:343px;top:64px;width:66px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text4" style="position:absolute;left:29px;top:107px;width:128px;height:16px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Observaciones :</strong></span></div>
+<textarea name="TextArea1" id="idObservacion" style="position:absolute;left:21px;top:126px;width:661px;height:45px;z-index:8;" rows="1" cols="107"></textarea>
+<div id="wb_Text1" style="position:absolute;left:345px;top:48px;width:72px;height:16px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Cantidad :</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:226px;top:48px;width:91px;height:16px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Unidad :</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:586px;top:48px;width:88px;height:16px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Fin :</strong></span></div>
+<input type="text" id="idFin" style="position:absolute;left:579px;top:64px;width:103px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" readonly autocomplete="off">
+<select name="Combobox1" size="1" id="idTipoUnidad" style="position:absolute;left:214px;top:66px;width:103px;height:20px;z-index:13;">
+<option value="UNID">UNID</option>
+</select>
+<input type="checkbox" id="idEstado" name="" value="on" style="position:absolute;left:651px;top:106px;z-index:14;">
+<div id="wb_lblEstado" style="position:absolute;left:587px;top:93px;width:100px;height:16px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Anular CATS ?</strong></span></div>
+</div>
+</div>
+</body>
+</html>

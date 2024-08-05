@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/lista_provisiones.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/lista_provisiones.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:64px;top:25px;width:402px;height:25px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>Listado de Provisiones x Agraviado</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:331px;top:66px;width:425px;height:142px;z-index:9;">
+<div id="wb_Text6" style="position:absolute;left:208px;top:51px;width:59px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="fechaDesde" style="position:absolute;left:83px;top:46px;width:98px;height:20px;line-height:20px;z-index:1;" name="Editbox1" value="" readonly>
+<input type="text" id="fechaHasta" style="position:absolute;left:279px;top:46px;width:98px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:179px;top:46px;width:22px;height:24px;z-index:3;cursor:pointer;" onclick="cleanDate('fechaDesde')">
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:379px;top:46px;width:22px;height:24px;z-index:4;cursor:pointer;" onclick="cleanDate('fechaHasta')">
+<input type="button" id="btnDescargar" name="" value="Descargar" style="position:absolute;left:284px;top:91px;width:117px;height:36px;z-index:5;cursor:pointer;">
+<div id="wb_Text5" style="position:absolute;left:8px;top:52px;width:59px;height:16px;text-align:right;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:17px;top:14px;width:208px;height:16px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>FECHA DE NOTIFICACIÓN:</strong></span></div>
+</div>
+<div id="Html2" style="position:absolute;left:14px;top:321px;width:1060px;height:153px;z-index:10">
+<div id="divTABLA" style="height:287px; border-style:solid; border-width:1px; border-color:gray; display:none;">
+ <br>
+ <table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; font-size:10px; vertical-align:middle; text-align:center ">
+  <thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+    <th><center>COD. AGRAVIADO</center></th>
+    <th><center>FECHA NOTIFICACION</center></th>
+    <th><center>Nro CAT</center></th>
+    <th><center>PLACA</center></th>
+    <th><center>NOMBRE AGRAVIADO</center></th>
+    <th><center>DNI</center></th>
+    <th><center>DIAGNOSTICO</center></th>
+    <th><center>MONTO GASTOS MED.</center></th>
+    <th><center>MONTO INCAP. TEMP.</center></th>
+    <th><center>MONTO INVAL. PERM.</center></th>
+    <th><center>MONTO SEPELIO</center></th>
+    <th><center>MONTO MUERTE</center></th>
+  </tr>
+</thead>
+  <tbody>
+  </tbody>
+ </table>
+</div></div>
+</div>
+</body>
+</html>

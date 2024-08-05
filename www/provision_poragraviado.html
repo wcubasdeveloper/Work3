@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/provision_poragraviado.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/provision_poragraviado.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:55px;top:28px;width:335px;height:25px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>PROVISIÓN POR AGRAVIADO</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:411px;top:10px;width:637px;height:60px;z-index:6;">
+<div id="wb_Text7" style="position:absolute;left:22px;top:21px;width:62px;height:16px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nombre:</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:316px;top:21px;width:41px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>DNI:</strong></span></div>
+<input type="text" id="nombreAgraviado" style="position:absolute;left:88px;top:16px;width:205px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="">
+<input type="button" id="btnBuscarAgraviado" name="" value="Buscar Agraviado" style="position:absolute;left:463px;top:11px;width:138px;height:33px;z-index:3;cursor:pointer;">
+<input type="text" id="idDNI" style="position:absolute;left:365px;top:16px;width:73px;height:20px;line-height:20px;z-index:4;" name="Editbox1" value="">
+</div>
+<!--   -->
+<div id="Html1" style="position:absolute;left:151px;top:96px;width:800px;height:380px;z-index:7">
+<div id="divTABLA_agraviados" style="height:380px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_agraviados" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th><center>COD. AGRAVIADO</center></th>
+        <th><center>COD. EVENTO</center></th>
+        <th><center>DNI</center></th>
+        <th><center>NOMBRE</center></th>  
+        <th><center>GASTO TOTAL</center></th>              
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="btnProvision" name="" value="Provisión" style="position:absolute;left:770px;top:430px;width:144px;height:30px;z-index:8;cursor:pointer;">
+<div id="idOculta" style="position:absolute;text-align:left;left:139px;top:85px;width:850px;height:403px;z-index:9;">
+</div>
+</div>
+</body>
+</html>

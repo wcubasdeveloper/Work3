@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Busqueda Notificaciones</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=700">
+<!--Page Head-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/busquedanotificacion.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:21.0px; line-height:1.19em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:15.0px; line-height:1.20em;
+}
+body{
+	font-size:11px;
+	font-family:Arial;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:278px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:700px;height:278px;">
+<div style="position:absolute;left:0px;top:0px;width:700px;height:32px; background-color:#0067a3;">
+    <div style="position:absolute;left:39px;top:3px;width:332px;height:25px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">BÚSQUEDA DE NOTIFICACIONES</span></div>
+    </div>
+</div>
+<div style="position:absolute;left:10px;top:43px;width:680px;height:220px; border-style:solid; border-width:1px; border-color:gray;">
+    <input type="text" id="codEvento" name="edit_2" value="" style="position:absolute; left:38px; top:100px; width:106px;">
+    <div style="position:absolute;left:42px;top:83px;width:88px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Cod. Evento</span></div>
+    </div>
+    <input type="text" id="nroCAT" name="edit_2" value="" style="position:absolute; left:163px; top:100px; width:103px;">
+    <div style="position:absolute;left:171px;top:82px;width:60px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Nro CAT</span></div>
+    </div>
+    <input type="text" id="placa" name="edit_2" value="" style="position:absolute; left:284px; top:99px; width:103px;">
+    <div style="position:absolute;left:293px;top:81px;width:38px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Placa</span></div>
+    </div>
+    <div style="position:absolute;left:413px;top:81px;width:46px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Desde</span></div>
+    </div>
+    <input type="text" id="fechaDesde" name="edit_2" value="" style="position:absolute; left:405px; top:99px; width:103px; text-align:center;">
+    <div style="position:absolute;left:535px;top:81px;width:40px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Hasta</span></div>
+    </div>
+    <input type="text" id="fechaHasta" name="edit_2" value="" style="position:absolute; left:526px; top:99px; width:114px; text-align:center;">
+    <input type="button" style="position:absolute; left:485px; top:147px; width:155px; height:22px; height:30px;" value="Buscar Notificación" onclick="buscar()">
+    <input type="button" style="position:absolute; left:385px; top:147px; width:84px; height:22px; height:30px;" value="Limpiar" onclick="limpiarBusqueda()">
+    <select id="idEstado" name="combo_1" size="1" style="position:absolute; left:163px; top:46px; width:109px;">
+        <option value="P">Pendientes</option>
+        <option value="R">Reintentando</option>
+        <option value="C">Canceladas</option>
+        <option value="T">Terminado</option>
+        <option value="PR">Pend.&nbsp;&amp;&nbsp;Reint.</option>
+    </select>
+    <div id="idLabelEstado" style="position:absolute;left:174px;top:28px;width:49px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Estado</span></div>
+    </div>
+    <input type="text" id="idNotificacion" name="edit_2" value="" style="position:absolute; left:38px; top:46px; width:106px;">
+    <div style="position:absolute;left:42px;top:28px;width:84px;height:18px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Notificación</span></div>
+    </div>
+</div>
+</div>
+</body>
+</html>

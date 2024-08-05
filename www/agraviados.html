@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Agraviados</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/agraviados.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+ <link rel="stylesheet" type="text/css" href="js/jpaginate/css/style.css" media="screen">
+ <script type="text/javascript" src="js/jpaginate/jquery.paginate.js"></script> 
+<style type="text/css">
+body{margin:0;padding:0;}
+.Body-P
+{
+    margin:0.0px 0.0px 12.0px 0.0px; text-align:center; font-weight:400;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:21.0px; line-height:1.19em;
+}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:12.0px; line-height:1.25em;
+}
+.Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#393939; font-size:10.0px; line-height:1.20em;
+}
+.Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:11.0px; line-height:1.27em;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:38px;top:17px;width:139px;height:25px;white-space:nowrap;">
+    <div class="Wp-Artistic-Body-P">
+        <span class="Artistic-Body-C">AGRAVIADOS</span></div>
+</div>
+<div style="position:absolute;left:395px;top:3px;width:678px;height:44px; background-color:#4485a6;">
+    <div style="position:absolute;left:9px;top:8px;width:74px;height:31px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">FILTROS DE BÚSQUEDA</span></p>
+    </div>
+    <div style="position:absolute;left:94px;top:6px;width:73px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">Tipo. Evento</span></p>
+    </div>
+    <div id="lbltipoEvento" style="position:absolute;left:189px;top:5px;width:73px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:94px;top:25px;width:94px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C-C1">Estad. Recupero</span></p>
+    </div>
+    <div id="lblEstado" style="position:absolute;left:189px;top:25px;width:73px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:488px;top:24px;width:39px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">Hasta</span></p>
+    </div>
+    <div id="lblHasta" style="position:absolute;left:534px;top:24px;width:70px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:268px;top:6px;width:73px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">Cod. Evento</span></p>
+    </div>
+    <div id="lblcodEvento" style="position:absolute;left:349px;top:6px;width:134px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:268px;top:25px;width:35px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C-C1">Placa</span></p>
+    </div>
+    <div id="lblnroCAT" style="position:absolute;left:304px;top:25px;width:62px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:369px;top:25px;width:50px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C-C1">Nro CAT</span></p>
+    </div>
+    <div id="lblplaca" style="position:absolute;left:419px;top:25px;width:64px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <div style="position:absolute;left:488px;top:6px;width:46px;height:13px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">Desde</span></p>
+    </div>
+    <div id="lblDesde" style="position:absolute;left:534px;top:6px;width:70px;height:13px; background-color:#ffffff;overflow:hidden;">
+    <p class="Body-P"><span class="Body-C-C0"><br></span></p>
+    </div>
+    <input type="button" style="position:absolute; left:610px; top:5px; width:60px; height:22px; height:32px;" value="Buscar" onclick="abrirBusquedaAvanzadaMantenimiento()">
+</div>
+<div id="divTABLA" style="position:absolute;left:32px;top:51px;width:1040px;height:460px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>COD. EVENTO</center></th>
+    <th><center>FECHA</center></th>
+    <th><center>PLACA</center></th>    
+    <th><center>CAT</center></th>
+    <th><center>ASOCIADO</center></th> 
+    <th><center>LUGAR</center></th> 
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+    <input type="button" style="position:absolute; left:851px; top:416px; width:145px; height:22px; height:30px;" value="Listar Agraviados" onclick="ListarAgraviados()">
+    <div style="position:absolute;left:22px;top:422px;width:573px;height:32px;">
+        <div id="pagination" style="font-family: verdana;"/>
+    </div>
+</div>
+</div>
+</body>
+</html>

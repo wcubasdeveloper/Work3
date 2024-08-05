@@ -1,0 +1,132 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Editar Agraviado</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=870">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/editarAgraviado.js"></script>
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/select2.js"></script>
+ <link href="css/select2.css" rel="stylesheet" type="text/css"/>
+ 
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:right; font-weight:400;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:19.0px; line-height:1.21em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:14.0px; line-height:1.14em;
+}
+body{
+	font-family:"Arial"; font-size:12.0px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:transparent; height:320px;">
+<div style="background-color:#4485a6;margin-left:auto;margin-right:auto;position:relative;width:870px;height:320px;">
+<div style="position:absolute;left:0px;top:0px;width:870px;height:39px; background-color:#676767;">
+    <div id="idLabelTitulo" style="position:absolute;left:349px;top:9px;width:190px;height:23px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">EDITAR AGRAVIADO</span></div>
+    </div>
+    <input type="text" id="txtCodAgraviado" name="edit_1" value="" style="position:absolute; left:98px; top:9px; width:176px; display:none;">
+    <div id="labelCodAgraviado" style="position:absolute;left:32px;top:12px;width:54px;height:16px;white-space:nowrap; display:none;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Código:</span></div>
+    </div>
+</div>
+<div style="position:absolute;left:11px;top:54px;width:849px;height:260px;">
+    <input type="text" id="apePat" name="edit_1" value="" style="position:absolute; left:384px; top:9px; width:175px;">
+    <img src="wpimages/wpe9fd5fb6_06.png" border="0" width="100" height="17" title="" alt="Apellido Mat.:&#10;" style="position:absolute;left:568px;top:11px;">
+    <input type="text" id="apeMat" name="edit_1" value="" style="position:absolute; left:668px; top:9px; width:175px;">
+    <img src="wpimages/wpf7dd0bf1_06.png" border="0" width="100" height="17" title="" alt="Apellido Pat. :&#10;" style="position:absolute;left:284px;top:11px;">
+    <input type="text" id="nombre" name="edit_1" value="" style="position:absolute; left:88px; top:9px; width:175px;">
+    <div style="position:absolute;left:16px;top:11px;width:67px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Nombres:</span></div>
+    </div>
+    <div style="position:absolute;left:23px;top:46px;width:60px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Nro Doc:</span></div>
+    </div>
+    <input type="text" id="nroDoc" name="edit_1" value="" style="position:absolute; left:88px; top:44px; width:175px;">
+    <img src="wpimages/wpa78871b9_06.png" border="0" width="108" height="17" title="" alt="F. Nacimiento :&#10;" style="position:absolute;left:276px;top:46px;">
+    <input type="text" id="fecNac" name="edit_1" readonly value="" style="position:absolute; left:384px; top:44px; width:175px;">
+    <div style="position:absolute;left:599px;top:46px;width:64px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Telf. Fijo:</span></div>
+    </div>
+    <input type="text" id="telfijo" name="edit_1" value="" style="position:absolute; left:668px; top:44px; width:175px;">
+    <div style="position:absolute;left:6px;top:81px;width:77px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Telf. Móvil:</span></div>
+    </div>
+    <input type="text" id="telmovil" name="edit_1" value="" style="position:absolute; left:88px; top:79px; width:173px;">
+    <div style="position:absolute;left:304px;top:82px;width:74px;height:16px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Provincia :</span></div>
+    </div>
+    <div style="position:absolute;left:605px;top:82px;width:59px;height:16px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Distrito :</span></div>
+    </div>
+    <select id="idProvincia_ag" name="combo_2" size="1" style="position:absolute; left:384px; top:75px; width:160px;" onchange="cargarProvincia()">
+        <option value="">Seleccione</option>
+    </select>
+    <div style="position:absolute;left:628px;top:121px;width:50px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Sector:</span></div>
+    </div>
+    <input type="text" id="sector" name="edit_1" value="" style="position:absolute; left:687px; top:118px; width:155px;">
+    <div style="position:absolute;left:43px;top:120px;width:39px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Calle:</span></div>
+    </div>
+    <input type="text" id="calle" name="edit_1" value="" style="position:absolute; left:88px; top:118px; width:235px;">
+    <div style="position:absolute;left:337px;top:121px;width:29px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Nro:</span></div>
+    </div>
+    <input type="text" id="nro" name="edit_1" value="" style="position:absolute; left:372px; top:118px; width:62px;">
+    <div style="position:absolute;left:444px;top:121px;width:68px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Mz -<wbr> Lote:</span></div>
+    </div>
+    <input type="text" id="lote" name="edit_1" value="" style="position:absolute; left:519px; top:118px; width:93px;">
+    <input type="button" style="position:absolute; left:691px; top:210px; width:144px; height:22px; height:30px;" value="Guardar cambios" onclick="guardarAgraviado()">
+    <div style="position:absolute;left:9px;top:157px;width:105px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Fecha Ingreso:</span></div>
+    </div>
+    <input type="text" id="fecIngreso" name="edit_1" readonly value="" style="position:absolute; left:114px; top:154px; width:140px;">
+    <div style="position:absolute;left:272px;top:157px;width:87px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Diagnóstico:</span></div>
+    </div>
+    <input type="text" id="diagnostico" name="edit_1" value="" style="position:absolute; left:366px; top:154px; width:253px;">
+    <div style="position:absolute;left:637px;top:157px;width:34px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">Tipo:</span></div>
+    </div>
+    <input type="text" id="tipo" name="edit_1" value="" style="position:absolute; left:686px; top:154px; width:155px;">
+    <select id="idDistrito_ag" name="combo_2" size="1" style="position:absolute; left:668px; top:79px; width:160px;" onchange="cargarProvincia()">
+        <option value="">Seleccione</option>
+    </select>
+</div>
+</div>
+</body>
+</html>

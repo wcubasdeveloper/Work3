@@ -1,0 +1,347 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>deudaActual</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=810">
+<!--Page Head-->
+ <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <link rel="stylesheet" href="css/jquery.datetimepicker.css" type="text/css" media="screen" />
+ <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/deudaactual.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-P
+{
+    margin:0.0px 0.0px 0.0px 0.0px; text-align:center; font-weight:400;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:21.0px; line-height:1.19em;
+}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:15.0px; line-height:1.20em;
+}
+.Artistic-Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:12.0px; line-height:1.25em;
+}
+.Artistic-Body-C-C2
+{
+    font-family:"Arial", sans-serif; font-style:italic; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C-C3
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:27.0px; line-height:1.22em;
+}
+.Artistic-Body-C-C4
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:13.0px; line-height:1.23em;
+}
+.Artistic-Body-C-C5
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:15.0px; line-height:1.20em;
+}
+.Artistic-Body-C-C6
+{
+    font-family:"Arial", sans-serif; font-weight:700; text-decoration:underline; font-size:11.0px; line-height:1.27em;
+}
+.Artistic-Body-C-C7
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:11.0px; line-height:1.27em;
+}
+.Artistic-Body-C-C8
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:20.0px; line-height:1.25em;
+}
+body{
+	font-size:12px;
+	font-family:Arial;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:880px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:810px;height:880px;">
+<div id="idPanelBusqueda" style="position:absolute;left:182px;top:40px;width:441px;height:39px;">
+    <input type="button" style="position:absolute; left:331px; top:6px; width:82px; height:22px;" id="idBuscarEvento" value="Buscar">
+    <input type="text" id="codEvento" name="edit_1" value="" style="position:absolute; left:124px; top:7px; width:198px;">
+    <div style="position:absolute;left:20px;top:10px;width:90px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">Cod. Evento:</span></div>
+    </div>
+</div>
+<div style="position:absolute;left:0px;top:0px;width:810px;height:35px; background-color:#0067a3;">
+    <div style="position:absolute;left:318px;top:5px;width:164px;height:25px;white-space:nowrap;">
+        <div class="Artistic-Body-P">
+            <span class="Artistic-Body-C-C0">DEUDA ACTUAL</span></div>
+    </div>
+</div>
+<div id="muestraDatos" style="position:absolute;left:30px;top:87px;width:750px;height:790px; border-style:solid; border-width:2px; border-color:gray; border-radius:5px;">
+    <div id="id_Titulo" style="position:absolute;left:21px;top:10px;width:309px;height:19px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">INFORMACIÓN DEL EVENTO E2015020013</span></p>
+    </div>
+    <img src="wpimages/wp36a78bdd_06.png" border="0" width="718" height="2" alt="" style="position:absolute;left:14px;top:28px;">
+    <div style="position:absolute;left:83px;top:38px;width:46px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Nro CAT</span></div>
+    </div>
+    <input type="text" id="id_nroCAT" name="edit_1" readonly value="" style="position:absolute; left:74px; top:53px; width:80px; text-align:center;">
+    <div style="position:absolute;left:268px;top:38px;width:53px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Asociado</span></div>
+    </div>
+    <input type="text" id="id_nombreCompletoAsociado" name="edit_1" readonly value="" style="position:absolute; left:256px; top:53px; width:295px;">
+    <div style="position:absolute;left:179px;top:38px;width:32px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Placa</span></div>
+    </div>
+    <input type="text" id="id_Placa" name="edit_1" readonly value="" style="position:absolute; left:173px; top:53px; width:70px; text-align:center;">
+    <div style="position:absolute;left:90px;top:126px;width:41px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Distrito</span></div>
+    </div>
+    <input type="text" id="id_Distrito" name="edit_1" readonly value="" style="position:absolute; left:73px; top:141px; width:183px; text-align:center;">
+    <div style="position:absolute;left:294px;top:126px;width:36px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Causa</span></div>
+    </div>
+    <input type="text" id="id_Causa" name="edit_1" readonly value="" style="position:absolute; left:276px; top:141px; width:398px;">
+    <div style="position:absolute;left:29px;top:183px;width:160px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C2">LISTA DE AGRAVIADOS</span></div>
+    </div>
+    <img src="wpimages/wp823c4272_06.png" border="0" width="699" height="2" alt="" style="position:absolute;left:24px;top:171px;">
+    <div style="position:absolute;left:26px;top:365px;width:125px;height:16px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C2">LISTA DE GASTOS</span></div>
+    </div>
+    <div id="divTABLA" style="position:absolute;left:21px;top:200px;width:710px;height:155px; border-color:gray; border-style:solid; border-width:1px;">
+    <table id="tabla_datos_Agraviados" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+    <thead>
+      <tr style='color:white; background-color:#4485A6; font-size:11px;'>
+      	<th><center>ID</center></th>
+        <th><center>NOMBRES</center></th>
+        <th><center>DNI</center></th>
+        <th><center>TIPO</center></th>
+        <th><center>DIAGNÓSTICO</center></th>       
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+    <div id="panel_42" style="position:absolute;left:21px;top:381px;width:710px;height:156px; border-color:gray; border-style:solid; border-width:1px;">
+    <table id="tabla_datos_gastos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+    <thead>
+      <tr style='color:white; background-color:#4485A6; font-size:11px;'>
+      	<th><center>Nº GASTO</center></th>
+        <th><center>TIPO GASTO</center></th>
+        <th><center>FECHA</center></th>
+        <th><center>AGRAVIADO</center></th>
+        <th><center>MONTO</center></th>         
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+    <div id="idPanelDeuda" style="position:absolute;left:29px;top:549px;width:692px;height:161px; border-style:solid; border-width:2px; border-color:gray; border-radius:6px;">
+        <div style="position:absolute;left:22px;top:8px;width:96px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">DEUDA TOTAL</span></div>
+        </div>
+        <img src="wpimages/wp83809ae8_06.png" border="0" width="669" height="2" alt="" style="position:absolute;left:8px;top:29px;">
+        <div style="position:absolute;left:38px;top:50px;width:102px;height:36px;overflow:hidden;">
+        <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C">Gasto Total del Accidente:</span></p>
+        </div>
+        <input type="text" id="gastoTotalAccidente" name="edit_1" readonly value="" style="position:absolute; left:149px; top:57px; width:94px;">
+        <div style="position:absolute;left:285px;top:50px;width:116px;height:36px;overflow:hidden;">
+        <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C">Gastos Administrativos:</span></p>
+        </div>
+        <div style="position:absolute;left:253px;top:50px;width:23px;height:36px;overflow:hidden;">
+        <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">+</span></p>
+        </div>
+        <input type="text" id="idGastosAdministrativos" name="edit_1" value="" style="position:absolute; left:409px; top:57px; width:94px;">
+        <div style="position:absolute;left:520px;top:50px;width:23px;height:36px;overflow:hidden;">
+        <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">=</span></p>
+        </div>
+        <input type="text" id="granTotal" name="edit_1" readonly value="" style="position:absolute; left:555px; top:57px; width:94px;">
+        <input type="button" style="position:absolute; left:510px; top:103px; width:149px; height:22px; height:30px;" id="idGenerarDeuda" value="Establecer Deuda">
+    </div>
+    <div style="position:absolute;left:576px;top:38px;width:34px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Fecha</span></div>
+    </div>
+    <input type="text" id="id_fecha" name="edit_1" readonly value="" style="position:absolute; left:566px; top:53px; width:108px; text-align:center;">
+    <input type="text" id="id_LugarAccidente" name="edit_1" readonly value="" style="position:absolute; left:74px; top:98px; width:599px;">
+    <div style="position:absolute;left:85px;top:83px;width:93px;height:15px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C-C1">Lugar Accidente</span></div>
+    </div>
+    <div id="idPanelCancelarDeuda" style="position:absolute;left:21px;top:488px;width:704px;height:280px; display:none;">
+        <div id="panel_43" style="position:absolute;left:8px;top:12px;width:692px;height:101px; border-style:solid; border-width:2px; border-color:gray; border-radius:6px;">
+            <div style="position:absolute;left:22px;top:8px;width:123px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">DEUDA ANTERIOR</span></div>
+            </div>
+            <img src="wpimages/wp83809ae8_06.png" border="0" width="669" height="2" alt="" style="position:absolute;left:8px;top:29px;">
+            <div style="position:absolute;left:19px;top:42px;width:79px;height:36px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Deuda Total Anterior:</span></p>
+            </div>
+            <input type="text" id="DAnt_gastoTotalAccidente" name="edit_1" readonly value="" style="position:absolute; left:100px; top:49px; width:80px;">
+            <div style="position:absolute;left:187px;top:42px;width:116px;height:36px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Deuda Acordada</span></p>
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Anterior:</span></p>
+            </div>
+            <input type="text" id="DAnt_deudaAcordada" name="edit_1" readonly value="" style="position:absolute; left:305px; top:49px; width:80px;">
+            <div style="position:absolute;left:392px;top:42px;width:61px;height:36px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Monto Pagado:</span></p>
+            </div>
+            <input type="text" id="DAnt_montoPagado" name="edit_1" readonly value="" style="position:absolute; left:452px; top:49px; width:80px;">
+            <div style="position:absolute;left:538px;top:52px;width:44px;height:15px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Saldo:</span></p>
+            </div>
+            <input type="text" id="DAnt_saldo" name="edit_1" readonly value="" style="position:absolute; left:585px; top:49px; width:80px;">
+        </div>
+        <div id="panelDeudaActual" style="position:absolute;left:7px;top:124px;width:692px;height:150px; border-style:solid; border-width:2px; border-color:gray; border-radius:6px;">
+            <div style="position:absolute;left:22px;top:8px;width:106px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">DEUDA ACTUAL</span></div>
+            </div>
+            <img src="wpimages/wp83809ae8_06.png" border="0" width="669" height="2" alt="" style="position:absolute;left:8px;top:29px;">
+            <div style="position:absolute;left:39px;top:55px;width:53px;height:16px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Saldo:</span></p>
+            </div>
+            <input type="text" id="DAct_saldo" name="edit_1" readonly value="" style="position:absolute; left:103px; top:50px; width:90px;">
+            <div style="position:absolute;left:242px;top:45px;width:117px;height:36px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Nuevo Total Gastos Accidente:</span></p>
+            </div>
+            <input type="text" id="DAct_nuevoTotalGastosAccidente" name="edit_1" readonly value="" style="position:absolute; left:369px; top:50px; width:90px;">
+            <div style="position:absolute;left:503px;top:46px;width:52px;height:34px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Nueva Deuda:</span></p>
+            </div>
+            <input type="text" id="DAct_nuevaDeuda1" name="edit_1" readonly value="" style="position:absolute; left:563px; top:50px; width:90px;">
+            <div style="position:absolute;left:205px;top:43px;width:23px;height:36px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">+</span></p>
+            </div>
+            <div style="position:absolute;left:469px;top:43px;width:23px;height:36px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">=</span></p>
+            </div>
+            <div style="position:absolute;left:40px;top:90px;width:52px;height:34px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Nueva Deuda:</span></p>
+            </div>
+            <input type="text" id="DAct_nuevaDeuda2" name="edit_1" readonly value="" style="position:absolute; left:103px; top:96px; width:90px;">
+            <div style="position:absolute;left:240px;top:90px;width:117px;height:36px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Nuevo Gasto administrativo:</span></p>
+            </div>
+            <input type="text" id="DAct_idGastosAdministrativos" name="edit_1" value="" style="position:absolute; left:368px; top:96px; width:90px;" requerido="Nuevos Gastos Administrativos">
+            <div style="position:absolute;left:502px;top:90px;width:52px;height:34px;overflow:hidden;">
+            <p class="Wp-Artistic-Body-P"><span class="Artistic-Body-C-C4">Gran Total:</span></p>
+            </div>
+            <input type="text" id="DAct_GranTotal" name="edit_1" readonly value="" style="position:absolute; left:561px; top:96px; width:90px;">
+            <div style="position:absolute;left:204px;top:90px;width:23px;height:36px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">+</span></p>
+            </div>
+            <div style="position:absolute;left:467px;top:90px;width:23px;height:36px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C3">=</span></p>
+            </div>
+        </div>
+    </div>
+    <div id="panelDatosAcuerdo" style="position:absolute;left:29px;top:623px;width:692px;height:165px; border-style:solid; border-width:2px; border-color:gray; border-radius:6px; display:none;">
+        <div style="position:absolute;left:22px;top:7px;width:165px;height:18px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C5">DATOS DEL ACUERDO</span></div>
+        </div>
+        <img src="wpimages/wp83809ae8_06.png" border="0" width="669" height="2" alt="" style="position:absolute;left:8px;top:29px;">
+        <input type="text" id="idDeudaAcordada" name="edit_1" value="" style="position:absolute; left:390px; top:3px; width:94px; text-align:center;" requerido="Deuda Acordada">
+        <input type="text" id="idPeriodoDias" name="edit_1" value="" style="position:absolute; left:541px; top:51px; width:90px; text-align:center;" requerido="Periodo">
+        <input type="button" style="position:absolute; left:523px; top:96px; width:143px; height:22px; height:30px;" id="idGuardarAcuerdo" value="Guardar Acuerdo">
+        <div style="position:absolute;left:213px;top:37px;width:65px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Valor cuota</span></div>
+        </div>
+        <input type="text" id="idNroCuotas" name="edit_1" value="" style="position:absolute; left:314px; top:51px; width:80px; text-align:center;" requerido="Numero de cuotas">
+        <input type="text" id="idFechaInicio" name="edit_1" readonly value="" style="position:absolute; left:421px; top:51px; width:95px; text-align:center;" requerido="Fecha de Inicio">
+        <input type="text" id="idValorCuota" name="edit_1" value="" style="position:absolute; left:206px; top:51px; width:80px; text-align:center;" requerido="valor Cuota">
+        <div style="position:absolute;left:322px;top:37px;width:62px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Nro cuotas</span></div>
+        </div>
+        <div style="position:absolute;left:427px;top:37px;width:84px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Fecha de Inicio</span></div>
+        </div>
+        <div style="position:absolute;left:544px;top:37px;width:80px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Periodo (Días)</span></div>
+        </div>
+        <input type="button" style="position:absolute; left:56px; top:51px; width:130px; height:22px;" id="idVistaResponsables" value="Ver">
+        <div style="position:absolute;left:69px;top:36px;width:81px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Responsables</span></div>
+        </div>
+        <div style="position:absolute;left:290px;top:7px;width:94px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Deuda Acordada</span></div>
+        </div>
+        <div style="position:absolute;left:56px;top:78px;width:452px;height:82px; background-color:#c9d1ff;">
+            <div style="position:absolute;left:8px;top:2px;width:114px;height:14px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C-C6">RESUMEN DE CUOTAS</span></div>
+            </div>
+            <input type="text" id="rc_cuotaRestante" name="edit_1" readonly value="" style="position:absolute; left:14px; top:30px; width:91px; text-align:center;" requerido="valor Cuota">
+            <div style="position:absolute;left:140px;top:17px;width:62px;height:14px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C-C7">Valor cuota</span></div>
+            </div>
+            <input type="text" id="rc_valorcuota" name="edit_1" readonly value="" style="position:absolute; left:133px; top:30px; width:80px; text-align:center;" requerido="valor Cuota">
+            <div style="position:absolute;left:30px;top:17px;width:61px;height:14px;white-space:nowrap;">
+                <div class="Artistic-Body-P">
+                    <span class="Artistic-Body-C-C7">Nro Cuotas</span></div>
+            </div>
+            <div style="position:absolute;left:217px;top:27px;width:23px;height:25px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C8">=</span></p>
+            </div>
+            <input type="text" id="rc_deudaacordada" name="edit_1" readonly value="" style="position:absolute; left:242px; top:30px; width:94px; text-align:center;" requerido="Deuda Acordada">
+            <div style="position:absolute;left:245px;top:17px;width:89px;height:14px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C-C7">Deuda Acordada</span></div>
+            </div>
+            <div style="position:absolute;left:110px;top:26px;width:20px;height:25px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C8">x</span></p>
+            </div>
+            <input type="button" style="position:absolute; left:13px; top:57px; width:137px; height:22px;" id="idBtnVerCronograma" value="Ver cronograma">
+            <div style="position:absolute;left:339px;top:28px;width:23px;height:25px;overflow:hidden;">
+            <p class="Artistic-Body-P"><span class="Artistic-Body-C-C8">-<wbr></span></p>
+            </div>
+            <input type="text" id="rc_primeracuota" name="edit_1" readonly value="" style="position:absolute; left:364px; top:30px; width:72px; text-align:center;" requerido="Deuda Acordada">
+            <div style="position:absolute;left:367px;top:17px;width:66px;height:14px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C-C7">Cuota Inicial</span></div>
+            </div>
+        </div>
+        <input type="text" id="idCuotaInicial" name="edit_1" value="" style="position:absolute; left:568px; top:3px; width:94px; text-align:center;">
+        <div style="position:absolute;left:492px;top:7px;width:69px;height:15px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C1">Cuota Inicial</span></div>
+        </div>
+    </div>
+</div>
+<div id="oculta" style="position:absolute;left:27px;top:83px;width:760px;height:777px; background-color:#4485a6; border-radius:10px;">
+</div>
+</div>
+</body>
+</html>

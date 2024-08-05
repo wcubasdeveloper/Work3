@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/informe_procurador.css" rel="stylesheet">
+<style>
+div#container
+{
+   width: 650px;
+   position: relative;
+   margin: 0 auto 0 auto;
+   text-align: left;
+}
+body
+{
+   background-color: #FFFFFF;
+   color: #000000;
+   font-family: Arial;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 1.1875;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: center;
+}
+#wb_Text1 div
+{
+   text-align: center;
+}
+#wb_Text2 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text2 div
+{
+   text-align: left;
+}
+#wb_Text3 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text3 div
+{
+   text-align: left;
+}
+#wb_Text6 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text6 div
+{
+   text-align: left;
+}
+#Table1
+{
+   border: 2px #C0C0C0 solid;
+   background-color: transparent;
+   border-spacing: 0px;
+}
+#Table1 td
+{
+   padding: 0px 0px 0px 0px;
+}
+#Table1 td div
+{
+   white-space: nowrap;
+}
+#wb_Text4 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text4 div
+{
+   text-align: right;
+}
+#wb_Text5 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text5 div
+{
+   text-align: right;
+}
+#wb_Text7 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text7 div
+{
+   text-align: right;
+}
+#wb_Text8 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text8 div
+{
+   text-align: right;
+}
+#wb_Text9 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text9 div
+{
+   text-align: left;
+}
+#wb_Text10 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text10 div
+{
+   text-align: left;
+}
+#wb_Text11 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text11 div
+{
+   text-align: left;
+}
+#wb_Text12 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text12 div
+{
+   text-align: left;
+}
+#wb_Text13 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text13 div
+{
+   text-align: right;
+}
+#wb_Text14 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text14 div
+{
+   text-align: left;
+}
+#wb_Text15 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text15 div
+{
+   text-align: right;
+}
+#wb_Text16 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text16 div
+{
+   text-align: right;
+}
+#wb_Text17 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text17 div
+{
+   text-align: right;
+}
+#wb_Text18 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text18 div
+{
+   text-align: right;
+}
+#wb_Text19 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text19 div
+{
+   text-align: right;
+}
+#wb_Text20 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text20 div
+{
+   text-align: right;
+}
+#wb_Text21 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: right;
+}
+#wb_Text21 div
+{
+   text-align: right;
+}
+#wb_Text22 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text22 div
+{
+   text-align: left;
+}
+#wb_Text23 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text23 div
+{
+   text-align: left;
+}
+#wb_Text24 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text24 div
+{
+   text-align: left;
+}
+#wb_Text25 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text25 div
+{
+   text-align: left;
+}
+#wb_Text26 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text26 div
+{
+   text-align: left;
+}
+#wb_Text27 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text27 div
+{
+   text-align: left;
+}
+#wb_Text28 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text28 div
+{
+   text-align: left;
+}
+#wb_Text29 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text29 div
+{
+   text-align: left;
+}
+#wb_Text30 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text30 div
+{
+   text-align: left;
+}
+#wb_Text31 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text31 div
+{
+   text-align: left;
+}
+#wb_Text32 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text32 div
+{
+   text-align: left;
+}
+#wb_Text33 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text33 div
+{
+   text-align: left;
+}
+#wb_Text36 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text36 div
+{
+   text-align: left;
+}
+#wb_Text37 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text37 div
+{
+   text-align: left;
+}
+#wb_Text34 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text34 div
+{
+   text-align: left;
+}
+#wb_Text35 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text35 div
+{
+   text-align: left;
+}
+#wb_Text38 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text38 div
+{
+   text-align: left;
+}
+#wb_Text39 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text39 div
+{
+   text-align: left;
+}
+#wb_Text40 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text40 div
+{
+   text-align: left;
+}
+#wb_Text41 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text41 div
+{
+   text-align: left;
+}
+#wb_Text42 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text42 div
+{
+   text-align: left;
+}
+#wb_Text43 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text43 div
+{
+   text-align: left;
+}
+#Table2
+{
+   border: 2px #C0C0C0 solid;
+   background-color: transparent;
+   border-spacing: 0px;
+}
+#Table2 td
+{
+   padding: 0px 0px 0px 0px;
+}
+#Table2 td div
+{
+   white-space: nowrap;
+}
+#wb_Text44 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text44 div
+{
+   text-align: left;
+}
+#wb_Text45 
+{
+   background-color: transparent;
+   border: 0px #000000 solid;
+   padding: 0;
+   margin: 0;
+   text-align: left;
+}
+#wb_Text45 div
+{
+   text-align: left;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:12px;top:32px;width:626px;height:24px;text-align:center;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:20px;"><strong>INFORME DE PROCURACIÓN DEL EVENTO @codEvento@</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:35px;top:82px;width:250px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>1.- DATOS DEL ACCIDENTE</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:35px;top:310px;width:439px;height:16px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>2.- RESPONSABLES DEL ACCIDENTE</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:54px;top:111px;width:168px;height:14px;z-index:3;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Lugar del Accidente</strong></span></div>
+<table style="position:absolute;left:34px;top:132px;width:583px;height:50px;z-index:4;" id="Table1">
+<tr>
+<td style="background-color:#4682B4;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:177px;height:20px;"><div><span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><strong> Dep. / Provincia</strong></span></div>
+</td>
+<td style="background-color:#4682B4;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:152px;height:20px;"><div><span style="color:#FFFFFF;font-family:Arial;font-size:13px;"><strong>Distrito</strong></span></div>
+</td>
+<td style="background-color:#4682B4;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:20px;"><div><span style="color:#FFFFFF;font-family:Arial;font-size:13px;"> <strong>Dirección</strong></span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:177px;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;">@dep_prov@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:152px;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;">@distrito@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;">@direccion@</span></div>
+</td>
+</tr>
+</table>
+<div id="wb_Text4" style="position:absolute;left:35px;top:194px;width:104px;height:14px;text-align:right;z-index:5;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Fecha y Hora :</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:317px;top:194px;width:76px;height:14px;text-align:right;z-index:6;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Comisaria :</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:20px;top:222px;width:119px;height:14px;text-align:right;z-index:7;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Tipo Accidente :</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:35px;top:249px;width:104px;height:14px;text-align:right;z-index:8;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Causal :</strong></span></div>
+<div id="wb_Text9" style="position:absolute;left:153px;top:194px;width:106px;height:14px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@fecha_hora@</span></div>
+<div id="wb_Text10" style="position:absolute;left:153px;top:222px;width:464px;height:14px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@tipo_accidente@</span></div>
+<div id="wb_Text11" style="position:absolute;left:153px;top:249px;width:451px;height:14px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@causal@</span></div>
+<div id="wb_Text12" style="position:absolute;left:405px;top:194px;width:203px;height:14px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@comisaria@</span></div>
+<div id="wb_Text13" style="position:absolute;left:35px;top:277px;width:104px;height:14px;text-align:right;z-index:13;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Conductor :</strong></span></div>
+<div id="wb_Text14" style="position:absolute;left:153px;top:277px;width:464px;height:14px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@conductor@</span></div>
+<div id="wb_Text15" style="position:absolute;left:34px;top:340px;width:90px;height:14px;text-align:right;z-index:15;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Asociado :</strong></span></div>
+<div id="wb_Text16" style="position:absolute;left:34px;top:366px;width:89px;height:14px;text-align:right;z-index:16;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Propietario :</strong></span></div>
+<div id="wb_Text17" style="position:absolute;left:33px;top:392px;width:90px;height:14px;text-align:right;z-index:17;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Conductor :</strong></span></div>
+<div id="wb_Text18" style="position:absolute;left:314px;top:340px;width:79px;height:14px;text-align:right;z-index:18;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>CAT :</strong></span></div>
+<div id="wb_Text19" style="position:absolute;left:464px;top:340px;width:74px;height:14px;text-align:right;z-index:19;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Vigencia :</strong></span></div>
+<div id="wb_Text20" style="position:absolute;left:314px;top:392px;width:79px;height:14px;text-align:right;z-index:20;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Lincencia :</strong></span></div>
+<div id="wb_Text21" style="position:absolute;left:474px;top:392px;width:64px;height:14px;text-align:right;z-index:21;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Clase :</strong></span></div>
+<div id="wb_Text22" style="position:absolute;left:139px;top:340px;width:232px;height:14px;z-index:22;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@asociado@</span></div>
+<div id="wb_Text23" style="position:absolute;left:139px;top:366px;width:478px;height:14px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@propietario@</span></div>
+<div id="wb_Text24" style="position:absolute;left:139px;top:392px;width:195px;height:14px;z-index:24;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@conductor@</span></div>
+<div id="wb_Text25" style="position:absolute;left:402px;top:340px;width:77px;height:14px;z-index:25;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@CAT@</span></div>
+<div id="wb_Text26" style="position:absolute;left:402px;top:392px;width:88px;height:14px;z-index:26;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@licencia@</span></div>
+<div id="wb_Text27" style="position:absolute;left:546px;top:340px;width:71px;height:14px;z-index:27;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@vigencia@</span></div>
+<div id="wb_Text28" style="position:absolute;left:546px;top:392px;width:71px;height:14px;z-index:28;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@clase@</span></div>
+<div id="wb_Text29" style="position:absolute;left:35px;top:430px;width:439px;height:16px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>3.- DILIGENCIAS REALIZADAS</strong></span></div>
+<div id="wb_Text30" style="position:absolute;left:54px;top:454px;width:224px;height:14px;z-index:30;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Procurador :</strong></span></div>
+<div id="wb_Text31" style="position:absolute;left:474px;top:454px;width:111px;height:14px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Fecha Atención :</strong></span></div>
+<div id="wb_Text32" style="position:absolute;left:474px;top:473px;width:143px;height:14px;z-index:32;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@fecha_hora@</span></div>
+<div id="wb_Text33" style="position:absolute;left:54px;top:473px;width:303px;height:14px;z-index:33;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@procurador@</span></div>
+<div id="wb_Text36" style="position:absolute;left:54px;top:499px;width:190px;height:14px;z-index:34;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Exam. Cualitativo :</strong></span></div>
+<div id="wb_Text37" style="position:absolute;left:54px;top:519px;width:190px;height:14px;z-index:35;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@cualitativo@</span></div>
+<div id="wb_Text34" style="position:absolute;left:259px;top:519px;width:195px;height:14px;z-index:36;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@cuantitativo@</span></div>
+<div id="wb_Text35" style="position:absolute;left:261px;top:499px;width:178px;height:14px;z-index:37;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Exam. Cuantitativo :</strong></span></div>
+<div id="wb_Text38" style="position:absolute;left:474px;top:499px;width:82px;height:14px;z-index:38;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Dosaje:</strong></span></div>
+<div id="wb_Text39" style="position:absolute;left:474px;top:519px;width:130px;height:14px;z-index:39;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@dosaje@</span></div>
+<div id="wb_Text40" style="position:absolute;left:54px;top:541px;width:168px;height:14px;z-index:40;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Inicio Investig :</strong></span></div>
+<div id="wb_Text41" style="position:absolute;left:54px;top:561px;width:168px;height:14px;z-index:41;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@inicio_invest@</span></div>
+<div id="wb_Text42" style="position:absolute;left:259px;top:541px;width:103px;height:14px;z-index:42;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;"><strong>Fin Investig :</strong></span></div>
+<div id="wb_Text43" style="position:absolute;left:259px;top:561px;width:220px;height:14px;z-index:43;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:11px;">@fin_invest@</span></div>
+<table style="position:absolute;left:28px;top:594px;width:594px;height:188px;z-index:44;" id="Table2">
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Accidente probado de manera cierta?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp1@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Existen posibilidades de Recupero?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp8@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Se entrevistó al conductor AD?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp2@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Conductor ebrio o en estado de </span></div>
+<div><span style="color:#000000;font-family:Arial;font-size:11px;">drogadicción?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp9@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Se entrevistó a los demás participantes?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp3@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Conductor sin licencia?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:19px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp10@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:20px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Existe parte policial en el C. de Salud?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:20px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp4@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:20px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿TP Responsable?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:20px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp11@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> </span><span style="color:#000000;font-family:Arial;font-size:11px;">¿El accidente fue constatado por la policía?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp5@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Licencia faculta a manejar vehículo </span></div>
+<div><span style="color:#000000;font-family:Arial;font-size:11px;">asociado?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp12@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Se verificaron daños del vehículo?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp6@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Uso del vehiculo distinto al del CAT </span></div>
+<div><span style="color:#000000;font-family:Arial;font-size:11px;">Asociado?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:30px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp13@</span></div>
+</td>
+</tr>
+<tr>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:226px;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> </span><span style="color:#000000;font-family:Arial;font-size:11px;">¿Está determinada la participación del AD?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;width:78px;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;">@rp7@</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:left;vertical-align:top;width:206px;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:11px;"> ¿Uso fraudulento del CAT?</span></div>
+</td>
+<td style="background-color:transparent;border:1px #C0C0C0 solid;text-align:center;vertical-align:top;height:22px;"><div><span style="color:#000000;font-family:Arial;font-size:13px;"> @rp14@</span></div>
+</td>
+</tr>
+</table>
+<div id="wb_Text44" style="position:absolute;left:35px;top:793px;width:439px;height:16px;z-index:45;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>4.- OBSERVACIONES</strong></span></div>
+<div id="Html1" style="position:absolute;left:54px;top:815px;width:541px;height:100px;z-index:46">
+@observaciones@</div>
+<div id="wb_Text45" style="position:absolute;left:40px;top:1011px;width:439px;height:16px;z-index:47;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>5.- AGRAVIADOS</strong></span></div>
+<div id="Html2" style="position:absolute;left:28px;top:1033px;width:594px;height:135px;z-index:48">
+@tablaAgraviados@</div>
+</div>
+</body>
+</html>

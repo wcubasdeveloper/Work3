@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/lista_certificados.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/lista_certificados.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:39px;top:27px;width:261px;height:29px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>Lista de Certificados</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:300px;top:5px;width:945px;height:76px;z-index:30;">
+<div id="wb_Text8" style="position:absolute;left:13px;top:13px;width:65px;height:16px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Buscar :</strong></span></div>
+<select name="Combobox1" size="1" id="idTipoFiltro" style="position:absolute;left:82px;top:10px;width:164px;height:22px;z-index:13;">
+<option value="T">Todos los CATS</option>
+<option value="A">por asociado</option>
+<option value="F">por fecha de liquidacion</option>
+</select>
+<div id="panelAsociado" style="position:absolute;text-align:left;left:255px;top:3px;width:678px;height:33px;z-index:14;">
+<div id="wb_Text4" style="position:absolute;left:16px;top:8px;width:65px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nombre :</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:440px;top:8px;width:65px;height:16px;text-align:right;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro Doc :</strong></span></div>
+<input type="text" id="nombreAsociado" style="position:absolute;left:90px;top:5px;width:335px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" autocomplete="off" placeholder="Nombre del asociado">
+<input type="text" id="docAsociado" style="position:absolute;left:509px;top:5px;width:136px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" autocomplete="off" placeholder="RUC/DNI Asociado">
+</div>
+<div id="panelFechas" style="position:absolute;text-align:left;left:255px;top:39px;width:678px;height:33px;z-index:15;">
+<div id="wb_Text5" style="position:absolute;left:242px;top:10px;width:59px;height:16px;text-align:right;z-index:4;" class="fechaComponent">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:449px;top:10px;width:57px;height:16px;text-align:right;z-index:5;" class="fechaComponent">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="fechaDesde" style="position:absolute;left:305px;top:6px;width:98px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="" readonly class="fechaComponent">
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:405px;top:6px;width:22px;height:24px;z-index:7;cursor:pointer;" onclick="cleanDate('fechaDesde')" class="fechaComponent">
+<input type="text" id="fechaHasta" style="position:absolute;left:509px;top:6px;width:98px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" readonly class="fechaComponent">
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:609px;top:6px;width:22px;height:24px;z-index:9;cursor:pointer;" onclick="cleanDate('fechaHasta')" class="fechaComponent">
+<input type="checkbox" id="idConFechaLiqui" name="" value="on" style="position:absolute;left:26px;top:8px;z-index:10;">
+<div id="wb_Text2" style="position:absolute;left:54px;top:9px;width:208px;height:16px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>¿ Con fecha de liquidación ?</strong></span></div>
+</div>
+<input type="button" id="btnBuscar" name="" value="Filtrar" style="position:absolute;left:13px;top:38px;width:233px;height:34px;z-index:16;cursor:pointer;">
+</div>
+<div id="Html2" style="position:absolute;left:25px;top:90px;width:1450px;height:420px;z-index:31">
+<div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>CAT</center></th>
+  	<th><center>LIQUIDACION</center></th> 
+    <th><center>F. INICIO</center></th>    
+    <th><center>F. CADUCIDAD</center></th>
+    <th><center>CONTROL INICIO</center></th>
+    <th><center>CONTROL FIN</center></th> 
+    <th><center>PRIMA</center></th>  
+    <th><center>APORTE</center></th>
+    <th><center>COMISION</center></th>
+    <th><center>ASOCIADO</center></th>
+    <th><center>NRO DOC.</center></th>
+    <th><center>SEDE</center></th>
+    <th><center>CONCESIONRIO</center></th>
+    <th><center>PLACA</center></th>          
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="btnExportar" name="" value="Exportar a Excel" style="position:absolute;left:909px;top:457px;width:135px;height:42px;z-index:32;cursor:pointer;">
+<div id="Html1" style="position:absolute;left:44px;top:468px;width:410px;height:33px;z-index:33">
+<div id="pagination" style="font-family: verdana;"/></div>
+</div>
+</body>
+</html>

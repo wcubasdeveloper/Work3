@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/cartagarantia.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/cartagarantia.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:445px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:24px;top:12px;width:378px;height:23px;z-index:65;text-align:left;">
+<span style="color:#1E90FF;font-family:Tahoma;font-size:19px;"><strong>CARTA DE GARANTIA</strong></span></div>
+<div id="divGeneral" style="position:absolute;text-align:left;left:15px;top:41px;width:668px;height:391px;z-index:66;">
+<input type="text" id="idNroCarta" style="position:absolute;left:30px;top:25px;width:73px;height:20px;line-height:20px;z-index:28;" name="Editbox1" value="" requerido="Nro Carta">
+<div id="wb_Text20" style="position:absolute;left:38px;top:10px;width:67px;height:15px;z-index:29;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nro Carta</strong></span></div>
+<input type="text" id="idFechaCarta" style="position:absolute;left:139px;top:25px;width:128px;height:20px;line-height:20px;z-index:30;" name="Editbox1" value="" readonly requerido="Fecha Carta">
+<div id="wb_Text2" style="position:absolute;left:147px;top:10px;width:101px;height:15px;z-index:31;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Fecha Carta</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:12px;top:68px;width:638px;height:55px;z-index:32;">
+<input type="text" id="idNombreAsociado" style="position:absolute;left:17px;top:22px;width:306px;height:20px;line-height:20px;z-index:0;" name="Editbox1" value="" readonly>
+<div id="wb_Text4" style="position:absolute;left:32px;top:7px;width:67px;height:15px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre</strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:361px;top:7px;width:57px;height:15px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI / RUC</strong></span></div>
+<input type="text" id="idNroDoc" style="position:absolute;left:342px;top:22px;width:93px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" readonly>
+<input type="text" id="idCAT" style="position:absolute;left:447px;top:22px;width:82px;height:20px;line-height:20px;z-index:4;" name="Editbox1" value="" readonly>
+<div id="wb_Text6" style="position:absolute;left:474px;top:7px;width:42px;height:15px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>CAT</strong></span></div>
+<input type="text" id="idPlaca" style="position:absolute;left:541px;top:22px;width:82px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="" readonly>
+<div id="wb_Text7" style="position:absolute;left:565px;top:7px;width:42px;height:15px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Placa</strong></span></div>
+</div>
+<div id="wb_Text3" style="position:absolute;left:31px;top:53px;width:67px;height:15px;z-index:33;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ASOCIADO</strong></span></div>
+<div id="wb_Text8" style="position:absolute;left:31px;top:131px;width:81px;height:15px;z-index:34;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>AGRAVIADO</strong></span></div>
+<div id="Layer2" style="position:absolute;text-align:left;left:12px;top:145px;width:638px;height:192px;z-index:35;">
+<div id="wb_Text10" style="position:absolute;left:503px;top:12px;width:37px;height:15px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Edad</strong></span></div>
+<input type="text" id="idEdad" style="position:absolute;left:497px;top:27px;width:38px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="" readonly>
+<input type="text" id="idDNI" style="position:absolute;left:554px;top:27px;width:69px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" readonly>
+<div id="wb_Text9" style="position:absolute;left:31px;top:12px;width:67px;height:15px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre</strong></span></div>
+<input type="text" id="idNombreAgraviado" style="position:absolute;left:17px;top:27px;width:450px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text12" style="position:absolute;left:21px;top:52px;width:132px;height:15px;z-index:13;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Tipo Asistencia</strong></span></div>
+<div id="wb_Text14" style="position:absolute;left:578px;top:12px;width:42px;height:15px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>DNI</strong></span></div>
+<div id="wb_Text13" style="position:absolute;left:22px;top:135px;width:133px;height:15px;z-index:15;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Diagnóstico Final</strong></span></div>
+<select name="Combobox1" size="1" id="tipoAsistencia_a" style="position:absolute;left:17px;top:67px;width:150px;height:22px;z-index:16;">
+<option value="U">Urgencia</option>
+<option value="I">Internamiento</option>
+<option value="E">Emergencia</option>
+</select>
+<div id="wb_Text15" style="position:absolute;left:188px;top:52px;width:132px;height:15px;z-index:17;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nosocomio</strong></span></div>
+<select name="Combobox1" size="1" id="idNosocomio_a" style="position:absolute;left:180px;top:67px;width:150px;height:22px;z-index:18;">
+<option>Seleccione</option>
+</select>
+<input type="button" id="btnBuscarNosocomio" name="" value="Buscar" style="position:absolute;left:560px;top:59px;width:65px;height:30px;z-index:19;cursor:pointer;">
+<div id="wb_Text16" style="position:absolute;left:18px;top:94px;width:112px;height:15px;z-index:20;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Servicio Médico</strong></span></div>
+<input type="text" id="buscarNosocomio_a" style="position:absolute;left:342px;top:64px;width:207px;height:20px;line-height:20px;z-index:21;" name="Editbox1" value="" placeholder="Buscar Nosocomio">
+<select name="Combobox1" size="1" id="idServicioMedico" style="position:absolute;left:17px;top:110px;width:313px;height:21px;z-index:22;" requerido="Servicio Médico">
+</select>
+<div id="wb_Text17" style="position:absolute;left:358px;top:94px;width:133px;height:15px;z-index:23;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Observaciones</strong></span></div>
+<input type="text" id="idObservacion" style="position:absolute;left:346px;top:109px;width:272px;height:20px;line-height:20px;z-index:24;" name="Editbox1" value="">
+<input type="text" id="idDiagnostico" style="position:absolute;left:18px;top:150px;width:472px;height:20px;line-height:20px;z-index:25;" name="Editbox1" value="">
+<div id="wb_Text11" style="position:absolute;left:523px;top:135px;width:42px;height:15px;z-index:26;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Monto</strong></span></div>
+<input type="text" id="monto_a" style="position:absolute;left:516px;top:150px;width:107px;height:20px;line-height:20px;z-index:27;" name="Editbox1" value="">
+</div>
+<input type="button" id="idBtnGuardar" name="" value="Guardar" style="position:absolute;left:529px;top:348px;width:109px;height:30px;z-index:36;cursor:pointer;">
+</div>
+</div>
+</body>
+</html>

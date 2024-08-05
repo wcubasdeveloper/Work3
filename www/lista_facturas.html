@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/lista_facturas.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/lista_facturas.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:62px;top:25px;width:402px;height:25px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>Generación de datos para Facturas</strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:219px;top:62px;width:609px;height:142px;z-index:10;">
+<div id="wb_Text6" style="position:absolute;left:208px;top:51px;width:59px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="fechaDesde" style="position:absolute;left:83px;top:46px;width:98px;height:20px;line-height:20px;z-index:1;" name="Editbox1" value="" readonly>
+<input type="text" id="fechaHasta" style="position:absolute;left:279px;top:46px;width:98px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:179px;top:46px;width:22px;height:24px;z-index:3;cursor:pointer;" onclick="cleanDate('fechaDesde')">
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:379px;top:46px;width:22px;height:24px;z-index:4;cursor:pointer;" onclick="cleanDate('fechaHasta')">
+<div id="wb_Text27" style="position:absolute;left:424px;top:17px;width:42px;height:14px;text-align:right;z-index:5;">
+<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>SEDE</strong></span></div>
+<input type="button" id="btnDescargar" name="" value="Descargar" style="position:absolute;left:477px;top:85px;width:117px;height:36px;z-index:6;cursor:pointer;">
+<select name="Combobox1" size="1" id="cmb_cono" style="position:absolute;left:424px;top:46px;width:170px;height:24px;z-index:7;" class="form-control">
+</select>
+<div id="wb_Text5" style="position:absolute;left:8px;top:52px;width:59px;height:16px;text-align:right;z-index:8;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+</div>
+<div id="Html2" style="position:absolute;left:14px;top:321px;width:1060px;height:153px;z-index:11">
+<div id="divTABLA" style="height:287px; border-style:solid; border-width:1px; border-color:gray; display:none;">
+ <br>
+ <table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; font-size:10px; vertical-align:middle; text-align:center ">
+  <tbody>
+  </tbody>
+ </table>
+</div></div>
+<div id="wb_Text3" style="position:absolute;left:240px;top:79px;width:208px;height:16px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>FECHA DE LIQUIDACIÓN:</strong></span></div>
+</div>
+</body>
+</html>

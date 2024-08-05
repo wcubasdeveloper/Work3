@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro-rev2.0.css" rel="stylesheet">
+<link href="wpscripts/tesor-pago-prov-aprobacion-detalle.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/tesor-pago-prov-aprobacion-detalle.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+<script src="js/select2.js"></script>
+<link href="css/select2.css" rel="stylesheet"/>
+</head>
+<body style="height: 570px;">
+<div id="container">
+<div id="idPanel" style="position:absolute;text-align:left;left:17px;top:9px;width:1018px;height:77px;z-index:24;">
+<div id="wb_Text6" style="position:absolute;left:128px;top:47px;width:59px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Fecha :</strong></span></div>
+<input type="text" id="fechaOrden" style="position:absolute;left:187px;top:43px;width:71px;height:20px;line-height:20px;z-index:1;" name="Editbox1" value="" readonly autocomplete="off">
+<input type="button" id="btnConfirmar" name="" value="Confirmar" style="position:absolute;left:908px;top:43px;width:89px;height:30px;z-index:2;cursor:pointer;">
+<div id="wb_Text1" style="position:absolute;left:25px;top:9px;width:315px;height:23px;z-index:3;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:19px;"><strong>Orden de Pago a Proveedores</strong></span></div>
+<input type="text" id="txtNroOrden" style="position:absolute;left:57px;top:43px;width:69px;height:20px;line-height:20px;z-index:4;" name="txtNroVoucher" value="" readonly>
+<input type="button" id="btnEliminarFecha" name="" value="x" style="position:absolute;left:260px;top:43px;width:22px;height:24px;z-index:5;cursor:pointer;" onclick="cleanDate('fechaOrden')">
+<div id="wb_Text8" style="position:absolute;left:356px;top:16px;width:59px;height:16px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Evento :</strong></span></div>
+<input type="text" id="codEvento" style="position:absolute;left:413px;top:10px;width:95px;height:20px;line-height:20px;z-index:7;" name="Editbox1" value="" readonly autocomplete="off">
+<input type="text" id="idAgraviado" style="position:absolute;left:590px;top:10px;width:95px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text9" style="position:absolute;left:509px;top:14px;width:80px;height:16px;text-align:right;z-index:9;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Agraviado :</strong></span></div>
+<div id="wb_Text10" style="position:absolute;left:697px;top:14px;width:80px;height:16px;text-align:right;z-index:10;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nombre :</strong></span></div>
+<input type="text" id="idNombre" style="position:absolute;left:777px;top:10px;width:218px;height:20px;line-height:20px;z-index:11;" name="Editbox1" value="" readonly autocomplete="off">
+<div id="wb_Text3" style="position:absolute;left:23px;top:45px;width:34px;height:16px;text-align:right;z-index:12;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nro :</strong></span></div>
+<input type="text" id="txtEstado" style="position:absolute;left:802px;top:47px;width:90px;height:20px;line-height:20px;z-index:13;" name="Editbox1" value="APROBADO" readonly disabled autocomplete="off">
+<div id="wb_Text11" style="position:absolute;left:356px;top:45px;width:86px;height:16px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Proveedor :</strong></span></div>
+<select name="Combobox1" size="1" id="idProveedor" style="position:absolute;left:435px;top:45px;width:252px;height:21px;z-index:15;">
+</select>
+</div>
+<div id="Layer1" style="position:absolute;text-align:left;left:17px;top:87px;width:1018px;height:238px;z-index:25;">
+<!--   -->
+<div id="Html1" style="position:absolute;left:25px;top:29px;width:972px;height:165px;z-index:16">
+<div id="divTABLA_datosL" style="height:165px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datosL" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th>ETAPA</th>
+      	<th>NOSOCOMIO</th>
+      	<th>ESTADO</th>
+      	<th>#CARTA</th>
+       	<th>FECHA</th>
+      	<th>TIPO ATENCION</th>
+      	<th>MONTO</th>
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+</div> </div>
+<div id="wb_Text7" style="position:absolute;left:25px;top:8px;width:284px;height:21px;z-index:17;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>Cartas de Garantia</strong></span></div>
+<div id="wb_Text4" style="position:absolute;left:802px;top:201px;width:78px;height:21px;z-index:18;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>TOTAL :</strong></span></div>
+<input type="text" id="txtTotalCarta" style="position:absolute;left:872px;top:201px;width:123px;height:20px;line-height:20px;z-index:19;" name="txtTotalLiquidacion" value="" readonly>
+</div>
+<div id="Layer2" style="position:absolute;text-align:left;left:17px;top:326px;width:1018px;height:238px;z-index:26;">
+<div id="wb_Text5" style="position:absolute;left:802px;top:204px;width:78px;height:21px;z-index:20;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>TOTAL :</strong></span></div>
+<div id="wb_Text2" style="position:absolute;left:25px;top:11px;width:284px;height:21px;z-index:21;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:17px;"><strong>Facturas</strong></span></div>
+<input type="text" id="txtTotalDeposito" style="position:absolute;left:872px;top:204px;width:123px;height:20px;line-height:20px;z-index:22;" name="txtTotalDeposito" value="" readonly>
+<!--   -->
+<div id="Html2" style="position:absolute;left:25px;top:32px;width:972px;height:165px;z-index:23">
+ <div id="divTABLA_datosD" style="height:165px; border-style:solid; border-width:1px; border-color:gray;"> 
+<table id="tabla_datosD" class="display" width="100%" cellspacing="0" style="font-family:Arial; background-color:;">     
+   <thead>      
+      <tr style='color:white; background-color:#4485A6; font-size:10.5px;'>
+      	<th>ETAPA</th>
+      	<th>TIPO DOC.</th>
+      	<th>NRO. DOCUMENTO</th>
+      	<th>FECHA EMISION</th>
+      	<th> OBSERVACIONES </th>
+      	<th>FECHA RECEPCION</th>
+      	<th> MONTO </th>
+      </tr>
+   </thead>
+<tbody>
+</tbody>
+</table>
+ </div> </div>
+</div>
+</div>
+</body>
+</html>

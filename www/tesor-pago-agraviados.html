@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/tesor-pago-agraviados.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/date-eu.js"></script>
+<script src="js/tesor-pago-agraviados.js"></script>
+<!--<link rel="stylesheet" href="css/bootstrap.css" />-->
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:20px;top:22px;width:244px;height:54px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:21px;"><strong>Seleccionar Agraviado<br></strong></span><span style="color:#000000;font-family:Tahoma;font-size:11px;"><strong><br></strong></span></div>
+<div id="Layer1" style="position:absolute;text-align:left;left:284px;top:5px;width:792px;height:81px;z-index:12;">
+<div id="wb_Text4" style="position:absolute;left:564px;top:12px;width:42px;height:16px;z-index:0;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>DNI </strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:319px;top:12px;width:63px;height:16px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Nombre </strong></span></div>
+<input type="text" id="idNombre" style="position:absolute;left:382px;top:7px;width:163px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="">
+<input type="text" id="idDNI" style="position:absolute;left:606px;top:7px;width:93px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="">
+<div id="wb_Text2" style="position:absolute;left:143px;top:12px;width:57px;height:16px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Codigo </strong></span></div>
+<div id="wb_Text5" style="position:absolute;left:15px;top:12px;width:101px;height:16px;z-index:5;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>x AGRAVIADO</strong></span></div>
+<input type="text" id="idCodigo" style="position:absolute;left:200px;top:7px;width:93px;height:20px;line-height:20px;z-index:6;" name="Editbox1" value="">
+<div id="wb_Text7" style="position:absolute;left:143px;top:53px;width:57px;height:16px;z-index:7;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Numero</strong></span></div>
+<input type="text" id="idNumero" style="position:absolute;left:200px;top:49px;width:93px;height:20px;line-height:20px;z-index:8;" name="Editbox1" value="">
+<input type="button" id="btnBuscar" name="" value="Buscar" style="position:absolute;left:720px;top:12px;width:65px;height:40px;z-index:9;cursor:pointer;">
+<div id="wb_Text6" style="position:absolute;left:14px;top:55px;width:102px;height:16px;z-index:10;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>x EXPEDIENTE</strong></span></div>
+</div>
+<div id="Html2" style="position:absolute;left:20px;top:95px;width:1060px;height:415px;z-index:13">
+<div id="divTABLA" style="height:420px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th>NRO. EXPEDIENTE</th>
+  	<th>COD. EVENTO</th>
+  	<th>COD. AGRAVIADO</th>
+    <th>DNI</th>    
+    <th>NOMBRE</th>
+    <th>DIAGNOSTICO</th>
+	<th>PROVEEDOR</th>
+    <th>TOTAL CARTAS</th> 
+    <th>TOTAL FACT.</th>        
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<input type="button" id="btnContinuar" name="" value="Continuar con Transaccion" style="position:absolute;left:866px;top:469px;width:205px;height:30px;z-index:14;cursor:pointer;">
+<div id="Html1" style="position:absolute;left:40px;top:468px;width:410px;height:33px;z-index:15">
+<div id="pagination" style="font-family: verdana;"/></div>
+</div>
+</body>
+</html>

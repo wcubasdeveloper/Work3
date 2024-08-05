@@ -1,0 +1,208 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Consulta de Tramites</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-euro.js"></script>
+ <script type="text/javascript" src="js/captcha/captcha.js"></script> 
+ <script type="text/javascript" src="js/historial_consultatramite.js"></script>
+<style type="text/css">
+body{margin:0;padding:0;}
+.Body-C
+{
+    font-family:"Arial", sans-serif; font-style:italic; font-weight:700; font-size:19.0px; line-height:1.26em;
+}
+.Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:14.0px; line-height:1.14em;
+}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:13.0px; line-height:1.23em;
+}
+.Body-C-C1
+{
+    font-family:"Arial", sans-serif; font-weight:700; text-decoration:underline; font-size:12.0px; line-height:1.25em;
+}
+.Body-C-C2
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:12.0px; line-height:1.25em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; color:#ffffff; font-size:14.0px; line-height:1.14em;
+}
+input[type=button] {
+	height:30px;
+}
+body{
+	font-size:12.5px;
+	font-family:Arial;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:630px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:630px;">
+<div style="position:absolute;left:17px;top:4px;width:1057px;height:620px; border-style:solid; border-line:2px; border-color:gray; border-radius:5px;">
+    <div style="position:absolute;left:29px;top:13px;width:282px;height:20px;overflow:hidden;">
+    <p class="Wp-Body-P"><span class="Body-C">CONSULTA DE TRÁMITES</span></p>
+    </div>
+    <div id="idPanelInfo" style="position:absolute;left:23px;top:120px;width:1010px;height:243px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+        <div id="id_titulo" style="position:absolute;left:35px;top:11px;width:480px;height:20px;overflow:hidden;">
+        <p class="Wp-Body-P"><span class="Body-C-C0">INFORMACIÓN DEL EXPEDIENTE XXXXX</span></p>
+        </div>
+        <img src="wpimages/wp89013530_06.png" border="0" width="954" height="1" alt="" style="position:absolute;left:32px;top:27px;">
+        <div style="position:absolute;left:26px;top:37px;width:90px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">Fecha Ingreso</span></div>
+        </div>
+        <input type="text" id="idFechaIngreso" name="edit_1" readonly value="" style="position:absolute; left:124px; top:34px; width:90px; text-align:center;">
+        <div style="position:absolute;left:226px;top:37px;width:42px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">Estado</span></div>
+        </div>
+        <input type="text" id="idEstado" name="edit_1" readonly value="" style="position:absolute; left:277px; top:34px; width:110px; text-align:center;">
+        <div style="position:absolute;left:400px;top:37px;width:62px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">Días resp.</span></div>
+        </div>
+        <input type="text" id="idDiasRespuesta" name="edit_1" readonly value="" style="position:absolute; left:469px; top:34px; width:45px; text-align:center;">
+        <div style="position:absolute;left:523px;top:37px;width:79px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">Observación</span></div>
+        </div>
+        <input type="text" id="idObservacion" name="edit_1" readonly value="" style="position:absolute; left:611px; top:34px; width:376px;">
+        <div style="position:absolute;left:24px;top:58px;width:962px;height:60px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_37" style="position:absolute;left:16px;top:7px;width:63px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C-C1">EVENTO</span></p>
+            </div>
+            <div style="position:absolute;left:16px;top:31px;width:58px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Asociado</span></div>
+            </div>
+            <input type="text" id="idAsociado" name="edit_1" readonly value="" style="position:absolute; left:78px; top:28px; width:270px;">
+            <div style="position:absolute;left:356px;top:31px;width:65px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Agraviado</span></div>
+            </div>
+            <input type="text" id="idAgraviado" name="edit_1" readonly value="" style="position:absolute; left:423px; top:28px; width:270px;">
+            <div style="position:absolute;left:701px;top:31px;width:36px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Placa</span></div>
+            </div>
+            <input type="text" id="idPlaca" name="edit_1" readonly value="" style="position:absolute; left:740px; top:28px; width:67px; text-align:center;">
+            <div style="position:absolute;left:816px;top:31px;width:39px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Fecha</span></div>
+            </div>
+            <input type="text" id="idFechaEvento" name="edit_1" readonly value="" style="position:absolute; left:857px; top:28px; width:92px; text-align:center;">
+        </div>
+        <div style="position:absolute;left:24px;top:123px;width:962px;height:60px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div id="txt_38" style="position:absolute;left:16px;top:7px;width:83px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C-C1">SOLICITANTE</span></p>
+            </div>
+            <div style="position:absolute;left:16px;top:31px;width:50px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nombre</span></div>
+            </div>
+            <input type="text" id="idNombreTramitador" name="edit_1" readonly value="" style="position:absolute; left:74px; top:28px; width:290px;">
+            <div style="position:absolute;left:375px;top:31px;width:22px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">DNI</span></div>
+            </div>
+            <input type="text" id="idDNI" name="edit_1" readonly value="" style="position:absolute; left:404px; top:28px; width:80px; text-align:center;">
+            <div style="position:absolute;left:496px;top:31px;width:28px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Telf.</span></div>
+            </div>
+            <input type="text" id="idTelef" name="edit_1" readonly value="" style="position:absolute; left:531px; top:28px; width:80px; text-align:center;">
+            <div style="position:absolute;left:622px;top:31px;width:37px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Direc.</span></div>
+            </div>
+            <input type="text" id="idDireccion" name="edit_1" readonly value="" style="position:absolute; left:664px; top:28px; width:285px;">
+        </div>
+        <div style="position:absolute;left:24px;top:188px;width:962px;height:42px; border-style:solid; border-width:1px; border-color:gray; border-radius:6px;">
+            <div style="position:absolute;left:124px;top:14px;width:64px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nro Folios</span></div>
+            </div>
+            <input type="text" id="idNroFolios" name="edit_1" readonly value="" style="position:absolute; left:197px; top:11px; width:55px; text-align:center;">
+            <div style="position:absolute;left:374px;top:14px;width:127px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nro Doc. Referencia</span></div>
+            </div>
+            <input type="text" id="idNroDocRef" name="edit_1" readonly value="" style="position:absolute; left:511px; top:11px; width:100px; text-align:center;">
+            <div style="position:absolute;left:697px;top:14px;width:143px;height:16px;white-space:nowrap;">
+                <div class="Wp-Artistic-Body-P">
+                    <span class="Artistic-Body-C">Nro Expediente Previo</span></div>
+            </div>
+            <input type="text" id="idNroExpPrevio" name="edit_1" readonly value="" style="position:absolute; left:849px; top:11px; width:100px; text-align:center;">
+            <div id="txt_40" style="position:absolute;left:16px;top:15px;width:98px;height:20px;overflow:hidden;">
+            <p class="Wp-Body-P"><span class="Body-C-C1">DOCUMENTOS</span><span class="Body-C-C2"> :</span></p>
+            </div>
+        </div>
+        <div style="position:absolute;left:476px;top:7px;width:104px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C">Tipo Expediente</span></div>
+        </div>
+        <input type="text" id="idTipoExpediente" name="edit_1" readonly value="" style="position:absolute; left:586px; top:4px; width:400px; text-align:center;">
+    </div>
+    <div id="idHistoriales" style="position:absolute;left:23px;top:371px;width:1010px;height:240px; border-style:solid; border-width:1px; border-color:gray;">
+    <table id="tabla_datos" class="display" cellspacing="0" width="100%" style="">
+    <thead>
+      <tr style='color:white; font-size:10px; font-family:Arial;'>
+        <th style='background-color:#4485A6;'><center>FECHA INGRESO<center></th>
+        <th style='background-color:#4485A6;'><center>AREA ORIGEN</center></th>
+        <th style='background-color:#4485A6;'><center>USUARIO ORIGEN</center></th>
+        <th style='background-color:#4485A6;'><center>TIEMPO PROCESO</center></th>
+        <th style='background-color:#4485A6;'><center>AREA DESTINO</center></th>
+        <th style='background-color:#4485A6;'><center>USUARIO DESTINO</center></th>
+        <th style='background-color:#4485A6;'><center>ESTADO NOTIF.</center></th>
+        <th style='background-color:#4485A6;'><center>INFORMES</center></th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+    <div id="idPanelBusqueda" style="position:absolute;left:23px;top:45px;width:1013px;height:75px; background-color:#3272a3;">
+        <input type="text" id="idTXTBuscarExpediente" name="edit_1" value="" style="position:absolute; left:138px; top:32px; width:116px; text-align:center;" placeholder='Ingrese Expediente' requerido="Nro Expediente">
+        <div style="position:absolute;left:141px;top:10px;width:117px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Nro Expediente :</span></div>
+        </div>
+        <div style="position:absolute;left:309px;top:10px;width:117px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Nro Documento :</span></div>
+        </div>
+        <input type="text" id="idBuscaDoc" name="edit_1" value="" style="position:absolute; left:308px; top:33px; width:116px; text-align:center;" placeholder='Ingrese Nro Doc.' requerido="Nro Documento Ref.">
+        <input type="button" style="position:absolute; left:830px; top:33px; width:83px; height:22px;" id="idBtnBuscarExpediente" value="Buscar">
+        <div style="position:absolute;left:476px;top:10px;width:123px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Cod. Verificación:</span></div>
+        </div>
+        <input type="text" id="idCaptcha" name="edit_1" readonly value="" style="position:absolute; left:471px; top:33px; width:135px; text-align:center; font-weight:bold;" placeholder='Ingrese Expediente'>
+        <div style="position:absolute;left:664px;top:11px;width:112px;height:16px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Escribir Código:</span></div>
+        </div>
+        <input type="text" id="idRptaCaptcha" name="edit_1" value="" style="position:absolute; left:660px; top:34px; width:135px;" placeholder='Ingrese Cod. Verif.' requerido="Codigo de verificación">
+    </div>
+    <div id="oculta" style="position:absolute;left:23px;top:120px;width:1013px;height:496px; background-color:#4485a6;">
+    </div>
+    <img src="wpimages/wpb9935e6b_06.png" border="0" width="118" height="62" alt="" style="position:absolute;left:918px;top:5px;">
+</div>
+</div>
+</body>
+</html>

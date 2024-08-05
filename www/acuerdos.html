@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Acuerdos</title>
+<meta name="Generator" content="Serif WebPlus X6">
+<meta name="viewport" content="width=1100">
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+ <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" /> 
+ <script type="text/javascript" src="js/dataTables.min.js"></script>
+ <link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css"/>
+ <script type="text/javascript" src="js/mhbsoftScripts.js"></script>
+ <script type="text/javascript" src="js/global.js"></script>
+ <script type="text/javascript" src="js/date-eu.js"></script>
+ <script type="text/javascript" src="js/acuerdos.js"></script>
+ <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+<style type="text/css">
+body{margin:0;padding:0;}
+.Artistic-Body-C
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:21.0px; line-height:1.19em;
+}
+.Artistic-Body-C-C0
+{
+    font-family:"Arial", sans-serif; font-weight:700; font-size:15.0px; line-height:1.20em;
+}
+input[type=button] {
+	height:30px;
+}
+</style>
+<link rel="stylesheet" href="wpscripts/wpstyles.css" type="text/css"></head>
+
+<body text="#000000" style="background:#ffffff; height:525px;">
+<div style="background-color:#fafafa;margin-left:auto;margin-right:auto;position:relative;width:1100px;height:525px;">
+<div style="position:absolute;left:32px;top:15px;width:1043px;height:496px; border-style:solid; border-width:2px; border-color:gray; border-radius:6px;">
+    <div style="position:absolute;left:459px;top:13px;width:118px;height:25px;white-space:nowrap;">
+        <div class="Wp-Artistic-Body-P">
+            <span class="Artistic-Body-C">ACUERDOS</span></div>
+    </div>
+    <div id="divTABLA" style="position:absolute;left:0px;top:11px;width:1039px;height:485px;">
+    <table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+    <thead>
+      <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+      	<th><center>Nº ACUERDO</center></th>
+        <th><center>COD. EVENTO</center></th>
+        <th><center>FECHA</center></th>
+        <th><center>DESCRIPCION</center></th>
+        <th><center>PERSONA RESPONSABLE</center></th> 
+        <th><center>DEUDA ACORDADA</center></th>        
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+        <input type="button" style="position:absolute; left:858px; top:435px; width:113px; height:22px; height:30px;" id="idDeudaActual" value="Conciliación">
+        <input type="button" style="position:absolute; left:696px; top:435px; width:148px; height:22px; height:30px;" id="idCancelarDeuda" value="Cancelar Acuerdo">
+        <div style="position:absolute;left:25px;top:6px;width:49px;height:18px;white-space:nowrap;">
+            <div class="Wp-Artistic-Body-P">
+                <span class="Artistic-Body-C-C0">Estado</span></div>
+        </div>
+        <select id="idEstado" name="combo_1" size="1" style="position:absolute; left:84px; top:4px;">
+            <option value="P">Pendientes</option>
+            <option value="C">Cancelados</option>
+            <option value="T">Terminados</option>
+        </select>
+    </div>
+</div>
+</div>
+</body>
+</html>

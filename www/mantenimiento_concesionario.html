@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/mantenimiento_concesionario.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/dataTables.min.js"></script>
+<link href="css/jquery.dataTables.css" rel="stylesheet"/>
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/mantenimiento_concesionario.js"></script>
+<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+<script src="js/jpaginate/jquery.paginate.js"></script>
+<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen">
+<script src="js/jquery.datetimepicker.js"></script>
+</head>
+<body style="height:525px;">
+<div id="container">
+<div id="Html2" style="position:absolute;left:20px;top:84px;width:1060px;height:415px;z-index:13">
+<div id="divTABLA" style="height:415px; border-style:solid; border-width:1px; border-color:gray;">
+<table id="tabla_datos" class="display" cellspacing="0" width="100%" style="font-family:Arial; background-color:#afcaff;">
+<thead>
+  <tr style='color:white; background-color:#4485A6; font-size:12px;'>
+  	<th><center>ID</center></th>
+  	<th><center>NOMBRE</center></th> 
+    <th><center>ESTADO</center></th>    
+    <th><center>SEDE</center></th>
+    <th><center>PROMOTOR</center></th>
+    <th><center>VISITA</center></th>       
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div></div>
+<div id="wb_Text1" style="position:absolute;left:21px;top:20px;width:244px;height:29px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Tahoma;font-size:24px;"><strong>CONCESIONARIOS</strong></span></div>
+<input type="button" id="btnNuevo" name="" value="Nuevo" style="position:absolute;left:937px;top:446px;width:104px;height:39px;z-index:15;cursor:pointer;">
+<input type="button" id="btnEditar" name="" value="Editar" style="position:absolute;left:819px;top:446px;width:111px;height:39px;z-index:16;cursor:pointer;">
+<input type="button" id="btnEliminar" name="" value="Eliminar" style="position:absolute;left:702px;top:446px;width:108px;height:39px;z-index:17;cursor:pointer;">
+<div id="Layer1" style="position:absolute;text-align:left;left:308px;top:3px;width:765px;height:72px;z-index:18;">
+<div id="wb_Text2" style="position:absolute;left:458px;top:13px;width:59px;height:16px;text-align:right;z-index:0;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Desde :</strong></span></div>
+<div id="wb_Text6" style="position:absolute;left:458px;top:41px;width:59px;height:16px;text-align:right;z-index:1;">
+<span style="color:#000000;font-family:Arial;font-size:13px;"><strong>Hasta :</strong></span></div>
+<input type="text" id="fechaDesde" style="position:absolute;left:522px;top:8px;width:98px;height:20px;line-height:20px;z-index:2;" name="Editbox1" value="" readonly>
+<input type="text" id="fechaHasta" style="position:absolute;left:522px;top:37px;width:98px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="" readonly>
+<input type="button" id="Eliminar" name="" value="x" style="position:absolute;left:622px;top:8px;width:22px;height:24px;z-index:4;cursor:pointer;" onclick="cleanDate('fechaDesde')">
+<input type="button" id="Button1" name="" value="x" style="position:absolute;left:622px;top:37px;width:22px;height:24px;z-index:5;cursor:pointer;" onclick="cleanDate('fechaHasta')">
+<input type="button" id="btnBuscar" name="" value="Buscar" style="position:absolute;left:657px;top:12px;width:91px;height:40px;z-index:6;cursor:pointer;">
+<select name="Combobox1" size="1" id="idSede" style="position:absolute;left:58px;top:10px;width:143px;height:22px;z-index:7;">
+</select>
+<div id="wb_Text5" style="position:absolute;left:20px;top:14px;width:36px;height:15px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Sede</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:219px;top:12px;width:85px;height:15px;z-index:9;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Razon Social</strong></span></div>
+<input type="text" id="razonSocial" style="position:absolute;left:304px;top:8px;width:152px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="" autocomplete="off">
+<div id="wb_Text4" style="position:absolute;left:20px;top:42px;width:85px;height:15px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Responsable</strong></span></div>
+<input type="text" id="nombreResponsable" style="position:absolute;left:105px;top:37px;width:351px;height:20px;line-height:20px;z-index:12;" name="Editbox1" value="" autocomplete="off">
+</div>
+<div id="Html1" style="position:absolute;left:42px;top:451px;width:344px;height:33px;z-index:19">
+<div id="pagination" style="font-family: verdana;"/></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es-pe">
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="author" content="mhbsoft">
+<link href="wpscripts/siniestros-autoseguro.css" rel="stylesheet">
+<link href="wpscripts/nuevo_editar_local.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
+<script src="js/mhbsoftScripts.js"></script>
+<script src="js/global.js"></script>
+<script src="js/nuevo_editar_local.js"></script>
+</head>
+<body style="height:405px;">
+<div id="container">
+<div id="wb_Text1" style="position:absolute;left:27px;top:9px;width:196px;height:29px;z-index:21;text-align:left;">
+<span style="color:#0080C0;font-family:Tahoma;font-size:24px;"><strong>LOCAL</strong></span></div>
+<div id="idForm" style="position:absolute;text-align:left;left:11px;top:38px;width:468px;height:356px;z-index:22;">
+<input type="text" id="idTelefono" style="position:absolute;left:91px;top:114px;width:121px;height:20px;line-height:20px;z-index:0;" name="Editbox1" value="">
+<div id="wb_Text4" style="position:absolute;left:23px;top:120px;width:68px;height:15px;z-index:1;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Telefono</strong></span></div>
+<div id="wb_Text3" style="position:absolute;left:23px;top:84px;width:68px;height:15px;z-index:2;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Dirección</strong></span></div>
+<input type="text" id="idDireccion" style="position:absolute;left:91px;top:79px;width:343px;height:20px;line-height:20px;z-index:3;" name="Editbox1" value="">
+<div id="wb_Text56" style="position:absolute;left:23px;top:15px;width:68px;height:15px;z-index:4;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombre</strong></span></div>
+<input type="text" id="idNombre" style="position:absolute;left:91px;top:11px;width:343px;height:20px;line-height:20px;z-index:5;" name="Editbox1" value="">
+<div id="wb_Text5" style="position:absolute;left:24px;top:224px;width:51px;height:15px;z-index:6;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Estado</strong></span></div>
+<select name="Combobox1" size="1" id="idEstado" style="position:absolute;left:91px;top:219px;width:128px;height:22px;z-index:7;">
+<option value="1">Activo</option>
+<option value="0">Inactivo</option>
+</select>
+<div id="wb_Text2" style="position:absolute;left:23px;top:51px;width:68px;height:15px;z-index:8;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>RUC</strong></span></div>
+<input type="text" id="idRUC" style="position:absolute;left:91px;top:45px;width:121px;height:20px;line-height:20px;z-index:9;" name="Editbox1" value="">
+<input type="text" id="idCelular" style="position:absolute;left:91px;top:149px;width:121px;height:20px;line-height:20px;z-index:10;" name="Editbox1" value="">
+<div id="wb_Text6" style="position:absolute;left:23px;top:155px;width:68px;height:15px;z-index:11;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Celular</strong></span></div>
+<div id="wb_Text7" style="position:absolute;left:23px;top:188px;width:68px;height:15px;z-index:12;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Correo</strong></span></div>
+<input type="text" id="idCorreo" style="position:absolute;left:91px;top:183px;width:343px;height:20px;line-height:20px;z-index:13;" name="Editbox1" value="">
+<div id="wb_Text8" style="position:absolute;left:23px;top:284px;width:138px;height:15px;z-index:14;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong><em><u>Datos del Contacto</u></em></strong></span></div>
+<input type="text" id="idNombresContacto" style="position:absolute;left:23px;top:321px;width:189px;height:20px;line-height:20px;z-index:15;" name="Editbox1" value="">
+<div id="wb_Text9" style="position:absolute;left:23px;top:257px;width:51px;height:15px;z-index:16;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Remoto</strong></span></div>
+<select name="Combobox1" size="1" id="idRemoto" style="position:absolute;left:91px;top:252px;width:128px;height:22px;z-index:17;">
+<option value="S">Si</option>
+<option value="N">No</option>
+</select>
+<div id="wb_Text10" style="position:absolute;left:24px;top:306px;width:67px;height:15px;z-index:18;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Nombres</strong></span></div>
+<div id="wb_Text11" style="position:absolute;left:246px;top:306px;width:67px;height:15px;z-index:19;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>Apellidos</strong></span></div>
+<input type="text" id="idApellidosContacto" style="position:absolute;left:245px;top:321px;width:189px;height:20px;line-height:20px;z-index:20;" name="Editbox1" value="">
+</div>
+<input type="button" id="btnGuardar" name="" value="Guardar" style="position:absolute;left:383px;top:4px;width:87px;height:30px;z-index:23;cursor:pointer;">
+<input type="text" id="idID" style="position:absolute;left:270px;top:9px;width:93px;height:20px;line-height:20px;z-index:24;" name="Editbox1" value="" readonly>
+<div id="wb_lblID" style="position:absolute;left:242px;top:13px;width:27px;height:15px;z-index:25;text-align:left;">
+<span style="color:#000000;font-family:Arial;font-size:12px;"><strong>ID</strong></span></div>
+</div>
+</body>
+</html>
