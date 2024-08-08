@@ -579,7 +579,7 @@ exports.consulta_dni_empresa_servicio = function(req, respuesta){
 
         console.log("---------------------")
     */
-        if (error) { //error
+        if (!error) { //error
             //console.log("response success");
 
            // const objetoJSON = JSON.parse(response.body);
@@ -587,22 +587,28 @@ exports.consulta_dni_empresa_servicio = function(req, respuesta){
            // console.log(objetoJSON)
             //console.log(response.body.data.nombres);
 
-            if(response.body.success){ //trajo data
-                jsonRespuesta.codResultado = 1;
-                if(tipodocumento == "N"){ //natural
-                    jsonRespuesta.nombres = response.body.data.nombres;
-                    jsonRespuesta.apepat = response.body.data.apellido_paterno;
-                    jsonRespuesta.apemat = response.body.data.apellido_materno;
+            if(response.body.hasOwnProperty('success')){ //trajo data
 
-                }else{ //juridica
-                    jsonRespuesta.nombres = response.body.data.nombre_o_razon_social;
+                if(response.body.success){
+                    jsonRespuesta.codResultado = 1;
+                    if(tipodocumento == "N"){ //natural
+                        jsonRespuesta.nombres = response.body.data.nombres;
+                        jsonRespuesta.apepat = response.body.data.apellido_paterno;
+                        jsonRespuesta.apemat = response.body.data.apellido_materno;
+                    }else{ //juridica
+                        jsonRespuesta.nombres = response.body.data.nombre_o_razon_social;
+                    }
+                }else{
+                    jsonRespuesta.codResultado = 0;
 
                 }
+               
             }else{
                 jsonRespuesta.codResultado = 0;
             }
            
         }
+
 
         respuesta.send(jsonRespuesta);
 
@@ -1927,6 +1933,8 @@ exports.certificadosXpromotor = function (req, res, funcionName) {
             }
         }
     }
+
+    /*
     var query = "select g.idGuia_movimiento_cabecera as idGuia, g.tipoOperacion, date_format(g.fechaOperacion, '%d/%m/%Y') as fechaOperacion, " +
         " a.nombre as almacen, if(p.tipoPersona='J', p.razonSocial, concat(p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno)) as concesionario, " +
         " cer.nroCertificado " +
@@ -1939,6 +1947,26 @@ exports.certificadosXpromotor = function (req, res, funcionName) {
         " and g.tipoOperacion in ('SAL', 'DEV') " +
         " and (select count(*) from Certificado_movimiento cex where cex.nroCertificado = cer.nroCertificado and ( cex.idGuiaSalida>g.idGuia_movimiento_cabecera or cex.estado='V' ))=0 " +
         " order by cer.nroCertificado";
+        */
+
+    var query = "select g.idGuia_movimiento_cabecera as idGuia, "+ 
+            " g.tipoOperacion, "+
+            " date_format(g.fechaOperacion, '%d/%m/%Y') as fechaOperacion, " +  
+            " a.nombre as almacen, " +
+            " if(p.tipoPersona='J', p.razonSocial, concat(p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno)) as concesionario, "+
+            " cer.nroCertificado " +  
+" from Guia_movimiento_cabecera g  inner join Certificado_movimiento cer " +
+    " on  cer.idGuiaSalida = g.idGuia_movimiento_cabecera and cer.estado!='V'  left join Almacen a " +
+    " on g.idAlmacen = a.idAlmacen  left join Concesionario co " +
+    " on g.idConcesionario = co.idConcesionario  left join Persona p " + 
+    " on co.idPersona = p.idPersona  join certificado c " +
+    " on c.ultimoMovimiento = cer.idcertificado_movimiento " + 
+    queryWhere.getQueryWhere() +
+    " and  cer.idArticulo = 9 " +
+    " and  cer.estado <> 'A' " +
+    " order by cer.nroCertificado desc;"
+
+
     ejecutarQUERY_MYSQL(query, [], res, funcionName)
 }
 //Certificados activados x Promotor

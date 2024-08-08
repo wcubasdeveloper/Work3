@@ -810,10 +810,15 @@ function busquedaSUNARP(){//wcubas
 			$("#cmbCategoria").prop("disabled", false);
 			$("#cmbUsoVehiculo").prop("disabled", false);
 			$("#cmbClaseVehiculo").prop("disabled", false);
-			if(anioVehiculo == 0 || anioVehiculo  == '####'){
+			if(anioVehiculo == 0 || anioVehiculo  == '####' ){
 				$("#txtAnno").prop('disabled',false);
 			}else{
-				$("#txtAnno").prop('disabled',true);
+
+				if(anioVehiculo.length == 4){
+					$("#txtAnno").prop('disabled',true);
+				}else{
+					$("#txtAnno").prop('disabled',false);
+				}
 			}
 			//seteando propietario
 			if(cantidadPropietario > 0){
