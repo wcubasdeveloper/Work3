@@ -105,6 +105,8 @@ var fs = require('fs');
 const certificate = fs.readFileSync('C:\\Certbot\\live\\sistema.autoseguro.pe\\cert', 'utf8');
 const ca = fs.readFileSync('C:\\Certbot\\live\\sistema.autoseguro.pe\\fullchain', 'utf8');
 */
+
+/*
 const privateKey = fs.readFileSync('C:\\work3\\cert\\privkey7.pem', 'utf8');
 const certificate = fs.readFileSync('C:\\work3\\cert\\cert7.pem', 'utf8');
 const ca = fs.readFileSync('C:\\work3\\cert\\fullchain7.pem', 'utf8');
@@ -119,3 +121,4 @@ const httpsServer = https.createServer(credentials, app);
 httpsServer.listen(4433, () => {
     console.log('HTTPS Server running on port 443');
 });
+*/

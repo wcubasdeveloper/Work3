@@ -650,7 +650,7 @@ exports.migra_registro = function (req, respuesta, funcionName) {
 
         //console.log("placa migra", placaMigra);
 
-        const url = 'http://srvFENAP.fenap.pe/api/afocat/registro';
+        const url = 'http://servicioBK.fenap.pe/api/afocat/registro';
         const data = {
           "idusuario": idUsuario,
           //"idusuario": "pppopopo",
@@ -760,7 +760,7 @@ exports.migra_liberacion = function (req, respuesta, funcionName) {
   
     console.log("ANULACION");
     //console.log("placa:", placaMigra);
-    const url = 'http://srvFENAP.fenap.pe/api/afocat/liberar';
+    const url = 'http://servicioBK.fenap.pe/api/afocat/liberar';
     const data = {
       "placa": placaMigra
     };
@@ -3300,16 +3300,20 @@ function getRegistroVentaTemporales(listaRegistroVentas, req, res, funcionName, 
         var queryDetalles
 
         if (listaRegistroVentas == "ALL") {
-
-            queryDetalles = "select d.idRegistroVentaDetalleTemp, d.idRegistroVentaTemp, d.nroCAT, d.placa, d.modelo, d.anno, d.usoVehiculo, d.claseVehiculo, d.prima, d.aporte, d.comision from RegistroVentaDetalleTemp d order by d.idRegistroVentaTemp, d.idRegistroVentaDetalleTemp"
+            queryDetalles = "select d.idRegistroVentaDetalleTemp, d.idRegistroVentaTemp, d.nroCAT, d.placa, d.modelo, d.anno, d.usoVehiculo, d.claseVehiculo, d.prima, d.aporte, d.comision , (select concat(pv.numerodocumento,'|',pv.apellido_paterno,' ',pv.apellido_materno,' ',pv.nombres_razonsocial) from cat c join propietario_vehiculo pv on c.idVehiculo = pv.idVehiculo where c.nroCat = d.nroCAT LIMIT 1 ) as datos_propietario from RegistroVentaDetalleTemp d order by d.idRegistroVentaTemp, d.idRegistroVentaDetalleTemp;";
+            //queryDetalles = "select d.idRegistroVentaDetalleTemp, d.idRegistroVentaTemp, d.nroCAT, d.placa, d.modelo, d.anno, d.usoVehiculo, d.claseVehiculo, d.prima, d.aporte, d.comision from RegistroVentaDetalleTemp d order by d.idRegistroVentaTemp, d.idRegistroVentaDetalleTemp"
 
         } else {
             queryDetalles = "select d.idRegistroVentaDetalleTemp, d.idRegistroVentaTemp, d.nroCAT, d.placa, d.modelo, d.anno, d.usoVehiculo, d.claseVehiculo, d.prima, d.aporte, d.comision from RegistroVentaDetalleTemp d where d.idRegistroVentaTemp in (" + listaRegistroVentas + ") order by d.idRegistroVentaTemp, d.idRegistroVentaDetalleTemp"
         }
 
-        ////console_log("obteniendo detalles")
+        //console.log("------------");
+        //console.log(queryDetalles);
+
         var found
         ejecutarQUERY_MYSQL(queryDetalles, [], res, "getDetalleTemporal", function (res, detalleList) {
+
+            //console.log(detalleList);
             for (var i = 0; i < registroList.length; i++) {
                 registroList[i].detalles = []
                 registroList[i].domicilio = registroList[i].calle + ((registroList[i].nro == null) ? "" : " " + registroList[i].nro)
@@ -3330,6 +3334,9 @@ function getRegistroVentaTemporales(listaRegistroVentas, req, res, funcionName, 
                             detalleList[y].domicilio = registroList[i].domicilio
                             detalleList[y].observaciones = ""
                             detalleList[y].idRegistro = registroList[i].idRegistroVentaTemp // id opcional
+                            detalleList[y].datoPropietario = registroList[i].datos_propietario
+                            detalleList[y].checkhtml = "<input "+ ( registroList[i].tipo == 'FA' ? "" : 'disabled' ) +" type='checkbox' onclick='checkPropietario("+ registroList[i].idRegistroVentaTemp+",$(this))' />"
+                            detalleList[y].flagFacturaAPropietario = false;
                             found = true
                         } else {
                             detalleList[y].idRegistroVentaTemp = ""
@@ -3345,16 +3352,23 @@ function getRegistroVentaTemporales(listaRegistroVentas, req, res, funcionName, 
                             detalleList[y].domicilio = ""
                             detalleList[y].observaciones = ""
                             detalleList[y].idRegistro = registroList[i].idRegistroVentaTemp // id opcional
+                            detalleList[y].datoPropietario = "";
+                            detalleList[y].checkhtml = "";
+                            detalleList[y].flagFacturaAPropietario = false;
+
+
                         }
 
                     }
                 }
             }
+            //console.log(detalleList);
             callback(detalleList)
         })
 
     })
 }
+
 
 function generarExcelTemporal(req, res, funcionName, listaRegistroVentas) {
 
@@ -3589,9 +3603,14 @@ exports.enviarFACSUNAT = function (req, res, funcionName) {
         mFACT.items[0].porcentajeImpuesto = 0;
         mFACT.items[0].valorVenta = Number(mFACT.items[0].valorVenta);
 
+        console_log("----FACTURA------", 2);
+        console_log(JSON.stringify(mFACT) , 2);
+
         var request = require("request");
         //recupera correlativo de la serie
+        //var queryFA = "select FACTCorrelativoActual from ConstantesGenerales limit 1"
         var queryFA = "select FACTCorrelativoActual from ConstantesGenerales limit 1"
+
         ejecutarQUERY_MYSQL(queryFA, [], res, 'enviarFACSUNAT',
             function (res, resultado) {
                 mFACT.numero = resultado[0].FACTCorrelativoActual + 1;  //actualiza
@@ -3609,8 +3628,9 @@ exports.enviarFACSUNAT = function (req, res, funcionName) {
                 //envia datos a OSE(SUNAT)
                 request(mOptions,
                     function (error, response, body) {
-                        //console.log("RESPUESTAAA")
-                        //console.log(response);
+                            console.log("----respuesta----");
+                            console.log(body);
+                            console.log("---fin---")
                         if (error) {
                             //console_log(error, 1)
                             res.send(error)
@@ -3681,20 +3701,27 @@ exports.enviarBVSUNAT = function (req, res, funcionName) {
         mBV.items[0].valorVenta = Number(mBV.items[0].valorVenta);
 
 
-
+        console.log("entree");
         var request = require("request");
 
         //recupera correlativo de la serie
         var queryBV = "select BVCorrelativoActual from ConstantesGenerales limit 1"
+        //var queryBV = "select BVCorrelativoActual, BVNroSerie from ConstantesGenerales limit 1"
+
         ejecutarQUERY_MYSQL(queryBV, [], res, 'enviarBVSUNAT',
             function (res, resultado) {
                 mBV.numero = resultado[0].BVCorrelativoActual + 1;  //actualiza
-                
-                //console.log("---BOLETA ENVIOOO----");
-                //console.log(mBV);
+                mBV.serie = 'B001';//resultado[0].BVNroSerie;  //actualiza
+                ///console.log("---serie----");
+                //console.log(resultado[0].BVNroSerie);
 
-                //console.log("---envio---");
-                //console.log(mBV);
+                console_log("----BOLETA------", 2);
+                console_log(JSON.stringify(mBV), 2);
+
+                console_log("---URL envio---", 2);
+                console_log(mURLSunat, 2);
+                process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
                 var mOptions = {
                     method: 'POST',
                     url: mURLSunat + '/boleta',
@@ -3703,17 +3730,29 @@ exports.enviarBVSUNAT = function (req, res, funcionName) {
                         'Authorization': 'Fo ' + accessKey + ':' + mSignature + ':' + mTimestamp
                     },
                     body: mBV,
-                    json: true
+                    json: true//,
+                    //rejectUnauthorized: false // Añadir esta línea
                 };
                 //console_log(' enviarBVSUNAT (SERIE-Numero)= ' + mBV.serie + '-' + mBV.numero + ' CAT: ' + mBV.items[0].nroCAT);
                 //envia datos a OSE(SUNAT)
                 request(mOptions,
                     function (error, response, body) {
-                        // console.log("----respuesta----");
-                        // console.log(body);
-                        // console.log("---fin---")
+                         
+                         console_log("----RESPUESTAA----", 2);
+                         console_log(body, 2);
+                         console_log("---FINN---", 2);
+
                         if (error) {
                             //console_log(error, 1)
+                            console_log("---ERROR----", 2)
+                            console_log(error, 2);
+                            console_log("---RESPONSE----", 2)
+
+                            console_log(response);
+                            //console.log(error);
+
+                            //console_log(error));
+
                             res.send(error)
                             return;
                         }

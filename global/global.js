@@ -32,6 +32,7 @@ var console_log = function (mensaje, tipo) { // tipo = 1 (ERROR) o 2 (AVISO)
         }
     }
 };
+
 var finalizarControl = function finalizarControl(startTime, descripcion) {
     startTime = startTime.getTime();
     var endTime = new Date();
@@ -79,9 +80,9 @@ var ejecutarQUERY_MYSQL = function ejecutarQUERY_MYSQL(query, parametros, res, n
             console.log("ERR: " + JSON.stringify(err));
             return;
         }
-        console_log("--------------");
-            console_log(query);
-            console_log(parametros);
+        //console_log("--------------");
+        //    console_log(query);
+        //    console_log(parametros);
         //console_log("Conectado a BD con ID:" + connection.threadId,2);
         //Activa funcion que ejecutara query solicitado
         connection.query(query, parametros, function (err, rows) {
@@ -146,9 +147,9 @@ var ejecutarQUERY_MYSQL_Extra = function ejecutarQUERY_MYSQL_Extra(evento, query
             //res.json({"code" : 100, "status" : "Error en pool de conexiones MySQL"});
             return;
         }
-        console_log("--------------");
-            console_log(query);
-            console_log(parametros);
+        //console_log("--------------");
+        //    console_log(query);
+        //    console_log(parametros);
         //console_log("Conectado a BD con ID:" + connection.threadId );
         //Activa funcion que ejecutara query solicitado
         connection.query(query, parametros, function (err, rows) {
