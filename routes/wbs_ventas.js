@@ -524,7 +524,10 @@ exports.consulta_placa_api= function(req, respuesta){
                 jsonRespuesta.marca = response.body.Marca;
                 jsonRespuesta.modelo = response.body.Modelo;
                 jsonRespuesta.anio = response.body.AnioFabricacion;
-                jsonRespuesta.nroSerieMotor = response.body.Nro_Motor;
+                //jsonRespuesta.nroSerieMotor = response.body.Nro_Motor;
+                jsonRespuesta.nroSerieMotor = response.body.Serie;
+
+                
                 jsonRespuesta.asientos = response.body.NumeroAsiento;
                 jsonRespuesta.propietarios = response.body.LPropietario;
             }else{
@@ -1592,11 +1595,25 @@ exports.verficarDisponibilidadCATS = function (req, res, funcionName) { // verif
 }
 // CUS10
 exports.consultaPlaca = function (req, res, funcionName) {
+    //console.log("consultaPlacaconsultaPlacaconsultaPlacaconsultaPlacaconsultaPlaca")
     var nroPlaca = req.query.nroPlaca;
     var query = "Select c.nroCAT, date_format(c.fechaInicio, '%d/%m/%Y') as fechaInicio, date_format(c.fechaCaducidad, '%d/%m/%Y') as fechaCaducidad, c.placa, if(p.tipoPersona='N', CONCAT(p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno), p.razonSocial) as asociado, cl.nombreClase, if(date_format(c.fechaCaducidad, '%Y-%m-%d 23:59:59') > now(), 'Activo', 'Caducado') as estado from Cat c inner join Asociado a on c.idAsociado = a.idAsociado inner join Persona p on a.idPersona=p.idPersona left join Vehiculo v on c.idVehiculo=v.idVehiculo left join UsoClaseVehiculo ucv on v.idUsoClaseVehiculo = ucv.idUsoClaseVehiculo left join Clase_Vehiculo cl on ucv.idClaseVehiculo=cl.idClase where c.placa = ? order by c.fechaCaducidad desc";
     var parametros = [nroPlaca];
     ejecutarQUERY_MYSQL(query, parametros, res, funcionName);
 }
+
+// CUS10
+exports.consultaCertificado = function (req, res, funcionName) {
+    var certificado = req.query.certificado;
+    var query = "Select c.nroCAT, date_format(c.fechaInicio, '%d/%m/%Y') as fechaInicio, date_format(c.fechaCaducidad, '%d/%m/%Y') as fechaCaducidad, c.placa, if(p.tipoPersona='N', CONCAT(p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno), p.razonSocial) as asociado, cl.nombreClase, if(date_format(c.fechaCaducidad, '%Y-%m-%d 23:59:59') > now(), 'Activo', 'Caducado') as estado from Cat c inner join Asociado a on c.idAsociado = a.idAsociado inner join Persona p on a.idPersona=p.idPersona left join Vehiculo v on c.idVehiculo=v.idVehiculo left join UsoClaseVehiculo ucv on v.idUsoClaseVehiculo = ucv.idUsoClaseVehiculo left join Clase_Vehiculo cl on ucv.idClaseVehiculo=cl.idClase where c.nroCAT = ? order by c.fechaCaducidad desc";
+    
+ 
+
+    var parametros = [certificado];
+    ejecutarQUERY_MYSQL(query, parametros, res, funcionName);
+}
+
+
 // CUS06:
 exports.getAllConcesionarios = function (req, res, funcionName) {
 

@@ -38,10 +38,15 @@ function reporte(){
                     {campo:'nombreAgraviado', alineacion:'center'},
                     {campo:'nroDocumento', alineacion:'center'},
                     {campo:'diagnosticoAccidente', alineacion:'center'},
+                    {campo:'fecha1', alineacion:'center'},
                     {campo:'monto1', alineacion:'center'},
+                    {campo:'fecha2', alineacion:'center'},
                     {campo:'monto2', alineacion:'center'},
+                    {campo:'fecha3', alineacion:'center'},
                     {campo:'monto3', alineacion:'center'},
+                    {campo:'fecha4', alineacion:'center'},
                     {campo:'monto4', alineacion:'center'},
+                    {campo:'fecha5', alineacion:'center'},
                     {campo:'monto5', alineacion:'center'}
                 ];
                 crearFilasHTML("tabla_datos", datos, camposAmostrar, false, 10); // crea la tabla HTML

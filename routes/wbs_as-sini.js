@@ -327,9 +327,11 @@ exports.registrarCarta = function (req, res, funcionName) { // registra la prime
 	ejecutarQUERY_MYSQL(queryValidarNro, paramsValida, res, funcionName, function (res1, resultados1) {
 		var cantRegistros = resultados1[0].cantidad;
 		if (cantRegistros == 0) {
-			var queryInsertPrimeraProyeccion = "Insert into ProyeccionGastos (codEvento, codAgraviado, tratamientoMes, detalleMes, mesDesembolso, montoAproximado, idSecuencia, idFase, idProveedor)" +
-				" values (?,?,?,?,?,?,?,?,?) ";
-			var paramsProy = [req.query.codEvento, req.query.codAgraviado, "CARTA GARANTIA", "", req.query.fechaAccidente, req.query.monto, 1, 1, req.query.idNosocomio];
+			var queryInsertPrimeraProyeccion = "Insert into ProyeccionGastos (codEvento, codAgraviado, tratamientoMes, detalleMes, mesDesembolso, montoAproximado, idSecuencia, idFase, idProveedor, fecharegistro)" +
+				" values (?,?,?,?,?,?,?,?,?, NOW()) ";
+			//var paramsProy = [req.query.codEvento, req.query.codAgraviado, "CARTA GARANTIA", "", req.query.fechaAccidente, req.query.monto, 1, 1, req.query.idNosocomio];
+			var paramsProy = [req.query.codEvento, req.query.codAgraviado, "CARTA GARANTIA", "", req.query.fechaAccidente, 0, 1, 1, req.query.idNosocomio];
+
 			ejecutarQUERY_MYSQL(queryInsertPrimeraProyeccion, paramsProy, res, funcionName, function (res, resultados) {
 				var idProyeccion = resultados.insertId;
 				if (idProyeccion > 0) { // inserta la primera proyeccion
@@ -1254,16 +1256,40 @@ exports.getEventosProyeccion = function (req, res, funcionName) { // Busca los e
 exports.listaAgraviadoYProyecciones = function (req, res, funcionName) {
 	var fechaDesde = req.query.fechaDesde;
 	var fechaHasta = req.query.fechaHasta;
+
+	// var mquery = "select ag.codAgraviado, date_format(ev.fechaAviso, '%d/%m/%Y %H:%i') as fechaAviso,ev.nroCAT,ev.placaAccidente, " +
+	// 	"concat (p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno) as nombreAgraviado , p.nroDocumento,ag.diagnosticoAccidente," +
+	// 	"(Select sum(pg1.montoAproximado) as monto1 from ProyeccionGastos pg1 where pg1.idFase='1' and pg1.codAgraviado = ag.codAgraviado) as monto1, " +
+	// 	"(Select sum(pg2.montoAproximado) as monto2 from ProyeccionGastos pg2 where pg2.idFase='2' and pg2.codAgraviado = ag.codAgraviado) as monto2, " +
+	// 	"(Select sum(pg3.montoAproximado) as monto3 from ProyeccionGastos pg3 where pg3.idFase='3' and pg3.codAgraviado = ag.codAgraviado) as monto3, " +
+	// 	"(Select sum(pg4.montoAproximado) as monto4 from ProyeccionGastos pg4 where pg4.idFase='4' and pg4.codAgraviado = ag.codAgraviado) as monto4, " +
+	// 	"(Select sum(pg5.montoAproximado) as monto5 from ProyeccionGastos pg5 where pg5.idFase='5' and pg5.codAgraviado = ag.codAgraviado) as monto5 " +
+	// 	"from Evento ev " +
+	// 	"inner join Agraviado ag on ag.codEvento=ev.CodEvento " +
+	// 	"left join Persona p on ag.idPersona=p.idPersona "
+
+
 	var mquery = "select ag.codAgraviado, date_format(ev.fechaAviso, '%d/%m/%Y %H:%i') as fechaAviso,ev.nroCAT,ev.placaAccidente, " +
 		"concat (p.nombres,' ',p.apellidoPaterno,' ',p.apellidoMaterno) as nombreAgraviado , p.nroDocumento,ag.diagnosticoAccidente," +
-		"(Select sum(pg1.montoAproximado) as monto1 from ProyeccionGastos pg1 where pg1.idFase='1' and pg1.codAgraviado = ag.codAgraviado) as monto1, " +
-		"(Select sum(pg2.montoAproximado) as monto2 from ProyeccionGastos pg2 where pg2.idFase='2' and pg2.codAgraviado = ag.codAgraviado) as monto2, " +
-		"(Select sum(pg3.montoAproximado) as monto3 from ProyeccionGastos pg3 where pg3.idFase='3' and pg3.codAgraviado = ag.codAgraviado) as monto3, " +
-		"(Select sum(pg4.montoAproximado) as monto4 from ProyeccionGastos pg4 where pg4.idFase='4' and pg4.codAgraviado = ag.codAgraviado) as monto4, " +
-		"(Select sum(pg5.montoAproximado) as monto5 from ProyeccionGastos pg5 where pg5.idFase='5' and pg5.codAgraviado = ag.codAgraviado) as monto5 " +
+		"(Select date_format(pg1.fecharegistro, '%d/%m/%Y')  as fecha1 from ProyeccionGastos pg1 where pg1.idFase='1' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as fecha1, " +
+		"(Select pg1.montoAproximado as monto1 from ProyeccionGastos pg1 where pg1.idFase='1' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as monto1, " +
+
+		"(Select date_format(pg1.fecharegistro, '%d/%m/%Y') as fecha2 from ProyeccionGastos pg1 where pg1.idFase='2' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as fecha2, " +
+		"(Select pg2.montoAproximado as monto2 from ProyeccionGastos pg2 where pg2.idFase='2' and pg2.codAgraviado = ag.codAgraviado order by pg2.fecharegistro desc LIMIT 1) as monto2, " +
+
+		"(Select date_format(pg1.fecharegistro, '%d/%m/%Y') as fecha3 from ProyeccionGastos pg1 where pg1.idFase='3' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as fecha3, " +
+		"(Select pg3.montoAproximado as monto3 from ProyeccionGastos pg3 where pg3.idFase='3' and pg3.codAgraviado = ag.codAgraviado order by pg3.fecharegistro desc LIMIT 1) as monto3, " +
+
+		"(Select date_format(pg1.fecharegistro, '%d/%m/%Y') as fecha4 from ProyeccionGastos pg1 where pg1.idFase='4' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as fecha4, " +
+		"(Select pg4.montoAproximado as monto4 from ProyeccionGastos pg4 where pg4.idFase='4' and pg4.codAgraviado = ag.codAgraviado order by pg4.fecharegistro desc LIMIT 1) as monto4, " +
+
+		"(Select date_format(pg1.fecharegistro, '%d/%m/%Y') as fecha5 from ProyeccionGastos pg1 where pg1.idFase='5' and pg1.codAgraviado = ag.codAgraviado order by pg1.fecharegistro desc LIMIT 1) as fecha5, " +
+		"(Select pg5.montoAproximado as monto5 from ProyeccionGastos pg5 where pg5.idFase='5' and pg5.codAgraviado = ag.codAgraviado order by pg5.fecharegistro desc LIMIT 1) as monto5 " +
 		"from Evento ev " +
 		"inner join Agraviado ag on ag.codEvento=ev.CodEvento " +
 		"left join Persona p on ag.idPersona=p.idPersona "
+
+
 	if (fechaDesde != "" || fechaHasta != "") {
 		if (fechaDesde != "" && fechaHasta != "") {
 			fechaHasta = fechaHasta + " 23:59:59";
@@ -1280,9 +1306,13 @@ exports.listaAgraviadoYProyecciones = function (req, res, funcionName) {
 	} else {
 		mquery += ";";
 	}
+
+	//console.log(mquery)
+
 	var params = []
 	ejecutarQUERY_MYSQL(mquery, params, res, funcionName);
 }
+
 
 // CAMBIADO: 28 DE AGOSTO (idProveedor por idNosocomio)
 exports.getProyeccionPorAgraviado = function (req, res, funcionName) {
@@ -1305,10 +1335,12 @@ exports.getProyeccionPorAgraviado = function (req, res, funcionName) {
 
 			var queryProyecciones = "select pg.tratamientoMes, pg.factor, pg.idProveedor as idNosocomio, prpe.idDistrito as distritoNosocomio, if(prpe.tipoPersona='J', prpe.razonSocial, concat(prpe.nombres,' ',prpe.apellidoPaterno,' ',prpe.apellidoMaterno)) as nombreNosocomio, n.tipoProveedor as tipoNosocomio, " +
 				" pg.mesDesembolso, pg.idSecuencia, pg.detalleMes, pg.idFase, pg.montoAproximado, pg.idTarifaProcedimiento, tp.codigoProcedimiento, tp.descripcion as descripcionProcedimiento, " +
-				" tp.unidades, tp.tipoTarifa from ProyeccionGastos pg " +
+				" tp.unidades, tp.tipoTarifa, DATE_FORMAT(pg.fechaRegistro, '%Y-%m-%d') as fechaRegistro  from ProyeccionGastos pg " +
 				" left join TarifaProcedimientos tp on pg.idTarifaProcedimiento = tp.idTarifa " +
 				" left join Proveedor n on pg.idProveedor = n.idProveedor " +
-				" left join Persona prpe on n.idPersona = prpe.idPersona where pg.codAgraviado=? order by pg.idFase, pg.mesDesembolso, pg.idSecuencia";
+				" left join Persona prpe on n.idPersona = prpe.idPersona where pg.codAgraviado=? order by pg.fecharegistro asc";
+				//" left join Persona prpe on n.idPersona = prpe.idPersona where pg.codAgraviado=? order by pg.idFase, pg.mesDesembolso, pg.idSecuencia";
+
 
 			ejecutarQUERY_MYSQL_Extra(resultados, queryProyecciones, [codAgraviado], res, funcionName, function (res, rows, resultados) {
 				resultados[0].proyecciones = rows;
@@ -1319,6 +1351,7 @@ exports.getProyeccionPorAgraviado = function (req, res, funcionName) {
 		}
 	});
 }
+
 // CAMBIADO: 28 DE AGOSTO (idProveedor por idNosocomio)
 exports.registrarProyecciones = function (req, res, funcionName) {
 	var codEvento = req.body.codEvento;
@@ -1330,7 +1363,7 @@ exports.registrarProyecciones = function (req, res, funcionName) {
 	var paramsElimina = [codEvento, codAgraviado];
 	ejecutarQUERY_MYSQL(queryElimina, paramsElimina, res, funcionName, function (res, resultados) {
 		// luego registra las nuevas proyecciones
-		var queryInsert = "Insert into ProyeccionGastos (codEvento, idProveedor, idTarifaProcedimiento, factor, codAgraviado, tratamientoMes, detalleMes, mesDesembolso, montoAproximado, idSecuencia, idFase) values ";
+		var queryInsert = "Insert into ProyeccionGastos (codEvento, idProveedor, idTarifaProcedimiento, factor, codAgraviado, tratamientoMes, detalleMes, mesDesembolso, montoAproximado, idSecuencia, idFase, fecharegistro) values ";
 		var values = "";
 		for (var y = 0; y < listaProyecciones.length; y++) {
 			if (y > 0) {
@@ -1340,13 +1373,33 @@ exports.registrarProyecciones = function (req, res, funcionName) {
 			var mesSecuencia = listaProyecciones[y].mes.split("(");
 			var mes = mesSecuencia[0];
 			var secuencia = mesSecuencia[1].split(")")[0];
+			var fechaRegistroProvicion = "";
+			//
 			if (listaProyecciones[y].idFase == "4" || listaProyecciones[y].idFase == "5") { // sepelio o muerte
 				listaProyecciones[y].detalle = listaProyecciones[y].tratamiento;
 				listaProyecciones[y].tratamiento = "";
 			} else {
 				listaProyecciones[y].detalle = "";
 			}
-			values = values + " ('" + codEvento + "', '" + listaProyecciones[y].idNosocomio + "', '" + listaProyecciones[y].idTarifaProcedimiento + "', '" + listaProyecciones[y].factor + "', '" + codAgraviado + "', '" + listaProyecciones[y].tratamiento + "', '" + listaProyecciones[y].detalle + "', '" + mes + "', '" + listaProyecciones[y].monto + "', '" + secuencia + "', '" + listaProyecciones[y].idFase + "') ";
+			fechaRegistroProvicion = listaProyecciones[y].fecharegistro;
+			console.log("fecha registro provision");
+			console.log(fechaRegistroProvicion);
+			console.log("---");
+
+			if(fechaRegistroProvicion){
+				values = values + " ('" + codEvento + "', '" + listaProyecciones[y].idNosocomio + "', '" + 
+				listaProyecciones[y].idTarifaProcedimiento + "', '" + listaProyecciones[y].factor + "', '" + 
+				codAgraviado + "', '" + listaProyecciones[y].tratamiento + "', '" + listaProyecciones[y].detalle + "', '" + 
+				mes + "', '" + listaProyecciones[y].monto + "', '" + secuencia + "', '" + 
+				listaProyecciones[y].idFase + "','"+ fechaRegistroProvicion +"') ";
+			}else{
+				values = values + " ('" + codEvento + "', '" + listaProyecciones[y].idNosocomio + "', '" + 
+				listaProyecciones[y].idTarifaProcedimiento + "', '" + listaProyecciones[y].factor + "', '" + 
+				codAgraviado + "', '" + listaProyecciones[y].tratamiento + "', '" + listaProyecciones[y].detalle + "', '" + 
+				mes + "', '" + listaProyecciones[y].monto + "', '" + secuencia + "', '" + 
+				listaProyecciones[y].idFase + "',NULL) ";
+			}
+
 		}
 		queryInsert = queryInsert + values;
 		ejecutarQUERY_MYSQL(queryInsert, [], res, funcionName, function (res, resultados2) {
@@ -1358,6 +1411,7 @@ exports.registrarProyecciones = function (req, res, funcionName) {
 		})
 	});
 }
+
 // CUS 04:
 exports.getEventosConInformeCerrado = function (req, res, funcionName) { // Busca los eventos ingresados por la central de emergencia y la muestra en la grilla
 	var codEvento = req.query.codEvento;

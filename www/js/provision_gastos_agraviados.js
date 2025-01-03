@@ -222,6 +222,8 @@ function cargarProvisiones(listaProvisiones){
 			var columns;
 			if(idTabla=="4" || idTabla=="5"){ // Para la etapa de Muerte=4 o sepelio = 5
 				for(var i=0; i<listaProvisiones.length; i++){
+					//console.log(listaProvisiones[i]);
+
 					if(listaProvisiones[i].idFase == idTabla){
 						indice++;
 						var htmlMes="<input id='mes_"+idTabla+"_"+indice+"' style='width: 58px; font-size:12px; text-align:center;' type='text' value='"+listaProvisiones[i].mesDesembolso+"("+listaProvisiones[i].idSecuencia+")' disabled >"; 
@@ -229,12 +231,14 @@ function cargarProvisiones(listaProvisiones){
 						acumulado = acumulado + listaProvisiones[i].montoAproximado;	
 						var htmlAcumulado = "S/. <input id='acumulado_"+idTabla+"_"+indice+"' style='width: 60px; font-size:12px; text-align:center;' type='text' value='"+acumulado+"' disabled />";
 						var htmlTratamiento="<textarea id='tratamiento_"+idTabla+"_"+indice+"' rows='2' cols='80' style='font-size:12px; text-align:left;' >"+listaProvisiones[i].detalleMes+"</textarea>"; // detalle
-						
+						var htmlFechaRegistro_ = '<input disabled type="date" id="lblfecharegistro_'+idTabla+'_'+indice+'" value="'+ listaProvisiones[i].fechaRegistro ? listaProvisiones[i].fechaRegistro : '' +'" />';
+
 						listProvisionById[idTabla].push({
 							htmlMes:htmlMes, 
 							htmlMonto:htmlMonto, 
 							htmlAcumulado:htmlAcumulado,
-							htmlTratamiento:htmlTratamiento
+							htmlTratamiento:htmlTratamiento,
+							htmlFechaRegistro : htmlFechaRegistro_
 						});
 					}				
 				}
@@ -242,13 +246,17 @@ function cargarProvisiones(listaProvisiones){
 					{campo:'htmlMes', alineacion:'center'},
 					{campo:'htmlTratamiento', alineacion:'center'},
 					{campo:'htmlMonto', alineacion:'center'},
-					{campo:'htmlAcumulado', alineacion:'center'}
+					{campo:'htmlAcumulado', alineacion:'center'},
+					{campo:'htmlFechaRegistro', alineacion:'center'}
+
 				];
 				columns=[
 					{ "width": "15%"},
-					{ "width": "39%"},
+					{ "width": "29%"},
 					{ "width": "25%"},
-					{ "width": "21%"}
+					{ "width": "21%"},
+					{ "width": "10%"}
+
 				];
 			}else{
 				// Para la etapa es Gastos Medicos = 1 / Incapacidad Temporal = 2 / Invalidez permanente = 3
@@ -283,18 +291,23 @@ function cargarProvisiones(listaProvisiones){
 						
 						var htmlCodProced = "<input type='text' title='usar "+codigoManual+" para códigos manuales' onkeyup='validarTipoProyeccion("+'"'+idTabla+"_"+indice+'"'+")' placeholder='Buscar Cod' value='"+listaProvisiones[i].codigoProcedimiento+"' id='codProced_"+idTabla+"_"+indice+"' style='width:65px; font-size:12px;'/>&nbsp;&nbsp;<img src='wpimages/search-icon.png' onclick='buscarProcedimientoPorCodigo("+'"'+idTabla+"_"+indice+'"'+")' width='18' height='18' style='cursor: pointer;'/>"; // codigo del procedimiento
 						
-						var htmlDescripProced = "<textarea onkeyup='resetIdTarifa("+'"'+idTabla+"_"+indice+'"'+")' id='descripProced_"+idTabla+"_"+indice+"' rows='2' cols='"+cols+"' style='font-size:12px; text-align:center; text-align:left;' >"+listaProvisiones[i].tratamiento_descripcion+"</textarea>&nbsp;&nbsp;<img id='btnBusqueda_"+idTabla+"_"+indice+"' src='wpimages/search-icon.png' onclick='buscarProcimientoPorDescripcion("+'"'+idTabla+"_"+indice+'"'+")' width='18' height='18' style='cursor: pointer; float:right; margin-right:5px; display:"+displayBotonBusqueda+";'/>"; // Descripcion del procedimiento
+						var htmlDescripProced = "<textarea disabled onkeyup='resetIdTarifa("+'"'+idTabla+"_"+indice+'"'+")' id='descripProced_"+idTabla+"_"+indice+"' rows='2' cols='"+cols+"' style='font-size:12px; text-align:center; text-align:left;' >"+listaProvisiones[i].tratamiento_descripcion+"</textarea>&nbsp;&nbsp;<img id='btnBusqueda_"+idTabla+"_"+indice+"' src='wpimages/search-icon.png' onclick='buscarProcimientoPorDescripcion("+'"'+idTabla+"_"+indice+'"'+")' width='18' height='18' style='cursor: pointer; float:right; margin-right:5px; display:"+displayBotonBusqueda+";'/>"; // Descripcion del procedimiento
 						
 						var htmlUnidades = "<input idTarifa='"+listaProvisiones[i].idTarifaProcedimiento+"' disabled type='text' value='"+quitarEspaciosEnBlanco(listaProvisiones[i].unidades)+"' id='unidades_"+idTabla+"_"+indice+"' style='width:60px; font-size:12px;'/>";
 						
 						var htmlFactor = "<input onkeyup='calcularMontoFactor("+'"'+idTabla+"_"+indice+'"'+")' "+disabledProcedimiento+" type='text' value='"+listaProvisiones[i].factor+"' id='factor_"+idTabla+"_"+indice+"' style='width:60px; font-size:12px;'/>";						
 
-						var htmlMonto="S/. <input "+disabledTratamiento+" id='monto_"+idTabla+"_"+indice+"' style='width: 60px; font-size:12px; text-align:center;' type='text' value='"+listaProvisiones[i].montoAproximado+"' onkeyup='recalcularAcumulado("+'"monto_'+idTabla+'_'+indice+'"'+")'>";
+						var htmlMonto="S/. <input "+disabledTratamiento+" id='monto_"+idTabla+"_"+indice+"' disabled style='width: 60px; font-size:12px; text-align:center;' type='text' value='"+listaProvisiones[i].montoAproximado+"' onkeyup='recalcularAcumulado("+'"monto_'+idTabla+'_'+indice+'"'+")'>";
 						
-						acumulado = acumulado + listaProvisiones[i].montoAproximado;
+						//acumulado = acumulado + listaProvisiones[i].montoAproximado;
+						acumulado =  listaProvisiones[i].montoAproximado;
+
+						var htmlAcumulado = "S/. <input id='acumulado_"+idTabla+"_"+indice+"' disabled style='width: 60px; font-size:12px; text-align:center;' type='text' value='"+acumulado+"' disabled />";
 						
-						var htmlAcumulado = "S/. <input id='acumulado_"+idTabla+"_"+indice+"' style='width: 60px; font-size:12px; text-align:center;' type='text' value='"+acumulado+"' disabled />";
-						
+						//  var htmlFechaRegistro = '<label id="lblfecharegistro_'+ idTabla +'_'+ indice +'">' + listaProvisiones[i].fechaRegistro ? listaProvisiones[i].fechaRegistro : ''  + '</label>'; //listaProvisiones[i].fechaRegistro; 
+						//var htmlFechaRegistro = '<input disabled type="date" id="lblfecharegistro_'+idTabla+'_'+indice+'" value="'+ listaProvisiones[i].fechaRegistro ? listaProvisiones[i].fechaRegistro : '' +'" />';
+						var htmlFechaRegistro = "<input type='date' id='lblfecharegistro_"+idTabla+"_"+indice+"' value='"+ (listaProvisiones[i].fechaRegistro ? listaProvisiones[i].fechaRegistro : '') + "'  />";
+
 						listProvisionById[idTabla].push({
 							htmlMes:htmlMes, 
 							htmlMonto:htmlMonto, 
@@ -303,7 +316,8 @@ function cargarProvisiones(listaProvisiones){
 							htmlCodProced:htmlCodProced,
 							htmlDescripProced:htmlDescripProced,
 							htmlUnidades:htmlUnidades,
-							htmlFactor:htmlFactor
+							htmlFactor:htmlFactor,
+							htmlFechaRegistro : htmlFechaRegistro
 						});
 					}				
 				}
@@ -315,17 +329,21 @@ function cargarProvisiones(listaProvisiones){
 					{campo:'htmlUnidades', alineacion:'center'},
 					{campo:'htmlFactor', alineacion:'center'},
 					{campo:'htmlMonto', alineacion:'center'},
-					{campo:'htmlAcumulado', alineacion:'center'}
+					{campo:'htmlAcumulado', alineacion:'center'},
+					{campo:'htmlFechaRegistro', alineacion:'center'}
+
 				];
 				columns=[
 					{ "width": "7%"},
 					{ "width": "15%"},
 					{ "width": "10%"},
-					{ "width": "32%"},
+					{ "width": "22%"},
 					{ "width": "8%"},
 					{ "width": "8%"},
 					{ "width": "10%"},
+					{ "width": "10%"},
 					{ "width": "10%"}
+
 				];
 			}
 			
@@ -434,6 +452,7 @@ function agregarMes(){
 					"<td style='text-align: center;'><textarea id='tratamiento_"+idTablaActual+"_"+idFila+"' rows='2' cols='80' style='font-size:12px; text-align:left;'/></td>"+
 					"<td style='text-align: center;'>S/. <input id='monto_"+idTablaActual+"_"+idFila+"' style='width: 60px; font-size:12px; text-align:center;' type='text' onkeyup='recalcularAcumulado("+'"monto_'+idTablaActual+'_'+idFila+'"'+")'/></td>"+
 					"<td style='text-align: center;'>S/. <input id='acumulado_"+idTablaActual+"_"+idFila+"' style='width: 60px; font-size:12px; text-align:center;' type='text' disabled/></td>"+
+					"<td>"+ '<input type="date" id="lblfecharegistro_'+idTablaActual+'_'+idFila+'" value="'+ obtenerFechaHoraActual() + '" />'    +"</td>" + 
 				"</tr>");
 				$("#tr_"+idTablaActual+"_"+idFila).click();
 				$("#monto_"+idTablaActual+"_"+idFila).focus();
@@ -442,7 +461,8 @@ function agregarMes(){
 					"<td style='text-align: center;'><input id='mes_"+idTablaActual+"_"+idFila+"' type='text' style='width: 58px; font-size:12px; text-align:center;' value='"+mesProyeccion+"' disabled/></td>"+
 					
 					"<td style='text-align: center;'><select style='width:115px; font-size:12px; height:22px;' class='lista_nosocomio' id='idNosocomio_"+idTablaActual+"_"+idFila+"'><option value=''>Seleccione</option></select>&nbsp&nbsp<input type='text' placeholder='Buscar Nosoc' id='buscarNosocomio_"+idTablaActual+"_"+idFila+"' style='width:90px; font-size:12px;'/>&nbsp;&nbsp;<img src='wpimages/search-icon.png' onclick='buscarNosocomio("+'"'+idTablaActual+"_"+idFila+'"'+")' width='18' height='18' style='cursor: pointer;'></td>"+
-					
+					// "<td style='text-align: center;'></td>"+
+
 					"<td style='text-align: center;'><input type='text' title='usar "+codigoManual+" para códigos manuales' onkeyup='validarTipoProyeccion("+'"'+idTablaActual+"_"+idFila+'"'+")' placeholder='Buscar Cod' value='' id='codProced_"+idTablaActual+"_"+idFila+"' style='width:65px; font-size:12px;'/>&nbsp;&nbsp;<img src='wpimages/search-icon.png' onclick='buscarProcedimientoPorCodigo("+'"'+idTablaActual+"_"+idFila+'"'+")' width='18' height='18' style='cursor: pointer;'/></td>"+
 					
 					"<td style='text-align: center;'><textarea onkeyup='resetIdTarifa("+'"'+idTablaActual+"_"+idFila+'"'+")' id='descripProced_"+idTablaActual+"_"+idFila+"' rows='2' cols='41' style='font-size:12px; text-align:center; text-align:left;' ></textarea>&nbsp;&nbsp;<img id='btnBusqueda_"+idTablaActual+"_"+idFila+"' src='wpimages/search-icon.png' onclick='buscarProcimientoPorDescripcion("+'"'+idTablaActual+"_"+idFila+'"'+")' width='18' height='18' style='cursor: pointer; float:right; margin-right:5px; display:;'/></td>"+
@@ -451,10 +471,11 @@ function agregarMes(){
 						
 					"<td style='text-align: center;'><input onkeyup='calcularMontoFactor("+'"'+idTablaActual+"_"+idFila+'"'+")' type='text' value='' id='factor_"+idTablaActual+"_"+idFila+"' style='width:60px; font-size:12px;' disabled/></td>"+
 					
-					"<td style='text-align: center;'>S/. <input id='monto_"+idTablaActual+"_"+idFila+"' disabled style='width: 60px; font-size:12px; text-align:center;' type='text' onkeyup='recalcularAcumulado("+'"monto_'+idTablaActual+'_'+idFila+'"'+")'/></td>"+
+					"<td style='text-align: center;'>S/. <input id='monto_"+idTablaActual+"_"+idFila+"'  style='width: 60px; font-size:12px; text-align:center;' type='text' onkeyup='recalcularAcumulado("+'"monto_'+idTablaActual+'_'+idFila+'"'+")'/></td>"+
 	
 					"<td style='text-align: center;'>S/. <input id='acumulado_"+idTablaActual+"_"+idFila+"' style='width: 60px; font-size:12px; text-align:center;' type='text' disabled/></td>"+
-				"</tr>");
+					"<td>"+ '<input type="date" id="lblfecharegistro_'+idTablaActual+'_'+idFila+'" value="'+ obtenerFechaHoraActual() + '" />'    +"</td>" + 
+					"</tr>");
 				$("#tr_"+idTablaActual+"_"+idFila).click();
 				$("#monto_"+idTablaActual+"_"+idFila).focus();
 				idFilaTRActual = idFila;
@@ -593,7 +614,7 @@ function agregarCostoMes(){
 				}
 				registroPrevio = registroPrevio.split("(");
 				var nuevoRegistroSecuencia = registroPrevio[0]+"("+(parseInt(registroPrevio[1].split(")")[0])+1)+")";
-				console.log("ultima secuencia: "+nuevoRegistroSecuencia);
+				//console.log("ultima secuencia: "+nuevoRegistroSecuencia);
 				var idFila = cantidadRegistros;				
 				if(idTablaActual=="4" || idTablaActual=="5"){ // Muerte o sepeleio
 					$("<tr onclick='seleccionarFila("+'"'+idTablaActual+'_'+idFila+'"'+")' id='tr_"+idTablaActual+"_"+idFila+"' style='font-family: Arial; height: 20px; font-size:11px; cursor:pointer;'>" +
@@ -703,6 +724,7 @@ function borrarMes(){
 		emitirErrorCatch(err, "borrarMes")
 	}
 }
+
 function recalcularTablaProyeccion(idFila){ // despues de borrar un mes se arrejustan la secuencia de los meses asi como tambien el acumulado
 	try{
 		var montoAcumulado = 0;
@@ -753,6 +775,7 @@ function recalcularTablaProyeccion(idFila){ // despues de borrar un mes se arrej
 			if($("#monto_"+idTablaActual+"_"+count).val()==""){
 				$("#monto_"+idTablaActual+"_"+count).val(0);
 			}
+			//console.log(parseFloat(montoAcumulado), parseFloat($("#monto_"+idTablaActual+"_"+count).val()))
 			montoAcumulado = parseFloat(montoAcumulado) + parseFloat($("#monto_"+idTablaActual+"_"+count).val());
 			$("#acumulado_"+idTablaActual+"_"+count).val(montoAcumulado);
 			
@@ -837,9 +860,12 @@ function guardarProyecciones(){
 											factor:"",
 											tratamiento:$("#tratamiento_"+idTabla+"_"+y).val(),
 											monto:$("#monto_"+idTabla+"_"+y).val(),
-											idFase:idTabla
+											idFase:idTabla,
+											fecharegistro : $("#lblfecharegistro_"+idTabla+"_"+y).val()
 										});	
-										totalAcumulado = totalAcumulado + parseFloat(($("#monto_"+idTabla+"_"+y).val()=="")?0:$("#monto_"+idTabla+"_"+y).val());
+										 totalAcumulado = totalAcumulado + parseFloat(($("#monto_"+idTabla+"_"+y).val()=="")?0:$("#monto_"+idTabla+"_"+y).val());
+
+										//totalAcumulado = parseFloat(($("#monto_"+idTabla+"_"+y).val()=="")?0:$("#monto_"+idTabla+"_"+y).val());
 									}else{
 										idFilaTRActual = idTabla+"_"+y;
 										continuar=false;
@@ -857,9 +883,12 @@ function guardarProyecciones(){
 											factor:$("#factor_"+idTabla+"_"+y).val(),							
 											tratamiento:$("#descripProced_"+idTabla+"_"+y).val(),							
 											monto:$("#monto_"+idTabla+"_"+y).val(),
-											idFase:idTabla
+											idFase:idTabla,
+											fecharegistro :  $("#lblfecharegistro_"+idTabla+"_"+y).val()
 										});	
 										totalAcumulado = totalAcumulado + parseFloat(($("#monto_"+idTabla+"_"+y).val()=="")?0:$("#monto_"+idTabla+"_"+y).val());
+										//totalAcumulado =  parseFloat(($("#monto_"+idTabla+"_"+y).val()=="")?0:$("#monto_"+idTabla+"_"+y).val());
+
 									}else{
 										idFilaTRActual = idTabla+"_"+y;
 										continuar=false;
@@ -880,6 +909,7 @@ function guardarProyecciones(){
 							codEvento:codEvento,
 							codAgraviado:codAgraviado
 						}
+						// console.log("listaProyecciones",listaProyecciones);
 						fancyConfirm("¿ Desea proseguir con el registro ?", function(rpta){
 							if(rpta){
 								DAO.consultarWebServicePOST(parametrosPost, "registrarProyecciones", function(data){
@@ -911,6 +941,31 @@ function guardarProyecciones(){
 		emitirErrorCatch(err, "guardarProyecciones");
 	}
 }
+
+function convertirFecha(fechaOriginal) {
+    // Dividimos la fecha original en día, mes y año
+    const partesFecha = fechaOriginal.split('/');
+
+    // Reordenamos las partes y las unimos con guiones
+    const fechaNueva = partesFecha[2] + '-' + partesFecha[1] + '-' + partesFecha[0];
+
+    return fechaNueva;
+}
+
+
+function obtenerFechaHoraActual() {
+    const fecha = new Date();
+
+    const año = fecha.getFullYear();
+    const mes = String(fecha.getMonth() + 1).padStart(2, '0'); // Los meses comienzan desde 0
+    const dia = String(fecha.getDate()).padStart(2, '0');
+    const horas = String(fecha.getHours()).padStart(2, '0');
+    const minutos = String(fecha.getMinutes()).padStart(2, '0');
+    const segundos = String(fecha.getSeconds()).padStart(2, '0');
+
+    return `${año}-${mes}-${dia}`;
+}
+
 var idFilaTRActual = ""; // Guarda el id de la fila actual para despues realizar un focus en alguno de sus elementos
 function buscarProcedimientoPorCodigo(idFila){ // Recibe como parametro el id de fila de la tabla (tr)
 	try{
