@@ -235,12 +235,11 @@ exports.buscarCertificado = function (req, res, funcionName) { // realiza la bus
     var nroCertificado = req.query.nroCertificado;
     var liquidacionPendiente = req.query.liquidacionPendiente;
     var arrayParametros = [nroCertificado, nroCertificado, nroCertificado];
-    console.log("liquidacionPendiente",liquidacionPendiente);
-    
+  
     if (liquidacionPendiente == 'true') { // realiza la busqueda de certificado distribuidos.
         var queryBusquedaCAT = "Select c.nroCertificado, m.tipOperacion, m.idGuiaSalida, c.estadoRegistroCAT as estado, " +
             " pr.idPromotor, gc.idConcesionario, gd.idArticulo, gd.Unidad, " +
-            "pr.idConcesionarioPromotor, c.CertificadoDuplicado " +
+            "pr.idConcesionarioPromotor " +
             "from Certificado c " +
             "inner join Certificado_movimiento m on c.ultimoMovimiento = m.idCertificado_movimiento " +
             "left join Guia_movimiento_cabecera gc on gc.idGuia_movimiento_cabecera=m.idGuia " +
@@ -248,6 +247,8 @@ exports.buscarCertificado = function (req, res, funcionName) { // realiza la bus
             "left join Guia_movimiento_detalle gd on gd.idGuia_movimiento_cabecera=m.idGuiaSalida and (gd.nroCertificadoInicio<=? and gd.nroCertificadoFin>=?)" +
             "left join Promotor pr on pr.idUsuario=g.idUsuarioResp " +
             "where c.nroCertificado = ? and c.registroEstado='0'";
+
+            console.log(queryBusquedaCAT)
         ejecutarQUERY_MYSQL(queryBusquedaCAT, arrayParametros, res, funcionName);
     } else {
         // primero realiza la busqueda en la tabla CAT:
