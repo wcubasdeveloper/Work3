@@ -1,247 +1,300 @@
 <!doctype html>
 <html lang="es-pe">
-<head>
-<meta charset="utf-8">
-<title>Untitled Page</title>
-<meta name="author" content="mhbsoft">
-<link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
-<link href="wpscripts/ventas_certificados.css" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" /> 
-<script src="js/dataTables.min.js"></script>
-<link href="css/jquery.dataTables.css" rel="stylesheet"/>
-<script src="js/mhbsoftScripts.js"></script>
-<script src="js/global.js"></script>
-<script src="js/date-eu.js"></script>
-<script src="js/ventas_certificados.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
-<link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
-<script src="js/jpaginate/jquery.paginate.js"></script>
-<link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
-<script src="js/jquery.datetimepicker.js"></script>
-<script src="js/select2.js"></script>
-<link href="css/select2.css" rel="stylesheet"/>
-
-</head>
-<body style="height:525px">
-<div id="container">
-<div id="Layer1" style="position:absolute;text-align:left;left:16px;top:4px;width:1062px;height:582px;z-index:208;">
-<hr id="Line1" style="position:absolute;left:6px;top:36px;width:1049px;height:1px;z-index:88;">
-<div id="wb_Text1" style="position:absolute;left:26px;top:7px;width:286px;height:24px;z-index:89;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:20px;"><strong>Ventas de Certificados</strong></span></div>
-<hr id="Line3" style="position:absolute;left:533px;top:40px;width:1px;height:455px;z-index:90;">
-<div id="panelVehiculo" style="position:absolute;text-align:left;left:541px;top:39px;width:512px;height:539px;z-index:91;" class="form-group well">
-
-<div id="wb_Text18" style="position:absolute;left:19px;top:240px;width:100%;height:16px;z-index:11;text-align:left;">
-    <span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>VEHICULO</u></strong>
-        <button onclick="busquedaSUNARP();" style="position: absolute; right: 7%;">SUNARP&nbsp;<span class="glyphicon glyphicon-search"></span></button>
-    </span>
-</div>
-<input type="text" id="txtPlaca" is_servicio="0" style="position:absolute;left:166px;top:240px;width:94px;height:23px;line-height:23px;z-index:12;" name="Editbox1" value="" tabindex="22" class="form-control">
-<div id="Html9" style="position:absolute;left:262px;top:242px;width:22px;height:23px;z-index:13">
-<a href="#"><span id="idBtnBuscarPlaca" class="glyphicon glyphicon-search"></span></a>
-</div>
-<div id="wb_Text21" style="position:absolute;left:170px;top:268px;width:39px;height:14px;z-index:14;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Uso</strong></span></div>
-<select name="Combobox1" size="1" id="cmbUsoVehiculo" style="position:absolute;left:134px;top:284px;width:174px;height:28px;z-index:15;" tabindex="24" class="form-control">
-</select>
-<div id="wb_Text22" style="position:absolute;left:323px;top:268px;width:39px;height:14px;z-index:16;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Clase</strong></span></div>
-<div id="wb_Text23" style="position:absolute;left:37px;top:317px;width:47px;height:14px;z-index:17;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Marca</strong></span></div>
-<div id="wb_Text24" style="position:absolute;left:274px;top:317px;width:38px;height:14px;z-index:18;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Año</strong></span></div>
-<input type="text" id="txtAnno" style="position:absolute;left:262px;top:333px;width:58px;height:24px;line-height:24px;z-index:19;" name="Editbox1" value="" tabindex="28" autocomplete="off" class="form-control">
-
-
-    <div style="position:absolute;left:19px;top:368px;width:100%;height:16px;z-index:11;text-align:left;">
-        <span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>PROPIETARIO</u></strong></span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <select  id="selectPersonaPropietario" style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
-            <option value="0">Tipo persona</option>
-            <option value="N">Natural</option>
-            <option value="J">Jurídico</option>
-        </select>
-
-        <select id="selectTipoDocuPropietario"   style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
-            <option value="0">Tipo documento</option>
-            <option value="DNI">DNI</option>
-            <option value="PTP">PTP</option>
-            <option value="CE">CE</option>
-            <option value="RUC">RUC</option>
-        
-        </select>
- 
-    </div>
-
-    <div style="position:absolute;left:19px;top:399px;width:100%;height:16px;z-index:11;text-align:left;">
-      
-        <span>Numero documento</span>
-        &nbsp;&nbsp;
-        <input type="text" id="txtNumeroDocumentoPropietario" id-propietario-vehiculo="0" class="inputformulario" style="width:67%;height: 22px;" >
-        &nbsp;
-        <a href="#" hidden ><span id="idBtnBuscarPropietario" class="glyphicon glyphicon-search"></span></a>
-
-    </div>
-
-    <div style="position:absolute;left:19px;top:423px;width:100%;height:32px;z-index:11;text-align:left;">
-        <input type="text" id="nombresPropietario" class="inputformulario" style="width:40%;height:24px;line-height:24px" placeholder="Nombres / Razon Social" >
-        &nbsp;&nbsp;
-        <input type="text" id="apepatPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Paterno" >
-        &nbsp;&nbsp;
-        <input type="text" id="apematPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Materno" >
-
-    </div>
-
-  
-
-<div id="divMonto" style="position:absolute;text-align:left;left:17px;top:451px;width:479px;height:83px;z-index:20;">
-<div id="wb_Text8" style="position:absolute;left:12px;top:6px;width:181px;height:14px;z-index:0;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>MONTO</u></strong></span></div>
-<div id="wb_Text29" style="position:absolute;left:28px;top:26px;width:47px;height:14px;z-index:1;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Prima</strong></span></div>
-<input type="text" id="txtPrima" style="position:absolute;left:28px;top:44px;width:63px;height:23px;line-height:23px;z-index:2;" name="Editbox1" value="" tabindex="31" autocomplete="off" class="form-control">
-<input type="text" id="txtTotal" style="position:absolute;left:393px;top:44px;width:66px;height:23px;line-height:23px;z-index:3;" name="Editbox1" value="" tabindex="34" autocomplete="off" class="form-control">
-<div id="wb_Text32" style="position:absolute;left:107px;top:46px;width:18px;height:14px;z-index:4;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span></div>
-<div id="wb_Text30" style="position:absolute;left:143px;top:26px;width:67px;height:14px;z-index:5;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Comisión</strong></span></div>
-<input type="text" id="txtComision" style="position:absolute;left:141px;top:44px;width:63px;height:23px;line-height:23px;z-index:6;" name="Editbox1" value="" tabindex="32" autocomplete="off" class="form-control">
-<div id="wb_Text37" style="position:absolute;left:219px;top:46px;width:18px;height:14px;z-index:7;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span></div>
-<input type="text" id="txtAporte" style="position:absolute;left:254px;top:44px;width:100px;height:23px;line-height:23px;z-index:8;" name="Editbox1" value="" tabindex="33" autocomplete="off" class="form-control">
-<div id="wb_Text31" style="position:absolute;left:252px;top:26px;width:116px;height:14px;z-index:9;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Aporte Afiliación</strong></span></div>
-<div id="wb_Text36" style="position:absolute;left:368px;top:46px;width:18px;height:14px;z-index:10;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>=</strong></span></div>
-</div>
-<div id="wb_Text20" style="position:absolute;left:121px;top:243px;width:45px;height:14px;z-index:21;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>PLACA</strong></span></div>
-<select name="Combobox1" size="1" id="cmbClaseVehiculo" style="position:absolute;left:316px;top:285px;width:180px;height:28px;z-index:22;" tabindex="25" class="form-control">
-</select>
-<input type="text" id="txtMarca" style="position:absolute;left:18px;top:333px;width:114px;height:24px;line-height:24px;z-index:23;" name="Editbox1" value="" tabindex="26" autocomplete="off" class="form-control">
-<input type="text" id="txtSerieNro" style="position:absolute;left:334px;top:334px;width:108px;height:24px;line-height:24px;z-index:24;" name="Editbox1" value="" tabindex="29" autocomplete="off" class="form-control">
-<div id="wb_Text25" style="position:absolute;left:334px;top:317px;width:97px;height:14px;z-index:25;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>N° Serie Motor</strong></span></div>
-<input type="text" id="txtModelo" style="position:absolute;left:144px;top:333px;width:107px;height:24px;line-height:24px;z-index:26;" name="Editbox1" value="" tabindex="27" autocomplete="off" class="form-control">
-<div id="wb_Text28" style="position:absolute;left:163px;top:317px;width:47px;height:28px;z-index:27;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Modelo</strong></span></div>
-<div id="wb_Text11" style="position:absolute;left:17px;top:7px;width:100%;height:16px;z-index:28;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>ASOCIADO</u></strong><button onclick="busquedaReniecSUNAT();" style="position: absolute; right: 7%;">RENIEC/SUNAT <span class="glyphicon glyphicon-search"></span></button> </span></div>
-<select name="Combobox1" size="1" id="idTipoPersona_asoc" style="position:absolute;left:17px;top:45px;width:95px;height:28px;z-index:29;" tabindex="13" class="form-control">
-<option value="N">Natural</option>
-<option value="J">Juridico</option>
-</select>
-<div id="wb_Text26" style="position:absolute;left:26px;top:28px;width:36px;height:14px;z-index:30;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Tipo</strong></span></div>
-<div id="Html8" style="position:absolute;left:231px;top:47px;width:22px;height:23px;z-index:31">
-<a href="#"><span id="btnBuscarPersona_asoc" class="glyphicon glyphicon-search"></span></a></div>
-<input type="text" id="idDNI_asoc" style="position:absolute;left:121px;top:45px;width:108px;height:28px;line-height:28px;z-index:32;" name="Editbox1" value="" tabindex="14" class="form-control">
-<div id="wb_Text12" style="position:absolute;left:128px;top:28px;width:61px;height:14px;z-index:33;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>DNI/RUC</strong></span></div>
-<div id="wb_Text33" style="position:absolute;left:264px;top:28px;width:93px;height:14px;z-index:34;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Razón Social</strong></span></div>
-<input type="text" id="idRazonSocial_asoc" style="position:absolute;left:255px;top:45px;width:241px;height:28px;line-height:28px;z-index:35;" name="Editbox1" value="" tabindex="15" autocomplete="off" class="form-control">
-<div id="wb_Text15" style="position:absolute;left:388px;top:80px;width:120px;height:14px;z-index:36;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Materno</strong></span></div>
-<input type="text" id="idApePat_asoc" style="position:absolute;left:255px;top:97px;width:116px;height:28px;line-height:28px;z-index:37;" name="Editbox1" value="" tabindex="17" autocomplete="off" class="form-control">
-<div id="wb_Text14" style="position:absolute;left:261px;top:80px;width:122px;height:14px;z-index:38;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Paterno</strong></span></div>
-<div id="wb_Text13" style="position:absolute;left:28px;top:80px;width:65px;height:14px;z-index:39;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nombres</strong></span></div>
-<input type="text" id="idNombres_asoc" style="position:absolute;left:17px;top:97px;width:228px;height:28px;line-height:28px;z-index:40;" name="Editbox1" value="" tabindex="16" autocomplete="off" class="form-control">
-<input type="text" id="idApeMat_asoc" style="position:absolute;left:380px;top:97px;width:116px;height:28px;line-height:28px;z-index:41;" name="Editbox1" value="" tabindex="18" autocomplete="off" class="form-control">
-<input type="text" id="idTelf_asoc" style="position:absolute;left:17px;top:152px;width:92px;height:28px;line-height:28px;z-index:42;" name="Editbox1" value="" tabindex="19" class="form-control">
-<div id="wb_Text16" style="position:absolute;left:26px;top:134px;width:59px;height:14px;z-index:43;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Telefono</strong></span></div>
-<select name="Combobox1" size="1" id="idDistrito_asoc" style="position:absolute;left:121px;top:152px;width:375px;height:28px;z-index:44;" tabindex="20">
-</select>
-<div id="wb_Text34" style="position:absolute;left:128px;top:134px;width:119px;height:14px;z-index:45;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Distrito Domicilio</strong></span></div>
-<div id="wb_Text17" style="position:absolute;left:28px;top:187px;width:59px;height:14px;z-index:46;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Dirección</strong></span></div>
-<input type="text" id="idDirec_asoc" style="position:absolute;left:18px;top:204px;width:478px;height:28px;line-height:28px;z-index:47;" name="Editbox1" value="" tabindex="21" autocomplete="off" class="form-control">
-<div id="wb_label_asoc" style="position:absolute;left:257px;top:134px;width:239px;height:13px;z-index:48;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:11px;"><strong>(..)</strong></span></div>
-<input type="text" id="txtAsientos" style="position:absolute;left:448px;top:333px;width:48px;height:24px;line-height:24px;z-index:49;" name="Editbox1" value="" tabindex="30" autocomplete="off" class="form-control">
-<div id="wb_Text38" style="position:absolute;left:448px;top:317px;width:64px;height:14px;z-index:50;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Asientos</strong></span></div>
-<select name="Combobox1" size="1" id="cmbCategoria" style="position:absolute;left:17px;top:284px;width:108px;height:28px;z-index:51;" tabindex="23" class="form-control">
-</select>
-<div id="wb_Text39" style="position:absolute;left:19px;top:268px;width:74px;height:14px;z-index:52;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Categoria</strong></span></div>
-</div>
-<input type="button" id="btnGuardar" name="" value="Registrar" style="position:absolute;left:927px;top:3px;width:117px;height:30px;z-index:92;cursor:pointer;" class="btn btn-default btn-sm">
-<div id="panelConcesionario" style="position:absolute;text-align:left;left:8px;top:39px;width:518px;height:455px;z-index:93;" class="form-group well">
-<div id="wb_Text2" style="position:absolute;left:221px;top:4px;width:101px;height:14px;text-align:right;z-index:67;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Concesionario</strong></span></div>
-<select name="Combobox1" size="1" id="cmb_concesionario" style="position:absolute;left:218px;top:21px;width:280px;height:28px;z-index:68;font-size:12px;" tabindex="2">
-</select>
-<div id="Html1" style="position:absolute;left:480px;top:63px;width:22px;height:23px;z-index:69">
-<a href="#" id="btnBusquedaConcesionario"><span class="glyphicon glyphicon-search"></span></a></div>
-<div id="wb_Text3" style="position:absolute;left:30px;top:108px;width:95px;height:14px;z-index:70;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>N° Certificado</strong></span></div>
-<input type="text" id="txtNroCertificado" style="position:absolute;left:17px;top:125px;width:169px;height:28px;line-height:28px;z-index:71;" name="Editbox1" value="" tabindex="4" autocomplete="off" placeholder="Buscar Certificado" class="form-control">
-<div id="Html2" style="position:absolute;left:188px;top:127px;width:22px;height:23px;z-index:72">
-<a href="#" id="btnBusquedaCertificado"><span class="glyphicon glyphicon-search"></span></a></div>
-<input type="text" id="txtFechaLiquidacion" style="position:absolute;left:338px;top:183px;width:143px;height:28px;line-height:28px;z-index:73;" name="Editbox1" value="" tabindex="8" readonly autocomplete="off" class="form-control">
-<div id="fecha_liquidacion_calendar" style="position:absolute;left:483px;top:185px;width:22px;height:23px;z-index:74">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<div id="wb_lblLiquidacion" style="position:absolute;left:345px;top:166px;width:135px;height:14px;z-index:75;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha de Liquidación</strong></span></div>
-
-<div id="wb_Text27" style="position:absolute;left:20px;top:4px;width:42px;height:14px;text-align:right;z-index:76;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Cono</strong></span></div>
-<select name="Combobox1" size="1" id="cmb_cono" style="position:absolute;left:17px;top:21px;width:190px;height:28px;z-index:77;" tabindex="1" class="form-control">
-</select>
-<input type="text" id="txtBusqueda_concesionario" style="position:absolute;left:17px;top:63px;width:464px;height:28px;line-height:28px;z-index:78;" name="Editbox1" value="" tabindex="3" autocomplete="off" placeholder="Buscar Concesionario" class="form-control">
-<select name="Combobox1" size="1" id="cmb_deuda" style="position:absolute;left:217px;top:183px;width:110px;height:28px;z-index:79;" tabindex="7" class="form-control">
-<option value="N">No</option>
-<option value="S">Si</option>
-</select>
-<div id="wb_Text19" style="position:absolute;left:226px;top:166px;width:85px;height:14px;z-index:80;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Con Deuda</strong></span></div>
-<div id="wb_Text4" style="position:absolute;left:30px;top:166px;width:95px;height:14px;z-index:81;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha Emisión</strong></span></div>
-<input type="text" id="txtFechaEmision" style="position:absolute;left:18px;top:183px;width:168px;height:28px;line-height:28px;z-index:82;" name="Editbox1" value="" tabindex="6" readonly class="form-control">
-<div id="Html3" style="position:absolute;left:188px;top:185px;width:22px;height:23px;z-index:83">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<div id="divFechaVigencia" style="position:absolute;text-align:left;left:17px;top:236px;width:479px;height:78px;z-index:84;">
-<div id="wb_Text5" style="position:absolute;left:12px;top:6px;width:137px;height:14px;z-index:53;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>FECHA VIGENCIA</u></strong></span></div>
-<input type="text" id="txtFV_Inicio" style="position:absolute;left:80px;top:34px;width:128px;height:28px;line-height:28px;z-index:54;" name="Editbox1" value="" tabindex="9" readonly class="form-control">
-<div id="Html4" style="position:absolute;left:210px;top:37px;width:22px;height:23px;z-index:55">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<input type="text" id="txtFV_Fin" style="position:absolute;left:283px;top:34px;width:128px;height:28px;line-height:28px;z-index:56;" name="Editbox1" value="" tabindex="10" readonly class="form-control">
-<div id="Html5" style="position:absolute;left:413px;top:36px;width:22px;height:23px;z-index:57">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<div id="wb_Text6" style="position:absolute;left:40px;top:37px;width:40px;height:14px;z-index:58;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Inicio</strong></span></div>
-<div id="wb_Text7" style="position:absolute;left:257px;top:38px;width:26px;height:14px;z-index:59;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fin</strong></span></div>
-</div>
-<div id="divFechaPolicial" style="position:absolute;text-align:left;left:17px;top:339px;width:479px;height:78px;z-index:85;">
-<div id="wb_Text35" style="position:absolute;left:12px;top:6px;width:181px;height:14px;z-index:60;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>FECHA CONTROL POLICIAL</u></strong></span></div>
-<input type="text" id="txtFCP_Inicio" style="position:absolute;left:80px;top:34px;width:128px;height:28px;line-height:28px;z-index:61;" name="Editbox1" value="" tabindex="11" readonly class="form-control">
-<div id="Html6" style="position:absolute;left:210px;top:37px;width:22px;height:23px;z-index:62">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<div id="wb_Text9" style="position:absolute;left:40px;top:38px;width:40px;height:14px;z-index:63;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Inicio</strong></span></div>
-<div id="wb_Text10" style="position:absolute;left:257px;top:38px;width:26px;height:14px;z-index:64;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fin</strong></span></div>
-<div id="Html7" style="position:absolute;left:413px;top:37px;width:22px;height:23px;z-index:65">
-<a href="#"><span class="glyphicon glyphicon-calendar"></span></a></div>
-<input type="text" id="txtFCP_Fin" style="position:absolute;left:283px;top:34px;width:128px;height:28px;line-height:28px;z-index:66;" name="Editbox1" value="" tabindex="12" readonly class="form-control">
-</div>
-<input type="checkbox" id="idCheckLiqPend" name="idCheckLiqPend" value="on" style="position:absolute;left:224px;top:128px;z-index:86;" tabindex="5">
-<div id="wb_idLabelLiqPend" style="position:absolute;left:247px;top:131px;width:251px;height:14px;z-index:87;text-align:left;">
-<span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Certificados con Liquidación pendiente</strong></span></div>
-</div>
-<input type="button" id="btnAnular" name="" value="Anular CAT" style="position:absolute;left:809px;top:3px;width:112px;height:30px;z-index:94;cursor:pointer;">
-</div>
-</div>
-</body>
+   <head>
+      <meta charset="utf-8">
+      <title>Untitled Page</title>
+      <meta name="author" content="mhbsoft">
+      <link href="wpscripts/interfaces-autoseguro.css" rel="stylesheet">
+      <link href="wpscripts/ventas_certificados.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="css/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+      <link rel="stylesheet" href="css/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+      <script src="js/dataTables.min.js"></script>
+      <link href="css/jquery.dataTables.css" rel="stylesheet"/>
+      <script src="js/mhbsoftScripts.js"></script>
+      <script src="js/global.js"></script>
+      <script src="js/date-eu.js"></script>
+      <script src="js/ventas_certificados.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+         <link rel="stylesheet" href="js/jpaginate/css/style.css" media="screen">
+         <script src="js/jpaginate/jquery.paginate.js">
+      </script>
+      <link rel="stylesheet" href="css/jquery.datetimepicker.css" media="screen" />
+      <script src="js/jquery.datetimepicker.js"></script>
+      <script src="js/select2.js"></script>
+      <link href="css/select2.css" rel="stylesheet"/>
+   </head>
+   <body style="height:525px">
+      <div id="container">
+         <div id="Layer1" style="position:absolute;text-align:left;left:16px;top:4px;width:1062px;height:582px;z-index:208;">
+            <hr id="Line1" style="position:absolute;left:6px;top:36px;width:1049px;height:1px;z-index:88;">
+            <div id="wb_Text1" style="position:absolute;left:26px;top:7px;width:286px;height:24px;z-index:89;text-align:left;">
+               <span style="color:#696969;font-family:Tahoma;font-size:20px;"><strong>Ventas de Certificados</strong></span>
+            </div>
+            <hr id="Line3" style="position:absolute;left:533px;top:40px;width:1px;height:455px;z-index:90;">
+            <div id="panelVehiculo" style="position:absolute;text-align:left;left:541px;top:39px;width:512px;height:539px;z-index:91;" class="form-group well">
+               <div id="wb_Text18" style="position:absolute;left:19px;top:240px;width:100%;height:16px;z-index:11;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>VEHICULO</u></strong>
+                  <button onclick="busquedaSUNARP();" style="position: absolute; right: 7%;">SUNARP&nbsp;<span class="glyphicon glyphicon-search"></span></button>
+                  </span>
+               </div>
+               <input type="text" id="txtPlaca" is_servicio="0" style="position:absolute;left:166px;top:240px;width:94px;height:23px;line-height:23px;z-index:12;" name="Editbox1" value="" tabindex="22" class="form-control">
+               <div id="Html9" style="position:absolute;left:262px;top:242px;width:22px;height:23px;z-index:13">
+                  <a href="#"><span id="idBtnBuscarPlaca" class="glyphicon glyphicon-search"></span></a>
+               </div>
+               <div id="wb_Text21" style="position:absolute;left:170px;top:268px;width:39px;height:14px;z-index:14;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Uso</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="cmbUsoVehiculo" style="position:absolute;left:134px;top:284px;width:174px;height:28px;z-index:15;" tabindex="24" class="form-control">
+               </select>
+               <div id="wb_Text22" style="position:absolute;left:323px;top:268px;width:39px;height:14px;z-index:16;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Clase</strong></span>
+               </div>
+               <div id="wb_Text23" style="position:absolute;left:37px;top:317px;width:47px;height:14px;z-index:17;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Marca</strong></span>
+               </div>
+               <div id="wb_Text24" style="position:absolute;left:274px;top:317px;width:38px;height:14px;z-index:18;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Año</strong></span>
+               </div>
+               <input type="text" id="txtAnno" style="position:absolute;left:262px;top:333px;width:58px;height:24px;line-height:24px;z-index:19;" name="Editbox1" value="" tabindex="28" autocomplete="off" class="form-control">
+               <div style="position:absolute;left:19px;top:368px;width:100%;height:16px;z-index:11;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>PROPIETARIO</u></strong></span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select  id="selectPersonaPropietario" style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
+                     <option value="0">Tipo persona</option>
+                     <option value="N">Natural</option>
+                     <option value="J">Jurídico</option>
+                  </select>
+                  <select id="selectTipoDocuPropietario"   style="height: 28px;z-index:15;display: inline;width: auto !important;"  class="form-control"   requerido="Tipo persona propietario">
+                     <option value="0">Tipo documento</option>
+                     <option value="DNI">DNI</option>
+                     <option value="PTP">PTP</option>
+                     <option value="CE">CE</option>
+                     <option value="RUC">RUC</option>
+                  </select>
+               </div>
+               <div style="position:absolute;left:19px;top:399px;width:100%;height:16px;z-index:11;text-align:left;">
+                  <span>Numero documento</span>
+                  &nbsp;&nbsp;
+                  <input type="text" id="txtNumeroDocumentoPropietario" id-propietario-vehiculo="0" class="inputformulario" style="width:67%;height: 22px;" >
+                  &nbsp;
+                  <a href="#" hidden ><span id="idBtnBuscarPropietario" class="glyphicon glyphicon-search"></span></a>
+               </div>
+               <div style="position:absolute;left:19px;top:423px;width:100%;height:32px;z-index:11;text-align:left;">
+                  <input type="text" id="nombresPropietario" class="inputformulario" style="width:40%;height:24px;line-height:24px" placeholder="Nombres / Razon Social" >
+                  &nbsp;&nbsp;
+                  <input type="text" id="apepatPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Paterno" >
+                  &nbsp;&nbsp;
+                  <input type="text" id="apematPropietario" class="inputformulario" style="width:24%;height:24px;line-height:24px" placeholder="Apellido Materno" >
+               </div>
+               <div id="divMonto" style="position:absolute;text-align:left;left:17px;top:451px;width:479px;height:83px;z-index:20;">
+                  <div id="wb_Text8" style="position:absolute;left:12px;top:6px;width:181px;height:14px;z-index:0;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>MONTO</u></strong></span>
+                  </div>
+                  <div id="wb_Text29" style="position:absolute;left:28px;top:26px;width:47px;height:14px;z-index:1;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Prima</strong></span>
+                  </div>
+                  <input type="text" id="txtPrima" style="position:absolute;left:28px;top:44px;width:63px;height:23px;line-height:23px;z-index:2;" name="Editbox1" value="" tabindex="31" autocomplete="off" class="form-control">
+                  <input type="text" id="txtTotal" style="position:absolute;left:393px;top:44px;width:66px;height:23px;line-height:23px;z-index:3;" name="Editbox1" value="" tabindex="34" autocomplete="off" class="form-control">
+                  <div id="wb_Text32" style="position:absolute;left:107px;top:46px;width:18px;height:14px;z-index:4;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span>
+                  </div>
+                  <div id="wb_Text30" style="position:absolute;left:143px;top:26px;width:67px;height:14px;z-index:5;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Comisión</strong></span>
+                  </div>
+                  <input type="text" id="txtComision" style="position:absolute;left:141px;top:44px;width:63px;height:23px;line-height:23px;z-index:6;" name="Editbox1" value="" tabindex="32" autocomplete="off" class="form-control">
+                  <div id="wb_Text37" style="position:absolute;left:219px;top:46px;width:18px;height:14px;z-index:7;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>+</strong></span>
+                  </div>
+                  <input type="text" id="txtAporte" style="position:absolute;left:254px;top:44px;width:100px;height:23px;line-height:23px;z-index:8;" name="Editbox1" value="" tabindex="33" autocomplete="off" class="form-control">
+                  <div id="wb_Text31" style="position:absolute;left:252px;top:26px;width:116px;height:14px;z-index:9;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Aporte Afiliación</strong></span>
+                  </div>
+                  <div id="wb_Text36" style="position:absolute;left:368px;top:46px;width:18px;height:14px;z-index:10;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>=</strong></span>
+                  </div>
+               </div>
+               <div id="wb_Text20" style="position:absolute;left:121px;top:243px;width:45px;height:14px;z-index:21;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>PLACA</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="cmbClaseVehiculo" style="position:absolute;left:316px;top:285px;width:180px;height:28px;z-index:22;" tabindex="25" class="form-control">
+               </select>
+               <input type="text" id="txtMarca" style="position:absolute;left:18px;top:333px;width:114px;height:24px;line-height:24px;z-index:23;" name="Editbox1" value="" tabindex="26" autocomplete="off" class="form-control">
+               <input type="text" id="txtSerieNro" style="position:absolute;left:334px;top:334px;width:108px;height:24px;line-height:24px;z-index:24;" name="Editbox1" value="" tabindex="29" autocomplete="off" class="form-control">
+               <div id="wb_Text25" style="position:absolute;left:334px;top:317px;width:97px;height:14px;z-index:25;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>N° Serie Motor</strong></span>
+               </div>
+               <input type="text" id="txtModelo" style="position:absolute;left:144px;top:333px;width:107px;height:24px;line-height:24px;z-index:26;" name="Editbox1" value="" tabindex="27" autocomplete="off" class="form-control">
+               <div id="wb_Text28" style="position:absolute;left:163px;top:317px;width:47px;height:28px;z-index:27;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Modelo</strong></span>
+               </div>
+               <div id="wb_Text11" style="position:absolute;left:17px;top:7px;width:100%;height:16px;z-index:28;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:13px;"><strong><u>ASOCIADO</u></strong><button onclick="busquedaReniecSUNAT();" style="position: absolute; right: 7%;">RENIEC/SUNAT <span class="glyphicon glyphicon-search"></span></button> </span>
+               </div>
+               <select name="Combobox1" size="1" id="idTipoPersona_asoc" style="position:absolute;left:17px;top:45px;width:95px;height:28px;z-index:29;" tabindex="13" class="form-control">
+                  <option value="N">Natural</option>
+                  <option value="J">Juridico</option>
+               </select>
+               <div id="wb_Text26" style="position:absolute;left:26px;top:28px;width:36px;height:14px;z-index:30;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Tipo</strong></span>
+               </div>
+               <div id="Html8" style="position:absolute;left:231px;top:47px;width:22px;height:23px;z-index:31">
+                  <a href="#"><span id="btnBuscarPersona_asoc" class="glyphicon glyphicon-search"></span></a>
+               </div>
+               <input type="text" id="idDNI_asoc" style="position:absolute;left:121px;top:45px;width:108px;height:28px;line-height:28px;z-index:32;" name="Editbox1" value="" tabindex="14" class="form-control">
+               <div id="wb_Text12" style="position:absolute;left:128px;top:28px;width:61px;height:14px;z-index:33;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>DNI/RUC</strong></span>
+               </div>
+               <div id="wb_Text33" style="position:absolute;left:264px;top:28px;width:93px;height:14px;z-index:34;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Razón Social</strong></span>
+               </div>
+               <input type="text" id="idRazonSocial_asoc" style="position:absolute;left:255px;top:45px;width:241px;height:28px;line-height:28px;z-index:35;" name="Editbox1" value="" tabindex="15" autocomplete="off" class="form-control">
+               <div id="wb_Text15" style="position:absolute;left:388px;top:80px;width:120px;height:14px;z-index:36;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Materno</strong></span>
+               </div>
+               <input type="text" id="idApePat_asoc" style="position:absolute;left:255px;top:97px;width:116px;height:28px;line-height:28px;z-index:37;" name="Editbox1" value="" tabindex="17" autocomplete="off" class="form-control">
+               <div id="wb_Text14" style="position:absolute;left:261px;top:80px;width:122px;height:14px;z-index:38;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Apellido Paterno</strong></span>
+               </div>
+               <div id="wb_Text13" style="position:absolute;left:28px;top:80px;width:65px;height:14px;z-index:39;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Nombres</strong></span>
+               </div>
+               <input type="text" id="idNombres_asoc" style="position:absolute;left:17px;top:97px;width:228px;height:28px;line-height:28px;z-index:40;" name="Editbox1" value="" tabindex="16" autocomplete="off" class="form-control">
+               <input type="text" id="idApeMat_asoc" style="position:absolute;left:380px;top:97px;width:116px;height:28px;line-height:28px;z-index:41;" name="Editbox1" value="" tabindex="18" autocomplete="off" class="form-control">
+               <input type="text" id="idTelf_asoc" style="position:absolute;left:17px;top:152px;width:92px;height:28px;line-height:28px;z-index:42;" name="Editbox1" value="" tabindex="19" class="form-control">
+               <div id="wb_Text16" style="position:absolute;left:26px;top:134px;width:59px;height:14px;z-index:43;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Telefono</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="idDistrito_asoc" style="position:absolute;left:121px;top:152px;width:375px;height:28px;z-index:44;" tabindex="20">
+               </select>
+               <div id="wb_Text34" style="position:absolute;left:128px;top:134px;width:119px;height:14px;z-index:45;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Distrito Domicilio</strong></span>
+               </div>
+               <div id="wb_Text17" style="position:absolute;left:28px;top:187px;width:59px;height:14px;z-index:46;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Dirección</strong></span>
+               </div>
+               <input type="text" id="idDirec_asoc" style="position:absolute;left:18px;top:204px;width:478px;height:28px;line-height:28px;z-index:47;" name="Editbox1" value="" tabindex="21" autocomplete="off" class="form-control">
+               <div id="wb_label_asoc" style="position:absolute;left:257px;top:134px;width:239px;height:13px;z-index:48;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:11px;"><strong>(..)</strong></span>
+               </div>
+               <input type="text" id="txtAsientos" style="position:absolute;left:448px;top:333px;width:48px;height:24px;line-height:24px;z-index:49;" name="Editbox1" value="" tabindex="30" autocomplete="off" class="form-control">
+               <div id="wb_Text38" style="position:absolute;left:448px;top:317px;width:64px;height:14px;z-index:50;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Asientos</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="cmbCategoria" style="position:absolute;left:17px;top:284px;width:108px;height:28px;z-index:51;" tabindex="23" class="form-control">
+               </select>
+               <div id="wb_Text39" style="position:absolute;left:19px;top:268px;width:74px;height:14px;z-index:52;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Categoria</strong></span>
+               </div>
+            </div>
+            <input type="button" id="btnGuardar" name="" value="Registrar" style="position:absolute;left:927px;top:3px;width:117px;height:30px;z-index:92;cursor:pointer;" class="btn btn-default btn-sm">
+            <div id="panelConcesionario" style="position:absolute;text-align:left;left:8px;top:39px;width:518px;height:455px;z-index:93;" class="form-group well">
+               <div id="wb_Text2" style="position:absolute;left:221px;top:4px;width:101px;height:14px;text-align:right;z-index:67;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Concesionario</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="cmb_concesionario" style="position:absolute;left:218px;top:21px;width:280px;height:28px;z-index:68;font-size:12px;" tabindex="2">
+               </select>
+               <div id="Html1" style="position:absolute;left:480px;top:63px;width:22px;height:23px;z-index:69">
+                  <a href="#" id="btnBusquedaConcesionario"><span class="glyphicon glyphicon-search"></span></a>
+               </div>
+               <div id="wb_Text3" style="position:absolute;left:30px;top:108px;width:95px;height:14px;z-index:70;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>N° Certificado</strong></span>
+               </div>
+               <input type="text" id="txtNroCertificado" style="position:absolute;left:17px;top:125px;width:169px;height:28px;line-height:28px;z-index:71;" name="Editbox1" value="" tabindex="4" autocomplete="off" placeholder="Buscar Certificado" class="form-control">
+               <div id="Html2" style="position:absolute;left:188px;top:127px;width:22px;height:23px;z-index:72">
+                  <a href="#" id="btnBusquedaCertificado"><span class="glyphicon glyphicon-search"></span></a>
+               </div>
+               <input type="text" id="txtFechaLiquidacion" style="position:absolute;left:338px;top:183px;width:143px;height:28px;line-height:28px;z-index:73;" name="Editbox1" value="" tabindex="8" readonly autocomplete="off" class="form-control">
+               <div id="fecha_liquidacion_calendar" style="position:absolute;left:483px;top:185px;width:22px;height:23px;z-index:74">
+                  <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+               </div>
+               <div id="wb_lblLiquidacion" style="position:absolute;left:345px;top:166px;width:135px;height:14px;z-index:75;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha de Liquidación</strong></span>
+               </div>
+               <div id="wb_Text27" style="position:absolute;left:20px;top:4px;width:42px;height:14px;text-align:right;z-index:76;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Cono</strong></span>
+               </div>
+               <select name="Combobox1" size="1" id="cmb_cono" style="position:absolute;left:17px;top:21px;width:190px;height:28px;z-index:77;" tabindex="1" class="form-control">
+               </select>
+               <input type="text" id="txtBusqueda_concesionario" style="position:absolute;left:17px;top:63px;width:464px;height:28px;line-height:28px;z-index:78;" name="Editbox1" value="" tabindex="3" autocomplete="off" placeholder="Buscar Concesionario" class="form-control">
+               <select name="Combobox1" size="1" id="cmb_deuda" style="position:absolute;left:217px;top:183px;width:110px;height:28px;z-index:79;" tabindex="7" class="form-control">
+                  <option value="N">No</option>
+                  <option value="S">Si</option>
+               </select>
+               <div id="wb_Text19" style="position:absolute;left:226px;top:166px;width:85px;height:14px;z-index:80;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Con Deuda</strong></span>
+               </div>
+               <div id="wb_Text4" style="position:absolute;left:30px;top:166px;width:95px;height:14px;z-index:81;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fecha Emisión</strong></span>
+               </div>
+               <input type="text" id="txtFechaEmision" style="position:absolute;left:18px;top:183px;width:168px;height:28px;line-height:28px;z-index:82;" name="Editbox1" value="" tabindex="6" readonly class="form-control">
+               <div id="Html3" style="position:absolute;left:188px;top:185px;width:22px;height:23px;z-index:83">
+                  <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+               </div>
+               <div id="divFechaVigencia" style="position:absolute;text-align:left;left:17px;top:236px;width:479px;height:78px;z-index:84;">
+                  <div id="wb_Text5" style="position:absolute;left:12px;top:6px;width:137px;height:14px;z-index:53;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>FECHA VIGENCIA</u></strong></span>
+                  </div>
+                  <input type="text" id="txtFV_Inicio" style="position:absolute;left:80px;top:34px;width:128px;height:28px;line-height:28px;z-index:54;" name="Editbox1" value="" tabindex="9" readonly class="form-control">
+                  <div id="Html4" style="position:absolute;left:210px;top:37px;width:22px;height:23px;z-index:55">
+                     <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+                  </div>
+                  <input type="text" id="txtFV_Fin" style="position:absolute;left:283px;top:34px;width:128px;height:28px;line-height:28px;z-index:56;" name="Editbox1" value="" tabindex="10" readonly class="form-control">
+                  <div id="Html5" style="position:absolute;left:413px;top:36px;width:22px;height:23px;z-index:57">
+                     <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+                  </div>
+                  <div id="wb_Text6" style="position:absolute;left:40px;top:37px;width:40px;height:14px;z-index:58;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Inicio</strong></span>
+                  </div>
+                  <div id="wb_Text7" style="position:absolute;left:257px;top:38px;width:26px;height:14px;z-index:59;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fin</strong></span>
+                  </div>
+               </div>
+               <div id="divFechaPolicial" style="position:absolute;text-align:left;left:17px;top:339px;width:479px;height:78px;z-index:85;">
+                  <div id="wb_Text35" style="position:absolute;left:12px;top:6px;width:181px;height:14px;z-index:60;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong><u>FECHA CONTROL POLICIAL</u></strong></span>
+                  </div>
+                  <input type="text" id="txtFCP_Inicio" style="position:absolute;left:80px;top:34px;width:128px;height:28px;line-height:28px;z-index:61;" name="Editbox1" value="" tabindex="11" readonly class="form-control">
+                  <div id="Html6" style="position:absolute;left:210px;top:37px;width:22px;height:23px;z-index:62">
+                     <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+                  </div>
+                  <div id="wb_Text9" style="position:absolute;left:40px;top:38px;width:40px;height:14px;z-index:63;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Inicio</strong></span>
+                  </div>
+                  <div id="wb_Text10" style="position:absolute;left:257px;top:38px;width:26px;height:14px;z-index:64;text-align:left;">
+                     <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Fin</strong></span>
+                  </div>
+                  <div id="Html7" style="position:absolute;left:413px;top:37px;width:22px;height:23px;z-index:65">
+                     <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+                  </div>
+                  <input type="text" id="txtFCP_Fin" style="position:absolute;left:283px;top:34px;width:128px;height:28px;line-height:28px;z-index:66;" name="Editbox1" value="" tabindex="12" readonly class="form-control">
+               </div>
+               <input type="checkbox" id="idCheckLiqPend" name="idCheckLiqPend" value="on" style="position:absolute;left:224px;top:128px;z-index:86;" tabindex="5">
+               <div id="wb_idLabelLiqPend" style="position:absolute;left:247px;top:131px;width:251px;height:14px;z-index:87;text-align:left;">
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>Certificados con Liquidación pendiente</strong></span>
+               </div>
+             
+               <div id="sectionNoTieneDuplicado"  hidden> 
+                  <div   style="position:absolute;left:224px;top:104px;width:251px;height:14px;z-index:87;text-align:left;display:inline-flex"  >
+                  <input id="chckDuplicado" onclick="clickDuplicadoCheck($(this))" style="height: 14px;" type="checkbox" />
+                  <span style="color:#696969;font-family:Tahoma;font-size:12px;"><strong>&nbsp;Duplicado</strong></span>
+                  &nbsp;&nbsp;<input id="txtValidaCATDuplicado" data-valido-duplicado="0" hidden style="height: 20px; border-radius: 5px;" type="text" /> 
+                  &nbsp;&nbsp;<div id="sectionIconoBusquedaCertitificado" hidden > <span style="cursor:pointer" onclick="validaCATValido();"  class="glyphicon glyphicon-search"></span> </div> 
+                  </div>
+               </div>
+             
+               <div id="sectionSiTieneDuplicado"  hidden >
+                  <div style="position:absolute;left:224px;top:104px;width:251px;height:14px;z-index:87;text-align:left;display:inline-flex">
+                     <span style="color:blue;font-family:Tahoma;font-size:12px;"><strong>&nbsp;Duplicado Referencia&nbsp;&nbsp;<span id="lblCertificadoDuplicadoReferencia">-</span></strong></span>
+                  </div>
+               </div>
+             
+               
+     
+            </div>
+            <input type="button" id="btnAnular" name="" value="Anular CAT" style="position:absolute;left:809px;top:3px;width:112px;height:30px;z-index:94;cursor:pointer;">
+         </div>
+      </div>
+   </body>
 </html>

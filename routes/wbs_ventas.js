@@ -235,10 +235,12 @@ exports.buscarCertificado = function (req, res, funcionName) { // realiza la bus
     var nroCertificado = req.query.nroCertificado;
     var liquidacionPendiente = req.query.liquidacionPendiente;
     var arrayParametros = [nroCertificado, nroCertificado, nroCertificado];
+    console.log("liquidacionPendiente",liquidacionPendiente);
+    
     if (liquidacionPendiente == 'true') { // realiza la busqueda de certificado distribuidos.
         var queryBusquedaCAT = "Select c.nroCertificado, m.tipOperacion, m.idGuiaSalida, c.estadoRegistroCAT as estado, " +
             " pr.idPromotor, gc.idConcesionario, gd.idArticulo, gd.Unidad, " +
-            "pr.idConcesionarioPromotor " +
+            "pr.idConcesionarioPromotor, c.CertificadoDuplicado " +
             "from Certificado c " +
             "inner join Certificado_movimiento m on c.ultimoMovimiento = m.idCertificado_movimiento " +
             "left join Guia_movimiento_cabecera gc on gc.idGuia_movimiento_cabecera=m.idGuia " +
@@ -253,11 +255,12 @@ exports.buscarCertificado = function (req, res, funcionName) { // realiza la bus
             "date_format(c.fechaInicio, '%d/%m/%Y') as fechaInicio, date_format(c.fechaCaducidad, '%d/%m/%Y') as fechaCaducidad, " +
             "date_format(c.fechaControlInicio, '%d/%m/%Y') as fechaControlInicio, date_format(c.fechaControlFin, '%d/%m/%Y') as fechaControlFin, c.conDeuda, " +
             "date_format(c.fechaLiquidacion, '%d/%m/%Y') as fechaLiquidacion, c.idConcesionario, c.prima, c.aporte, c.comision, a.idAsociado, p.tipoPersona, " +
-            "p.nroDocumento, c.idDeposito " +
+            "p.nroDocumento, c.idDeposito,c.CertificadoDuplicado " +
             "from Cat c " +
             "inner join Asociado a on c.idAsociado = a.idAsociado " +
             "inner join Persona p on a.idPersona = p.idPersona where c.nroCAT = ? ";
         ejecutarQUERY_MYSQL(queryBusquedaCAT, arrayParametros, res, funcionName, function (res, resultados) {
+        
             if (resultados.length == 0) {
                 var nroCertificado = req.query.nroCertificado;
                 var query = "Select c.nroCertificado, c.estadoCertificadoAntiguo as estado, m.estado as estadoMovimiento, m.idUbicacion as idConcesionario " +
@@ -267,12 +270,12 @@ exports.buscarCertificado = function (req, res, funcionName) { // realiza la bus
                 var arrayParametros = [nroCertificado];
                 ejecutarQUERY_MYSQL(query, arrayParametros, res, funcionName);
             } else {
-                enviarResponse(res, resultados); // envia los resultados del CAT encontrado
+                 enviarResponse(res, resultados); // envia los resultados del CAT encontrado
             }
         });
     }
-
 }
+
 exports.getPersonaByNroDoc = function (req, res, funcionName) {
     var nroDoc = req.query.nroDoc;
     var query = "call sp_getPersonaByNroDoc(?)";
@@ -417,13 +420,15 @@ exports.actualizarCAT = function (req, res, funcionName) {
             vehiculo.nroAsientos = req.query.nroAsientos;
             vehiculo.viene_de_servicio = vehiculoVieneDeServicio;
 
+            console.log("CAT DUPLICADO");
+            console.log(req.query.certificadoDuplicado);
             abstractGuardarActualizarVehiculo(res, funcionName, vehiculo, propietario, function (idVehiculo_CAT) {
                 // actualiza el cat
                 var idUsuarioUpdate = req.query.idUsuarioUpdate;
                 //09/04/2019 *** OJO*** el tipoPersona siempre debe coincidir, posterior facturacion
                 var queryInsertCat = "Update Cat set placa=?, marca=?, modelo=?, annoFabricacion=?, nMotorserie=?, fechaInicio=?, fechaCaducidad=?, " +
                     "idConcesionario=?, fechaEmision=?, fechaControlInicio=?, fechaControlFin=?, idVehiculo=?, conDeuda=?, fechaLiquidacion=?, prima=?, " +
-                    "comision=?, aporte=?, ultActualizaFecha=now(), ultActualizaUsuario=?, tipoPersona=? " +
+                    "comision=?, aporte=?, ultActualizaFecha=now(), ultActualizaUsuario=?, tipoPersona=?" +
                     "where nroCAT=? ";
 
                 var parametros = [req.query.placa, req.query.marca, req.query.modelo, req.query.anno, req.query.serieMotor, req.query.fechaV_inicio,
@@ -841,8 +846,6 @@ exports.migra_liberacion = function (req, respuesta, funcionName) {
 
 
 exports.guardarCAT = function (req, res, funcionName) {
-
- 
     var idPromotor = 0;
     if (req.query.idPromotor != undefined) {
         idPromotor = req.query.idPromotor
@@ -882,10 +885,13 @@ exports.guardarCAT = function (req, res, funcionName) {
     var nombresPropietario = req.query.nombresPropietario;
     var apepatPropietario = req.query.apepatPropietario;
     var apematPropietario = req.query.apematPropietario;
+    var catDuplicadoPost =  req.query.apematPropietario;
+    var vistaEnvio =  req.query.certificadoDuplicado;
 
-    var vistaEnvio =  req.query.vistaRegistro;
     console.log("--VISTA DESDE DONDE SE REGISTRA--");
     console.log(vistaEnvio);
+    console.log(catDuplicadoPost);
+
     // guarda o actualiza la personalbar
     var persona = {};
     persona.idPersona = idPersona;
@@ -946,10 +952,19 @@ exports.guardarCAT = function (req, res, funcionName) {
                     vehiculo.nroAsientos = req.query.nroAsientos;
                     vehiculo.viene_de_servicio = vehiculoVieneDeServicio;
 
+                    console.log("CAT referencia",req.query.certificadoDuplicado);
+                    console.log("CAT registro ",req.query.nroCertificado);
+
+
                     // guarda o se actualiza el vehiculo, el ID del vehiculo es retornado en la funcion callback (idVehiculo_CAT)
                     abstractGuardarActualizarVehiculo(res, funcionName, vehiculo,propietario,
                         function (idVehiculo_CAT) {
-                           
+                           console.log("query para CAT");
+                            console.log(req.query.nroCertificado, req.query.idAsociado, req.query.placa, req.query.marca, req.query.modelo, 
+                                req.query.anno,req.query.serieMotor, req.query.fechaV_inicio, req.query.fechaV_fin, req.query.idConcesionario, 
+                                req.query.fechaEmision,req.query.fechaCP_inicio, req.query.fechaCP_fin, idVehiculo_CAT, req.query.conDeuda,
+                                 req.query.prima,req.query.comision, req.query.aporte, req.query.tipoPersona, idPromotor, 
+                                 req.query.certificadoDuplicado);
                             // guarda el cat
                             //09/04/2019 ***Debe guardar tipoPersona*** posterior facturacion
                             // var queryInsertCat = "Insert into Cat (nroCAT, idAsociado, placa, marca, modelo, annoFabricacion, nMotorserie, fechaInicio, " +
@@ -957,7 +972,7 @@ exports.guardarCAT = function (req, res, funcionName) {
                             //    "prima, comision, aporte) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
                             var queryInsertCat = "Insert into Cat (nroCAT, idAsociado, placa, marca, modelo, annoFabricacion, nMotorserie, fechaInicio, " +
                                 "fechaCaducidad, idConcesionario, fechaEmision, fechaControlInicio, fechaControlFin, idVehiculo, conDeuda, fechaLiquidacion, " +
-                                "prima, comision, aporte, tipoPersona, idPromotor) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"+ (req.query.fechaLiquidacion ? "'" + req.query.fechaLiquidacion + "'" : "NULL")+",?,?,?,?,?)";
+                                "prima, comision, aporte, tipoPersona, idPromotor, CertificadoDuplicado) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,"+ (req.query.fechaLiquidacion ? "'" + req.query.fechaLiquidacion + "'" : "NULL")+",?,?,?,?,?,"+ req.query.certificadoDuplicado +")";
                             var parametros = [req.query.nroCertificado, req.query.idAsociado, req.query.placa, req.query.marca, req.query.modelo, req.query.anno,
                             req.query.serieMotor, req.query.fechaV_inicio, req.query.fechaV_fin, req.query.idConcesionario, req.query.fechaEmision,
                             req.query.fechaCP_inicio, req.query.fechaCP_fin, idVehiculo_CAT, req.query.conDeuda, req.query.prima,

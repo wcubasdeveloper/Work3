@@ -192,6 +192,76 @@ cargarInicio(function () {
 		});
 	});
 });
+
+function clickDuplicadoCheck(elementoCheck){
+
+	var isChecked = elementoCheck.is(':checked');
+	//console.log("isChecked",isChecked);
+
+	if(isChecked){ //si duplicado is Checked
+		$('#txtValidaCATDuplicado').focus();
+		$('#txtValidaCATDuplicado').prop('disabled',false);
+		$('#txtValidaCATDuplicado').removeAttr('hidden');
+		$('#sectionIconoBusquedaCertitificado').removeAttr('hidden');
+		$('#sectionIconoBusquedaCertitificado').find('span').eq(0).attr('class','glyphicon glyphicon-search');
+		$('#txtValidaCATDuplicado').attr('data-valido-duplicado',0);
+
+
+	}else{
+
+		$('#txtValidaCATDuplicado').prop('hidden',true);
+		$('#sectionIconoBusquedaCertitificado').prop('hidden',true);
+		$('#txtValidaCATDuplicado').val('');
+		$('#txtValidaCATDuplicado').attr('data-valido-duplicado',0);
+	}
+
+}
+ 
+function validaCATValido() {
+	var realizoValidacionDuplicado = $('#txtValidaCATDuplicado').attr('data-valido-duplicado');
+	if(Number(realizoValidacionDuplicado) == 1){
+		return false;
+	}
+	
+	$('#txtValidaCATDuplicado').prop('disabled',false);
+	$('#sectionIconoBusquedaCertitificado').find('span').eq(0).attr('class','glyphicon glyphicon-search');
+	try {
+		var nroCertificado = $("#txtValidaCATDuplicado").val().trim();
+		if (nroCertificado == "") {
+			fancyAlertFunction("Debe ingresar el número de certificado", function () {
+				$("#txtValidaCATDuplicado").focus();
+			})
+			return;
+		}
+		var parametros = "&nroCertificado=" + nroCertificado + "&liquidacionPendiente=" + "false";
+		DAO.consultarWebServiceGet("buscarCertificado", parametros, function (data) {
+			console.log('--->>',data.length)
+			if (data.length == 0) { //no existe certificado
+				fancyAlertFunction("¡El número de Certificado " + $("#txtValidaCATDuplicado").val() + ", no existe!", function () {
+					$("#txtValidaCATDuplicado").focus();
+				});
+				return;
+			} else { //si existe 
+				if (data[0].estado == 29 || data[0].estado == 24 || data[0].estado == 5 || data[0].estado == 7 || data[0].estadoMovimiento == 'V') {
+					//certificado disponible
+					console.log("data certificado", data);
+					$('#txtValidaCATDuplicado').attr('data-valido-duplicado',1);
+					$('#txtValidaCATDuplicado').prop('disabled',true);
+					$('#sectionIconoBusquedaCertitificado').find('span').eq(0).attr('class','glyphicon glyphicon-ok');
+
+				}else{
+					console.log('--')
+					fancyAlertFunction("¡El Certificado " + $("#txtValidaCATDuplicado").val() + " no se encuentra disponible!", function () {});
+				}
+			}
+			$.fancybox.close();
+		})
+	} catch (err) {
+		emitirErrorCatch(err, "buscarCertificado");
+	}
+}
+
+
 function calcularComisionByAporte() {
 	try {
 		var aporte = $("#txtAporte").val();
@@ -508,6 +578,21 @@ function buscarCertificado() {
 					accion = 'N';
 				})
 			} else {
+				//validando la sección duplicado
+				if(data[0].CertificadoDuplicado){ //si tiene una referencia de duplicado
+					$('#sectionSiTieneDuplicado').removeAttr('hidden');
+					$('#sectionNoTieneDuplicado').prop('hidden',true);
+					$('#chckDuplicado').prop('checked',false);
+					$('#txtValidaCATDuplicado').val('');
+					$('#lblCertificadoDuplicadoReferencia').text(data[0].CertificadoDuplicado);
+					
+				}else{ //si no tiene 
+					$('#sectionNoTieneDuplicado').removeAttr('hidden');
+					$('#sectionSiTieneDuplicado').prop('hidden',true);
+					$('#lblCertificadoDuplicadoReferencia').text('-');
+
+				}
+
 				if ($("#idCheckLiqPend").prop("checked")) {
 					if (data[0].tipOperacion == 'E' && data[0].idGuiaSalida == 0 && data[0].estado != '8' && data[0].estado != '9') {
 						$("#txtNroCertificado").prop("disabled", true);
@@ -531,7 +616,8 @@ function buscarCertificado() {
 							fancyAlert("¡El certificado aun no se encuentra distribuido!")
 						}
 					}
-				} else {
+					
+				} else { //checked false
 
 			
 
@@ -713,6 +799,14 @@ function reiniciarCertificado() {
 
 			// reinicia los campos de vehiculo:
 			reiniciarBusquedaVehiculo();
+
+			//reinicia los datos de duplicado
+			$('#sectionNoTieneDuplicado').prop('hidden',true);
+			$('#sectionSiTieneDuplicado').prop('hidden',true);
+
+			//datos de asociado 
+
+
 		}
 		$("#txtNroCertificado").focus();
 		$("#btnAnular").css("display", "none");
@@ -1456,8 +1550,27 @@ function guardar() {
 				})
 				return;
 			}
-			
 
+				
+			var certificadoDuplicado = "";
+			//validando CAT duplicado
+			var isDuplicadoSeleccion = $('#chckDuplicado').is(':checked');
+
+			if(isDuplicadoSeleccion){ //si es duplicado debe validar que el duplicado sea valido o esté lleno
+
+				var validoElCertificadoDuplicado = $('#txtValidaCATDuplicado').attr('data-valido-duplicado');
+				if(Number(validoElCertificadoDuplicado) == 0){ //si no valida 
+					fancyAlertFunction("¡Debe ingresar un certificado válido para el duplicado !", function () {});
+					return;
+				}else{
+					certificadoDuplicado = $('#txtValidaCATDuplicado').val();
+				}
+
+			}else{
+				certificadoDuplicado = "";
+			}
+
+			
 			fancyConfirm("¿Desea continuar con la operación?", function (rpta) {
 				if (rpta) {
 					var dniConsultaServicio = Number($("#idDNI_asoc").attr("is_servicio"));
@@ -1466,11 +1579,16 @@ function guardar() {
 
 					var funcionName = "guardarCAT";
 					if (accion == 'E') { // Editar CAT:
-						funcionName = "actualizarCAT";
+
+						if(isDuplicadoSeleccion){ //si es duplicado
+							funcionName = "guardarCAT";
+						}else{
+							funcionName = "actualizarCAT";
+						}
 					}
 
 					var parametros = "&idConcesionario=" + $("#cmb_concesionario").val() +
-						"&nroCertificado=" + $("#txtNroCertificado").val() +
+						"&nroCertificado=" + (isDuplicadoSeleccion ? certificadoDuplicado : $("#txtNroCertificado").val()) +
 						"&fechaEmision=" + dateTimeFormat($("#txtFechaEmision").val()) +
 						"&conDeuda=" + $("#cmb_deuda").val() +
 						"&fechaLiquidacion=" + dateTimeFormat($("#txtFechaLiquidacion").val()) +
@@ -1513,13 +1631,15 @@ function guardar() {
 						"&apematPropietario=" + $('#apematPropietario').val() + 
 						"&idpropietariovehiculo=" + idPropietarioVehiculo_ + 
 						"&isServiceSUNARP=" + Number($("#txtPlaca").attr('is_servicio')) +
-						"&vistaRegistro=" + "REGISTRO CERTIFICADO VENDIDO |" + funcionName;
+						"&vistaRegistro=" + "REGISTRO CERTIFICADO VENDIDO |" + funcionName+ 
+						"&certificadoDuplicado=" + (isDuplicadoSeleccion ? $("#txtNroCertificado").val() : "" );
 
+					console.log("funcionName",funcionName);
+					console.log("parametros",parametros);
 					
-		
 					DAO.consultarWebServiceGet(funcionName, parametros, function (data) {
 						
-						console.log("data luego actualiza", data);
+						//console.log("data luego actualiza", data);
 						//
 						var idCAT = data[0];
 						if (idCAT > 0) {
@@ -1614,6 +1734,16 @@ function refrescarPantalla(reiniciaCertif) {
 		openSelect($("#cmb_concesionario"));
 		$("#btnGuardar").val("Registrar")
 		$("#btnAnular").css("display", "none");
+
+		//reinicia datos de duplicado
+		$('#chckDuplicado').prop('checked',false);
+		$('#txtValidaCATDuplicado').prop('hidden',true);
+		$('#sectionIconoBusquedaCertitificado').prop('hidden',true);
+		$('#txtValidaCATDuplicado').val('');
+		$('#txtValidaCATDuplicado').attr('data-valido-duplicado',0);
+		// $('#sectionSiTieneDuplicado').prop('hidden',true);
+		// $('#sectionNoTieneDuplicado').prop('hidden',true);
+
 	} catch (err) {
 		emitirErrorCatch(err, "refrescarPantalla");
 	}

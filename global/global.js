@@ -80,7 +80,7 @@ var ejecutarQUERY_MYSQL = function ejecutarQUERY_MYSQL(query, parametros, res, n
             console.log("ERR: " + JSON.stringify(err));
             return;
         }
-        //console_log("--------------");
+        // console_log("--------------");
         //    console_log(query);
         //    console_log(parametros);
         //console_log("Conectado a BD con ID:" + connection.threadId,2);
