@@ -1632,7 +1632,7 @@ function guardar() {
 						"&idpropietariovehiculo=" + idPropietarioVehiculo_ + 
 						"&isServiceSUNARP=" + Number($("#txtPlaca").attr('is_servicio')) +
 						"&vistaRegistro=" + "REGISTRO CERTIFICADO VENDIDO |" + funcionName+ 
-						"&certificadoDuplicado=" + (isDuplicadoSeleccion ? $("#txtNroCertificado").val() : "" );
+						"&certificadoDuplicado=" + (isDuplicadoSeleccion ? $("#txtNroCertificado").val() : 0 );
 
 					console.log("funcionName",funcionName);
 					console.log("parametros",parametros);

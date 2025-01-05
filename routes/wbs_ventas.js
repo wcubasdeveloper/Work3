@@ -886,12 +886,10 @@ exports.guardarCAT = function (req, res, funcionName) {
     var nombresPropietario = req.query.nombresPropietario;
     var apepatPropietario = req.query.apepatPropietario;
     var apematPropietario = req.query.apematPropietario;
-    var catDuplicadoPost =  req.query.apematPropietario;
     var vistaEnvio =  req.query.certificadoDuplicado;
 
     console.log("--VISTA DESDE DONDE SE REGISTRA--");
     console.log(vistaEnvio);
-    console.log(catDuplicadoPost);
 
     // guarda o actualiza la personalbar
     var persona = {};
