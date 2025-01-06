@@ -1346,7 +1346,7 @@ function guardar() {
 					"&idpropietariovehiculo=" + idPropietarioVehiculo_ + 
 					"&isServiceSUNARP=" + Number($("#txtPlaca").attr('is_servicio')) + 
 					"&vistaRegistro=" + "ACTIVAR CAT"+ 
-					"&certificadoDuplicado=" + "";
+					"&certificadoDuplicado=" + 0;
 
 
 				DAO.consultarWebServiceGet("guardarCAT", parametros, function (data) {
